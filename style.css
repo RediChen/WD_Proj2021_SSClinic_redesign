@@ -1,2 +1,10 @@
 @import url("https://fonts.googleapis.com/css3?family=Noto+Sans+TC:wght@500;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
 /*# sourceMappingURL=style.css.map */
