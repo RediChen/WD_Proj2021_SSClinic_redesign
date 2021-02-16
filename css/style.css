@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css3?family=Noto+Sans+TC:wght@500;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;500;700;900&display=swap");
+#intro #front-img img {
+  width: 100%;
+  margin-top: -100px;
+}
+
+#intro #front-img h1 {
+  position: absolute;
+  font-family: "Noto Serif TC", serif;
+  font-weight: 900;
+  font-size: 5em;
+  color: deepPink;
+  text-shadow: 1px 1px hotpink, 2px 2px rgba(255, 105, 180, 0.3), 0 0 40px LavenderBlush, 0 30px 20px white;
+}
+
+#intro #front-img #overlay {
+  position: absolute;
+  height: 6em;
+  width: 24em;
+  background-color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+}
+
+#intro #front-img #overlay h2 {
+  font-size: 2em;
+  color: Sienna;
+  letter-spacing: 5px;
+  line-height: 3em;
+}
+
+@media screen and (min-width: 1025px) {
+  #intro #front-img h1 {
+    top: 25vh;
+    left: 40vw;
+  }
+  #intro #front-img #overlay {
+    top: 45vh;
+    right: 20vw;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #intro #front-img h1 {
+    top: 16vh;
+    left: 50%;
+    display: block;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  #intro #front-img #overlay {
+    top: 60vh;
+    right: 20vw;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,23 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;500;700;900&display=swap");
-$color-main: pink;
-$color-sec: LavenderBlush;
-$color-text: indigo; //or purple
-$desktop: 1025px; //lower bound
-$tablet: 1024px; //upper bound
-$mobile: 767px; //upper bound
-$h-nav: 100px;
-@mixin font-zh($wt, $sz) {
-    //wt is in 200, 300, 500, 700, 900
-    font-family: "Noto Serif TC", serif;
-    font-weight: $wt;
-    font-size: $sz;
-}
-@mixin font-en($wt, $sz) {
-    //TODO family not decided
-    font-family: serif;
-    font-weight: $wt;
-    font-size: $sz;
-}
+@import "./var" ;
 //通用樣式設定 ==============================================
 * {
     margin: 0;
@@ -83,7 +64,7 @@ nav {
 
         &:link,
         &:visited {
-            color: mediumseagreen;
+            color: burlywood;
         }
         &:hover {
             text-shadow: 0 0 30px 10px $color-sec;
