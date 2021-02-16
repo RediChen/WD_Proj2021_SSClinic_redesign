@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;500;700;900&display=swap");
 $color-main: pink;
 $color-sec: LavenderBlush;
-$color-text: Chocolate; //or purple
+$color-text: indigo; //or purple
 $desktop: 1025px; //lower bound
 $tablet: 1024px; //upper bound
 $mobile: 767px; //upper bound
-$h-nav : 100px ;
+$h-nav: 100px;
 @mixin font-zh($wt, $sz) {
     //wt is in 200, 300, 500, 700, 900
     font-family: "Noto Serif TC", serif;
@@ -29,26 +29,27 @@ body {
 a {
     text-decoration: none;
 }
-.logo {
-    img:hover {
-        filter: drop-shadow(0 5px 15px rgba($color-sec, 0.8));
+.logo img {
+    transition: filter 0.5s;
+    &:hover {
+        filter: drop-shadow(0 5px 15px 15px rgba($color-sec, 0.8));
     }
 }
 .title-big {
-    @include font-zh(900, 2em)
+    @include font-zh(900, 2em);
 }
 .title-medium {
-    @include font-zh(700, 1.5em)
+    @include font-zh(700, 1.5em);
 }
 //通用樣式設定 END ==========================================
 //導覽列 ====================================================
 nav {
-    display: flex;
-    justify-content: space-around;
-    // align-items: center;
     width: 100%;
     height: $h-nav;
+    display: flex;
+    justify-content: space-around;
     &::before {
+        //for 圓弧版面
         content: "";
         position: absolute;
         width: 100%;
@@ -79,6 +80,7 @@ nav {
     .nav-a {
         line-height: 1.2;
         @include font-zh(700, 1.5em);
+        color: ivory; //TODO
 
         &:link,
         &:visited {
