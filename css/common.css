@@ -20,8 +20,8 @@ a {
 }
 
 .logo img:hover {
-  -webkit-filter: drop-shadow(0 5px 15px 15px rgba(255, 240, 245, 0.8));
-          filter: drop-shadow(0 5px 15px 15px rgba(255, 240, 245, 0.8));
+  -webkit-filter: drop-shadow(0 5px 15px rgba(255, 240, 245, 0.8));
+          filter: drop-shadow(0 5px 15px rgba(255, 240, 245, 0.8));
 }
 
 .title-big {
@@ -88,10 +88,15 @@ nav .nav-a {
 }
 
 nav .nav-a:link, nav .nav-a:visited {
-  color: burlywood;
+  color: Brown;
 }
 
 nav .nav-a:hover {
-  text-shadow: 0 0 30px 10px LavenderBlush;
+  text-shadow: 0 0 30px LavenderBlush;
+}
+
+nav .nav-a:active {
+  -webkit-filter: brightness(125%);
+          filter: brightness(125%);
 }
 /*# sourceMappingURL=common.css.map */

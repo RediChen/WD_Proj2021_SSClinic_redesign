@@ -13,7 +13,7 @@ a {
 .logo img {
     transition: filter 0.5s;
     &:hover {
-        filter: drop-shadow(0 5px 15px 15px rgba($color-sec, 0.8));
+        filter: drop-shadow(0 5px 15px rgba($color-sec, 0.8));
     }
 }
 .title-big {
@@ -64,10 +64,14 @@ nav {
 
         &:link,
         &:visited {
-            color: burlywood;
+            color: $color-text;
         }
         &:hover {
-            text-shadow: 0 0 30px 10px $color-sec;
+            text-shadow: 0 0 30px $color-sec;
+        }
+        &:active {
+            // filter: invert(20%);
+            filter: brightness(125%);
         }
     }
 }
