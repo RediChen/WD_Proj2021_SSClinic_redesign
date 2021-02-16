@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #eee;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo img:hover {
+  -webkit-filter: drop-shadow(0 5px 15px rgba(255, 240, 245, 0.8));
+          filter: drop-shadow(0 5px 15px rgba(255, 240, 245, 0.8));
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  height: 100px;
+}
+
+nav::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 15%;
+  top: 0;
+  left: 0;
+  background-color: pink;
+  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transform: scaleX(1.5);
+          transform: scaleX(1.5);
+  overflow: hidden;
+}
+
+nav > a {
+  z-index: 1;
+}
+
+nav > a:nth-child(1), nav > a:nth-child(7) {
+  margin-top: 15px;
+}
+
+nav > a:nth-child(2n) {
+  margin-top: 25px;
+}
+
+nav > a:nth-child(3), nav > a:nth-child(5) {
+  margin-top: 30px;
+}
+
+nav .nav-a {
+  line-height: 1.2;
+  font-family: "Noto Serif TC", serif;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+nav .nav-a:link, nav .nav-a:visited {
+  color: DarkMagenta;
+}
+
+nav .nav-a:hover {
+  text-shadow: 0 0 15px LavenderBlush;
+}
+/*# sourceMappingURL=common.css.map */
