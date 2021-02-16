@@ -1,10 +1,36 @@
 @import url("https://fonts.googleapis.com/css3?family=Noto+Sans+TC:wght@500;700;800&display=swap");
-@use "./_common.scss" ;
+@import "./common.scss";
 
 // 診所簡介 ==============================================================
 #intro {
     #front-img {
-        
+        img {
+            width: 100%;
+            margin-top: -$h-nav;
+        }
+        h1 {
+            position: absolute;
+            top: 25vh;
+            left: 40vw;
+            @include font-zh(900, 5em);
+            color: deepPink;
+            text-shadow: 1px 1px hotpink, 2px 2px rgba(hotpink, 0.3), 0 0 40px $color-sec, 0 30px 20px white;
+        }
+        #overlay {
+            position: absolute;
+            top: 45vh;
+            right: 20vw;
+            height: 6em;
+            width: 24em;
+            background-color: rgba(white, 0.6);
+            text-align: center;
+            h2 {
+                font-size: 2em;
+                color: Sienna;
+                letter-spacing: 5px;
+                line-height: 3em;
+            }
+        }
     }
 }
 // 診所簡介 END ==========================================================
@@ -16,4 +42,3 @@
 // 門診時間 END ==========================================================
 // 頁尾 ==================================================================
 // 頁尾 END ==============================================================
-

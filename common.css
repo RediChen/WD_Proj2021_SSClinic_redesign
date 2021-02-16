@@ -17,6 +17,18 @@ a {
           filter: drop-shadow(0 5px 15px rgba(255, 240, 245, 0.8));
 }
 
+.title-big {
+  font-family: "Noto Serif TC", serif;
+  font-weight: 900;
+  font-size: 2em;
+}
+
+.title-medium {
+  font-family: "Noto Serif TC", serif;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -47,7 +59,8 @@ nav > a {
   z-index: 1;
 }
 
-nav > a:nth-child(1), nav > a:nth-child(7) {
+nav > a:nth-child(1),
+nav > a:nth-child(7) {
   margin-top: 15px;
 }
 
@@ -55,7 +68,8 @@ nav > a:nth-child(2n) {
   margin-top: 25px;
 }
 
-nav > a:nth-child(3), nav > a:nth-child(5) {
+nav > a:nth-child(3),
+nav > a:nth-child(5) {
   margin-top: 30px;
 }
 
@@ -67,10 +81,10 @@ nav .nav-a {
 }
 
 nav .nav-a:link, nav .nav-a:visited {
-  color: DarkMagenta;
+  color: Chocolate;
 }
 
 nav .nav-a:hover {
-  text-shadow: 0 0 15px LavenderBlush;
+  text-shadow: 0 0 30px 10px LavenderBlush;
 }
 /*# sourceMappingURL=common.css.map */

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -9,13 +10,15 @@
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- 導覽列 ================================================================ -->
     <nav>
         <a href="#intro" class="nav-a">關於<br>心晴</a>
         <a href="#team" class="nav-a">醫療<br>團隊</a>
         <a href="#care" class="nav-a">治療<br>項目</a>
-        <a href="#" class="logo" id="nav-logo"><img src="./LOGO icon/128px wFrame.png" alt="心晴診所 Sunshine Clinic logo" /></a>
+        <a href="#" class="logo" id="nav-logo"><img src="./LOGO icon/128px wFrame.png"
+                alt="心晴診所 Sunshine Clinic logo" /></a>
         <a href="#time" class="nav-a">門診<br>時間</a>
         <a href="#footer" class="nav-a">聯絡<br>我們</a>
         <a href="#footer" class="nav-a">交通<br>方式</a>
@@ -24,9 +27,18 @@
     <!-- 診所簡介 ============================================================== -->
     <!-- TODO 1. 開頭畫面  2. 簡介文字 -->
     <section id="intro">
-        <div id="front-img"><img src="" alt=""></div>
+        <div id="front-img">
+            <picture>
+                <source media="(max-width : 1024px)" srcset="./img/Homepage_mobile.png" />
+                <img src="./img/FrontImg_ByMinhPham.jpg" alt="心晴診所">
+            </picture>
+            <h1>心晴診所</h1>
+            <div id="overlay">
+                <h2 class="title-medium">讓您值得信賴的團隊</h2>
+            </div>
+        </div>
         <div id="intro-text">
-            <p>成為您值得信賴的團隊</p>
+            <p></p>
         </div>
     </section>
     <!-- 診所簡介 END ========================================================== -->
@@ -79,4 +91,5 @@
     </footer>
     <!-- 頁尾 END ============================================================== -->
 </body>
+
 </html>
