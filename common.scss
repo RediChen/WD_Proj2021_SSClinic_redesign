@@ -80,11 +80,10 @@ nav {
     .nav-a {
         line-height: 1.2;
         @include font-zh(700, 1.5em);
-        color: ivory; //TODO
 
         &:link,
         &:visited {
-            color: $color-text;
+            color: mediumseagreen;
         }
         &:hover {
             text-shadow: 0 0 30px 10px $color-sec;
