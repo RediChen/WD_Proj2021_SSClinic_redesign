@@ -36,7 +36,8 @@ nav {
     height: $h-nav;
     display: flex;
     justify-content: space-around;
-    position: relative;//必須加，才不會被沒有設定pos的img擋住
+    position: sticky;//必須加，才不會被沒有設定pos的img擋住
+    top: 0;
     background-color: $color-pri-light;
     border-radius: 0 0 50% 50% / 0 0 50% 50%;
     // z-index: 2;

@@ -69,6 +69,11 @@
                 margin: 5% auto 0 ;
                 padding: 2.5em 2em 5em ;
             }
+            @media screen and (max-width : $tablet) {//TODO not yet
+                width: 70%;
+                margin: 5% auto 0 ;
+                padding: 2.5em 2em 5em ;
+            }
             p {
                 line-height: 2.5;
                 span {
