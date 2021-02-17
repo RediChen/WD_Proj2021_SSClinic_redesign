@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css3?family=Noto+Sans+TC:wght@500;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;500;700;900&display=swap");
 #intro {
-  margin-top: -100px;
+  margin-top: -120px;
 }
 
 #intro #front-img img {
@@ -16,11 +16,11 @@
   font-family: "Noto Serif TC", serif;
   font-weight: 900;
   font-size: 5em;
-  color: deepPink;
-  text-shadow: 0 0 1px pink, 1px 1px 2px hotpink, 2px 2px 1px rgba(255, 105, 180, 0.3), 0 0 40px LavenderBlush, 0 30px 20px white;
+  color: DeepPink;
+  text-shadow: 0 0 1px pink, 1px 1px 2px HotPink, 2px 2px 1px rgba(255, 105, 180, 0.3), 0 0 40px LavenderBlush, 0 30px 20px LavenderBlush;
 }
 
-#intro #front-img #overlay {
+#intro #front-img #intro-overlay1 {
   position: absolute;
   height: 6em;
   width: 24em;
@@ -28,7 +28,7 @@
   text-align: center;
 }
 
-#intro #front-img #overlay h2 {
+#intro #front-img #intro-overlay1 h2 {
   font-size: 2em;
   color: brown;
   letter-spacing: 5px;
@@ -40,7 +40,7 @@
     top: 25vh;
     left: 40vw;
   }
-  #intro #front-img #overlay {
+  #intro #front-img #intro-overlay1 {
     top: 45vh;
     right: 20vw;
   }
@@ -54,7 +54,7 @@
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
   }
-  #intro #front-img #overlay {
+  #intro #front-img #intro-overlay1 {
     top: 44vh;
     right: 20vw;
   }
@@ -62,8 +62,32 @@
 
 #intro #intro-text {
   width: 100%;
-  height: 500px;
+  overflow: hidden;
+  height: 100vh;
   background-image: -webkit-gradient(linear, left top, left bottom, from(skyblue), color-stop(85%, snow), to(lightyellow));
   background-image: linear-gradient(180deg, skyblue, snow 85%, lightyellow);
+}
+
+#intro #intro-text #intro-overlay2 {
+  background-color: rgba(255, 240, 245, 0.3);
+  border-radius: 5%;
+}
+
+@media screen and (min-width: 1025px) {
+  #intro #intro-text #intro-overlay2 {
+    width: 40%;
+    margin: 5% auto 0;
+    padding: 2.5em 2em 5em;
+  }
+}
+
+#intro #intro-text #intro-overlay2 p {
+  line-height: 2.5;
+}
+
+#intro #intro-text #intro-overlay2 p span {
+  color: DeepPink;
+  font-weight: 700;
+  background-color: rgba(255, 240, 245, 0.3);
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;500;700;900&display=swap");
-$color-main: pink;
-$color-sec: LavenderBlush;
-$color-text: Brown; //or purple
+$color-pri-dark : DeepPink ;
+$color-pri-light : pink ;
+$color-sec-dark : HotPink ;
+$color-sec-light : LavenderBlush ;
+$color-text : Brown ;
 $desktop: 1025px; //lower bound
 $tablet: 1024px; //upper bound
 $mobile: 767px; //upper bound
-$h-nav: 100px;
+$h-nav: 120px;
 @mixin font-zh($wt, $sz) {
     //wt is in 200, 300, 500, 700, 900
     font-family: "Noto Serif TC", serif;
@@ -17,4 +19,11 @@ $h-nav: 100px;
     font-family: serif;
     font-weight: $wt;
     font-size: $sz;
+}
+@mixin test($ifIn, $color) {
+    @if $ifIn {
+        background-color: rgba($color, 0.3) ;
+    } @else {
+        border: 1px solid $color ;
+    }
 }

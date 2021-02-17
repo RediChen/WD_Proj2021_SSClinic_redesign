@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css3?family=Noto+Sans+TC:wght@500;700;800&display=swap");
-@import "./var" ;
+@import "./var";
 
 // 診所簡介 ==============================================================
 #intro {
-    margin-top: -$h-nav;
+    margin-top: -$h-nav;//向上拉，以避免任何縫隙
+    // Part I : 首頁形象
     #front-img {
         img {
             width: 100%;
@@ -13,16 +14,12 @@
         h1 {
             position: absolute;
             @include font-zh(900, 5em);
-            color: deepPink;
-            text-shadow: 0 0 1px pink,
-            1px 1px 2px hotpink,
-            2px 2px 1px rgba(hotpink, 0.3),
-            0 0 40px $color-sec,
-            0 30px 20px white;
+            color: $color-pri-dark;
+            text-shadow: 0 0 1px $color-pri-light, 1px 1px 2px $color-sec-dark, 2px 2px 1px rgba($color-sec-dark, 0.3),
+                0 0 40px $color-sec-light, 0 30px 20px $color-sec-light;
         }
-        #overlay {
+        #intro-overlay1 {
             position: absolute;
-
             height: 6em;
             width: 24em;
             background-color: rgba(white, 0.6);
@@ -34,12 +31,13 @@
                 line-height: 3em;
             }
         }
+        //以下是位置定位
         @media screen and (min-width: $desktop) {
             h1 {
                 top: 25vh;
                 left: 40vw;
             }
-            #overlay {
+            #intro-overlay1 {
                 top: 45vh;
                 right: 20vw;
             }
@@ -49,18 +47,37 @@
                 top: 16vh;
                 left: 50%;
                 display: block;
-                transform: translateX(-50%);//for 置中
+                transform: translateX(-50%); //for 置中
             }
-            #overlay {
+            #intro-overlay1 {
                 top: 44vh;
                 right: 20vw;
             }
         }
     }
+    // Part II : 診所簡介
     #intro-text {
         width: 100%;
-        height: 500px ;
-        background-image: linear-gradient(180deg, skyblue,snow 85%, lightyellow);
+        overflow: hidden;
+        height: 100vh;
+        background-image: linear-gradient(180deg, skyblue, snow 85%, lightyellow);
+        #intro-overlay2 {
+            background-color: rgba($color-sec-light, 0.3);
+            border-radius: 5%;
+            @media screen and (min-width : $desktop) {
+                width: 40%;
+                margin: 5% auto 0 ;
+                padding: 2.5em 2em 5em ;
+            }
+            p {
+                line-height: 2.5;
+                span {
+                    color : $color-pri-dark ;
+                    font-weight: 700;
+                    background-color: rgba($color-sec-light,0.3) ;
+                }
+            }
+        }
     }
 }
 // 診所簡介 END ==========================================================
