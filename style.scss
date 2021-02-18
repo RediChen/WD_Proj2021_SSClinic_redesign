@@ -3,7 +3,7 @@
 
 // 診所簡介 ==============================================================
 #intro {
-    margin-top: -$h-nav;//向上拉，以避免任何縫隙
+    margin-top: -$h-nav; //向上拉，以避免任何縫隙
     // Part I : 首頁形象
     #front-img {
         img {
@@ -20,15 +20,14 @@
         }
         #intro-overlay1 {
             position: absolute;
-            height: 6em;
-            width: 24em;
-            background-color: rgba(white, 0.6);
+            $temp: 4em; //TODO
+            height: $temp;
             text-align: center;
             h2 {
                 font-size: 2em;
                 color: brown;
                 letter-spacing: 5px;
-                line-height: 3em;
+                line-height: $temp / 2;
             }
         }
         //以下是位置定位
@@ -38,8 +37,10 @@
                 left: 40vw;
             }
             #intro-overlay1 {
+                width: 24em;
                 top: 45vh;
                 right: 20vw;
+                background-color: rgba(white, 0.6);
             }
         }
         @media screen and (max-width: $tablet) {
@@ -50,8 +51,11 @@
                 transform: translateX(-50%); //for 置中
             }
             #intro-overlay1 {
+                width: 100vw;
                 top: 44vh;
-                right: 20vw;
+                background-color: rgba(white, 0.75);
+                // filter: brightness(2);
+                box-shadow: 0 0 5px 5px rgba(white, 0.75);
             }
         }
     }
@@ -60,26 +64,27 @@
         width: 100%;
         overflow: hidden;
         height: 100vh;
-        background-image: linear-gradient(180deg, skyblue, snow 85%, lightyellow);
+        background-image: linear-gradient(180deg, skyblue, snow 85%, snow 95%, lightyellow);
         #intro-overlay2 {
             background-color: rgba($color-sec-light, 0.3);
             border-radius: 5%;
-            @media screen and (min-width : $desktop) {
+            @media screen and (min-width: $desktop) {
                 width: 40%;
-                margin: 5% auto 0 ;
-                padding: 2.5em 2em 5em ;
+                margin: 5% auto 0;
+                padding: 2.5em 2em 5em;
             }
-            @media screen and (max-width : $tablet) {//TODO not yet
+            @media screen and (max-width: $tablet) {
+                //TODO not yet
                 width: 70%;
-                margin: 5% auto 0 ;
-                padding: 2.5em 2em 5em ;
+                margin: 5% auto 0;
+                padding: 2.5em 2em 5em;
             }
             p {
                 line-height: 2.5;
                 span {
-                    color : $color-pri-dark ;
+                    color: $color-pri-dark;
                     font-weight: 700;
-                    background-color: rgba($color-sec-light,0.3) ;
+                    background-color: rgba($color-sec-light, 0.3);
                 }
             }
         }

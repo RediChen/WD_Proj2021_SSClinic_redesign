@@ -40,7 +40,7 @@ nav {
     top: 0;
     background-color: $color-pri-light;
     border-radius: 0 0 50% 50% / 0 0 50% 50%;
-    // z-index: 2;
+    z-index: 2;
 
     & > a:nth-child(1),
     & > a:nth-child(7) {

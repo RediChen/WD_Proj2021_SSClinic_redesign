@@ -54,9 +54,12 @@ nav {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   background-color: pink;
   border-radius: 0 0 50% 50% / 0 0 50% 50%;
+  z-index: 2;
 }
 
 nav > a:nth-child(1),
