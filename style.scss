@@ -65,6 +65,7 @@
         overflow: hidden;
         height: 100vh;
         background-image: linear-gradient(180deg, skyblue, snow 85%, snow 95%, lightyellow);
+
         #intro-overlay2 {
             background-color: rgba($color-sec-light, 0.3);
             border-radius: 5%;
@@ -81,6 +82,21 @@
             }
             p {
                 line-height: 2.5;
+                text-indent: 2em ;
+                
+                span {
+                    color: $color-pri-dark;
+                    font-weight: 700;
+                    background-color: rgba($color-sec-light, 0.3);
+                }
+            }
+            ul {
+                line-height: 2.5;
+                list-style-type: none;
+                text-indent: 4em ;
+                u {
+                    font-weight: 700;
+                }
                 span {
                     color: $color-pri-dark;
                     font-weight: 700;

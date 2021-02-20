@@ -94,9 +94,26 @@
 
 #intro #intro-text #intro-overlay2 p {
   line-height: 2.5;
+  text-indent: 2em;
 }
 
 #intro #intro-text #intro-overlay2 p span {
+  color: DeepPink;
+  font-weight: 700;
+  background-color: rgba(255, 240, 245, 0.3);
+}
+
+#intro #intro-text #intro-overlay2 ul {
+  line-height: 2.5;
+  list-style-type: none;
+  text-indent: 4em;
+}
+
+#intro #intro-text #intro-overlay2 ul u {
+  font-weight: 700;
+}
+
+#intro #intro-text #intro-overlay2 ul span {
   color: DeepPink;
   font-weight: 700;
   background-color: rgba(255, 240, 245, 0.3);
