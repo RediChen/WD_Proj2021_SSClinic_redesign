@@ -24,13 +24,13 @@ a {
           filter: drop-shadow(0 5px 15px rgba(255, 240, 245, 0.8));
 }
 
-.title-big {
+.title-1 {
   font-family: "Noto Serif TC", serif;
   font-weight: 900;
   font-size: 2em;
 }
 
-.title-medium {
+.title-2 {
   font-family: "Noto Serif TC", serif;
   font-weight: 700;
   font-size: 1.5em;
@@ -42,8 +42,12 @@ a {
   font-size: 1em;
 }
 
-.hr-title {
+.hr-1 {
   margin: 0 auto;
+}
+
+.hr-2 {
+  width: 80%;
 }
 
 nav {

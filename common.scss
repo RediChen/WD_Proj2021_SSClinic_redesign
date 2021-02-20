@@ -16,18 +16,22 @@ a {
         filter: drop-shadow(0 5px 15px rgba($color-sec-light, 0.8));
     }
 }
-.title-big {
+.title-1 {
     @include font-zh(900, 2em);
 }
-.title-medium {
+.title-2 {
     @include font-zh(700, 1.5em);
 }
 .p-text {
     @include font-zh(300, 1em);
 }
-.hr-title {
+.hr-1 {
     margin: 0 auto;
     //TODO 顏色等待設定
+}
+.hr-2 {
+    width: 80%;
+    //TODO 想做有帶小方塊的效果 by 偽元素
 }
 //通用樣式設定 END ==========================================
 //導覽列 ====================================================
