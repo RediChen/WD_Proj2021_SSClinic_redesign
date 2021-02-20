@@ -27,11 +27,21 @@ a {
 }
 .hr-1 {
     margin: 0 auto;
-    //TODO 顏色等待設定
+    border-color: indigo;
 }
-.hr-2 {
-    width: 80%;
-    //TODO 想做有帶小方塊的效果 by 偽元素
+.hr-2 {//複合式
+    margin-left: 1em;
+    margin-bottom: 0.5em;
+    & > div {
+        width: 15px;
+        height: 5px;
+        background-color: $color-sec-dark;
+    }
+    hr {
+        width: 80%;
+        margin: 0;
+        border-color: $color-sec-dark;
+    }
 }
 //通用樣式設定 END ==========================================
 //導覽列 ====================================================
@@ -40,7 +50,7 @@ nav {
     height: $h-nav;
     display: flex;
     justify-content: space-around;
-    position: sticky;//必須加，才不會被沒有設定pos的img擋住
+    position: sticky; //必須加，才不會被沒有設定pos的img擋住
     top: 0;
     background-color: $color-pri-light;
     border-radius: 0 0 50% 50% / 0 0 50% 50%;

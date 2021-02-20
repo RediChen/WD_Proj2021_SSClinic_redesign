@@ -44,10 +44,24 @@ a {
 
 .hr-1 {
   margin: 0 auto;
+  border-color: indigo;
 }
 
 .hr-2 {
+  margin-left: 1em;
+  margin-bottom: 0.5em;
+}
+
+.hr-2 > div {
+  width: 15px;
+  height: 5px;
+  background-color: HotPink;
+}
+
+.hr-2 hr {
   width: 80%;
+  margin: 0;
+  border-color: HotPink;
 }
 
 nav {

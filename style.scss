@@ -114,16 +114,15 @@
     & > h1 {
         text-align: center;
     }
+    // Part I : 選取按鈕
     #team-btn-box {
         padding: 10px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
         grid-gap: 10px;
-        @include test(false, orange);
 
         .team-btn {
-            @include test(false, navy);
             width: 300px;
         }
         .team-btn:nth-child(-n + 2) {
@@ -138,6 +137,16 @@
         }
         .team-btn:nth-child(n + 7) {
             background-color: AliceBlue;
+        }
+    }
+    // Part II : 詳細介紹
+    #team-card-wrap {
+        .team-sub-card {
+            padding: 1em 0;
+            h3 {
+                text-indent: 2em;
+                margin-bottom: -0.3em;
+            }
         }
     }
 }

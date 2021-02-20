@@ -136,11 +136,9 @@
   -ms-grid-rows: (1fr)[3];
       grid-template-rows: repeat(3, 1fr);
   grid-gap: 10px;
-  border: 1px solid orange;
 }
 
 #team #team-btn-box .team-btn {
-  border: 1px solid navy;
   width: 300px;
 }
 
@@ -159,5 +157,14 @@
 
 #team #team-btn-box .team-btn:nth-child(n + 7) {
   background-color: AliceBlue;
+}
+
+#team #team-card-wrap .team-sub-card {
+  padding: 1em 0;
+}
+
+#team #team-card-wrap .team-sub-card h3 {
+  text-indent: 2em;
+  margin-bottom: -0.3em;
 }
 /*# sourceMappingURL=style.css.map */
