@@ -121,25 +121,36 @@
 
 #team {
   margin-top: 50px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% auto;
+      grid-template-columns: 40% auto;
 }
 
-#team > h1 {
+#team > div:nth-child(1) {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / span 2;
+}
+
+#team > div:nth-child(1) h1 {
   text-align: center;
 }
 
 #team #team-btn-box {
   padding: 10px;
+  max-width: 100%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   -ms-grid-rows: (1fr)[3];
       grid-template-rows: repeat(3, 1fr);
-  grid-gap: 10px;
+  grid-gap: 5px;
 }
 
 #team #team-btn-box .team-btn {
-  width: 300px;
+  height: 100px;
 }
 
 #team #team-btn-box .team-btn:nth-child(-n + 2) {
@@ -157,6 +168,10 @@
 
 #team #team-btn-box .team-btn:nth-child(n + 7) {
   background-color: AliceBlue;
+}
+
+#team #team-card-wrap > article:nth-child(n+2) {
+  display: none;
 }
 
 #team #team-card-wrap .team-sub-card {

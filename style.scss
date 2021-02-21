@@ -110,20 +110,27 @@
 // 醫療團隊 ==============================================================
 #team {
     margin-top: 50px;
+    display: grid;
+    grid-template-columns: 40% auto ;
 
-    & > h1 {
-        text-align: center;
+    // Part 0 : 標題
+    & > div:nth-child(1) {
+        grid-column: 1 / span 2;
+        h1 {
+            text-align: center;
+        }
     }
     // Part I : 選取按鈕
     #team-btn-box {
         padding: 10px;
+        max-width: 100%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
-        grid-gap: 10px;
+        grid-gap: 5px;
 
         .team-btn {
-            width: 300px;
+            height: 100px;
         }
         .team-btn:nth-child(-n + 2) {
             background-color: #f8c9a0;
@@ -141,12 +148,18 @@
     }
     // Part II : 詳細介紹
     #team-card-wrap {
+        //預設先顯示總院長
+        & > article:nth-child(n+2) {
+            display: none;
+        }
+
         .team-sub-card {
             padding: 1em 0;
             h3 {
                 text-indent: 2em;
                 margin-bottom: -0.3em;
             }
+            
         }
     }
 }
