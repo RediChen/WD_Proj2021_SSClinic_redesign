@@ -109,9 +109,11 @@
 // 診所簡介 END ==========================================================
 // 醫療團隊 ==============================================================
 #team {
-    margin-top: 50px;
+    margin: 50px 0 0 10px;
+    max-height: 800px;
     display: grid;
     grid-template-columns: 36% auto;
+    grid-gap: 30px;
 
     // Part 0 : 標題
     & > div:nth-child(1) {
@@ -128,6 +130,12 @@
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
         grid-gap: 5px;
+        border: 10px solid rgba($color-sec-dark, 0.3);
+        box-shadow: -1px 1px 3px 3px rgba($color-sec-dark, 0.2),
+                    -5px 5px 5px 5px rgba($color-sec-dark, 0.2),
+                    -7px 7px 5px 5px rgba($color-sec-dark, 0.1),
+                    -15px 15px 10px rgba($color-sec-dark, 0.1),
+                    -20px 20px 20px $color-sec-light;
 
         .team-btn {
             height: 100px;
@@ -149,30 +157,32 @@
     // Part II : 詳細介紹
     #team-card-wrap {
         .team-card {
-            //格局設定
             display: grid;
             grid-template-areas: "photos showcases" "names showcases";
+            grid-template-rows: 400px 150px;
+            background-color: rgba($color-sec-light, 0.6);
+
             & > img {
                 grid-area: photos;
             }
             & > h2 {
                 grid-area: names;
+                text-align: center;
             }
             & > .team-about {
                 grid-area: showcases;
-            }
-            // 樣式
-            overflow: hidden;
-            word-wrap: break-word;
+                overflow: auto;
+                padding: 0 5%;
 
-            .team-sub-card {
-                padding: 1em 0;
-                h3 {
-                    text-indent: 2em;
-                    margin-bottom: -0.3em;
-                }
-                ul {
-                    list-style-type: none;
+                .team-sub-card {
+                    padding: 1em 0;
+                    h3 {
+                        text-indent: 2em;
+                        margin-bottom: -0.3em;
+                    }
+                    ul {
+                        list-style-type: none;
+                    }
                 }
             }
         }
@@ -184,6 +194,9 @@
 }
 // 醫療團隊 END ==========================================================
 // 治療項目 ==============================================================
+#care {
+    margin-top: 200px;
+}
 // 治療項目 END ==========================================================
 // 門診時間 ==============================================================
 // 門診時間 END ==========================================================

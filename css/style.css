@@ -120,11 +120,13 @@
 }
 
 #team {
-  margin-top: 50px;
+  margin: 50px 0 0 10px;
+  max-height: 800px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 36% auto;
       grid-template-columns: 36% auto;
+  grid-gap: 30px;
 }
 
 #team > div:nth-child(1) {
@@ -147,6 +149,9 @@
   -ms-grid-rows: (1fr)[3];
       grid-template-rows: repeat(3, 1fr);
   grid-gap: 5px;
+  border: 10px solid rgba(255, 105, 180, 0.3);
+  -webkit-box-shadow: -1px 1px 3px 3px rgba(255, 105, 180, 0.2), -5px 5px 5px 5px rgba(255, 105, 180, 0.2), -7px 7px 5px 5px rgba(255, 105, 180, 0.1), -15px 15px 10px rgba(255, 105, 180, 0.1), -20px 20px 20px LavenderBlush;
+          box-shadow: -1px 1px 3px 3px rgba(255, 105, 180, 0.2), -5px 5px 5px 5px rgba(255, 105, 180, 0.2), -7px 7px 5px 5px rgba(255, 105, 180, 0.1), -15px 15px 10px rgba(255, 105, 180, 0.1), -20px 20px 20px LavenderBlush;
 }
 
 #team #team-btn-box .team-btn {
@@ -174,8 +179,9 @@
   display: -ms-grid;
   display: grid;
       grid-template-areas: "photos showcases" "names showcases";
-  overflow: hidden;
-  word-wrap: break-word;
+  -ms-grid-rows: 400px 150px;
+      grid-template-rows: 400px 150px;
+  background-color: rgba(255, 240, 245, 0.6);
 }
 
 #team #team-card-wrap .team-card > img {
@@ -188,6 +194,7 @@
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: names;
+  text-align: center;
 }
 
 #team #team-card-wrap .team-card > .team-about {
@@ -195,22 +202,28 @@
   -ms-grid-row-span: 2;
   -ms-grid-column: 2;
   grid-area: showcases;
+  overflow: auto;
+  padding: 0 5%;
 }
 
-#team #team-card-wrap .team-card .team-sub-card {
+#team #team-card-wrap .team-card > .team-about .team-sub-card {
   padding: 1em 0;
 }
 
-#team #team-card-wrap .team-card .team-sub-card h3 {
+#team #team-card-wrap .team-card > .team-about .team-sub-card h3 {
   text-indent: 2em;
   margin-bottom: -0.3em;
 }
 
-#team #team-card-wrap .team-card .team-sub-card ul {
+#team #team-card-wrap .team-card > .team-about .team-sub-card ul {
   list-style-type: none;
 }
 
 #team #team-card-wrap .team-card:nth-child(n + 2) {
   display: none;
+}
+
+#care {
+  margin-top: 200px;
 }
 /*# sourceMappingURL=style.css.map */

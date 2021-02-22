@@ -18,16 +18,19 @@ a {
 }
 .title-1 {
     @include font-zh(900, 2em);
+    text-align: center;
 }
 .title-2 {
     @include font-zh(700, 1.5em);
+    text-align: center;
 }
 .p-text {
     @include font-zh(300, 1em);
 }
 .hr-1 {
-    margin: 0 auto;
+    margin: 0.5em auto 1em ;
     border-color: indigo;
+    max-width: 800px;
 }
 .hr-2 {//複合式
     margin-left: 1em;
