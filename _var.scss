@@ -7,7 +7,7 @@ $color-text : Brown ;
 $desktop: 1025px; //lower bound
 $tablet: 1024px; //upper bound
 $mobile: 767px; //upper bound
-$h-nav: 120px;
+$h-nav: 100px;
 @mixin font-zh($wt, $sz) {
     //wt is in 200, 300, 500, 700, 900
     font-family: "Noto Serif TC", serif;

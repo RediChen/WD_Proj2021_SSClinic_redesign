@@ -53,20 +53,18 @@ nav {
     position: sticky; //必須加，才不會被沒有設定pos的img擋住
     top: 0;
     background-color: $color-pri-light;
-    border-radius: 0 0 50% 50% / 0 0 50% 50%;
+    border-radius: 0 0 80% 80% / 0 0 55% 55%;
     z-index: 2;
-
-    & > a:nth-child(1),
-    & > a:nth-child(7) {
-        margin-top: 15px;
-    }
-    & > a:nth-child(2n) {
-        margin-top: 25px;
-    }
-    & > a:nth-child(3),
-    & > a:nth-child(5) {
+    // 高度微調：from 內側
+    
+    & > a:nth-child(3n+3),
+    & > a:nth-child(3n+4) {
         margin-top: 30px;
     }
+    & > a:nth-child(6n+2) {
+        margin-top: 25px;
+    }
+    // 高度微調 END
 
     .nav-a {
         line-height: 1.2;
