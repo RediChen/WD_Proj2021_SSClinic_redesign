@@ -130,12 +130,8 @@
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
         grid-gap: 5px;
-        border: 10px solid rgba($color-sec-dark, 0.3);
-        box-shadow: -1px 1px 3px 3px rgba($color-sec-dark, 0.2),
-                    -5px 5px 5px 5px rgba($color-sec-dark, 0.2),
-                    -7px 7px 5px 5px rgba($color-sec-dark, 0.1),
-                    -15px 15px 10px rgba($color-sec-dark, 0.1),
-                    -20px 20px 20px $color-sec-light;
+        border: 10px solid rgba($color-sec-dark, 0.4);
+        box-shadow: -8px 8px 8px -3px rgba(#990000, 0.5) ;
 
         .team-btn {
             height: 100px;
