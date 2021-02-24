@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css3?family=Noto+Sans+TC:wght@500;700;800&display=swap");
 @import "./var";
 
 // 診所簡介 ==============================================================
@@ -61,8 +60,8 @@
     // Part II : 診所簡介
     #intro-text {
         width: 100%;
+        height: 85vh;
         overflow: hidden;
-        height: 100vh;
         background-image: linear-gradient(180deg, skyblue, snow 85%, snow 95%, lightyellow);
 
         #intro-overlay2 {
@@ -74,9 +73,8 @@
                 padding: 2.5em 2em 5em;
             }
             @media screen and (max-width: $tablet) {
-                //TODO not yet
                 width: 70%;
-                margin: 5% auto 0;
+                margin: 20% auto 0;
                 padding: 2.5em 2em 5em;
             }
             p {

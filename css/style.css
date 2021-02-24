@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css3?family=Noto+Sans+TC:wght@500;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;500;700;900&display=swap");
 #intro {
   margin-top: -100px;
@@ -65,8 +64,8 @@
 
 #intro #intro-text {
   width: 100%;
+  height: 85vh;
   overflow: hidden;
-  height: 100vh;
   background-image: -webkit-gradient(linear, left top, left bottom, from(skyblue), color-stop(85%, snow), color-stop(95%, snow), to(lightyellow));
   background-image: linear-gradient(180deg, skyblue, snow 85%, snow 95%, lightyellow);
 }
@@ -87,7 +86,7 @@
 @media screen and (max-width: 1024px) {
   #intro #intro-text #intro-overlay2 {
     width: 70%;
-    margin: 5% auto 0;
+    margin: 20% auto 0;
     padding: 2.5em 2em 5em;
   }
 }
