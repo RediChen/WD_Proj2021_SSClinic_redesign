@@ -60,7 +60,7 @@
     // Part II : 診所簡介
     #intro-text {
         width: 100%;
-        height: 85vh;
+        height: 100vh;
         overflow: hidden;
         background-image: linear-gradient(180deg, skyblue, snow 85%, snow 95%, lightyellow);
 
@@ -108,14 +108,16 @@
 #team {
     // Overall : 格局設定
     max-height: 80vh;
+
     @media screen and (min-width: $desktop) {
-        margin: 50px 0 0 10px;
+        margin-top: 50px;
+        margin-left: 10px;
         display: grid;
         grid-template-columns: 36% auto;
         grid-gap: 30px;
 
         // Part 0 : 標題
-        & > div:nth-child(1) {
+        header {
             grid-column: 1 / span 2;
         }
         // Part I : 選取按鈕
@@ -146,6 +148,7 @@
     }
     @media screen and (max-width: $tablet) {
         display: flex;
+        margin: 50px 10px 0 ;
         flex-direction: column;
         #team-btn-box {
             order: 4;
@@ -155,6 +158,10 @@
         }
     }
     // Overall END
+    // Respective : Part 0 : 標題
+    header {
+        padding-bottom: 2em;
+    }
     // Respective : 個別樣式, Part I : 選取按鈕
     #team-btn-box {
         padding: 10px;
@@ -190,7 +197,7 @@
                 h2 {
                     display: inline-block;
                     padding: 0 0.5em;
-                    border-bottom: 1px solid indigo;
+                    border-bottom: 1px solid $color-line;
                     box-shadow: 0 9px 5px -6px #66666666;
                 }
             }
