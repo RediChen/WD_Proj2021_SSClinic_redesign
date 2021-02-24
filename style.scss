@@ -106,29 +106,61 @@
 // 診所簡介 END ==========================================================
 // 醫療團隊 ==============================================================
 #team {
-    margin: 50px 0 0 10px;
-    max-height: 800px;
-    display: grid;
-    grid-template-columns: 36% auto;
-    grid-gap: 30px;
+    // Overall : 格局設定
+    max-height: 80vh;
+    @media screen and (min-width: $desktop) {
+        margin: 50px 0 0 10px;
+        display: grid;
+        grid-template-columns: 36% auto;
+        grid-gap: 30px;
 
-    // Part 0 : 標題
-    & > div:nth-child(1) {
-        grid-column: 1 / span 2;
-        h1 {
-            text-align: center;
+        // Part 0 : 標題
+        & > div:nth-child(1) {
+            grid-column: 1 / span 2;
+        }
+        // Part I : 選取按鈕
+        #team-btn-box {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-gap: 5px;
         }
     }
-    // Part I : 選取按鈕
+    //* Part II : 詳細介紹 for Desktop & Tablet
+    @media screen and (min-width: $mobile + 1) {
+        #team-card-wrap > .team-card {
+            display: grid;
+            grid-template-areas: "photos showcases" "names showcases";
+            grid-template-rows: 400px 150px;
+
+            & > img {
+                grid-area: photos;
+            }
+            & > h2 {
+                grid-area: names;
+            }
+            & > .team-about {
+                grid-area: showcases;
+            }
+        }
+    }
+    @media screen and (max-width: $tablet) {
+        display: flex;
+        flex-direction: column;
+        #team-btn-box {
+            order: 4;
+
+            display: flex; //TODO 暫時，等著用輪播圖
+            flex-direction: row; //TODO 暫時，等著用輪播圖
+        }
+    }
+    // Overall END
+    // Respective : 個別樣式, Part I : 選取按鈕
     #team-btn-box {
         padding: 10px;
         max-width: 100%;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        grid-gap: 5px;
         border: 10px solid rgba($color-sec-dark, 0.4);
-        box-shadow: -8px 8px 8px -3px rgba(#990000, 0.5) ;
+        box-shadow: -8px 8px 8px -3px rgba(#990000, 0.5);
 
         .team-btn {
             height: 100px;
@@ -147,25 +179,25 @@
             background-color: AliceBlue;
         }
     }
-    // Part II : 詳細介紹
+    // Respective : 個別樣式, Part II : 詳細介紹
     #team-card-wrap {
         .team-card {
-            display: grid;
-            grid-template-areas: "photos showcases" "names showcases";
-            grid-template-rows: 400px 150px;
             background-color: rgba($color-sec-light, 0.6);
+            box-shadow: 0 -3px 5px #66666666;
 
-            & > img {
-                grid-area: photos;
-            }
-            & > h2 {
-                grid-area: names;
+            & > div:nth-child(2) {
                 text-align: center;
+                h2 {
+                    display: inline-block;
+                    padding: 0 0.5em;
+                    border-bottom: 1px solid indigo;
+                    box-shadow: 0 9px 5px -6px #66666666;
+                }
             }
-            & > .team-about {
-                grid-area: showcases;
-                overflow: auto;
+
+            .team-about {
                 padding: 0 5%;
+                overflow: auto; //自動生成內滾動範圍
 
                 .team-sub-card {
                     padding: 1em 0;
@@ -178,10 +210,10 @@
                     }
                 }
             }
-        }
-        //預設先顯示總院長
-        .team-card:nth-child(n + 2) {
-            display: none;
+            //預設先顯示總院長
+            &:nth-child(n + 2) {
+                display: none;
+            }
         }
     }
 }
