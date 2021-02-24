@@ -22,15 +22,15 @@
 
 #intro #front-img #intro-overlay1 {
   position: absolute;
-  height: 4em;
   text-align: center;
+  padding: 1em 2em;
 }
 
 #intro #front-img #intro-overlay1 h2 {
   font-size: 2em;
   color: brown;
   letter-spacing: 5px;
-  line-height: 2em;
+  margin-left: 5px;
 }
 
 @media screen and (min-width: 1025px) {
@@ -41,7 +41,7 @@
   #intro #front-img #intro-overlay1 {
     width: 24em;
     top: 45vh;
-    right: 20vw;
+    right: 18vw;
     background-color: rgba(255, 255, 255, 0.6);
   }
 }

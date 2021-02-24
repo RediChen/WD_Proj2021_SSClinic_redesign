@@ -20,14 +20,13 @@
         }
         #intro-overlay1 {
             position: absolute;
-            $temp: 4em; //TODO
-            height: $temp;
             text-align: center;
+            padding: 1em 2em;
             h2 {
                 font-size: 2em;
                 color: brown;
                 letter-spacing: 5px;
-                line-height: $temp / 2;
+                margin-left: 5px;
             }
         }
         //以下是位置定位
@@ -39,7 +38,7 @@
             #intro-overlay1 {
                 width: 24em;
                 top: 45vh;
-                right: 20vw;
+                right: 18vw;
                 background-color: rgba(white, 0.6);
             }
         }
