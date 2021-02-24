@@ -199,6 +199,12 @@
   }
 }
 
+@media screen and (max-width: 767px) {
+  #team {
+    overflow: hidden;
+  }
+}
+
 #team header {
   padding-bottom: 2em;
 }

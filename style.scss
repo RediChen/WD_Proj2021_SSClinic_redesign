@@ -157,6 +157,9 @@
             flex-direction: row; //TODO 暫時，等著用輪播圖
         }
     }
+    @media screen and (max-width : $mobile) {
+        overflow: hidden;
+    }
     // Overall END
     // Respective : Part 0 : 標題
     header {
