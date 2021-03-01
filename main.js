@@ -1,0 +1,1 @@
+// $("#care-board-1").slick() ;

@@ -274,7 +274,8 @@
   list-style-type: none;
 }
 
-#team #team-card-wrap .team-card .team-about .team-sub-card p, #team #team-card-wrap .team-card .team-about .team-sub-card li {
+#team #team-card-wrap .team-card .team-about .team-sub-card p,
+#team #team-card-wrap .team-card .team-about .team-sub-card li {
   line-height: 2.5;
 }
 
@@ -284,5 +285,21 @@
 
 #care {
   margin-top: 200px;
+}
+
+#care .care-card {
+  text-align: center;
+}
+
+#care #care-board-1 .care-card {
+  margin: 0 auto;
+  padding: 130px 0 80px;
+  min-height: 300px;
+  max-width: 400px;
+  background-color: rgba(105, 105, 105, 0.3);
+}
+
+#care #care-board-1 .care-card:focus {
+  outline: none;
 }
 /*# sourceMappingURL=style.css.map */

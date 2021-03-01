@@ -148,7 +148,7 @@
     }
     @media screen and (max-width: $tablet) {
         display: flex;
-        margin: 50px 10px 0 ;
+        margin: 50px 10px 0;
         flex-direction: column;
         #team-btn-box {
             order: 4;
@@ -157,7 +157,7 @@
             flex-direction: row; //TODO 暫時，等著用輪播圖
         }
     }
-    @media screen and (max-width : $mobile) {
+    @media screen and (max-width: $mobile) {
         overflow: hidden;
     }
     //* 格局設定 END
@@ -218,7 +218,8 @@
                     ul {
                         list-style-type: none;
                     }
-                    p, li {
+                    p,
+                    li {
                         line-height: 2.5;
                     }
                 }
@@ -234,6 +235,28 @@
 // 治療項目 ==============================================================
 #care {
     margin-top: 200px;
+
+    //* 共通樣式
+    .care-card {
+        text-align: center;
+    }
+
+    //* board 1
+    #care-board-1 {
+        .care-card {
+            margin: 0 auto;
+            padding: 130px 0 80px;
+            min-height: 300px;
+            max-width: 400px;
+            @include test(true, dimgray);
+            &:focus {
+                outline: none;
+            } //取消slick預設的黑框
+        }
+    }
+    //* board 2
+
+    //* board 3
 }
 // 治療項目 END ==========================================================
 // 門診時間 ==============================================================
