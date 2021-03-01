@@ -274,6 +274,10 @@
   list-style-type: none;
 }
 
+#team #team-card-wrap .team-card .team-about .team-sub-card p, #team #team-card-wrap .team-card .team-about .team-sub-card li {
+  line-height: 2.5;
+}
+
 #team #team-card-wrap .team-card:nth-child(n + 2) {
   display: none;
 }

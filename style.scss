@@ -106,7 +106,7 @@
 // 診所簡介 END ==========================================================
 // 醫療團隊 ==============================================================
 #team {
-    // Overall : 格局設定
+    //* 格局設定 : Overall
     max-height: 80vh;
 
     @media screen and (min-width: $desktop) {
@@ -128,7 +128,7 @@
             grid-gap: 5px;
         }
     }
-    //* Part II : 詳細介紹 for Desktop & Tablet
+    //* 格局設定 : (Part II)詳細介紹 for Desktop & Tablet
     @media screen and (min-width: $mobile + 1) {
         #team-card-wrap > .team-card {
             display: grid;
@@ -160,12 +160,12 @@
     @media screen and (max-width : $mobile) {
         overflow: hidden;
     }
-    // Overall END
-    // Respective : Part 0 : 標題
+    //* 格局設定 END
+    //* Respective : Part 0 : 標題
     header {
         padding-bottom: 2em;
     }
-    // Respective : 個別樣式, Part I : 選取按鈕
+    //* Respective : 個別樣式, Part I : 選取按鈕
     #team-btn-box {
         padding: 10px;
         max-width: 100%;
@@ -189,7 +189,7 @@
             background-color: AliceBlue;
         }
     }
-    // Respective : 個別樣式, Part II : 詳細介紹
+    //* Respective : 個別樣式, Part II : 詳細介紹
     #team-card-wrap {
         .team-card {
             background-color: rgba($color-sec-light, 0.6);
@@ -217,6 +217,9 @@
                     }
                     ul {
                         list-style-type: none;
+                    }
+                    p, li {
+                        line-height: 2.5;
                     }
                 }
             }
