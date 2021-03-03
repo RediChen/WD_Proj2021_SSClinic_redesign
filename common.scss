@@ -32,7 +32,7 @@ a {
     border-color: $color-line;
     max-width: 80%;
 }
-.hr-2 {//複合式
+.hr-2 {//複合式；靠左
     margin-left: 1em;
     margin-bottom: 0.5em;
     & > div {
@@ -45,6 +45,11 @@ a {
         margin: 0;
         border-color: $color-sec-dark;
     }
+}
+.hr-3 {
+    margin: 0.5em auto 1em ;
+    max-width: 25%;
+    border-color: $color-sec-dark;
 }
 //通用樣式設定 END ==========================================
 //導覽列 ====================================================

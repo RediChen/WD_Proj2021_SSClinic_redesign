@@ -1,7 +1,7 @@
-//以下暫時註解掉，因為非所有裝置皆採用輪播圖。
-// $("#care-board-1").slick(
-//     {
-//         slidesToShow : 3,
-//         slidesToScroll : 1
-//     }
-// ) ;
+//board-3非所有裝置皆採用輪播圖，待思考作法。
+$("#care-board-3").slick(
+    {
+        slidesToShow : 1,
+        slidesToScroll : 1
+    }
+) ;

@@ -236,33 +236,60 @@
 #care {
     margin-top: 200px;
 
-    //* 共通樣式
-    .care-card {
-        text-align: center;
+    //* 共同樣式
+    
+    .care-card-wrap {
+        //boards
+        margin: 50px auto;
+        box-shadow: 0 5px 5px $color-shade;
+        @media screen and (min-width: $desktop) {
+            max-width: 70vw;
+        }
+
+        .care-card {
+            & > img {
+                display: block;
+                margin: 0 auto;
+            }
+            & > h2 {
+                text-align: center;
+            }
+        }
     }
 
     //* board 1
     #care-board-1 {
-        margin: 0 auto;
+        background-color: rgba($color-sec-light, 0.6);
 
         @media screen and (min-width: $desktop) {
-            max-width: 70vw;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, 1fr);
-            grid-gap: 10px;
 
             .care-card {
                 width: 100%;
                 padding: 45px 0 70px;
-                background-color: rgba($color-text, 0.05);
-                border-radius: 1%;
             }
         }
     }
     //* board 2
+    #care-board-2 {
+        @media screen and (min-width: $desktop) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
 
+            .care-card {
+                flex: 1;
+                margin: 10px 15px;
+            }
+        }
+    }
     //* board 3
+    #care-board-2 {
+        @media screen and (min-width: $desktop) {
+        }
+    }
 }
 // 治療項目 END ==========================================================
 // 門診時間 ==============================================================

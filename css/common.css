@@ -67,6 +67,12 @@ a {
   border-color: HotPink;
 }
 
+.hr-3 {
+  margin: 0.5em auto 1em;
+  max-width: 25%;
+  border-color: HotPink;
+}
+
 nav {
   width: 100%;
   height: 100px;
