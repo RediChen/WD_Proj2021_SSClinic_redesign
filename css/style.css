@@ -291,15 +291,26 @@
   text-align: center;
 }
 
-#care #care-board-1 .care-card {
+#care #care-board-1 {
   margin: 0 auto;
-  padding: 130px 0 80px;
-  min-height: 300px;
-  max-width: 400px;
-  background-color: rgba(105, 105, 105, 0.3);
 }
 
-#care #care-board-1 .care-card:focus {
-  outline: none;
+@media screen and (min-width: 1025px) {
+  #care #care-board-1 {
+    max-width: 70vw;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+  #care #care-board-1 .care-card {
+    width: 100%;
+    padding: 45px 0 70px;
+    background-color: rgba(165, 42, 42, 0.05);
+    border-radius: 1%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -243,15 +243,21 @@
 
     //* board 1
     #care-board-1 {
-        .care-card {
-            margin: 0 auto;
-            padding: 130px 0 80px;
-            min-height: 300px;
-            max-width: 400px;
-            @include test(true, dimgray);
-            &:focus {
-                outline: none;
-            } //取消slick預設的黑框
+        margin: 0 auto;
+
+        @media screen and (min-width: $desktop) {
+            max-width: 70vw;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-gap: 10px;
+
+            .care-card {
+                width: 100%;
+                padding: 45px 0 70px;
+                background-color: rgba($color-text, 0.05);
+                border-radius: 1%;
+            }
         }
     }
     //* board 2
@@ -261,5 +267,5 @@
 // 治療項目 END ==========================================================
 // 門診時間 ==============================================================
 // 門診時間 END ==========================================================
-// 頁尾 ==================================================================
-// 頁尾 END ==============================================================
+// 頁尾 =================================================================
+// 頁尾 END =============================================================
