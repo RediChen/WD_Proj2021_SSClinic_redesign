@@ -67,7 +67,7 @@ a {
   border-color: HotPink;
 }
 
-.hr-3 {
+.hr-3, footer #time-table-footer table th {
   margin: 0.5em auto 1em;
   max-width: 25%;
   border-color: HotPink;
@@ -141,30 +141,41 @@ footer div:first-child iframe {
   height: 300px;
 }
 
-footer dl dt {
+footer dl {
   line-height: 3em;
 }
 
-footer dl dt img {
+footer dl img {
   vertical-align: middle;
-  margin-right: .5em;
+  margin-right: 0.5em;
 }
 
-footer dl dt a {
+footer dl dt > a {
   color: initial;
-  -webkit-transition: color .5s;
-  transition: color .5s;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
 }
 
-footer dl dt a:hover {
+footer dl dt > a:hover {
   color: rgba(165, 42, 42, 0.8);
+}
+
+footer dl dd {
+  text-indent: -2.5em;
+  margin-left: 4em;
 }
 
 footer #time-table-footer table {
   border-collapse: collapse;
+  border: 1px solid #000;
 }
 
-footer #time-table-footer table th, footer #time-table-footer table td {
+footer #time-table-footer table tr > :first-child {
+  border-right: 1px solid #000;
+}
+
+footer #time-table-footer table th,
+footer #time-table-footer table td {
   padding: 2px 3px;
   text-align: center;
 }

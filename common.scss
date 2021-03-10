@@ -113,32 +113,39 @@ footer {
     }
     // Part 2 : 聯絡 & 交通方式
     dl {
-        dt {
-            $h-dt : 3em ;
-            line-height: $h-dt;
-            img {
-                vertical-align: middle;
-                margin-right: .5em;
+        line-height: 3em;
+        img {
+            vertical-align: middle;
+            margin-right: 0.5em;
+        }
+        dt > a {
+            color: initial;
+            transition: color 0.5s;
+            &:hover {
+                color: rgba($color-text, 0.8);
             }
-            a {
-                color: initial;
-                transition: color .5s;
-                &:hover {
-                    color :rgba($color-text, 0.8) ;
-                }
-            }
+        }
+        dd {
+            text-indent: -2.5em;
+            margin-left: 4em;
         }
     }
     // Part 3 : 門診時間簡表
     #time-table-footer {
         table {
             border-collapse: collapse;
-            th, td {
+            border: 1px solid #000;
+            tr > :first-child {
+                border-right: 1px solid #000;
+            }
+            th,
+            td {
                 padding: 2px 3px;
                 text-align: center;
             }
             th {
                 border-bottom: 1px solid #000;
+                @extend .hr-3 ;
             }
         }
     }
