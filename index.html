@@ -696,6 +696,7 @@
     <!-- 門診時間 END ========================================================== -->
     <!-- 頁尾 ================================================================== -->
     <footer>
+        <!-- Part 1 : 嵌入Google地圖 -->
         <div id="map">
             <iframe frameborder="0" allowfullscreen="false"
                 src="https://www.google.com/maps?q=桃園市桃園區大有路360號(心晴診所)&language=zh-Hant-TW&z=15&t=p&output=embed">
@@ -705,18 +706,59 @@
             <!-- z代表縮放比例：（zoom out）1～18（in）-->
             <!-- output=embed代表採用嵌入的樣式 -->
         </div>
-        <!-- 交通方式 -->
+        <!-- Part 2 : 聯絡 & 交通方式 -->
         <dl>
-            <dt>地址</dt>
-            <dd>桃園市桃園區大有路360號1樓</dd>
+            <dt><img src="./img/iconTel.png"></img>電話：<a href="tel:+886-3-3467895">(03)346-7895</a></dt>
+            <!-- tel的語法備註 -->
+            <dt><img src="./img/iconAdr.png"></img>地址：桃園市桃園區大有路360號1樓</dt>
             <dt>交通方式</dt>
             <dd>大眾交通：搭乘105、168、209、602、707、 9069、免費公車環狀線紅‧ 藍線，在「新光三越」站下車</dd>
             <dd>自行開車：國道一號，在南崁交流道下，往桃園春日路。後接健行路，再接大有路，開至360號。</dd>
         </dl>
-        <div>
+        <!-- Part 3 : 門診時間簡表 -->
+        <div id="time-table-footer">
+            <table>
+                <tr>
+                    <th>時段</th>
+                    <th>一</th>
+                    <th>二</th>
+                    <th>三</th>
+                    <th>四</th>
+                    <th>五</th>
+                    <th>六</th>
+                </tr>
+                <tr>
+                    <td>上午</td>
+                    <td>&bull;</td>
+                    <td></td>
+                    <td>&bull;</td>
+                    <td>&bull;</td>
+                    <td></td>
+                    <td>&bull;</td>
+                </tr>
+                <tr>
+                    <td>下午</td>
+                    <td>&bull;</td>
+                    <td>&bull;</td>
+                    <td>&bull;</td>
+                    <td>&bull;</td>
+                    <td>&bull;</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>晚上</td>
+                    <td>&bull;</td>
+                    <td>&bull;</td>
+                    <td>&bull;</td>
+                    <td>&bull;</td>
+                    <td>&bull;</td>
+                    <td></td>
+                </tr>
+            </table>
             <p>我是段落門診時間簡表</p>
             <a href="#">詳細門診時間</a>
         </div>
+        <!-- Part 4 : 友善連結 & 版權聲明 -->
         <div>
             <!-- 友善連結 -->
             <a href="http://peacefulmindclinic.com/" target="blank">
