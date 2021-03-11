@@ -90,8 +90,8 @@ nav {
   top: 0;
   background-color: pink;
   border-radius: 0 0 80% 80% / 0 0 55% 55%;
-  -webkit-box-shadow: 0 0 3px #55555555;
-          box-shadow: 0 0 3px #55555555;
+  -webkit-box-shadow: 0 0 3px rgba(128, 128, 128, 0.3);
+          box-shadow: 0 0 3px rgba(128, 128, 128, 0.3);
   z-index: 2;
 }
 
@@ -130,14 +130,14 @@ nav .nav-a:active {
 
 footer {
   background-color: pink;
-  -webkit-box-shadow: 0 0 3px #55555555;
-          box-shadow: 0 0 3px #55555555;
+  -webkit-box-shadow: 0 0 3px rgba(128, 128, 128, 0.3);
+          box-shadow: 0 0 3px rgba(128, 128, 128, 0.3);
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 65% auto;
       grid-template-columns: 65% auto;
-  grid-gap: 20px;
-  padding: 15px;
+  grid-gap: 30px;
+  padding: 50px 20px 20px;
 }
 
 footer div:first-child iframe {
@@ -196,7 +196,25 @@ footer #time-table-footer table tr span {
 
 footer #time-table-footer a {
   display: block;
-  margin-top: 1em;
+  margin: 1em auto;
+  background-color: rgba(255, 105, 180, 0.3);
+  -webkit-box-shadow: 0 0 10px rgba(128, 128, 128, 0.3);
+          box-shadow: 0 0 10px rgba(128, 128, 128, 0.3);
+  width: 6em;
+  height: 2.5em;
+  line-height: 2.5em;
+  border-radius: 50% / 20%;
+  -webkit-transition: background-color .5s;
+  transition: background-color .5s;
+}
+
+footer #time-table-footer a:hover {
+  background-color: rgba(255, 105, 180, 0.8);
+}
+
+footer #time-table-footer a:active {
+  -webkit-filter: invert(5%);
+          filter: invert(5%);
 }
 
 footer dl {
@@ -222,5 +240,30 @@ footer dl dt > a:hover {
 footer dl dd {
   text-indent: -2.5em;
   margin-left: 4em;
+}
+
+footer div:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer div:last-child a {
+  margin-bottom: 1em;
+  width: 45%;
+}
+
+footer div:last-child a img {
+  width: 100%;
 }
 /*# sourceMappingURL=common.css.map */

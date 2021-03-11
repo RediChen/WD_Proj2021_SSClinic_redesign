@@ -10,7 +10,8 @@ body {
 a {
     //reset the default
     text-decoration: none;
-    &:link, &:visited {
+    &:link,
+    &:visited {
         color: initial;
     }
 }
@@ -67,7 +68,7 @@ nav {
     top: 0;
     background-color: $color-pri-light;
     border-radius: 0 0 80% 80% / 0 0 55% 55%;
-    box-shadow: 0 0 3px #55555555;
+    box-shadow: 0 0 3px $color-shade;
     z-index: 2;
     // 高度微調：from 內側
     // TODO 規律一點的統一下降
@@ -102,15 +103,18 @@ nav {
 }
 //導覽列 END ================================================
 footer {
+    // Part 0 : 整體設定
     background-color: $color-pri-light;
-    box-shadow: 0 0 3px #55555555;
+    box-shadow: 0 0 3px $color-shade;
     display: grid;
     grid-template-columns: 65% auto;
-    grid-gap: 20px;
-    padding: 15px;
+    grid-gap: 30px;
+    padding: 50px 20px 20px;
+
     // Part 1 : 嵌入Google地圖
     div:first-child {
         iframe {
+            //TODO 檢視rwd調整需求
             width: 100%;
             height: 300px;
         }
@@ -120,10 +124,9 @@ footer {
         background-color: rgba($color-sec-light, 0.15);
         text-align: center;
         hr {
-            @extend .hr-3 ;
+            @extend .hr-3;
             max-width: 60%;
         }
-
         table {
             margin: auto;
             width: 80%;
@@ -156,7 +159,7 @@ footer {
                 & > :nth-child(n + 1) {
                     padding: 0 3px;
                 }
-                //bullets                
+                //bullets
                 span {
                     font-size: 2em;
                 }
@@ -164,7 +167,20 @@ footer {
         }
         a {
             display: block;
-            margin-top: 1em;
+            margin: 1em auto;
+            background-color: rgba($color-sec-dark, 0.3);
+            box-shadow: 0 0 10px $color-shade;
+            width: 6em;
+            height: 2.5em;
+            line-height: 2.5em;
+            border-radius: 50% / 20%;
+            transition: background-color .5s;
+            &:hover {
+                background-color: rgba($color-sec-dark, 0.8);
+            }
+            &:active {
+                filter: invert(5%);
+            }
         }
     }
     // Part 3 : 聯絡 & 交通方式
@@ -188,4 +204,20 @@ footer {
         }
     }
     // Part 4 : 友善連結 & 版權聲明
+    div:last-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+        a {
+            margin-bottom: 1em;
+            width: 45%;
+            img {
+                width: 100%;
+            }
+        }
+        p {
+            // margin-top: 1em;
+        }
+    }
 }
