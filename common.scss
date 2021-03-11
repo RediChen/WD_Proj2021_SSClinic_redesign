@@ -8,7 +8,11 @@ body {
     background-color: #eee;
 }
 a {
+    //reset the default
     text-decoration: none;
+    &:link, &:visited {
+        color: initial;
+    }
 }
 .logo img {
     transition: filter 0.5s;
@@ -102,8 +106,8 @@ footer {
     box-shadow: 0 0 3px #55555555;
     display: grid;
     grid-template-columns: 65% auto;
-    grid-gap: 15px;
-    padding-top: 15px;
+    grid-gap: 20px;
+    padding: 15px;
     // Part 1 : 嵌入Google地圖
     div:first-child {
         iframe {
@@ -111,8 +115,61 @@ footer {
             height: 300px;
         }
     }
-    // Part 2 : 聯絡 & 交通方式
+    // Part 2 : 門診時間簡表
+    #time-table-footer {
+        background-color: rgba($color-sec-light, 0.15);
+        text-align: center;
+        hr {
+            @extend .hr-3 ;
+            max-width: 60%;
+        }
+
+        table {
+            margin: auto;
+            width: 80%;
+            height: 60%;
+            border-collapse: collapse;
+            border: 1px solid #000;
+            background-color: rgba($color-sec-dark, 0.25);
+            text-align: center;
+
+            tr {
+                //first row
+                &:first-of-type {
+                    background-color: rgba($color-sec-dark, 0.6);
+                    border-bottom: 1px solid #000;
+                    line-height: 2em;
+                    @include font-zh(500, 1em);
+                }
+                //other rows
+                &:nth-child(n + 1) {
+                    padding: 2px 0;
+                }
+                //first column
+                & > :first-child {
+                    background-color: rgba($color-sec-dark, 0.6);
+                    width: 3em;
+                    border-right: 1px solid #000;
+                    @include font-zh(500, 1em);
+                }
+                //other columns
+                & > :nth-child(n + 1) {
+                    padding: 0 3px;
+                }
+                //bullets                
+                span {
+                    font-size: 2em;
+                }
+            }
+        }
+        a {
+            display: block;
+            margin-top: 1em;
+        }
+    }
+    // Part 3 : 聯絡 & 交通方式
     dl {
+        background-color: rgba($color-sec-light, 0.15);
         line-height: 3em;
         img {
             vertical-align: middle;
@@ -128,25 +185,6 @@ footer {
         dd {
             text-indent: -2.5em;
             margin-left: 4em;
-        }
-    }
-    // Part 3 : 門診時間簡表
-    #time-table-footer {
-        table {
-            border-collapse: collapse;
-            border: 1px solid #000;
-            tr > :first-child {
-                border-right: 1px solid #000;
-            }
-            th,
-            td {
-                padding: 2px 3px;
-                text-align: center;
-            }
-            th {
-                border-bottom: 1px solid #000;
-                @extend .hr-3 ;
-            }
         }
     }
     // Part 4 : 友善連結 & 版權聲明

@@ -12,6 +12,10 @@ a {
   text-decoration: none;
 }
 
+a:link, a:visited {
+  color: initial;
+}
+
 .logo img {
   -webkit-transition: -webkit-filter 0.5s;
   transition: -webkit-filter 0.5s;
@@ -67,7 +71,7 @@ a {
   border-color: HotPink;
 }
 
-.hr-3, footer #time-table-footer table th {
+.hr-3, footer #time-table-footer hr {
   margin: 0.5em auto 1em;
   max-width: 25%;
   border-color: HotPink;
@@ -132,8 +136,8 @@ footer {
   display: grid;
   -ms-grid-columns: 65% auto;
       grid-template-columns: 65% auto;
-  grid-gap: 15px;
-  padding-top: 15px;
+  grid-gap: 20px;
+  padding: 15px;
 }
 
 footer div:first-child iframe {
@@ -141,7 +145,62 @@ footer div:first-child iframe {
   height: 300px;
 }
 
+footer #time-table-footer {
+  background-color: rgba(255, 240, 245, 0.15);
+  text-align: center;
+}
+
+footer #time-table-footer hr {
+  max-width: 60%;
+}
+
+footer #time-table-footer table {
+  margin: auto;
+  width: 80%;
+  height: 60%;
+  border-collapse: collapse;
+  border: 1px solid #000;
+  background-color: rgba(255, 105, 180, 0.25);
+  text-align: center;
+}
+
+footer #time-table-footer table tr:first-of-type {
+  background-color: rgba(255, 105, 180, 0.6);
+  border-bottom: 1px solid #000;
+  line-height: 2em;
+  font-family: "Noto Serif TC", serif;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+footer #time-table-footer table tr:nth-child(n + 1) {
+  padding: 2px 0;
+}
+
+footer #time-table-footer table tr > :first-child {
+  background-color: rgba(255, 105, 180, 0.6);
+  width: 3em;
+  border-right: 1px solid #000;
+  font-family: "Noto Serif TC", serif;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+footer #time-table-footer table tr > :nth-child(n + 1) {
+  padding: 0 3px;
+}
+
+footer #time-table-footer table tr span {
+  font-size: 2em;
+}
+
+footer #time-table-footer a {
+  display: block;
+  margin-top: 1em;
+}
+
 footer dl {
+  background-color: rgba(255, 240, 245, 0.15);
   line-height: 3em;
 }
 
@@ -163,24 +222,5 @@ footer dl dt > a:hover {
 footer dl dd {
   text-indent: -2.5em;
   margin-left: 4em;
-}
-
-footer #time-table-footer table {
-  border-collapse: collapse;
-  border: 1px solid #000;
-}
-
-footer #time-table-footer table tr > :first-child {
-  border-right: 1px solid #000;
-}
-
-footer #time-table-footer table th,
-footer #time-table-footer table td {
-  padding: 2px 3px;
-  text-align: center;
-}
-
-footer #time-table-footer table th {
-  border-bottom: 1px solid #000;
 }
 /*# sourceMappingURL=common.css.map */
