@@ -10,6 +10,12 @@ $desktop: 1025px; //lower bound
 $tablet: 1024px; //upper bound
 $mobile: 767px; //upper bound
 $h-nav: 100px;
+//============ 門診時間表用
+$color-children : lightgoldenrodyellow ;
+$color-adult : skyblue ;
+$color-nature : pink ;
+$color-closed : #999 ;
+//============
 @mixin font-zh($wt, $sz) {
     //wt is in 200, 300, 500, 700, 900
     font-family: "Noto Serif TC", serif;

@@ -57,7 +57,7 @@ a {
     max-width: 25%;
     border-color: $color-sec-dark;
 }
-//通用樣式設定 END ==========================================
+//通用樣式設定 END ===========================================
 //導覽列 ====================================================
 nav {
     width: 100%;
@@ -120,11 +120,10 @@ footer {
         }
     }
     // Part 2 : 門診時間簡表
-    #time-table-footer {
+    #time-footer {
         background-color: rgba($color-sec-light, 0.15);
         text-align: center;
         hr {
-            @extend .hr-3;
             max-width: 60%;
         }
         table {
