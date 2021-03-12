@@ -554,15 +554,15 @@
     <!-- 治療項目 ============================================================== -->
     <section id="care">
         <!-- Part 0 : 標題 -->
-        <div>
+        <header>
             <h1 class="title-1">治療項目</h1>
             <hr class="hr-1">
-        </div>
+        </header>
         <!-- Part I : 主要治療項目 -->
-        <div>
+        <header>
             <h1 class="title-2">主要治療項目</h1>
             <hr class="hr-3">
-        </div>
+        </header>
         <div class="care-card-wrap" id="care-board-1">
             <div class="care-card">
                 <img src="./img/unhappy.png" alt="過動症" title="耶～～～～～～">
@@ -590,10 +590,10 @@
             </div>
         </div>
         <!-- Part II : 所有治療項目 -->
-        <div>
+        <header>
             <h1 class="title-2">所有治療項目</h1>
             <hr class="hr-3">
-        </div>
+        </header>
         <div class="care-card-wrap" id="care-board-2">
             <div class="care-card">
                 <img src="./img/cloudy.png" alt="">
@@ -665,10 +665,10 @@
             </div>
         </div>
         <!-- Part III : 其他服務項目 -->
-        <div>
+        <header>
             <h1 class="title-2">其他服務項目</h1>
             <hr class="hr-3">
-        </div>
+        </header>
         <div class="care-card-wrap" id="care-board-3">
             <div class="care-card">
                 <img src="./img/warm_heart.png" alt="">
@@ -691,10 +691,70 @@
     <!-- 治療項目 END ========================================================== -->
     <!-- 門診時間 ============================================================== -->
     <section id="time">
-
+        <!-- Part 0 : 標題 -->
+        <header>
+            <h1 class="title-1">門診時間表</h1>
+            <hr class="hr-1">
+        </header>
+        <!-- Part I : 時間表 -->
+        <div id="time-table">
+            <table>
+                <tr>
+                    <th></th>
+                    <th>一</th>
+                    <th>二</th>
+                    <th>三</th>
+                    <th>四</th>
+                    <th>五</th>
+                    <th>六</th>
+                </tr>
+                <tr>
+                    <td>上午<br>09:00<br>|<br>12:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>下午<br>14:30<br>|<br>17:30</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>晚上<br>18:00<br>|<br>21:00</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <!-- Part II : 時間表圖例 -->
+        <div id="table-eg"></div>
+        <!-- Part III : 掛號須知 -->
+        <div id="register-note">
+            <h3></h3>
+            <p></p>
+            <div class="note-btn">初次看診</div>
+            <div class="note-btn">今日看診</div>
+            <div class="note-btn">之後看診</div>
+            <div class="note-pages"></div>
+            <div class="note-pages"></div>
+            <div class="note-pages"></div>
+        </div>
+        <!-- Part IV : 門診異動 -->
+        <div></div>
     </section>
     <!-- 門診時間 END ========================================================== -->
-    <!-- 頁尾 ================================================================== -->
+    <!-- 頁尾 ================================================================= -->
     <footer>
         <!-- Part 1 : 嵌入Google地圖 -->
         <div id="map">
@@ -707,9 +767,9 @@
             <!-- output=embed代表採用嵌入的樣式 -->
         </div>
         <!-- Part 2 : 門診時間簡表 -->
-        <div id="time-table-footer">
+        <div id="time-footer">
             <h2 class="title-2">門診時間簡表</h2>
-            <hr>
+            <hr class="hr-3">
             <table>
                 <tr>
                     <th>時段</th>
@@ -749,7 +809,6 @@
                 </tr>
             </table>
             <a href="#">詳細資訊</a>
-            <!-- TODO 未設定 -->
         </div>
         <!-- Part 3 : 聯絡 & 交通方式 -->
         <dl class="p-text">
@@ -760,7 +819,6 @@
                 9069、免費公車環狀線紅‧藍線，在「新光三越」站下車</dd>
             <dd><img src="./img/iconCar.png">自行開車：國道一號，在南崁交流道下，往桃園春日路。後接健行路，再接大有路，開至360號。</dd>
         </dl>
-
         <!-- Part 4 : 友善連結 & 版權聲明 -->
         <div>
             <!-- 友善連結 -->
