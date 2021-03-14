@@ -16,7 +16,12 @@
   font-weight: 900;
   font-size: 5em;
   color: DeepPink;
-  text-shadow: 0 0 1px pink, 1px 1px 2px HotPink, 2px 2px 1px rgba(255, 105, 180, 0.3), 0 0 40px LavenderBlush, 0 30px 20px LavenderBlush;
+  text-shadow: 1px 1px 0 LavenderBlush, 2px 2px 0 #e1cdd5, 3px 3px 0 #d1bdc5, 4px 4px 0 #c1adb5, 5px 5px 0 #b19da5;
+  display: block;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 50px 10px LavenderBlush inset;
+          box-shadow: 0 0 50px 10px LavenderBlush inset;
+  padding-bottom: 10px;
 }
 
 #intro #front-img #intro-overlay1 {
@@ -30,6 +35,7 @@
   color: brown;
   letter-spacing: 5px;
   margin-left: 5px;
+  text-shadow: 3px 2px 2px #55555555;
 }
 
 @media screen and (min-width: 1025px) {
@@ -63,6 +69,7 @@
 }
 
 #intro #intro-text {
+  margin-top: -5px;
   width: 100%;
   height: 100vh;
   overflow: hidden;
