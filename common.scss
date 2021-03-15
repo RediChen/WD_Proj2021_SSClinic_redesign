@@ -69,12 +69,15 @@ nav {
     background-color: $color-pri-light;
     border-radius: 0 0 80% 80% / 0 0 55% 55%;
     box-shadow: 0 0 3px $color-shade;
+    //TODO -(JS)-> 向下滾動時隱藏op0，向上或hover恢復op1
 
     //* Part 1 : LOGO
     & > a {
+        display: block;
         position: absolute;
-        top: 0;
-        margin: 0 auto;
+        top: 3px;
+        left: 50%;
+        transform: translateX(-50%);
     }
     //* Part 2 : HBGer
     div:nth-child(2) {

@@ -91,9 +91,12 @@ nav {
 }
 
 nav > a {
+  display: block;
   position: absolute;
-  top: 0;
-  margin: 0 auto;
+  top: 3px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 nav div:nth-child(2) {
