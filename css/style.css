@@ -19,8 +19,22 @@
   border-radius: 50%;
   -webkit-box-shadow: 0 0 40px 10px LavenderBlush inset;
           box-shadow: 0 0 40px 10px LavenderBlush inset;
-  top: 34vh;
-  left: 40vw;
+}
+
+@media screen and (min-width: 1025px) {
+  #intro > div:first-child #intro-disk {
+    top: 34vh;
+    left: 40vw;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #intro > div:first-child #intro-disk {
+    top: 25vh;
+    left: 52%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
 }
 
 #intro > div:first-child h1 {

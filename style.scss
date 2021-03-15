@@ -14,17 +14,19 @@
         }
         #intro-disk {
             position: absolute;
-            // @media screen and (min-width: $desktop) {
-                width: 22em;
-                height: 4em;
-                border-radius: 50%;
-                box-shadow: 0 0 40px 10px $color-sec-light inset;
+            width: 22em;
+            height: 4em;
+            border-radius: 50%;
+            box-shadow: 0 0 40px 10px $color-sec-light inset;
+            @media screen and (min-width: $desktop) {
                 top: 34vh;
                 left: 40vw;
-            // }
-            // @media screen and (max-width: $tablet) {
-            //     top: 5em;
-            // }
+            }
+            @media screen and (max-width: $tablet) {
+                top: 25vh;
+                left: 52%;
+                transform: translateX(-50%);
+            }
         }
         h1 {
             position: absolute;
