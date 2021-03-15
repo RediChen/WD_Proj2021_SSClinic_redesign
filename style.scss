@@ -2,7 +2,7 @@
 
 // 診所簡介 ==============================================================
 #intro {
-    margin-top: -$h-nav; //避免任何縫隙
+    margin-top: -$h-nav + 20px; //避免任何縫隙
     //* Part I : 首頁形象
     & > div:first-child {
         //Part I-1 : 樣式設定
@@ -10,20 +10,21 @@
             width: 100%;
             object-fit: cover;
             overflow: hidden;
+            filter: contrast(0.65) brightness(1.2) saturate(1.3);
         }
         #intro-disk {
             position: absolute;
-            @media screen and (min-width: $desktop) {
+            // @media screen and (min-width: $desktop) {
                 width: 22em;
                 height: 4em;
                 border-radius: 50%;
                 box-shadow: 0 0 40px 10px $color-sec-light inset;
                 top: 34vh;
                 left: 40vw;
-            }
-            @media screen and (max-width: $tablet) {
-                top: 5em;
-            }
+            // }
+            // @media screen and (max-width: $tablet) {
+            //     top: 5em;
+            // }
         }
         h1 {
             position: absolute;
@@ -35,19 +36,24 @@
                 text-shadow: 1px -1px 0 $color-sec-light, 2px -2px 0 #e1cdd5, 3px -3px 0 #d1bdc5, 4px -4px 0 #c1adb5,5px -5px 0 #b19da5;
             }
             @media screen and (max-width: $tablet) {
-                top: 16vh;
-                left: 50%;
+                top: 18vh;
+                left: 52%;
                 transform: translateX(-50%);
                 text-shadow: -1px -1px 0 $color-sec-light, -2px -2px 0 #e1cdd5, -3px -3px 0 #d1bdc5, -4px -4px 0 #c1adb5, -5px -5px 0 #b19da5;
             }
+            @media screen and (max-width: $mobile) {
+                top: 17vh;
+                @include font-zh(900, 3em);
+                word-break: keep-all;//不准換行
+            }
         }
-
         h2 {
+            $offset-ls : 5px ;//因為letter spacing的微調
             // for 定位
             display: block;
             // 背景樣式
             position: absolute;
-            padding: 1em 2em;
+            padding: 1em 0;
             background-color: rgba(white, 0.6);
             box-shadow: 0 0 5px 5px rgba(white, 0.75);
             // 文字樣式
@@ -55,22 +61,27 @@
             font-size: 2em;
             color: brown;
             letter-spacing: 5px;
-            margin-left: 5px;
+
             @media screen and (min-width: $desktop) {
                 top: 46vh;
                 right: 0;
+                transform: translateX($offset-ls);
                 padding-right: 15vw;
                 text-shadow: 1px -1px 0px burlywood, 5px -4px 2px #55555555;
             }
             @media screen and (max-width: $tablet) {
-                width: 50%;
+                width: 100%;
                 top: 44vh;
+                left: 50%;
+                transform: translateX(calc(-50% + #{$offset-ls}));
                 text-shadow: -1px -1px 0px burlywood, -5px -3px 2px #55555555;
             }
             @media screen and (max-width: $mobile) {
-                top: 44vh;
-                text-shadow: -1px -1px 0px burlywood, -5px -3px 2px #55555555;
-            }
+                top: 32vh;
+                text-shadow: -1px -1px 0px burlywood, -4px -2px 4px #55555555;
+            padding: 0.5em 0;
+            font-size: 1.5em;
+        }
         }
     }
     // Part II : 診所簡介
@@ -323,7 +334,8 @@
     }
     //* board 3
     #care-board-3 {
-        padding-bottom: 20px;
+            overflow: hidden;
+            padding-bottom: 20px;
         .slick-arrow::before {
             position: absolute;
             color: #990000;
