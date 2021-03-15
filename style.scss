@@ -322,7 +322,20 @@
         }
     }
     //* board 3
-    #care-board-2 {
+    #care-board-3 {
+        padding-bottom: 20px;
+        .slick-arrow::before {
+            position: absolute;
+            color: #990000;
+            top: -15px;
+            z-index: 3;
+        }
+        .slick-prev::before {
+            left: 80px;
+        }
+        .slick-next::before {
+            right: 30px;
+        }
         @media screen and (max-width: $mobile) {
             display: grid;
             grid-template-columns: repeat(2, 1fr);

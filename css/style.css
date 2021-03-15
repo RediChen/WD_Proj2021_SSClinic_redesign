@@ -404,8 +404,27 @@
   }
 }
 
+#care #care-board-3 {
+  padding-bottom: 20px;
+}
+
+#care #care-board-3 .slick-arrow::before {
+  position: absolute;
+  color: #990000;
+  top: -15px;
+  z-index: 3;
+}
+
+#care #care-board-3 .slick-prev::before {
+  left: 80px;
+}
+
+#care #care-board-3 .slick-next::before {
+  right: 30px;
+}
+
 @media screen and (max-width: 767px) {
-  #care #care-board-2 {
+  #care #care-board-3 {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[2];
