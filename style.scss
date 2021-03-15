@@ -2,61 +2,74 @@
 
 // 診所簡介 ==============================================================
 #intro {
-    margin-top: -$h-nav; //向上拉，以避免任何縫隙
-    // Part I : 首頁形象
+    margin-top: -$h-nav; //避免任何縫隙
+    //* Part I : 首頁形象
     & > div:first-child {
+        //Part I-1 : 樣式設定
         img {
             width: 100%;
             object-fit: cover;
             overflow: hidden;
         }
+        #intro-disk {
+            position: absolute;
+            @media screen and (min-width: $desktop) {
+                width: 22em;
+                height: 4em;
+                border-radius: 50%;
+                box-shadow: 0 0 40px 10px $color-sec-light inset;
+                top: 34vh;
+                left: 40vw;
+            }
+            @media screen and (max-width: $tablet) {
+                top: 5em;
+            }
+        }
         h1 {
             position: absolute;
             @include font-zh(900, 5em);
             color: $color-pri-dark;
-            text-shadow: 1px 1px 0 $color-sec-light, 2px 2px 0 #e1cdd5, 3px 3px 0 #d1bdc5, 4px 4px 0 #c1adb5,
-                5px 5px 0 #b19da5;
-            display: block;
-            border-radius: 50%;
-            box-shadow: 0 0 50px 10px $color-sec-light inset;
-            padding-bottom: 10px;
-        }
-        & > div {
-            position: absolute;
-            text-align: center;
-            padding: 1em 2em;
-            h2 {
-                font-size: 2em;
-                color: brown;
-                letter-spacing: 5px;
-                margin-left: 5px;
-                text-shadow: 3px 2px 2px #55555555;
+            @media screen and (min-width: $desktop) {
+                top: 26vh;
+                left: 41vw;
+                text-shadow: 1px -1px 0 $color-sec-light, 2px -2px 0 #e1cdd5, 3px -3px 0 #d1bdc5, 4px -4px 0 #c1adb5,5px -5px 0 #b19da5;
             }
-        }
-        //以下是位置定位
-        @media screen and (min-width: $desktop) {
-            h1 {
-                top: 25vh;
-                left: 40vw;
-            }
-            & > div {
-                width: 24em;
-                top: 45vh;
-                right: 18vw;
-                background-color: rgba(white, 0.6);
-            }
-        }
-        @media screen and (max-width: $tablet) {
-            h1 {
+            @media screen and (max-width: $tablet) {
                 top: 16vh;
                 left: 50%;
                 transform: translateX(-50%);
+                text-shadow: -1px -1px 0 $color-sec-light, -2px -2px 0 #e1cdd5, -3px -3px 0 #d1bdc5, -4px -4px 0 #c1adb5, -5px -5px 0 #b19da5;
             }
-            & > div {
-                width: 100vw;
+        }
+
+        h2 {
+            // for 定位
+            display: block;
+            // 背景樣式
+            position: absolute;
+            padding: 1em 2em;
+            background-color: rgba(white, 0.6);
+            box-shadow: 0 0 5px 5px rgba(white, 0.75);
+            // 文字樣式
+            text-align: center;
+            font-size: 2em;
+            color: brown;
+            letter-spacing: 5px;
+            margin-left: 5px;
+            @media screen and (min-width: $desktop) {
+                top: 46vh;
+                right: 0;
+                padding-right: 15vw;
+                text-shadow: 1px -1px 0px burlywood, 5px -4px 2px #55555555;
+            }
+            @media screen and (max-width: $tablet) {
+                width: 50%;
                 top: 44vh;
-                background-color: rgba(white, 0.75);
-                box-shadow: 0 0 5px 5px rgba(white, 0.75);
+                text-shadow: -1px -1px 0px burlywood, -5px -3px 2px #55555555;
+            }
+            @media screen and (max-width: $mobile) {
+                top: 44vh;
+                text-shadow: -1px -1px 0px burlywood, -5px -3px 2px #55555555;
             }
         }
     }
