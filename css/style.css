@@ -3,14 +3,14 @@
   margin-top: -100px;
 }
 
-#intro #front-img img {
+#intro > div:first-child img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   overflow: hidden;
 }
 
-#intro #front-img h1 {
+#intro > div:first-child h1 {
   position: absolute;
   font-family: "Noto Serif TC", serif;
   font-weight: 900;
@@ -24,13 +24,13 @@
   padding-bottom: 10px;
 }
 
-#intro #front-img #intro-overlay1 {
+#intro > div:first-child > div {
   position: absolute;
   text-align: center;
   padding: 1em 2em;
 }
 
-#intro #front-img #intro-overlay1 h2 {
+#intro > div:first-child > div h2 {
   font-size: 2em;
   color: brown;
   letter-spacing: 5px;
@@ -39,11 +39,11 @@
 }
 
 @media screen and (min-width: 1025px) {
-  #intro #front-img h1 {
+  #intro > div:first-child h1 {
     top: 25vh;
     left: 40vw;
   }
-  #intro #front-img #intro-overlay1 {
+  #intro > div:first-child > div {
     width: 24em;
     top: 45vh;
     right: 18vw;
@@ -52,14 +52,13 @@
 }
 
 @media screen and (max-width: 1024px) {
-  #intro #front-img h1 {
+  #intro > div:first-child h1 {
     top: 16vh;
     left: 50%;
-    display: block;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
   }
-  #intro #front-img #intro-overlay1 {
+  #intro > div:first-child > div {
     width: 100vw;
     top: 44vh;
     background-color: rgba(255, 255, 255, 0.75);
@@ -68,7 +67,7 @@
   }
 }
 
-#intro #intro-text {
+#intro > div:last-child {
   margin-top: -5px;
   width: 100%;
   height: 100vh;
@@ -77,13 +76,13 @@
   background-image: linear-gradient(180deg, skyblue, snow 85%, snow 95%, lightyellow);
 }
 
-#intro #intro-text #intro-overlay2 {
+#intro > div:last-child > div {
   background-color: rgba(255, 240, 245, 0.3);
   border-radius: 5%;
 }
 
 @media screen and (min-width: 1025px) {
-  #intro #intro-text #intro-overlay2 {
+  #intro > div:last-child > div {
     width: 40%;
     margin: 5% auto 0;
     padding: 2.5em 2em 5em;
@@ -91,35 +90,35 @@
 }
 
 @media screen and (max-width: 1024px) {
-  #intro #intro-text #intro-overlay2 {
+  #intro > div:last-child > div {
     width: 70%;
     margin: 20% auto 0;
     padding: 2.5em 2em 5em;
   }
 }
 
-#intro #intro-text #intro-overlay2 p {
+#intro > div:last-child > div p {
   line-height: 2.5;
   text-indent: 2em;
 }
 
-#intro #intro-text #intro-overlay2 p span {
+#intro > div:last-child > div p span {
   color: DeepPink;
   font-weight: 700;
   background-color: rgba(255, 240, 245, 0.3);
 }
 
-#intro #intro-text #intro-overlay2 ul {
+#intro > div:last-child > div ul {
   line-height: 2.5;
   list-style-type: none;
   text-indent: 4em;
 }
 
-#intro #intro-text #intro-overlay2 ul u {
+#intro > div:last-child > div ul u {
   font-weight: 700;
 }
 
-#intro #intro-text #intro-overlay2 ul span {
+#intro > div:last-child > div ul span {
   color: DeepPink;
   font-weight: 700;
   background-color: rgba(255, 240, 245, 0.3);
