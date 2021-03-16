@@ -138,7 +138,7 @@
 // 醫療團隊 ==============================================================
 #team {
     //* 格局設定 : Overall
-    max-height: 80vh;
+    max-height: 80vh;//TODO 待調整
 
     @media screen and (min-width: $desktop) {
         margin-top: 50px;
@@ -272,15 +272,19 @@
     .care-card-wrap {
         //boards
         margin: 50px auto;
+        padding: 50px;
         box-shadow: 0 5px 5px $color-shade;
         @media screen and (min-width: $desktop) {
             max-width: 70vw;
         }
 
         .care-card {
+            // 只有板1&3使用img，2使用bg-img
             & > img {
                 display: block;
                 margin: 0 auto;
+                width: 128px;
+                height: 128px;
             }
             & > h2 {
                 text-align: center;
@@ -291,16 +295,24 @@
     //* board 1
     #care-board-1 {
         background-color: rgba($color-24, 0.6);
+        display: grid;
+        grid-gap: 50px;
 
         @media screen and (min-width: $desktop) {
-            display: grid;
             grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(2, 1fr);
 
             .care-card {
                 width: 100%;
                 padding: 45px 0 70px;
             }
+        }
+        @media screen and (max-width : $tablet) {
+            grid-template-columns: repeat(2, 1fr);
+            
+        }
+        @media screen and (max-width : $mobile) {
+            grid-template-columns: repeat(1, 1fr);
+            
         }
     }
     //* board 2
@@ -330,9 +342,14 @@
                 margin: 10px 15px;
             }
         }
+        //TODO [全部展開]-(JS)->from overf:auto to overf:none
         @media screen and (max-width: $tablet) {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
+        }
+        @media screen and (max-width: $mobile) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
         }
     }
     //* board 3
@@ -346,10 +363,10 @@
             z-index: 3;
         }
         .slick-prev::before {
-            left: 80px;
+            left: 45px;
         }
         .slick-next::before {
-            right: 30px;
+            right: 35px;
         }
         @media screen and (max-width: $mobile) {
             display: grid;

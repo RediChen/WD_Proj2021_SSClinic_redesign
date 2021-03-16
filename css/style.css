@@ -346,6 +346,7 @@
 
 #care .care-card-wrap {
   margin: 50px auto;
+  padding: 50px;
   -webkit-box-shadow: 0 5px 5px rgba(128, 128, 128, 0.3);
           box-shadow: 0 5px 5px rgba(128, 128, 128, 0.3);
 }
@@ -359,6 +360,8 @@
 #care .care-card-wrap .care-card > img {
   display: block;
   margin: 0 auto;
+  width: 128px;
+  height: 128px;
 }
 
 #care .care-card-wrap .care-card > h2 {
@@ -367,20 +370,33 @@
 
 #care #care-board-1 {
   background-color: rgba(255, 240, 245, 0.6);
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 50px;
 }
 
 @media screen and (min-width: 1025px) {
   #care #care-board-1 {
-    display: -ms-grid;
-    display: grid;
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
-    -ms-grid-rows: (1fr)[2];
-        grid-template-rows: repeat(2, 1fr);
   }
   #care #care-board-1 .care-card {
     width: 100%;
     padding: 45px 0 70px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #care #care-board-1 {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #care #care-board-1 {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -426,6 +442,15 @@
   }
 }
 
+@media screen and (max-width: 767px) {
+  #care #care-board-2 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 #care #care-board-3 {
   overflow: hidden;
   padding-bottom: 20px;
@@ -439,11 +464,11 @@
 }
 
 #care #care-board-3 .slick-prev::before {
-  left: 80px;
+  left: 45px;
 }
 
 #care #care-board-3 .slick-next::before {
-  right: 30px;
+  right: 35px;
 }
 
 @media screen and (max-width: 767px) {
