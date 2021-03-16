@@ -1,6 +1,6 @@
-@import "./var" ;
+@import "./var";
 //通用樣式設定 ==============================================
-@debug "I'm here~" ;
+@debug "I'm here~";
 * {
     margin: 0;
     padding: 0;
@@ -128,8 +128,8 @@ nav {
         }
         @media screen and (max-width: $tablet) {
             position: absolute;
-            right: -100%;//TODO -(js)-> 0
-            display: none;//TODO -(js)-> block
+            right: -100%; //TODO -(js)-> 0
+            display: none; //TODO -(js)-> block
             flex-flow: column;
 
             //TODO w, fz, lh
@@ -142,9 +142,20 @@ footer {
     background-color: $color-14;
     box-shadow: 0 0 3px $color-shade;
     display: grid;
-    grid-template-columns: 65% auto;
-    grid-gap: 30px;
     padding: 50px 20px 20px;
+    // Part 0 : 整體格局 RWD
+    @media screen and (min-width: $desktop) {
+        grid-template-columns: 65% auto;
+        grid-gap: 30px;
+    }
+    @media screen and (max-width: $tablet) {
+        grid-template-columns: 60% auto;
+        grid-gap: 15px;
+    }
+    @media screen and (max-width: $mobile) {
+        grid-template-columns: auto;
+        grid-gap: 15px;
+    }
 
     // Part 1 : 嵌入Google地圖
     div:first-child {
@@ -251,7 +262,7 @@ footer {
             }
         }
         // p {
-            // margin-top: 1em;
+        // margin-top: 1em;
         // }
     }
 }

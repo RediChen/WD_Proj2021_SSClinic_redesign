@@ -178,10 +178,31 @@ footer {
           box-shadow: 0 0 3px rgba(128, 128, 128, 0.3);
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 65% auto;
-      grid-template-columns: 65% auto;
-  grid-gap: 30px;
   padding: 50px 20px 20px;
+}
+
+@media screen and (min-width: 1025px) {
+  footer {
+    -ms-grid-columns: 65% auto;
+        grid-template-columns: 65% auto;
+    grid-gap: 30px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  footer {
+    -ms-grid-columns: 60% auto;
+        grid-template-columns: 60% auto;
+    grid-gap: 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  footer {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    grid-gap: 15px;
+  }
 }
 
 footer div:first-child iframe {
