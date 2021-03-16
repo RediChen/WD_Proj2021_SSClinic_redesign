@@ -1,15 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;500;700;900&display=swap");
-$color-pri-dark : DeepPink ;
-$color-pri-light : pink ;
-$color-sec-dark : HotPink ;
-$color-sec-light : LavenderBlush ;
+$color-16 : DeepPink ;
+$color-14 : pink ;
+$color-26 : HotPink ;
+$color-24 : LavenderBlush ;
 $color-text : Brown ;
 $color-line : indigo ;
 $color-shade : rgba(gray, 0.3) ;
 $desktop: 1025px; //lower bound
 $tablet: 1024px; //upper bound
 $mobile: 767px; //upper bound
-$h-nav: 100px;
+//============ nav高度 in RWD
+// 用於 nav(common) & 簡介頁面(style)
+$h-nav: 100px ;
 //============ 門診時間表用
 $color-children : lightgoldenrodyellow ;
 $color-adult : skyblue ;
