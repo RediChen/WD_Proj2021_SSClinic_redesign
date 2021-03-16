@@ -127,6 +127,12 @@
   background-image: linear-gradient(180deg, skyblue, snow 85%, snow 95%, lightyellow);
 }
 
+@media screen and (max-width: 767px) {
+  #intro > div:last-child {
+    height: auto;
+  }
+}
+
 #intro > div:last-child > div {
   background-color: rgba(255, 240, 245, 0.3);
   border-radius: 5%;

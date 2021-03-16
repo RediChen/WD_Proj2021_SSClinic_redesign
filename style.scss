@@ -94,7 +94,9 @@
         height: 100vh;
         overflow: hidden;
         background-image: linear-gradient(180deg, skyblue, snow 85%, snow 95%, lightyellow);
-
+        @media screen and (max-width : $mobile) {
+            height: auto;
+        }
         & > div {
             background-color: rgba($color-24, 0.3);
             border-radius: 5%;
