@@ -63,9 +63,6 @@ a {
 nav {
     //* Part 0 : 通用樣式設定
     height: $h-nav;
-    &::after {
-        content: "#{$h-nav}";
-    }
     width: 100%;
     position: sticky;
     top: 0;

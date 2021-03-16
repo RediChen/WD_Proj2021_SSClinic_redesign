@@ -17,7 +17,7 @@
             width: 22em;
             height: 4em;
             border-radius: 50%;
-            box-shadow: 0 0 40px 10px $color-sec-light inset;
+            box-shadow: 0 0 40px 10px $color-24 inset;
             @media screen and (min-width: $desktop) {
                 top: 34vh;
                 left: 40vw;
@@ -31,17 +31,17 @@
         h1 {
             position: absolute;
             @include font-zh(900, 5em);
-            color: $color-pri-dark;
+            color: $color-16;
             @media screen and (min-width: $desktop) {
                 top: 26vh;
                 left: 41vw;
-                text-shadow: 1px -1px 0 $color-sec-light, 2px -2px 0 #e1cdd5, 3px -3px 0 #d1bdc5, 4px -4px 0 #c1adb5,5px -5px 0 #b19da5;
+                text-shadow: 1px -1px 0 $color-24, 2px -2px 0 #e1cdd5, 3px -3px 0 #d1bdc5, 4px -4px 0 #c1adb5,5px -5px 0 #b19da5;
             }
             @media screen and (max-width: $tablet) {
                 top: 18vh;
                 left: 52%;
                 transform: translateX(-50%);
-                text-shadow: -1px -1px 0 $color-sec-light, -2px -2px 0 #e1cdd5, -3px -3px 0 #d1bdc5, -4px -4px 0 #c1adb5, -5px -5px 0 #b19da5;
+                text-shadow: -1px -1px 0 $color-24, -2px -2px 0 #e1cdd5, -3px -3px 0 #d1bdc5, -4px -4px 0 #c1adb5, -5px -5px 0 #b19da5;
             }
             @media screen and (max-width: $mobile) {
                 top: 17vh;
@@ -57,7 +57,7 @@
             position: absolute;
             padding: 1em 0;
             background-color: rgba(white, 0.6);
-            box-shadow: 0 0 5px 5px rgba(white, 0.75);
+            box-shadow: 0 0 5px 7px rgba(white, 0.75);
             // 文字樣式
             text-align: center;
             font-size: 2em;
@@ -68,8 +68,9 @@
                 top: 46vh;
                 right: 0;
                 transform: translateX($offset-ls);
+                padding-left: 3vw;
                 padding-right: 15vw;
-                text-shadow: 1px -1px 0px burlywood, 5px -4px 2px #55555555;
+                text-shadow: 1px -1px 0px burlywood, 5px -4px 4px #55555555;
             }
             @media screen and (max-width: $tablet) {
                 width: 100%;
@@ -86,7 +87,7 @@
         }
         }
     }
-    // Part II : 診所簡介
+    //* Part II : 診所簡介
     & > div:last-child {
         margin-top: -5px; //修正picture未知原因造成的隙縫
         width: 100%;
@@ -95,7 +96,7 @@
         background-image: linear-gradient(180deg, skyblue, snow 85%, snow 95%, lightyellow);
 
         & > div {
-            background-color: rgba($color-sec-light, 0.3);
+            background-color: rgba($color-24, 0.3);
             border-radius: 5%;
             @media screen and (min-width: $desktop) {
                 width: 40%;
@@ -112,9 +113,9 @@
                 text-indent: 2em;
 
                 span {
-                    color: $color-pri-dark;
+                    color: $color-16;
                     font-weight: 700;
-                    background-color: rgba($color-sec-light, 0.3);
+                    background-color: rgba($color-24, 0.3);
                 }
             }
             ul {
@@ -125,9 +126,9 @@
                     font-weight: 700;
                 }
                 span {
-                    color: $color-pri-dark;
+                    color: $color-16;
                     font-weight: 700;
-                    background-color: rgba($color-sec-light, 0.3);
+                    background-color: rgba($color-24, 0.3);
                 }
             }
         }
@@ -199,7 +200,7 @@
     #team-btn-box {
         padding: 10px;
         max-width: 100%;
-        border: 10px solid rgba($color-sec-dark, 0.4);
+        border: 10px solid rgba($color-26, 0.4);
         box-shadow: -8px 8px 8px -3px rgba(#990000, 0.5);
 
         .team-btn {
@@ -210,7 +211,7 @@
         }
         .team-btn:nth-child(4),
         .team-btn:nth-child(5) {
-            background-color: $color-sec-light;
+            background-color: $color-24;
         }
         .team-btn:nth-child(-3n + 6) {
             background-color: HoneyDew;
@@ -222,7 +223,7 @@
     //* Respective : 個別樣式, Part II : 詳細介紹
     #team-card-wrap {
         .team-card {
-            background-color: rgba($color-sec-light, 0.6);
+            background-color: rgba($color-24, 0.6);
             box-shadow: 0 -3px 5px #66666666;
 
             & > div:nth-child(2) {
@@ -289,7 +290,7 @@
 
     //* board 1
     #care-board-1 {
-        background-color: rgba($color-sec-light, 0.6);
+        background-color: rgba($color-24, 0.6);
 
         @media screen and (min-width: $desktop) {
             display: grid;

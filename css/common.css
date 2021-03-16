@@ -90,10 +90,6 @@ nav {
           box-shadow: 0 0 3px rgba(128, 128, 128, 0.3);
 }
 
-nav::after {
-  content: "100px";
-}
-
 nav > a {
   display: block;
   position: absolute;
