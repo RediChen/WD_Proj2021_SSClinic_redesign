@@ -35,22 +35,24 @@
             @media screen and (min-width: $desktop) {
                 top: 26vh;
                 left: 41vw;
-                text-shadow: 1px -1px 0 $color-24, 2px -2px 0 #e1cdd5, 3px -3px 0 #d1bdc5, 4px -4px 0 #c1adb5,5px -5px 0 #b19da5;
+                text-shadow: 1px -1px 0 $color-24, 2px -2px 0 #e1cdd5, 3px -3px 0 #d1bdc5, 4px -4px 0 #c1adb5,
+                    5px -5px 0 #b19da5;
             }
             @media screen and (max-width: $tablet) {
                 top: 18vh;
                 left: 52%;
                 transform: translateX(-50%);
-                text-shadow: -1px -1px 0 $color-24, -2px -2px 0 #e1cdd5, -3px -3px 0 #d1bdc5, -4px -4px 0 #c1adb5, -5px -5px 0 #b19da5;
+                text-shadow: -1px -1px 0 $color-24, -2px -2px 0 #e1cdd5, -3px -3px 0 #d1bdc5, -4px -4px 0 #c1adb5,
+                    -5px -5px 0 #b19da5;
             }
             @media screen and (max-width: $mobile) {
                 top: 17vh;
                 @include font-zh(900, 3em);
-                word-break: keep-all;//不准換行
+                word-break: keep-all; //不准換行
             }
         }
         h2 {
-            $offset-ls : 5px ;//因為letter spacing的微調
+            $offset-ls: 5px; //因為letter spacing的微調
             // for 定位
             display: block;
             // 背景樣式
@@ -82,9 +84,9 @@
             @media screen and (max-width: $mobile) {
                 top: 32vh;
                 text-shadow: -1px -1px 0px burlywood, -4px -2px 4px #55555555;
-            padding: 0.5em 0;
-            font-size: 1.5em;
-        }
+                padding: 0.5em 0;
+                font-size: 1.5em;
+            }
         }
     }
     //* Part II : 診所簡介
@@ -94,7 +96,7 @@
         height: 100vh;
         overflow: hidden;
         background-image: linear-gradient(180deg, skyblue, snow 85%, snow 95%, lightyellow);
-        @media screen and (max-width : $mobile) {
+        @media screen and (max-width: $mobile) {
             height: auto;
         }
         & > div {
@@ -139,21 +141,21 @@
 // 診所簡介 END ==========================================================
 // 醫療團隊 ==============================================================
 #team {
-    //* 格局設定 : Overall
-    max-height: 80vh;//TODO 待調整
-
+    //* 格局設定 0~II : Overall
+    margin-top: 50px;
     @media screen and (min-width: $desktop) {
-        margin-top: 50px;
+        // Part 0 : 整體
+        max-height: 80vh;
         margin-left: 10px;
         display: grid;
         grid-template-columns: 36% auto;
         grid-gap: 30px;
 
-        // Part 0 : 標題
+        // Part I : 標題
         header {
             grid-column: 1 / span 2;
         }
-        // Part I : 選取按鈕
+        // Part II : 選取按鈕
         #team-btn-box {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -161,28 +163,8 @@
             grid-gap: 5px;
         }
     }
-    //* 格局設定 : (Part II)詳細介紹 for Desktop & Tablet
-    @media screen and (min-width: $mobile + 1) {
-        #team-card-wrap > .team-card {
-            display: grid;
-            grid-template-areas: "photos showcases" "names showcases";
-            grid-template-rows: 400px 150px;
-
-            & > img {
-                grid-area: photos;
-            }
-            & > h2 {
-                grid-area: names;
-            }
-            & > .team-about {
-                grid-area: showcases;
-            }
-        }
-    }
     @media screen and (max-width: $tablet) {
-        display: flex;
-        margin: 50px 10px 0;
-        flex-direction: column;
+        max-height: 120vh;
         #team-btn-box {
             order: 4;
 
@@ -190,15 +172,42 @@
             flex-direction: row; //TODO 暫時，等著用輪播圖
         }
     }
-    @media screen and (max-width: $mobile) {
-        overflow: hidden;
+    //* 格局設定 III : 詳細介紹 for Desktop & Tablet
+    #team-card-wrap {
+        overflow: auto;
+        @media screen and (min-width: $mobile + 1) {
+            .team-card {
+                display: grid;
+                grid-template-areas: "photos showcases" "names showcases";
+                grid-template-rows: 400px 150px;
+                //area 命名
+                & > img {
+                    grid-area: photos;
+                }
+                & > h2 {
+                    grid-area: names;
+                }
+                & > .team-about {
+                    grid-area: showcases;
+                }
+                //area 命名 END
+            }
+        }
+        @media screen and (max-width: $tablet) {
+            display: flex;
+            margin: 50px 10px 0;
+            flex-direction: column;
+        }
+        @media screen and (max-width: $mobile) {
+            // overflow: hidden;
+        }
     }
     //* 格局設定 END
-    //* Respective : Part 0 : 標題
+    //* 樣式設定 I : 標題
     header {
         padding-bottom: 2em;
     }
-    //* Respective : 個別樣式, Part I : 選取按鈕
+    //* 樣式設定 II : 按鈕區
     #team-btn-box {
         padding: 10px;
         max-width: 100%;
@@ -222,7 +231,7 @@
             background-color: AliceBlue;
         }
     }
-    //* Respective : 個別樣式, Part II : 詳細介紹
+    //* 樣式設定 III : 詳細介紹
     #team-card-wrap {
         .team-card {
             background-color: rgba($color-24, 0.6);
@@ -308,13 +317,11 @@
                 padding: 45px 0 70px;
             }
         }
-        @media screen and (max-width : $tablet) {
+        @media screen and (max-width: $tablet) {
             grid-template-columns: repeat(2, 1fr);
-            
         }
-        @media screen and (max-width : $mobile) {
+        @media screen and (max-width: $mobile) {
             grid-template-columns: repeat(1, 1fr);
-            
         }
     }
     //* board 2
@@ -356,8 +363,8 @@
     }
     //* board 3
     #care-board-3 {
-            overflow: hidden;
-            padding-bottom: 20px;
+        overflow: hidden;
+        padding-bottom: 20px;
         .slick-arrow::before {
             position: absolute;
             color: #990000;

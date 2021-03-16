@@ -182,12 +182,12 @@
 }
 
 #team {
-  max-height: 80vh;
+  margin-top: 50px;
 }
 
 @media screen and (min-width: 1025px) {
   #team {
-    margin-top: 50px;
+    max-height: 80vh;
     margin-left: 10px;
     display: -ms-grid;
     display: grid;
@@ -211,42 +211,9 @@
   }
 }
 
-@media screen and (min-width: 768px) {
-  #team #team-card-wrap > .team-card {
-    display: -ms-grid;
-    display: grid;
-        grid-template-areas: "photos showcases" "names showcases";
-    -ms-grid-rows: 400px 150px;
-        grid-template-rows: 400px 150px;
-  }
-  #team #team-card-wrap > .team-card > img {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-area: photos;
-  }
-  #team #team-card-wrap > .team-card > h2 {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-area: names;
-  }
-  #team #team-card-wrap > .team-card > .team-about {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
-    -ms-grid-column: 2;
-    grid-area: showcases;
-  }
-}
-
 @media screen and (max-width: 1024px) {
   #team {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 50px 10px 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    max-height: 120vh;
   }
   #team #team-btn-box {
     -webkit-box-ordinal-group: 5;
@@ -262,9 +229,46 @@
   }
 }
 
-@media screen and (max-width: 767px) {
-  #team {
-    overflow: hidden;
+#team #team-card-wrap {
+  overflow: auto;
+}
+
+@media screen and (min-width: 768px) {
+  #team #team-card-wrap .team-card {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "photos showcases" "names showcases";
+    -ms-grid-rows: 400px 150px;
+        grid-template-rows: 400px 150px;
+  }
+  #team #team-card-wrap .team-card > img {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: photos;
+  }
+  #team #team-card-wrap .team-card > h2 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: names;
+  }
+  #team #team-card-wrap .team-card > .team-about {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 2;
+    grid-area: showcases;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #team #team-card-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 50px 10px 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
