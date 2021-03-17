@@ -204,8 +204,26 @@
             display: flex; //TODO 暫時，等著用輪播圖
             flex-direction: row; //TODO 暫時，等著用輪播圖
         }
+        //按鈕 Part 1 : 非顏色的設定
         .team-btn {
             height: 100px;
+            
+            h2 {
+                @media screen and (min-width: $desktop) {
+                    @include font-zh(3em, 500);
+                }
+                @media screen and (max-width: $tablet) {
+                    @include font-zh(1em, 300);
+                }
+                @media screen and (max-width: $mobile) {
+                    @include font-zh(12px, 300);
+                }
+            }
+            
+        }
+        //按鈕 Part 2 : 顏色的設定
+        .team-btn {
+            // 個別配色
             &:nth-child(-n + 2) {
                 background-color: #f8c9a0;
             }
@@ -219,16 +237,16 @@
             &:nth-child(n + 7) {
                 background-color: AliceBlue;
             }
-            h2 {
-                @media screen and (min-width: $desktop) {
-                    @include font-zh(1em, 500);
-                }
-                @media screen and (max-width: $mobile) {
-                    @include font-zh(12px, 300);
-                }
-            }
+            // 啟動者的對應強調
             &-active {
-                filter: brightness(1.2);
+                filter: brightness(1.1);
+            }
+            // 連結的基本變化
+            &:hover {
+                filter: brightness(1.05);
+            }
+            &:active {
+                filter: invert(0.2);
             }
         }
     }
