@@ -87,7 +87,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 2;
-  background-color: pink;
+  background-color: #f9c8d0;
   border-radius: 0 0 80% 80% / 0 0 55% 55%;
   -webkit-box-shadow: 0 0 3px rgba(153, 153, 153, 0.3);
           box-shadow: 0 0 3px rgba(153, 153, 153, 0.3);
@@ -194,7 +194,7 @@ nav div:nth-child(3) a:active {
 }
 
 footer {
-  background-color: pink;
+  background-color: #f9c8d0;
   -webkit-box-shadow: 0 0 3px rgba(153, 153, 153, 0.3);
           box-shadow: 0 0 3px rgba(153, 153, 153, 0.3);
   display: -ms-grid;
@@ -313,19 +313,28 @@ footer dl img {
   margin-right: 0.5em;
 }
 
-footer dl dt > a {
+footer dl dt {
+  font-family: "Noto Serif TC", serif;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+footer dl dt a {
   color: initial;
   -webkit-transition: color 0.5s;
   transition: color 0.5s;
 }
 
-footer dl dt > a:hover {
+footer dl dt a:hover {
   color: rgba(165, 42, 42, 0.8);
 }
 
 footer dl dd {
-  text-indent: -2.5em;
-  margin-left: 4em;
+  font-family: "Noto Serif TC", serif;
+  font-weight: 300;
+  font-size: 0.8em;
+  background-color: rgba(255, 240, 245, 0.3);
+  text-indent: 2.5em;
 }
 
 footer div:last-child {
@@ -336,9 +345,9 @@ footer div:last-child {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

@@ -247,23 +247,27 @@ footer {
             vertical-align: middle;
             margin-right: 0.5em;
         }
-        dt > a {
-            color: initial;
-            transition: color 0.5s;
-            &:hover {
-                color: rgba($color-text, 0.8);
+        dt {
+            @include font-zh(1em, 500) ;
+            a {
+                color: initial;
+                transition: color 0.5s;
+                &:hover {
+                    color: rgba($color-text, 0.8);
+                }
             }
         }
         dd {
-            text-indent: -2.5em;
-            margin-left: 4em;
+            @include font-zh(0.8em, 300) ;
+            background-color: rgba($color-24,0.3);
+            text-indent: 2.5em;
         }
     }
     // Part 4 : 友善連結 & 版權聲明
     div:last-child {
         display: flex;
         flex-direction: column;
-        justify-content: end;
+        justify-content:space-evenly;
         align-items: center;
         a {
             margin-bottom: 1em;
