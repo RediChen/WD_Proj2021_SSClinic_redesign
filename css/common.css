@@ -90,8 +90,8 @@ nav {
   z-index: 2;
   background-color: pink;
   border-radius: 0 0 80% 80% / 0 0 55% 55%;
-  -webkit-box-shadow: 0 0 3px rgba(128, 128, 128, 0.3);
-          box-shadow: 0 0 3px rgba(128, 128, 128, 0.3);
+  -webkit-box-shadow: 0 0 3px rgba(153, 153, 153, 0.3);
+          box-shadow: 0 0 3px rgba(153, 153, 153, 0.3);
 }
 
 nav > a {
@@ -178,8 +178,8 @@ nav div:nth-child(3) a:active {
 
 footer {
   background-color: pink;
-  -webkit-box-shadow: 0 0 3px rgba(128, 128, 128, 0.3);
-          box-shadow: 0 0 3px rgba(128, 128, 128, 0.3);
+  -webkit-box-shadow: 0 0 3px rgba(153, 153, 153, 0.3);
+          box-shadow: 0 0 3px rgba(153, 153, 153, 0.3);
   display: -ms-grid;
   display: grid;
   padding: 50px 20px 20px;
@@ -267,8 +267,8 @@ footer #time-footer a {
   display: block;
   margin: 1em auto;
   background-color: rgba(255, 105, 180, 0.3);
-  -webkit-box-shadow: 0 0 10px rgba(128, 128, 128, 0.3);
-          box-shadow: 0 0 10px rgba(128, 128, 128, 0.3);
+  -webkit-box-shadow: 0 0 10px rgba(153, 153, 153, 0.3);
+          box-shadow: 0 0 10px rgba(153, 153, 153, 0.3);
   width: 6em;
   height: 2.5em;
   line-height: 2.5em;

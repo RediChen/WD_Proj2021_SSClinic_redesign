@@ -3,7 +3,7 @@
 \*-------------------------*/
 @import "./var";
 
-// 診所簡介 ==============================================================
+//* 診所簡介 ==============================================================
 #intro {
     margin-top: -$h-nav + 20px; //避免任何縫隙
     //* Part I : 首頁形象
@@ -40,7 +40,7 @@
         }
         h1 {
             position: absolute;
-            @include font-zh(900, 5em);
+            @include font-zh(5em, 900);
             color: $color-16;
             @media screen and (min-width: $desktop) {
                 top: 26vh;
@@ -57,7 +57,7 @@
             }
             @media screen and (max-width: $mobile) {
                 top: 17vh;
-                @include font-zh(900, 3em);
+                @include font-zh(3em, 900);
                 word-break: keep-all; //不准換行
             }
         }
@@ -162,108 +162,93 @@
     }
 }
 // 診所簡介 END ==========================================================
-// 醫療團隊 ==============================================================
+//* 醫療團隊 ==============================================================
 #team {
-    //* 格局設定
-    // 格局設定 0~II : Overall
+    //* Part 0 : 整體
     margin-top: 50px;
     @media screen and (min-width: $desktop) {
-        // Part 0 : 整體
         max-height: 80vh;
         // margin-left: 10px;
         display: grid;
         grid-template-columns: 36% auto;
         grid-gap: 30px;
+    }
+    @media screen and (max-width: $tablet) {
+        max-height: 120vh;
+    }
 
-        // Part I : 標題
-        header {
+    //* Part I : 標題
+    header {
+        padding-bottom: 2em;
+        @media screen and (min-width: $desktop) {
             grid-column: 1 / span 2;
         }
-        // Part II : 選取按鈕
-        #team-btn-box {
+    }
+
+    //* Part II : 選取按鈕區
+    #team-btn-box {
+        padding: 10px;
+        width: 100%;
+        border: 10px solid rgba($color-26, 0.4);
+        box-shadow: -8px 8px 8px -3px rgba(#990000, 0.4);
+
+        @media screen and (min-width: $desktop) {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(3, 1fr);
             grid-gap: 5px;
         }
-    }
-    @media screen and (max-width: $tablet) {
-        max-height: 120vh;
-        #team-btn-box {
+        @media screen and (max-width: $tablet) {
             order: 4;
 
             display: flex; //TODO 暫時，等著用輪播圖
             flex-direction: row; //TODO 暫時，等著用輪播圖
         }
-    }
-    // 格局設定 III : 詳細介紹 for Desktop & Tablet
-    #team-card-wrap {
-        .team-about {
-            overflow: auto;
-        }
-        @media screen and (min-width: $mobile + 1) {
-            .team-card {
-                display: grid;
-                grid-template-areas: "photos showcases" "names showcases";
-                grid-template-rows: 400px 150px;
-                //area 命名
-                & > img {
-                    grid-area: photos;
-                }
-                & > h2 {
-                    grid-area: names;
-                }
-                & > .team-about {
-                    grid-area: showcases;
-                }
-                //area 命名 END
-            }
-        }
-        @media screen and (max-width: $tablet) {
-            display: flex;
-            margin: 50px 10px 0;
-            flex-direction: column;
-        }
-        @media screen and (max-width: $mobile) {
-            // overflow: hidden;
-        }
-    }
-    //* 格局設定 END
-    //* 樣式設定
-    // 樣式設定 I : 標題
-    header {
-        padding-bottom: 2em;
-    }
-    // 樣式設定 II : 按鈕區
-    #team-btn-box {
-        padding: 10px;
-        max-width: 100%;
-        border: 10px solid rgba($color-26, 0.4);
-        box-shadow: -8px 8px 8px -3px rgba(#990000, 0.4);
-
         .team-btn {
             height: 100px;
-        }
-        .team-btn:nth-child(-n + 2) {
-            background-color: #f8c9a0;
-        }
-        .team-btn:nth-child(4),
-        .team-btn:nth-child(5) {
-            background-color: $color-24;
-        }
-        .team-btn:nth-child(-3n + 6) {
-            background-color: HoneyDew;
-        }
-        .team-btn:nth-child(n + 7) {
-            background-color: AliceBlue;
+            &:nth-child(-n + 2) {
+                background-color: #f8c9a0;
+            }
+            &:nth-child(4),
+            &:nth-child(5) {
+                background-color: $color-24;
+            }
+            &:nth-child(-3n + 6) {
+                background-color: HoneyDew;
+            }
+            &:nth-child(n + 7) {
+                background-color: AliceBlue;
+            }
+            h2 {
+                @media screen and (min-width: $desktop) {
+                    @include font-zh(1em, 500);
+                }
+                @media screen and (max-width: $mobile) {
+                    @include font-zh(12px, 300);
+                }
+            }
         }
     }
-    // 樣式設定 III : 詳細介紹
+    //* Part III : 詳細介紹
     #team-card-wrap {
         background-color: rgba($color-24, 0.6);
-        box-shadow: -8px 8px 8px -3px rgba(#999, 0.4);
-
+        box-shadow: -8px 8px 8px -3px $color-shade;
         .team-card {
+            display: grid;
+            grid-template-areas: "photos showcases" "names showcases";
+            grid-template-rows: 400px 150px;
+            //area 命名
+            & > img {
+                grid-area: photos;
+            }
+            & > h2 {
+                grid-area: names;
+            }
+            & > .team-about {
+                grid-area: showcases;
+            }
+            //area 命名 END
+            // 成員姓名
             & > div:nth-child(2) {
                 text-align: center;
                 h2 {
@@ -273,33 +258,46 @@
                     box-shadow: 0 9px 5px -6px #66666666;
                 }
             }
-
-            .team-about {
-                padding: 0 5%;
-                overflow: auto; //自動生成內滾動範圍
-
-                .team-sub-card {
-                    padding: 1em 0;
-                    h3 {
-                        text-indent: 2em;
-                        margin-bottom: -0.3em;
-                    }
-                    ul {
-                        list-style-type: none;
-                    }
-                    p,
-                    li {
-                        line-height: 2.5;
-                    }
-                }
-            }
             //預設先顯示總院長
             &:nth-child(n + 2) {
                 display: none;
             }
         }
+
+        @media screen and (max-width: $tablet) {
+            box-shadow: 0 0 8px 8px $color-shade;
+            margin-top: 50px;
+            padding: 10px;
+        }
+        @media screen and (max-width: $mobile) {
+            .team-card {
+                max-height: 120vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        .team-about {
+            padding: 0 5%;
+            background-color: rgba(#aaa, 0.1);
+            overflow: auto; //自動生成內滾動範圍
+
+            .team-sub-card {
+                padding: 1em 0;
+                h3 {
+                    text-indent: 2em;
+                    margin-bottom: -0.3em;
+                }
+                ul {
+                    list-style-type: none;
+                }
+                p,
+                li {
+                    line-height: 2.5;
+                }
+            }
+        }
     }
-    //* 樣式設定 END
 }
 // 醫療團隊 END ==========================================================
 // 治療項目 ==============================================================

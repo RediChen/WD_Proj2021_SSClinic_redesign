@@ -5,7 +5,7 @@ $color-26 : HotPink ;
 $color-24 : LavenderBlush ;
 $color-text : Brown ;
 $color-line : indigo ;
-$color-shade : rgba(gray, 0.3) ;
+$color-shade : rgba(#999, 0.3) ;
 $desktop: 1025px; //lower bound
 $tablet: 1024px; //upper bound
 $mobile: 767px; //upper bound
@@ -18,13 +18,13 @@ $color-adult : skyblue ;
 $color-nature : pink ;
 $color-closed : #999 ;
 //============
-@mixin font-zh($wt, $sz) {
+@mixin font-zh($sz, $wt) {
     //wt is in 200, 300, 500, 700, 900
     font-family: "Noto Serif TC", serif;
     font-weight: $wt;
     font-size: $sz;
 }
-@mixin font-en($wt, $sz) {
+@mixin font-en($sz, $wt) {
     //TODO family not decided
     font-family: serif;
     font-weight: $wt;

@@ -26,15 +26,15 @@ a {
     }
 }
 .title-1 {
-    @include font-zh(900, 2em);
+    @include font-zh(2em, 900);
     text-align: center;
 }
 .title-2 {
-    @include font-zh(700, 1.5em);
+    @include font-zh(1.5em, 700);
     text-align: center;
 }
 .p-text {
-    @include font-zh(300, 1em);
+    @include font-zh(1em, 300);
 }
 .hr-1 {
     margin: 0.5em auto 1em;
@@ -103,7 +103,7 @@ nav {
         }
         a {
             line-height: 1.2;
-            @include font-zh(700, 1.5em);
+            @include font-zh(1.5em, 700);
             // 配合弧度的高度微調：from 內 to 外
             // TODO 規律一點的統一下降
             &:nth-child(4),
@@ -190,7 +190,7 @@ footer {
                     background-color: rgba($color-26, 0.6);
                     border-bottom: 1px solid #000;
                     line-height: 2em;
-                    @include font-zh(500, 1em);
+                    @include font-zh(1em, 500);
                 }
                 //other rows
                 &:nth-child(n + 1) {
@@ -201,7 +201,7 @@ footer {
                     background-color: rgba($color-26, 0.6);
                     width: 3em;
                     border-right: 1px solid #000;
-                    @include font-zh(500, 1em);
+                    @include font-zh(1em, 500);
                 }
                 //other columns
                 & > :nth-child(n + 1) {
