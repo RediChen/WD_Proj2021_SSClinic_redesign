@@ -65,7 +65,15 @@ a {
 //導覽列 ====================================================
 nav {
     //* Part 0 : 通用樣式設定
-    height: $h-nav;
+    @media screen and (min-width: $desktop) {
+    height: $h-nav-dt;
+    }
+    @media screen and (max-width: $tablet) {
+    height: $h-nav-tb;
+    }
+    @media screen and (max-width: $mobile) {
+    height: $h-nav-mb;
+    }
     width: 100%;
     position: sticky;
     top: 0;
