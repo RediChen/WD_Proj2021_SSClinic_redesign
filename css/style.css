@@ -2,12 +2,12 @@
 /*-------------------------*\
     「首頁」專屬元素樣式
 \*-------------------------*/
-/*-------------------------*\
-    RWD的變數改變不採取更改變數值的方案，因為不可行
-    //採用在個樣式設定取用不同不同的變數
-    //也就說是說還是要寫兩次。
-\*-------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;500;700;900&display=swap");
+/*-------------------------*\
+RWD的變數改變不採取更改變數值的方案，因為不可行
+//採用在個樣式設定取用不同不同的變數
+//也就說是說還是要寫兩次。
+\*-------------------------*/
 @media screen and (min-width: 1025px) {
   #intro {
     margin-top: -80px;
@@ -419,6 +419,12 @@
 }
 
 @media screen and (max-width: 767px) {
+  #team #team-card-wrap .team-card > div:nth-child(2) h2 {
+    margin: 0.5em 0 1em;
+  }
+}
+
+@media screen and (max-width: 767px) {
   #team #team-card-wrap .team-card {
     max-height: 120vh;
   }
@@ -437,6 +443,12 @@
   padding: 0 5%;
   background-color: rgba(170, 170, 170, 0.1);
   overflow: auto;
+}
+
+@media screen and (max-width: 767px) {
+  #team #team-card-wrap .team-about {
+    margin: 0 5%;
+  }
 }
 
 #team #team-card-wrap .team-about .team-sub-card {
@@ -571,6 +583,7 @@
 #care #care-board-3 {
   overflow: hidden;
   padding-bottom: 20px;
+  width: 80%;
 }
 
 #care #care-board-3 .slick-arrow::before {

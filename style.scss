@@ -1,13 +1,6 @@
 /*-------------------------*\
     「首頁」專屬元素樣式
 \*-------------------------*/
-//!=======================
-/*-------------------------*\
-    RWD的變數改變不採取更改變數值的方案，因為不可行
-    //採用在個樣式設定取用不同不同的變數
-    //也就說是說還是要寫兩次。
-\*-------------------------*/
-//!=======================
 @import "./var";
 
 //* 診所簡介 ==============================================================
@@ -300,6 +293,9 @@
                     padding: 0 0.5em;
                     border-bottom: 1px solid $color-line;
                     box-shadow: 0 9px 5px -6px #66666666;
+                    @media screen and (max-width: $mobile) {
+                        margin: 0.5em 0 1em;
+                    }
                 }
             }
             @media screen and (max-width: $mobile) {
@@ -315,6 +311,9 @@
 
         .team-about {
             padding: 0 5%;
+            @media screen and (max-width: $mobile) {
+                margin: 0 5%;
+            }
             background-color: rgba(#aaa, 0.1);
             overflow: auto; //自動生成內滾動範圍
 
@@ -427,6 +426,7 @@
     #care-board-3 {
         overflow: hidden;
         padding-bottom: 20px;
+        width: 80%;
         .slick-arrow::before {
             position: absolute;
             color: #990000;
