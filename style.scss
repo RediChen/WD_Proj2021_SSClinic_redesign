@@ -30,6 +30,13 @@
                 left: 52%;
                 transform: translateX(-50%);
             }
+            @media screen and (max-width: $mobile) {
+                width: 15em;
+                height: 3em;
+                top: 21vh;
+                left: 52%;
+                box-shadow: 0 0 20px 10px $color-24 inset;
+            }
         }
         h1 {
             position: absolute;
@@ -61,6 +68,8 @@
             // 背景樣式
             position: absolute;
             padding: 1em 0;
+            padding-left: $offset-ls;
+            overflow: hidden; //隱藏被推出畫面寬的部份
             background-color: rgba(white, 0.6);
             box-shadow: 0 0 5px 7px rgba(white, 0.75);
             // 文字樣式
@@ -78,14 +87,14 @@
                 text-shadow: 1px -1px 0px burlywood, 5px -4px 4px #55555555;
             }
             @media screen and (max-width: $tablet) {
-                width: 100%;
+                width: calc(100%);
                 top: 44vh;
                 left: 50%;
-                transform: translateX(calc(-50% + #{$offset-ls}));
+                transform: translateX(calc(-50%));
                 text-shadow: -1px -1px 0px burlywood, -5px -3px 2px #55555555;
             }
             @media screen and (max-width: $mobile) {
-                top: 32vh;
+                top: 36vh;
                 text-shadow: -1px -1px 0px burlywood, -4px -2px 4px #55555555;
                 padding: 0.5em 0;
                 font-size: 1.5em;

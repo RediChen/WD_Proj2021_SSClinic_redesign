@@ -41,6 +41,17 @@
   }
 }
 
+@media screen and (max-width: 767px) {
+  #intro > div:first-child #intro-disk {
+    width: 15em;
+    height: 3em;
+    top: 21vh;
+    left: 52%;
+    -webkit-box-shadow: 0 0 20px 10px LavenderBlush inset;
+            box-shadow: 0 0 20px 10px LavenderBlush inset;
+  }
+}
+
 #intro > div:first-child h1 {
   position: absolute;
   font-family: "Noto Serif TC", serif;
@@ -81,6 +92,8 @@
   display: block;
   position: absolute;
   padding: 1em 0;
+  padding-left: 5px;
+  overflow: hidden;
   background-color: rgba(255, 255, 255, 0.6);
   -webkit-box-shadow: 0 0 5px 7px rgba(255, 255, 255, 0.75);
           box-shadow: 0 0 5px 7px rgba(255, 255, 255, 0.75);
@@ -104,18 +117,18 @@
 
 @media screen and (max-width: 1024px) {
   #intro > div:first-child h2 {
-    width: 100%;
+    width: calc(100%);
     top: 44vh;
     left: 50%;
-    -webkit-transform: translateX(calc(-50% + 5px));
-            transform: translateX(calc(-50% + 5px));
+    -webkit-transform: translateX(calc(-50%));
+            transform: translateX(calc(-50%));
     text-shadow: -1px -1px 0px burlywood, -5px -3px 2px #55555555;
   }
 }
 
 @media screen and (max-width: 767px) {
   #intro > div:first-child h2 {
-    top: 32vh;
+    top: 36vh;
     text-shadow: -1px -1px 0px burlywood, -4px -2px 4px #55555555;
     padding: 0.5em 0;
     font-size: 1.5em;
