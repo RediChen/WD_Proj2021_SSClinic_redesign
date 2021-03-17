@@ -30,10 +30,3 @@ $color-closed : #999 ;
     font-weight: $wt;
     font-size: $sz;
 }
-@mixin test($ifIn, $color) {
-    @if $ifIn {
-        background-color: rgba($color, 0.3) ;
-    } @else {
-        border: 1px solid $color ;
-    }
-}

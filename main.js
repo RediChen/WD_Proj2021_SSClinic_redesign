@@ -8,10 +8,9 @@ $("#care-board-3").slick(
 
 //* 團隊頁面
 // 全域變數區 ===================
-var i_card = 0;// index of card = 0 ~ 8；預設顯示總院長
 
 // 馬上執行區 ===================
-showCard(i_card);
+showCard(0);
 
 // 函數宣告區 ===================
 function showCard(n) {
@@ -21,12 +20,6 @@ function showCard(n) {
     var ifMobile = window.matchMedia("(max-width: 767px)");
     //TODO 待研究
 
-    // 處理超出值域的n
-    if (n >= cards.length) {
-        i_card = 0;
-    } else if (n < 0) {
-        i_card = cards.length - 1;
-    }
     //全部卡片隱藏，全部按鈕還原
     for (i = 0; i < cards.length; i++) {
         cards[i].classList.remove("team-card-active");
@@ -34,9 +27,9 @@ function showCard(n) {
         btns[i].classList.remove("team-btn-active");
     }
     //顯示指定卡片，啟動對應按鈕
-    cards[i_card].classList.add("team-card-active");
-    // if (ifMobile) cards[i_card].style.display = "flex";
-    // else cards[i_card].style.display = "grid";
-    btns[i_card].classList.add("team-btn-active");
+    cards[n].classList.add("team-card-active");
+    if (ifMobile.matches) cards[n].style.display = "flex";
+    else cards[n].style.display = "grid";
+    btns[n].classList.add("team-btn-active");
 }
 // 團隊頁面 END
