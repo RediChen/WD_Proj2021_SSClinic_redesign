@@ -227,6 +227,9 @@
                     @include font-zh(12px, 300);
                 }
             }
+            &-active {
+                filter: brightness(1.2);
+            }
         }
     }
     //* Part III : 詳細介紹
@@ -234,20 +237,28 @@
         background-color: rgba($color-24, 0.6);
         box-shadow: -8px 8px 8px -3px $color-shade;
         .team-card {
-            display: grid;
-            grid-template-areas: "photos showcases" "names showcases";
-            grid-template-rows: 400px 150px;
-            //area 命名
-            & > img {
-                grid-area: photos;
+            &-active {
+                //* RWD : Desktop & Tablet
+                display: grid;
+                grid-template-areas: "photos showcases" "names showcases";
+                grid-template-rows: 400px 150px;
+                //area 命名
+                & > img {
+                    grid-area: photos;
+                }
+                & > h2 {
+                    grid-area: names;
+                }
+                & > .team-about {
+                    grid-area: showcases;
+                }
+                //area 命名 END
+                @media screen and (max-width: $mobile) {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
             }
-            & > h2 {
-                grid-area: names;
-            }
-            & > .team-about {
-                grid-area: showcases;
-            }
-            //area 命名 END
             // 成員姓名
             & > div:nth-child(2) {
                 text-align: center;
@@ -258,9 +269,8 @@
                     box-shadow: 0 9px 5px -6px #66666666;
                 }
             }
-            //預設先顯示總院長
-            &:nth-child(n + 2) {
-                display: none;
+            @media screen and (max-width: $mobile) {
+                max-height: 120vh;
             }
         }
 
@@ -269,14 +279,7 @@
             margin-top: 50px;
             padding: 10px;
         }
-        @media screen and (max-width: $mobile) {
-            .team-card {
-                max-height: 120vh;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-        }
+
         .team-about {
             padding: 0 5%;
             background-color: rgba(#aaa, 0.1);
