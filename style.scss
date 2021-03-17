@@ -144,12 +144,13 @@
 // 診所簡介 END ==========================================================
 // 醫療團隊 ==============================================================
 #team {
-    //* 格局設定 0~II : Overall
+    //* 格局設定
+    // 格局設定 0~II : Overall
     margin-top: 50px;
     @media screen and (min-width: $desktop) {
         // Part 0 : 整體
         max-height: 80vh;
-        margin-left: 10px;
+        // margin-left: 10px;
         display: grid;
         grid-template-columns: 36% auto;
         grid-gap: 30px;
@@ -175,9 +176,11 @@
             flex-direction: row; //TODO 暫時，等著用輪播圖
         }
     }
-    //* 格局設定 III : 詳細介紹 for Desktop & Tablet
+    // 格局設定 III : 詳細介紹 for Desktop & Tablet
     #team-card-wrap {
-        overflow: auto;
+        .team-about {
+            overflow: auto;
+        }
         @media screen and (min-width: $mobile + 1) {
             .team-card {
                 display: grid;
@@ -206,16 +209,17 @@
         }
     }
     //* 格局設定 END
-    //* 樣式設定 I : 標題
+    //* 樣式設定
+    // 樣式設定 I : 標題
     header {
         padding-bottom: 2em;
     }
-    //* 樣式設定 II : 按鈕區
+    // 樣式設定 II : 按鈕區
     #team-btn-box {
         padding: 10px;
         max-width: 100%;
         border: 10px solid rgba($color-26, 0.4);
-        box-shadow: -8px 8px 8px -3px rgba(#990000, 0.5);
+        box-shadow: -8px 8px 8px -3px rgba(#990000, 0.4);
 
         .team-btn {
             height: 100px;
@@ -234,12 +238,12 @@
             background-color: AliceBlue;
         }
     }
-    //* 樣式設定 III : 詳細介紹
+    // 樣式設定 III : 詳細介紹
     #team-card-wrap {
-        .team-card {
-            background-color: rgba($color-24, 0.6);
-            box-shadow: 0 -3px 5px #66666666;
+        background-color: rgba($color-24, 0.6);
+        box-shadow: -8px 8px 8px -3px rgba(#999, 0.4);
 
+        .team-card {
             & > div:nth-child(2) {
                 text-align: center;
                 h2 {
@@ -275,6 +279,7 @@
             }
         }
     }
+    //* 樣式設定 END
 }
 // 醫療團隊 END ==========================================================
 // 治療項目 ==============================================================

@@ -1,3 +1,7 @@
+@charset "UTF-8";
+/*-------------------------*\
+    「首頁」專屬元素樣式
+\*-------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;500;700;900&display=swap");
 #intro {
   margin-top: -80px;
@@ -188,7 +192,6 @@
 @media screen and (min-width: 1025px) {
   #team {
     max-height: 80vh;
-    margin-left: 10px;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 36% auto;
@@ -229,7 +232,7 @@
   }
 }
 
-#team #team-card-wrap {
+#team #team-card-wrap .team-about {
   overflow: auto;
 }
 
@@ -280,8 +283,8 @@
   padding: 10px;
   max-width: 100%;
   border: 10px solid rgba(255, 105, 180, 0.4);
-  -webkit-box-shadow: -8px 8px 8px -3px rgba(153, 0, 0, 0.5);
-          box-shadow: -8px 8px 8px -3px rgba(153, 0, 0, 0.5);
+  -webkit-box-shadow: -8px 8px 8px -3px rgba(153, 0, 0, 0.4);
+          box-shadow: -8px 8px 8px -3px rgba(153, 0, 0, 0.4);
 }
 
 #team #team-btn-box .team-btn {
@@ -305,10 +308,10 @@
   background-color: AliceBlue;
 }
 
-#team #team-card-wrap .team-card {
+#team #team-card-wrap {
   background-color: rgba(255, 240, 245, 0.6);
-  -webkit-box-shadow: 0 -3px 5px #66666666;
-          box-shadow: 0 -3px 5px #66666666;
+  -webkit-box-shadow: -8px 8px 8px -3px rgba(153, 153, 153, 0.4);
+          box-shadow: -8px 8px 8px -3px rgba(153, 153, 153, 0.4);
 }
 
 #team #team-card-wrap .team-card > div:nth-child(2) {
