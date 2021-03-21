@@ -246,12 +246,6 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
   }
 }
 
-@media screen and (max-width: 1024px) {
-  #team {
-    max-height: 120vh;
-  }
-}
-
 #team header {
   padding-bottom: 2em;
 }
@@ -442,6 +436,8 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 #team #team-card-wrap .team-about {
   padding: 0 5%;
   background-color: rgba(170, 170, 170, 0.1);
+  -webkit-box-shadow: 10px 0 10px -10px inset rgba(102, 102, 102, 0.5);
+          box-shadow: 10px 0 10px -10px inset rgba(102, 102, 102, 0.5);
   overflow: auto;
 }
 

@@ -173,17 +173,17 @@
 // 診所簡介 END ==========================================================
 //* 醫療團隊 ==============================================================
 #team {
+    // team = {header, buttons, cards}
     //* Part 0 : 整體
     margin-top: 50px;
     @media screen and (min-width: $desktop) {
         max-height: 80vh;
-        // margin-left: 10px;
         display: grid;
         grid-template-columns: 36% auto;
         grid-gap: 30px;
     }
     @media screen and (max-width: $tablet) {
-        max-height: 120vh;
+        // max-height: 120vh;
     }
 
     //* Part I : 標題
@@ -315,6 +315,7 @@
                 margin: 0 5%;
             }
             background-color: rgba(#aaa, 0.1);
+            box-shadow: 10px 0 10px -10px inset rgba(#666, 0.5) ;
             overflow: auto; //自動生成內滾動範圍
 
             .team-sub-card {
