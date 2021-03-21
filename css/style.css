@@ -16,13 +16,13 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 
 @media screen and (max-width: 1024px) {
   #intro {
-    margin-top: -60px;
+    margin-top: -52px;
   }
 }
 
 @media screen and (max-width: 767px) {
   #intro {
-    margin-top: -40px;
+    margin-top: -20px;
   }
 }
 

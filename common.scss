@@ -1,5 +1,5 @@
 /*-------------------------*\
-        頁首頁尾樣式
+        頁首、頁尾樣式
 \*-------------------------*/
 @import "./var";
 //通用樣式設定 ==============================================
@@ -66,13 +66,13 @@ a {
 nav {
     //* Part 0 : 通用樣式設定
     @media screen and (min-width: $desktop) {
-    height: $h-nav-dt;
+        height: $h-nav-dt;
     }
     @media screen and (max-width: $tablet) {
-    height: $h-nav-tb;
+        height: $h-nav-tb;
     }
     @media screen and (max-width: $mobile) {
-    height: $h-nav-mb;
+        height: $h-nav-mb;
     }
     width: 100%;
     position: sticky;
@@ -248,7 +248,7 @@ footer {
             margin-right: 0.5em;
         }
         dt {
-            @include font-zh(1em, 500) ;
+            @include font-zh(1em, 500);
             a {
                 color: initial;
                 transition: color 0.5s;
@@ -258,8 +258,8 @@ footer {
             }
         }
         dd {
-            @include font-zh(0.8em, 300) ;
-            background-color: rgba($color-24,0.3);
+            @include font-zh(0.8em, 300);
+            background-color: rgba($color-24, 0.3);
             text-indent: 2.5em;
         }
     }
@@ -267,7 +267,7 @@ footer {
     div:last-child {
         display: flex;
         flex-direction: column;
-        justify-content:space-evenly;
+        justify-content: space-evenly;
         align-items: center;
         a {
             margin-bottom: 1em;

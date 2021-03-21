@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*-------------------------*\
-        頁首頁尾樣式
+        頁首、頁尾樣式
 \*-------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;500;700;900&display=swap");
 /*-------------------------*\
@@ -106,13 +106,13 @@ nav {
 
 @media screen and (max-width: 1024px) {
   nav {
-    height: 80px;
+    height: 72px;
   }
 }
 
 @media screen and (max-width: 767px) {
   nav {
-    height: 60px;
+    height: 40px;
   }
 }
 

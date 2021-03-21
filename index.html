@@ -10,8 +10,8 @@
 
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-    <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
@@ -20,8 +20,9 @@
         <!-- * Part 1 : LOGO -->
         <a href="#" class="logo">
             <picture>
+                <!-- 由上而下依序判斷 -->
+                <source media="(max-width : 767px)" srcset="./LOGO/32px_wFrame.png" />
                 <source media="(max-width : 1024px)" srcset="./LOGO/64px_wFrame.png" />
-                <!-- <source media="(max-width : 767px)" srcset="./LOGO/32px_wFrame.png" /> -->
                 <img src="./LOGO/128px_wFrame.png" alt="心晴診所 Sunshine Clinic logo" />
             </picture>
         </a>
