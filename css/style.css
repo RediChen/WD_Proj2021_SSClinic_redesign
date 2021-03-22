@@ -606,10 +606,19 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
   }
 }
 
+#time #time-table {
+  text-align: center;
+  font-family: "Noto Serif TC", serif;
+  font-weight: 300;
+  font-size: 1.5em;
+}
+
 #time #table-eg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 10px 0;
+  background-color: sandybrown;
 }
 
 #time #table-eg > div {

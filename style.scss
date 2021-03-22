@@ -451,11 +451,15 @@
 #time {
     // Part 0 : 標題
     // Part I : 時間表
+    #time-table {
+        text-align: center;
+        @include font-zh(1.5em, 300) ;
+    }
     // Part II : 時間表圖例
-    // Part III : 掛號須知
     #table-eg {
         display: flex;
-        background-color: #fab659
+        padding: 10px 0;
+        background-color: sandybrown ;//TODO
         & > div {
             margin: 0 5px;
             height: 5em;
@@ -480,6 +484,7 @@
             }
         }
     }
+    // Part III : 掛號須知
     // Part IV : 門診異動
 }
 // 門診時間 END ==========================================================
