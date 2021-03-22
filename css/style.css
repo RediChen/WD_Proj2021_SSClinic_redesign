@@ -76,7 +76,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
   font-family: "Noto Serif TC", serif;
   font-weight: 900;
   font-size: 5em;
-  color: DeepPink;
+  color: #dc388f;
 }
 
 @media screen and (min-width: 1025px) {
@@ -159,8 +159,8 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(skyblue), color-stop(85%, snow), color-stop(95%, snow), to(lightyellow));
-  background-image: linear-gradient(180deg, skyblue, snow 85%, snow 95%, lightyellow);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(snow), color-stop(85%, #f5d6db), color-stop(95%, #f5d6db), to(snow));
+  background-image: linear-gradient(180deg, snow, #f5d6db 85%, #f5d6db 95%, snow);
 }
 
 @media screen and (max-width: 767px) {
@@ -204,7 +204,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 #intro > div:last-child > div p span {
-  color: DeepPink;
+  color: #dc388f;
   font-weight: 700;
   background-color: rgba(255, 240, 245, 0.3);
 }
@@ -226,7 +226,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 #intro > div:last-child > div ul span {
-  color: DeepPink;
+  color: #dc388f;
   font-weight: 700;
   background-color: rgba(255, 240, 245, 0.3);
 }
@@ -261,7 +261,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 #team #team-btn-box {
   padding: 10px;
   width: 100%;
-  border: 10px solid rgba(255, 105, 180, 0.4);
+  border: 10px solid rgba(240, 122, 181, 0.4);
   -webkit-box-shadow: -8px 8px 8px -3px rgba(153, 0, 0, 0.4);
           box-shadow: -8px 8px 8px -3px rgba(153, 0, 0, 0.4);
 }
