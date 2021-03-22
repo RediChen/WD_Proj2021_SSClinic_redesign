@@ -20,10 +20,10 @@ $h-nav-dt: 100px ;
 $h-nav-tb: 72px ;
 $h-nav-mb: 40px ;
 //============ 門診時間表用
-$color-children : lightgoldenrodyellow ;
-$color-adult : skyblue ;
-$color-nature : pink ;
-$color-closed : #999 ;
+$color-children : hsl(60, 80%, 90%) ;
+$color-adult : hsl(197, 80%, 90%) ;
+$color-nature : hsl(350, 80%, 90%) ;
+$color-closed : hsl(0, 0%, 90%) ;
 //============
 @mixin font-zh($sz, $wt) {
     //wt is in 200, 300, 500, 700, 900

@@ -448,6 +448,40 @@
 }
 // 治療項目 END ==========================================================
 // *門診時間 ==============================================================
+#time {
+    // Part 0 : 標題
+    // Part I : 時間表
+    // Part II : 時間表圖例
+    // Part III : 掛號須知
+    #table-eg {
+        display: flex;
+        background-color: #fab659
+        & > div {
+            margin: 0 5px;
+            height: 5em;
+            width: 5em;
+            text-align: center;
+            border-radius: 50%;
+            h4 {
+                line-height: 5em;
+            }
+
+            &:nth-child(1) {
+                background-color: $color-children ;
+            }
+            &:nth-child(2) {
+                background-color: $color-adult ;
+            }
+            &:nth-child(3) {
+                background-color: $color-nature ;
+            }
+            &:nth-child(4) {
+                background-color: $color-closed ;
+            }
+        }
+    }
+    // Part IV : 門診異動
+}
 // 門診時間 END ==========================================================
 // *頁尾 =================================================================
 // 頁尾 END =============================================================

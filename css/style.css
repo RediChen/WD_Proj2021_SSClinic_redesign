@@ -605,4 +605,38 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
         grid-template-columns: repeat(2, 1fr);
   }
 }
+
+#time #table-eg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#time #table-eg > div {
+  margin: 0 5px;
+  height: 5em;
+  width: 5em;
+  text-align: center;
+  border-radius: 50%;
+}
+
+#time #table-eg > div h4 {
+  line-height: 5em;
+}
+
+#time #table-eg > div:nth-child(1) {
+  background-color: #fafad1;
+}
+
+#time #table-eg > div:nth-child(2) {
+  background-color: #d1eefa;
+}
+
+#time #table-eg > div:nth-child(3) {
+  background-color: #fad1d8;
+}
+
+#time #table-eg > div:nth-child(4) {
+  background-color: #e6e6e6;
+}
 /*# sourceMappingURL=style.css.map */
