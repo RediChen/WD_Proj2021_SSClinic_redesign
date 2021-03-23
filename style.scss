@@ -7,13 +7,13 @@
 #intro {
     //避免任何縫隙
     @media screen and (min-width: $desktop) {
-    margin-top: -$h-nav-dt + 20px;
+        margin-top: -$h-nav-dt + 20px;
     }
     @media screen and (max-width: $tablet) {
-    margin-top: -$h-nav-tb + 20px;
+        margin-top: -$h-nav-tb + 20px;
     }
     @media screen and (max-width: $mobile) {
-    margin-top: -$h-nav-mb + 20px;
+        margin-top: -$h-nav-mb + 20px;
     }
     //* Part I : 首頁形象
     & > div:first-child {
@@ -315,7 +315,7 @@
                 margin: 0 5%;
             }
             background-color: rgba(#aaa, 0.1);
-            box-shadow: 10px 0 10px -10px inset rgba(#666, 0.5) ;
+            box-shadow: 10px 0 10px -10px inset rgba(#666, 0.5);
             overflow: auto; //自動生成內滾動範圍
 
             .team-sub-card {
@@ -452,13 +452,13 @@
     // Part 0 : 標題
     // Part I : 時間表
     #time-table {
-        $gap : 10px ;
-        $leng : 100px ;
-        $leng-2 : $leng - 2px ;
-        $leng-half : $leng / 2 ;
-        $leng-half-2: $leng-half - 2px ;
-        width: 6.5*$leng + 6*$gap;
-        height: 3.5*$leng + 3*$gap;
+        $gap: 10px;
+        $leng: 100px;
+        $leng-2: $leng - 2px;
+        $leng-half: $leng / 2;
+        $leng-half-2: $leng-half - 2px;
+        width: 6.5 * $leng + 6 * $gap;
+        height: 3.5 * $leng + 3 * $gap;
         margin: 0 auto;
         display: grid;
         grid-gap: $gap;
@@ -466,7 +466,7 @@
         text-align: center;
         //! 有文字的部份實際都會超出一咪咪
         // 框線設定區
-        & > div:nth-child(n+2) {
+        & > div:nth-child(n + 2) {
             border: 1px solid #000;
             overflow: hidden;
         }
@@ -476,20 +476,20 @@
             height: $leng-half-2;
         }
         // 尺寸設定區：主列
-        & > div:nth-child(-n+7):not(:first-child) {
-            @include font-zh(1em, 500) ;
+        & > div:nth-child(-n + 7):not(:first-child) {
+            @include font-zh(1em, 500);
             width: $leng-2;
             height: $leng-half-2;
             line-height: $leng-half-2;
         }
         // 尺寸設定區：主欄
-        & > div:nth-child(7n+8) {
-            @include font-zh(1em, 300) ;
-            width: $leng-half-2 ;
+        & > div:nth-child(7n + 8) {
+            @include font-zh(1em, 300);
+            width: $leng-half-2;
             height: $leng-2;
         }
         // 尺寸設定區：非主列
-        & > div:nth-child(n+8):not(:nth-child(7n+8)) {
+        & > div:nth-child(n + 8):not(:nth-child(7n + 8)) {
             width: $leng-2;
             height: $leng-2;
         }
@@ -521,7 +521,7 @@
         }
         .tt-closed {
             background-color: $color-closed;
-            @include font-zh(1em, 700) ;
+            @include font-zh(1em, 700);
             color: crimson;
         }
     }
@@ -529,7 +529,7 @@
     #table-eg {
         display: flex;
         padding: 10px 0;
-        background-color: sandybrown ;//TODO
+        background-color: sandybrown; //TODO
         & > div {
             margin: 0 5px;
             height: 5em;
@@ -541,16 +541,16 @@
             }
 
             &:nth-child(1) {
-                background-color: $color-children ;
+                background-color: $color-children;
             }
             &:nth-child(2) {
-                background-color: $color-adult ;
+                background-color: $color-adult;
             }
             &:nth-child(3) {
-                background-color: $color-nature ;
+                background-color: $color-nature;
             }
             &:nth-child(4) {
-                background-color: $color-closed ;
+                background-color: $color-closed;
             }
         }
     }
@@ -558,7 +558,21 @@
     #register-note {
         // this = {h3, p, btns, pages}
         margin: 0 5%;
+        .note-btn-box {
+            display: flex;
+            & > a {
+                display: block;
+                margin-right: 10px;
+                padding: 2em 2em 1em;
+                background-color: antiquewhite;
+                border-radius: 10% 10% 0 0/ 20% 20% 0 0;
+            }
+        }
         // pages = {h4, ul}
+        .note-pages {
+            background-color: antiquewhite;
+            padding: 2em 4em;
+        }
     }
     // Part IV : 門診異動
 }

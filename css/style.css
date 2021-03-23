@@ -618,7 +618,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
   text-align: center;
 }
 
-#time #time-table > div:nth-child(n+2) {
+#time #time-table > div:nth-child(n + 2) {
   border: 1px solid #000;
   overflow: hidden;
 }
@@ -628,7 +628,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
   height: 48px;
 }
 
-#time #time-table > div:nth-child(-n+7):not(:first-child) {
+#time #time-table > div:nth-child(-n + 7):not(:first-child) {
   font-family: "Noto Serif TC", serif;
   font-weight: 500;
   font-size: 1em;
@@ -637,7 +637,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
   line-height: 48px;
 }
 
-#time #time-table > div:nth-child(7n+8) {
+#time #time-table > div:nth-child(7n + 8) {
   font-family: "Noto Serif TC", serif;
   font-weight: 300;
   font-size: 1em;
@@ -645,7 +645,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
   height: 98px;
 }
 
-#time #time-table > div:nth-child(n+8):not(:nth-child(7n+8)) {
+#time #time-table > div:nth-child(n + 8):not(:nth-child(7n + 8)) {
   width: 98px;
   height: 98px;
 }
@@ -745,5 +745,24 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 
 #time #register-note {
   margin: 0 5%;
+}
+
+#time #register-note .note-btn-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#time #register-note .note-btn-box > a {
+  display: block;
+  margin-right: 10px;
+  padding: 2em 2em 1em;
+  background-color: antiquewhite;
+  border-radius: 10% 10% 0 0/ 20% 20% 0 0;
+}
+
+#time #register-note .note-pages {
+  background-color: antiquewhite;
+  padding: 2em 4em;
 }
 /*# sourceMappingURL=style.css.map */
