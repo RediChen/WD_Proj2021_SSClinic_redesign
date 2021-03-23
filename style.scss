@@ -500,6 +500,15 @@
                 grid-template-columns: repeat($i, 1fr);
             }
         }
+        & > div:nth-last-child(2) > .tt-closed {
+            grid-column: 1 / span 3;
+        }
+        .tt-shorter {
+            grid-template-rows: repeat(1, 3fr 1fr);
+            .tt-closed {
+                box-shadow: 3px 6px 6px -3px $color-shade inset;
+            }
+        }
         // 顏色分配區
         .tt-children {
             background-color: $color-children;
@@ -512,6 +521,8 @@
         }
         .tt-closed {
             background-color: $color-closed;
+            @include font-zh(1em, 700) ;
+            color: crimson;
         }
     }
     // Part II : 時間表圖例

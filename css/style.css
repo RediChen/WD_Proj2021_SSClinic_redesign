@@ -671,6 +671,22 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
       grid-template-columns: repeat(3, 1fr);
 }
 
+#time #time-table > div:nth-last-child(2) > .tt-closed {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / span 3;
+}
+
+#time #time-table .tt-shorter {
+  -ms-grid-rows: (3fr 1fr)[1];
+      grid-template-rows: repeat(1, 3fr 1fr);
+}
+
+#time #time-table .tt-shorter .tt-closed {
+  -webkit-box-shadow: 3px 6px 6px -3px rgba(153, 153, 153, 0.3) inset;
+          box-shadow: 3px 6px 6px -3px rgba(153, 153, 153, 0.3) inset;
+}
+
 #time #time-table .tt-children {
   background-color: #fafad1;
 }
@@ -685,6 +701,10 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 
 #time #time-table .tt-closed {
   background-color: #e6e6e6;
+  font-family: "Noto Serif TC", serif;
+  font-weight: 700;
+  font-size: 1em;
+  color: crimson;
 }
 
 #time #table-eg {
