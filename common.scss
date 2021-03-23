@@ -19,6 +19,19 @@ a {
         color: initial;
     }
 }
+.btn {
+    display: block;
+    background-color: rgba($color-26, 0.3);
+    box-shadow: 0 0 10px $color-shade;
+    border-radius: 50% / 20%;
+    transition: background-color 0.5s;
+    &:hover {
+        background-color: rgba($color-26, 0.8);
+    }
+    &:active {
+        filter: invert(5%);
+    }
+}
 .logo img {
     transition: filter 0.5s;
     &:hover {
@@ -222,21 +235,10 @@ footer {
             }
         }
         a {
-            display: block;
             margin: 1em auto;
-            background-color: rgba($color-26, 0.3);
-            box-shadow: 0 0 10px $color-shade;
             width: 6em;
             height: 2.5em;
             line-height: 2.5em;
-            border-radius: 50% / 20%;
-            transition: background-color 0.5s;
-            &:hover {
-                background-color: rgba($color-26, 0.8);
-            }
-            &:active {
-                filter: invert(5%);
-            }
         }
     }
     // Part 3 : 聯絡 & 交通方式
@@ -276,8 +278,5 @@ footer {
                 width: 100%;
             }
         }
-        // p {
-        // margin-top: 1em;
-        // }
     }
 }

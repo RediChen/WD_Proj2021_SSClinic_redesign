@@ -742,4 +742,8 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 #time #table-eg > div:nth-child(4) {
   background-color: #e6e6e6;
 }
+
+#time #register-note {
+  margin: 0 5%;
+}
 /*# sourceMappingURL=style.css.map */

@@ -555,6 +555,11 @@
         }
     }
     // Part III : 掛號須知
+    #register-note {
+        // this = {h3, p, btns, pages}
+        margin: 0 5%;
+        // pages = {h4, ul}
+    }
     // Part IV : 門診異動
 }
 // 門診時間 END ==========================================================

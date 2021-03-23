@@ -25,6 +25,25 @@ a:link, a:visited {
   color: initial;
 }
 
+.btn {
+  display: block;
+  background-color: rgba(240, 122, 181, 0.3);
+  -webkit-box-shadow: 0 0 10px rgba(153, 153, 153, 0.3);
+          box-shadow: 0 0 10px rgba(153, 153, 153, 0.3);
+  border-radius: 50% / 20%;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+.btn:hover {
+  background-color: rgba(240, 122, 181, 0.8);
+}
+
+.btn:active {
+  -webkit-filter: invert(5%);
+          filter: invert(5%);
+}
+
 .logo img {
   -webkit-transition: -webkit-filter 0.5s;
   transition: -webkit-filter 0.5s;
@@ -286,26 +305,10 @@ footer #time-footer table tr span {
 }
 
 footer #time-footer a {
-  display: block;
   margin: 1em auto;
-  background-color: rgba(240, 122, 181, 0.3);
-  -webkit-box-shadow: 0 0 10px rgba(153, 153, 153, 0.3);
-          box-shadow: 0 0 10px rgba(153, 153, 153, 0.3);
   width: 6em;
   height: 2.5em;
   line-height: 2.5em;
-  border-radius: 50% / 20%;
-  -webkit-transition: background-color 0.5s;
-  transition: background-color 0.5s;
-}
-
-footer #time-footer a:hover {
-  background-color: rgba(240, 122, 181, 0.8);
-}
-
-footer #time-footer a:active {
-  -webkit-filter: invert(5%);
-          filter: invert(5%);
 }
 
 footer dl {
