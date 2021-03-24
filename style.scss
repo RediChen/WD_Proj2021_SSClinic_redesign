@@ -378,7 +378,6 @@
             }
         }
     }
-
     //* board 1
     #care-board-1 {
         background-color: rgba($color-24, 0.6);
@@ -413,6 +412,7 @@
             }
             //TODO 將此機制複製到行動裝置 by JS
             &:hover {
+                border-radius: 35px;
                 box-shadow: 0 2px 8px #55555555;
                 & > div {
                     background-image: url(../img/cloudy1.png);
@@ -455,12 +455,15 @@
             margin-top: 20px;
         }
         //Slick 修正區
-        $slick-offset: 170%;
+        $slick-offset: 65px;
         .slick-arrow::before {
             position: absolute;
             color: #990000;
             top: -15px;
             z-index: 3;
+            @media screen and (max-width: $tablet) {
+                font-size: xx-large;
+            }
         }
         .slick-prev::before {
             @media screen and (min-width: $desktop) {

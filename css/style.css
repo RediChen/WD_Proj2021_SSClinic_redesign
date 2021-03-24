@@ -563,6 +563,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 #care #care-board-2 .care-card:hover {
+  border-radius: 35px;
   -webkit-box-shadow: 0 2px 8px #55555555;
           box-shadow: 0 2px 8px #55555555;
 }
@@ -630,6 +631,12 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
   z-index: 3;
 }
 
+@media screen and (max-width: 1024px) {
+  #care #care-board-3 .slick-arrow::before {
+    font-size: xx-large;
+  }
+}
+
 @media screen and (min-width: 1025px) {
   #care #care-board-3 .slick-prev::before {
     left: 45px;
@@ -638,7 +645,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 
 @media screen and (max-width: 1024px) {
   #care #care-board-3 .slick-prev::before {
-    left: 170%;
+    left: 65px;
   }
 }
 
@@ -650,7 +657,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 
 @media screen and (max-width: 1024px) {
   #care #care-board-3 .slick-next::before {
-    right: 170%;
+    right: 65px;
   }
 }
 
