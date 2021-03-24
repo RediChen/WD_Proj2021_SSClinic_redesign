@@ -596,8 +596,24 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 
 #care #care-board-3 {
   overflow: hidden;
-  padding-bottom: 20px;
-  width: 80%;
+  padding: 30px;
+}
+
+@media screen and (min-width: 1025px) {
+  #care #care-board-3 {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #care #care-board-3 {
+    width: 80%;
+  }
+}
+
+#care #care-board-3 h3 {
+  display: block;
+  margin-top: 20px;
 }
 
 #care #care-board-3 .slick-arrow::before {
@@ -607,20 +623,27 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
   z-index: 3;
 }
 
-#care #care-board-3 .slick-prev::before {
-  left: 45px;
+@media screen and (min-width: 1025px) {
+  #care #care-board-3 .slick-prev::before {
+    left: 45px;
+  }
 }
 
-#care #care-board-3 .slick-next::before {
-  right: 35px;
+@media screen and (max-width: 1024px) {
+  #care #care-board-3 .slick-prev::before {
+    left: 170%;
+  }
 }
 
-@media screen and (max-width: 767px) {
-  #care #care-board-3 {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+@media screen and (min-width: 1025px) {
+  #care #care-board-3 .slick-next::before {
+    right: 35px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #care #care-board-3 .slick-next::before {
+    right: 170%;
   }
 }
 

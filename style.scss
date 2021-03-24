@@ -360,9 +360,7 @@
 // *治療項目 ====================================================================
 #care {
     margin-top: 200px;
-
     //* 共同樣式
-
     .care-card-wrap {
         //boards
         margin: 50px auto;
@@ -447,8 +445,22 @@
     //* board 3
     #care-board-3 {
         overflow: hidden;
-        padding-bottom: 20px;
-        width: 80%;
+        padding: 30px;
+        @media screen and (min-width: $desktop) {
+            width: 60%;
+        }
+        @media screen and (max-width: $tablet) {
+            width: 80%;
+        }
+        // @media screen and (max-width: $mobile) {
+        //     width: 80%;
+        // }
+        h3 {
+            display: block;
+            margin-top: 20px;
+        }
+        //Slick 修正區
+        $slick-offset : 170% ;
         .slick-arrow::before {
             position: absolute;
             color: #990000;
@@ -456,15 +468,22 @@
             z-index: 3;
         }
         .slick-prev::before {
-            left: 45px;
+            @media screen and (min-width: $desktop) {
+                left: 45px;
+            }
+            @media screen and (max-width: $tablet) {
+                left: $slick-offset;
+            }
         }
         .slick-next::before {
-            right: 35px;
+            @media screen and (min-width: $desktop) {
+                right: 35px;
+            }
+            @media screen and (max-width: $tablet) {
+                right: $slick-offset;
+            }
         }
-        @media screen and (max-width: $mobile) {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-        }
+        //Slick 修正區 END
     }
 }
 // 治療項目 END =================================================================
@@ -473,7 +492,7 @@
     // Part 0 : 標題
     // Part I : 時間表
     #time-table {
-        @import "./timeTable";// 外包的表格格式＆文字大小設定 with RWD
+        @import "./timeTable"; // 外包的表格格式＆文字大小設定 with RWD
         margin: 0 auto;
         text-align: center;
         // 格式設定
@@ -495,7 +514,7 @@
             }
         }
         // 文字設定區
-        @include timeTableText() ;
+        @include timeTableText();
         // 顏色分配區
         .tt-children {
             background-color: $color-children;

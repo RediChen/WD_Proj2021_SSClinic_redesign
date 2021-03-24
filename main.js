@@ -2,7 +2,9 @@
 $("#care-board-3").slick(
     {
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        fade: true,
+        speed: 1200
     }
 );
 
