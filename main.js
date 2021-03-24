@@ -6,7 +6,7 @@ $("#care-board-3").slick(
     }
 );
 
-//* 團隊頁面
+//* 團隊頁面 ==========================//
 // 全域變數區 ===================
 
 // 馬上執行區 ===================
@@ -17,8 +17,8 @@ function showCard(n) {
     var i;//for 迴圈用的這個變數不會被關在for裡頭，而會被提昇到這裡。
     var cards = document.getElementsByClassName("team-card");
     var btns = document.getElementsByClassName("team-btn");
-    var ifMobile = window.matchMedia("(max-width: 767px)");
-    //TODO 待研究
+    var isMobile = window.matchMedia("(max-width: 767px)");
+    //TODO 待研究這個變數到底是什麼
 
     //全部卡片隱藏，全部按鈕還原
     for (i = 0; i < cards.length; i++) {
@@ -28,7 +28,7 @@ function showCard(n) {
     }
     //顯示指定卡片，啟動對應按鈕
     cards[n].classList.add("team-card-active");
-    if (ifMobile.matches) cards[n].style.display = "flex";
+    if (isMobile.matches) cards[n].style.display = "flex";
     else cards[n].style.display = "grid";
     btns[n].classList.add("team-btn-active");
 }

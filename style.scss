@@ -176,6 +176,7 @@
     // team = {header, buttons, cards}
     //* Part 0 : 整體
     margin-top: 50px;
+    width: 100%;
     @media screen and (min-width: $desktop) {
         max-height: 80vh;
         display: grid;
@@ -183,6 +184,8 @@
         grid-gap: 30px;
     }
     @media screen and (max-width: $tablet) {
+        display: flex;
+        flex-direction: column;
         // max-height: 120vh;
     }
 
@@ -196,22 +199,22 @@
 
     //* Part II : 選取按鈕區
     #team-btn-box {
-        padding: 10px;
-        width: 100%;
-        border: 10px solid rgba($color-26, 0.4);
+        $pd : 10px ;//padding
+        $bd : 10px ;//border
+        padding: $pd;
+        width: calc(100% - 2*$pd - 2*$bd);
+        border: $bd solid rgba($color-26, 0.4);
         box-shadow: -8px 8px 8px -3px rgba(#990000, 0.4);
 
-        @media screen and (min-width: $desktop) {
+        // @media screen and (min-width: $desktop) {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(3, 1fr);
             grid-gap: 5px;
-        }
+        // }
         @media screen and (max-width: $tablet) {
             order: 4;
 
-            display: flex; //TODO 暫時，等著用輪播圖
-            flex-direction: row; //TODO 暫時，等著用輪播圖
         }
         //按鈕 Part 1 : 非顏色的設定
         .team-btn {
@@ -262,6 +265,8 @@
     #team-card-wrap {
         background-color: rgba($color-24, 0.6);
         box-shadow: -8px 8px 8px -3px $color-shade;
+
+        // card = {img, div-h2, div-about}
         .team-card {
             &-active {
                 //* RWD : Desktop & Tablet
@@ -284,6 +289,12 @@
                     flex-direction: column;
                     align-items: center;
                 }
+            }
+            // 照片
+            img {
+                display: block;
+                margin: 0 auto;
+                object-fit: contain;
             }
             // 成員姓名
             & > div:nth-child(2) {
