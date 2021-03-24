@@ -52,8 +52,8 @@ a:link, a:visited {
 }
 
 .logo img:hover {
-  -webkit-filter: drop-shadow(0 5px 15px rgba(255, 240, 245, 0.8));
-          filter: drop-shadow(0 5px 15px rgba(255, 240, 245, 0.8));
+  -webkit-filter: drop-shadow(0 5px 25px LavenderBlush);
+          filter: drop-shadow(0 5px 25px LavenderBlush);
 }
 
 .title-1 {
@@ -140,7 +140,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 2;
-  background-color: #f9c8d0;
+  background-color: #fbe9ec;
   border-radius: 0 0 80% 80% / 0 0 55% 55%;
   -webkit-box-shadow: 0 0 3px rgba(153, 153, 153, 0.3);
           box-shadow: 0 0 3px rgba(153, 153, 153, 0.3);
@@ -203,30 +203,39 @@ nav div:nth-child(3) div:nth-of-type(2) {
 }
 
 nav div:nth-child(3) a {
-  line-height: 1.2;
+  display: block;
+  line-height: 2;
+  padding: 5px 1em;
   font-family: "Noto Serif TC", serif;
   font-weight: 700;
   font-size: 1.5em;
+  border-radius: 30%;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 nav div:nth-child(3) a:nth-child(4), nav div:nth-child(3) a:nth-child(6) {
-  margin-top: 32px;
+  -webkit-transform: translateY(28px);
+          transform: translateY(28px);
 }
 
 nav div:nth-child(3) a:nth-child(4n + 3) {
-  margin-top: 30px;
+  -webkit-transform: translateY(23px);
+          transform: translateY(23px);
 }
 
 nav div:nth-child(3) a:nth-child(6n + 2) {
-  margin-top: 25px;
+  -webkit-transform: translateY(12px);
+          transform: translateY(12px);
 }
 
 nav div:nth-child(3) a:link, nav div:nth-child(3) a:visited {
-  color: Brown;
+  color: #000;
 }
 
 nav div:nth-child(3) a:hover {
-  text-shadow: 0 0 30px LavenderBlush;
+  -webkit-box-shadow: 0 0 10px 10px rgba(240, 122, 181, 0.3) inset;
+          box-shadow: 0 0 10px 10px rgba(240, 122, 181, 0.3) inset;
 }
 
 nav div:nth-child(3) a:active {
@@ -247,7 +256,7 @@ nav div:nth-child(3) a:active {
 }
 
 footer {
-  background-color: #f9c8d0;
+  background-color: #fbe9ec;
   -webkit-box-shadow: 0 0 3px rgba(153, 153, 153, 0.3);
           box-shadow: 0 0 3px rgba(153, 153, 153, 0.3);
   display: -ms-grid;

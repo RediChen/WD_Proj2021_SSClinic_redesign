@@ -50,7 +50,7 @@
         h1 {
             position: absolute;
             @include font-zh(5em, 900);
-            color: $color-16;
+            color: $color-24;
             @media screen and (min-width: $desktop) {
                 top: 26vh;
                 left: 41vw;
@@ -84,7 +84,7 @@
             // 文字樣式
             text-align: center;
             font-size: 2em;
-            color: brown;
+            color: #000;
             letter-spacing: 5px;
 
             @media screen and (min-width: $desktop) {
@@ -93,18 +93,18 @@
                 transform: translateX($offset-ls);
                 padding-left: 3vw;
                 padding-right: 15vw;
-                text-shadow: 1px -1px 0px burlywood, 5px -4px 4px #55555555;
+                text-shadow:3px -3px 3px #fff;
             }
             @media screen and (max-width: $tablet) {
                 width: calc(100%);
                 top: 44vh;
                 left: 50%;
                 transform: translateX(calc(-50%));
-                text-shadow: -1px -1px 0px burlywood, -5px -3px 2px #55555555;
+                text-shadow: -3px -3px 3px #fff;
             }
             @media screen and (max-width: $mobile) {
                 top: 36vh;
-                text-shadow: -1px -1px 0px burlywood, -4px -2px 4px #55555555;
+                text-shadow: -3px -3px 3px #fff;
                 padding: 0.5em 0;
                 font-size: 1.5em;
             }
@@ -574,7 +574,7 @@
     // Part III & IV
     & > :last-child {
         display: flex;
-        
+
     }
     // Part III : 掛號須知
     #register-note {

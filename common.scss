@@ -35,7 +35,7 @@ a {
 .logo img {
     transition: filter 0.5s;
     &:hover {
-        filter: drop-shadow(0 5px 15px rgba($color-24, 0.8));
+        filter: drop-shadow(0 5px 25px $color-24);
     }
 }
 .title-1 {
@@ -140,27 +140,30 @@ nav {
             width: 128px; //LOGO的位置
         }
         a {
-            line-height: 1.2;
+            display: block;
+            line-height: 2;
+            padding: 5px 1em;
             @include font-zh(1.5em, 700);
+            border-radius: 30%;
+            transition: .5s;
             // 配合弧度的高度微調：from 內 to 外
-            // TODO 規律一點的統一下降
             &:nth-child(4),
             &:nth-child(6) {
-                margin-top: 32px;
+                transform: translateY(28px);
             }
             &:nth-child(4n + 3) {
-                margin-top: 30px;
+                transform: translateY(23px);
             }
             &:nth-child(6n + 2) {
-                margin-top: 25px;
+                transform: translateY(12px);
             }
             // 配合弧度的高度微調 END
             &:link,
             &:visited {
-                color: $color-text;
+                color: #000;
             }
             &:hover {
-                text-shadow: 0 0 30px $color-24;
+                box-shadow: 0 0 10px 10px rgba($color-26, 0.3) inset;
             }
             &:active {
                 // filter: invert(20%);
