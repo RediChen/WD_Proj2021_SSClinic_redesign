@@ -913,19 +913,38 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
   display: -ms-flexbox;
   display: flex;
   padding: 10px 0;
-  background-color: sandybrown;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 #time #table-eg > div {
-  margin: 0 5px;
-  height: 5em;
-  width: 5em;
-  text-align: center;
   border-radius: 50%;
+  -webkit-box-shadow: 8px 8px 8px rgba(153, 153, 153, 0.3);
+          box-shadow: 8px 8px 8px rgba(153, 153, 153, 0.3);
+  height: 100px;
+  width: 100px;
 }
 
 #time #table-eg > div h4 {
-  line-height: 5em;
+  font-family: "Noto Serif TC", serif;
+  font-weight: 500;
+  font-size: 1.5em;
+  line-height: 100px;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  #time #table-eg > div {
+    height: 65px;
+    width: 65px;
+  }
+  #time #table-eg > div h4 {
+    font-family: "Noto Serif TC", serif;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 65px;
+  }
 }
 
 #time #table-eg > div:nth-child(1) {

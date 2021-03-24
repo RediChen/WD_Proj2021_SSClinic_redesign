@@ -529,15 +529,28 @@
     #table-eg {
         display: flex;
         padding: 10px 0;
-        background-color: sandybrown; //TODO
+        justify-content: space-evenly;
         & > div {
-            margin: 0 5px;
-            height: 5em;
-            width: 5em;
-            text-align: center;
             border-radius: 50%;
+            box-shadow: 8px 8px 8px $color-shade;
+            $leng : 100px ;
+                height: $leng;
+                width: $leng;
+            //RWD：電腦、平板
             h4 {
-                line-height: 5em;
+                @include font-zh(1.5em, 500);
+                line-height: $leng;
+                text-align: center;
+            }
+            //RWD：手機
+            @media screen and (max-width: $mobile) {
+                $leng : 65px ;
+                height: $leng;
+                width: $leng;
+                h4 {
+                    @include font-zh(1em, 500);
+                    line-height: $leng;
+                }
             }
 
             &:nth-child(1) {
