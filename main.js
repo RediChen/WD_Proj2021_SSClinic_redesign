@@ -1,10 +1,23 @@
 //board-3非所有裝置皆採用輪播圖，待思考作法。
+var tablet = 1024; //upper bound ; w < 1024
+var mobile = 767; //upper bound ; w < 767
 $("#care-board-3").slick(
     {
-        slidesToShow: 1,
+        slidesToShow: 4,
         slidesToScroll: 1,
         fade: true,
-        speed: 1200
+        speed: 1200,
+        responsive: [{
+            breakpoint: tablet,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                fade: false,
+                speed: 400
+            }
+        }
+        ]
+
     }
 );
 
@@ -24,7 +37,7 @@ function showCard(n) {
 
     //全部卡片隱藏，全部按鈕還原
     for (i = 0; i < cards.length; i++) {
-        cards[i].style.display = "none" ;
+        cards[i].style.display = "none";
         cards[i].style.display = "none";
         btns[i].classList.remove("team-btn-active");
     }
