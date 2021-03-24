@@ -234,8 +234,8 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 #team {
-  margin-top: 50px;
-  width: 100%;
+  margin: 50px 5px 0;
+  width: calc(100% - 10px);
 }
 
 @media screen and (min-width: 1025px) {
@@ -288,9 +288,9 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 #team #team-btn-box {
   padding: 10px;
   width: calc(100% - 2 * $pd - 2 * $bd);
-  border: 10px solid rgba(240, 122, 181, 0.4);
-  -webkit-box-shadow: -8px 8px 8px -3px rgba(153, 0, 0, 0.4);
-          box-shadow: -8px 8px 8px -3px rgba(153, 0, 0, 0.4);
+  border: 10px solid rgba(187, 187, 187, 0.3);
+  -webkit-box-shadow: -8px 8px 8px -3px rgba(153, 153, 153, 0.3);
+          box-shadow: -8px 8px 8px -3px rgba(153, 153, 153, 0.3);
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
@@ -336,9 +336,9 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
   background-color: #fbe9ec;
 }
 
-#team #team-btn-box .team-btn:hover {
-  -webkit-filter: brightness(1.05);
-          filter: brightness(1.05);
+#team #team-btn-box .team-btn:not(.team-btn-active):hover {
+  -webkit-filter: brightness(1.2);
+          filter: brightness(1.2);
 }
 
 #team #team-btn-box .team-btn:active {
