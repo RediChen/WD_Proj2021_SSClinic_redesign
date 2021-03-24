@@ -235,23 +235,10 @@
         }
         //按鈕 Part 2 : 顏色的設定
         .team-btn {
-            // 個別配色
-            &:nth-child(-n + 2) {
-                background-color: #f8c9a0;
-            }
-            &:nth-child(4),
-            &:nth-child(5) {
-                background-color: $color-24;
-            }
-            &:nth-child(-3n + 6) {
-                background-color: HoneyDew;
-            }
-            &:nth-child(n + 7) {
-                background-color: AliceBlue;
-            }
+            background-color: $color-shade;
             // 啟動者的對應強調
             &-active {
-                filter: brightness(1.1);
+                background-color: $color-14;
             }
             // 連結的基本變化
             &:hover {

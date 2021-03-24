@@ -328,25 +328,12 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
   }
 }
 
-#team #team-btn-box .team-btn:nth-child(-n + 2) {
-  background-color: #f8c9a0;
-}
-
-#team #team-btn-box .team-btn:nth-child(4), #team #team-btn-box .team-btn:nth-child(5) {
-  background-color: LavenderBlush;
-}
-
-#team #team-btn-box .team-btn:nth-child(-3n + 6) {
-  background-color: HoneyDew;
-}
-
-#team #team-btn-box .team-btn:nth-child(n + 7) {
-  background-color: AliceBlue;
+#team #team-btn-box .team-btn {
+  background-color: rgba(153, 153, 153, 0.3);
 }
 
 #team #team-btn-box .team-btn-active {
-  -webkit-filter: brightness(1.1);
-          filter: brightness(1.1);
+  background-color: #fbe9ec;
 }
 
 #team #team-btn-box .team-btn:hover {
