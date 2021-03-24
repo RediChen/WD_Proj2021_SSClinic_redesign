@@ -474,7 +474,6 @@
     // Part I : 時間表
     #time-table {
         @import "./timeTable";// 外包的表格格式＆文字大小設定 with RWD
-
         margin: 0 auto;
         text-align: center;
         // 格式設定
@@ -497,7 +496,6 @@
         }
         // 文字設定區
         @include timeTableText() ;
-
         // 顏色分配區
         .tt-children {
             background-color: $color-children;
