@@ -178,20 +178,19 @@
     margin-top: 50px;
     width: 100%;
     @media screen and (min-width: $desktop) {
-        max-height: 80vh;
+        height: 80vh;
         display: grid;
         grid-template-columns: 36% auto;
         grid-gap: 30px;
     }
     @media screen and (max-width: $tablet) {
+        height: 120vh;
         display: flex;
         flex-direction: column;
-        // max-height: 120vh;
     }
 
     //* Part I : 標題
     header {
-        padding-bottom: 2em;
         @media screen and (min-width: $desktop) {
             grid-column: 1 / span 2;
         }
@@ -199,30 +198,30 @@
 
     //* Part II : 選取按鈕區
     #team-btn-box {
-        $pd : 10px ;//padding
-        $bd : 10px ;//border
+        $pd: 10px; //padding
+        $bd: 10px; //border
         padding: $pd;
-        width: calc(100% - 2*$pd - 2*$bd);
+        width: calc(100% - 2 * $pd - 2 * $bd);
         border: $bd solid rgba($color-26, 0.4);
         box-shadow: -8px 8px 8px -3px rgba(#990000, 0.4);
 
         // @media screen and (min-width: $desktop) {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(3, 1fr);
-            grid-gap: 5px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 5px;
         // }
         @media screen and (max-width: $tablet) {
             order: 4;
-
         }
         //按鈕 Part 1 : 非顏色的設定
         .team-btn {
             height: 100px;
 
             h2 {
+                text-align: center;
                 @media screen and (min-width: $desktop) {
-                    @include font-zh(3em, 500);
+                    @include font-zh(2em, 700);
                 }
                 @media screen and (max-width: $tablet) {
                     @include font-zh(1em, 300);
@@ -266,13 +265,19 @@
         background-color: rgba($color-24, 0.6);
         box-shadow: -8px 8px 8px -3px $color-shade;
 
+        // @media screen and (max-width: $tablet) {
+        //     box-shadow: 0 0 8px 8px $color-shade;
+        //     margin-top: 50px;
+        //     padding: 10px;
+        // }
+
         // card = {img, div-h2, div-about}
         .team-card {
-            &-active {
-                //* RWD : Desktop & Tablet
+            @media screen and (min-width: $desktop) {
                 display: grid;
                 grid-template-areas: "photos showcases" "names showcases";
-                grid-template-rows: 400px 150px;
+                grid-template-columns: repeat(1, 1fr 3fr);
+                grid-template-rows: repeat(1, 3fr 1fr);
                 //area 命名
                 & > img {
                     grid-area: photos;
@@ -284,11 +289,28 @@
                     grid-area: showcases;
                 }
                 //area 命名 END
-                @media screen and (max-width: $mobile) {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
+            }
+            @media screen and (max-width: $tablet) {
+                display: grid;
+                grid-template-areas: "photos showcases" "names showcases";
+                grid-template-columns: repeat(1, 1fr 3fr);
+                grid-template-rows: repeat(1, 3fr 2fr);
+                //area 命名
+                & > img {
+                    grid-area: photos;
                 }
+                & > h2 {
+                    grid-area: names;
+                }
+                & > .team-about {
+                    grid-area: showcases;
+                }
+                //area 命名 END
+            }
+            @media screen and (max-width: $mobile) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
             }
             // 照片
             img {
@@ -309,25 +331,13 @@
                     }
                 }
             }
-            @media screen and (max-width: $mobile) {
-                max-height: 120vh;
-            }
         }
-
-        @media screen and (max-width: $tablet) {
-            box-shadow: 0 0 8px 8px $color-shade;
-            margin-top: 50px;
-            padding: 10px;
-        }
-
         .team-about {
             padding: 0 5%;
-            @media screen and (max-width: $mobile) {
-                margin: 0 5%;
-            }
+            max-height: 100%;
+            overflow: auto; //自動生成內滾動範圍
             background-color: rgba(#aaa, 0.1);
             box-shadow: 10px 0 10px -10px inset rgba(#666, 0.5);
-            overflow: auto; //自動生成內滾動範圍
 
             .team-sub-card {
                 padding: 1em 0;

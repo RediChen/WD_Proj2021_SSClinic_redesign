@@ -22,12 +22,11 @@ function showCard(n) {
 
     //全部卡片隱藏，全部按鈕還原
     for (i = 0; i < cards.length; i++) {
-        cards[i].classList.remove("team-card-active");
+        cards[i].style.display = "none" ;
         cards[i].style.display = "none";
         btns[i].classList.remove("team-btn-active");
     }
     //顯示指定卡片，啟動對應按鈕
-    cards[n].classList.add("team-card-active");
     if (isMobile.matches) cards[n].style.display = "flex";
     else cards[n].style.display = "grid";
     btns[n].classList.add("team-btn-active");
