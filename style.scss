@@ -206,7 +206,7 @@
         $pd: 10px; //padding
         $bd: 10px; //border
         $gap: 5px;
-        $leng: 100px ;
+        $leng: 100px;
         padding: $pd;
         width: calc(100% - 2 * $pd - 2 * $bd);
         border: $bd solid rgba($color-26, 0.4);
@@ -219,16 +219,6 @@
         grid-gap: 5px;
         //按鈕 Part 1 : 非顏色的設定
         .team-btn {
-            @media screen and (min-width: $desktop) {
-                height: 100px;
-            }
-            @media screen and (max-width: $tablet) {
-                height: 70px;
-            }
-            @media screen and (max-width: $mobile) {
-                height: 50px;
-            }
-
             h2 {
                 text-align: center;
                 @media screen and (min-width: $desktop) {
@@ -280,7 +270,7 @@
         .team-card {
             height: 45vh;
             @media screen and (min-width: $desktop) {
-            display: grid;
+                display: grid;
                 grid-template-areas: "photos showcases" "names showcases";
                 grid-template-columns: repeat(1, 1fr 3fr);
                 grid-template-rows: repeat(1, 3fr 1fr);
@@ -570,18 +560,42 @@
         margin: 0 5%;
         .note-btn-box {
             display: flex;
-            & > a {
+            .note-btns {
                 display: block;
                 margin-right: 10px;
-                padding: 2em 2em 1em;
-                background-color: antiquewhite;
+                padding: 1em 2em 0.5em;
+                background-color: hsl(34, 60%, 75%);
                 border-radius: 10% 10% 0 0/ 20% 20% 0 0;
+                transition: filter 0.5s;
+                &:not(.note-btns-active):hover {
+                    filter: brightness(1.1);
+                }
+                // 啟動者的對應強調
+                &-active {
+                    background-color: antiquewhite;
+                }
+                // 文字
+                @include font-zh(1em, 500);
             }
         }
         // pages = {h4, ul}
         .note-pages {
             background-color: antiquewhite;
             padding: 2em 4em;
+            // 文字
+            h4 {
+                @include font-zh(2em, 700) ;
+            }
+            ul {
+                $fz : 1.5em ;
+            @include font-zh($fz, 300);
+            line-height: 2.5em;
+            margin-left: 2*$fz;
+            &::before {
+                    text-indent: -2*$fz;
+                    content: attr(aria-label);
+                }
+            }
         }
     }
     // Part IV : 門診異動

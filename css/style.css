@@ -298,24 +298,6 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
   grid-gap: 5px;
 }
 
-@media screen and (min-width: 1025px) {
-  #team #team-btn-box .team-btn {
-    height: 100px;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  #team #team-btn-box .team-btn {
-    height: 70px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  #team #team-btn-box .team-btn {
-    height: 50px;
-  }
-}
-
 #team #team-btn-box .team-btn h2 {
   text-align: center;
 }
@@ -972,16 +954,51 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
   display: flex;
 }
 
-#time #register-note .note-btn-box > a {
+#time #register-note .note-btn-box .note-btns {
   display: block;
   margin-right: 10px;
-  padding: 2em 2em 1em;
-  background-color: antiquewhite;
+  padding: 1em 2em 0.5em;
+  background-color: #e6c499;
   border-radius: 10% 10% 0 0/ 20% 20% 0 0;
+  -webkit-transition: -webkit-filter 0.5s;
+  transition: -webkit-filter 0.5s;
+  transition: filter 0.5s;
+  transition: filter 0.5s, -webkit-filter 0.5s;
+  font-family: "Noto Serif TC", serif;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+#time #register-note .note-btn-box .note-btns:not(.note-btns-active):hover {
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
+}
+
+#time #register-note .note-btn-box .note-btns-active {
+  background-color: antiquewhite;
 }
 
 #time #register-note .note-pages {
   background-color: antiquewhite;
   padding: 2em 4em;
+}
+
+#time #register-note .note-pages h4 {
+  font-family: "Noto Serif TC", serif;
+  font-weight: 700;
+  font-size: 2em;
+}
+
+#time #register-note .note-pages ul {
+  font-family: "Noto Serif TC", serif;
+  font-weight: 300;
+  font-size: 1.5em;
+  line-height: 2.5em;
+  margin-left: 3em;
+}
+
+#time #register-note .note-pages ul::before {
+  text-indent: -3em;
+  content: attr(aria-label);
 }
 /*# sourceMappingURL=style.css.map */
