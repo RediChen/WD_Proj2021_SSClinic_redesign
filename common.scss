@@ -39,12 +39,21 @@ a {
     }
 }
 .title-1 {
+    $offset: 15px;
     @include font-zh(2em, 900);
     text-align: center;
+    letter-spacing: $offset;
+    text-indent: $offset;
+    @media screen and (max-width: $mobile) {
+        @include font-zh(1.5em, 900);
+    }
 }
 .title-2 {
-    @include font-zh(1.5em, 700);
     text-align: center;
+    @include font-zh(1.5em, 700);
+    @media screen and (max-width: $mobile) {
+        @include font-zh(1em, 900);
+    }
 }
 .p-text {
     @include font-zh(1em, 300);
@@ -52,7 +61,15 @@ a {
 .hr-1 {
     margin: 0.5em auto 1em;
     border-color: $color-line;
-    max-width: 80%;
+    @media screen and (min-width: $desktop) {
+        max-width: 70%;
+    }
+    @media screen and (max-width: $tablet) {
+        max-width: 80%;
+    }
+    // @media screen and (max-width: $mobile) {
+    //     max-width: 80%;
+    // }
 }
 .hr-2 {
     //複合式；靠左
