@@ -82,11 +82,25 @@
         }
         // 尺寸設定區：主欄
         & > div:nth-child(7n + 8) {
-            @include font-zh(0.5em, 300);
+            @include font-zh(10px, 300);
         }
         // 特殊休診時段
         .tt-closed {
             @include font-zh(0.8em, 700);
+        }
+    }
+}
+
+@mixin notePageText($fz_h4, $fz_ul) {
+    h4 {
+        @include font-zh($fz_h4, 700);
+    }
+    ul {
+        @include font-zh($fz_ul, 300);
+        margin-left: 2 * $fz_ul;
+        &::before {
+            content: attr(aria-label);
+            text-indent: -2 * $fz_ul;
         }
     }
 }

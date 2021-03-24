@@ -484,10 +484,10 @@
 // 治療項目 END =================================================================
 // *門診時間 ====================================================================
 #time {
+    @import "./timeTable"; // 外包的表格格式＆文字大小設定 with RWD
     // Part 0 : 標題
     // Part I : 時間表
     #time-table {
-        @import "./timeTable"; // 外包的表格格式＆文字大小設定 with RWD
         margin: 0 auto;
         text-align: center;
         // 格式設定
@@ -575,7 +575,15 @@
                     background-color: antiquewhite;
                 }
                 // 文字
-                @include font-zh(1em, 500);
+                @media screen and (min-width: $desktop) {
+                    @include font-zh(1em, 500);
+                }
+                @media screen and (max-width: $tablet) {
+                    @include font-zh(0.8em, 500);
+                }
+                @media screen and (max-width: $mobile) {
+                    @include font-zh(0.5em, 500);
+                }
             }
         }
         // pages = {h4, ul}
@@ -583,22 +591,60 @@
             background-color: antiquewhite;
             padding: 2em 4em;
             // 文字
-            h4 {
-                @include font-zh(2em, 700) ;
+            @media screen and (min-width: $desktop) {
+                @include notePageText(2em, 1.5em);
             }
-            ul {
-                $fz : 1.5em ;
-            @include font-zh($fz, 300);
-            line-height: 2.5em;
-            margin-left: 2*$fz;
-            &::before {
-                    text-indent: -2*$fz;
-                    content: attr(aria-label);
-                }
+            @media screen and (max-width: $tablet) {
+                @include notePageText(1.5em, 1em);
+            }
+            @media screen and (max-width: $mobile) {
+                @include notePageText(1em, 0.5em);
             }
         }
     }
-    // Part IV : 門診異動
+    // Part IV : 門診異動摘要
+    & > :last-child {
+        background-color: $color-24;
+        padding: 10px 20px;
+        border: 1px solid $color-26;
+        dl {
+            margin: 0.5em 0;
+            padding-left: 0.5em;
+            border: 1px solid $color-shade;
+            line-height: 2.5;
+            dt {
+                @media screen and (min-width: $desktop) {
+                    @include font-zh(2em, 500);
+                }
+                @media screen and (max-width: $tablet) {
+                    @include font-zh(1.5em, 500);
+                }
+                @media screen and (max-width: $mobile) {
+                    @include font-zh(1em, 500);
+                }
+            }
+            dd {
+                @media screen and (min-width: $desktop) {
+                    @include font-zh(1.5em, 300);
+                    text-indent: 3em;
+                }
+                @media screen and (max-width: $tablet) {
+                    @include font-zh(1em, 300);
+                    text-indent: 2em;
+                }
+                @media screen and (max-width: $mobile) {
+                    @include font-zh(0.8em, 300);
+                    text-indent: 1.6em;
+                }
+            }
+        }
+        a {
+            margin: 10px auto 0;
+            width: 5em;
+            line-height: 2.5em;
+            text-align: center;
+        }
+    }
 }
 // 門診時間 END ==========================================================
 // *頁尾 =================================================================

@@ -882,7 +882,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
   #time #time-table > div:nth-child(7n + 8) {
     font-family: "Noto Serif TC", serif;
     font-weight: 300;
-    font-size: 0.5em;
+    font-size: 10px;
   }
   #time #time-table .tt-closed {
     font-family: "Noto Serif TC", serif;
@@ -964,9 +964,6 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
   transition: -webkit-filter 0.5s;
   transition: filter 0.5s;
   transition: filter 0.5s, -webkit-filter 0.5s;
-  font-family: "Noto Serif TC", serif;
-  font-weight: 500;
-  font-size: 1em;
 }
 
 #time #register-note .note-btn-box .note-btns:not(.note-btns-active):hover {
@@ -978,27 +975,157 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
   background-color: antiquewhite;
 }
 
+@media screen and (min-width: 1025px) {
+  #time #register-note .note-btn-box .note-btns {
+    font-family: "Noto Serif TC", serif;
+    font-weight: 500;
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #time #register-note .note-btn-box .note-btns {
+    font-family: "Noto Serif TC", serif;
+    font-weight: 500;
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #time #register-note .note-btn-box .note-btns {
+    font-family: "Noto Serif TC", serif;
+    font-weight: 500;
+    font-size: 0.5em;
+  }
+}
+
 #time #register-note .note-pages {
   background-color: antiquewhite;
   padding: 2em 4em;
 }
 
-#time #register-note .note-pages h4 {
-  font-family: "Noto Serif TC", serif;
-  font-weight: 700;
-  font-size: 2em;
+@media screen and (min-width: 1025px) {
+  #time #register-note .note-pages h4 {
+    font-family: "Noto Serif TC", serif;
+    font-weight: 700;
+    font-size: 2em;
+  }
+  #time #register-note .note-pages ul {
+    font-family: "Noto Serif TC", serif;
+    font-weight: 300;
+    font-size: 1.5em;
+    margin-left: 3em;
+  }
+  #time #register-note .note-pages ul::before {
+    content: attr(aria-label);
+    text-indent: -3em;
+  }
 }
 
-#time #register-note .note-pages ul {
-  font-family: "Noto Serif TC", serif;
-  font-weight: 300;
-  font-size: 1.5em;
+@media screen and (max-width: 1024px) {
+  #time #register-note .note-pages h4 {
+    font-family: "Noto Serif TC", serif;
+    font-weight: 700;
+    font-size: 1.5em;
+  }
+  #time #register-note .note-pages ul {
+    font-family: "Noto Serif TC", serif;
+    font-weight: 300;
+    font-size: 1em;
+    margin-left: 2em;
+  }
+  #time #register-note .note-pages ul::before {
+    content: attr(aria-label);
+    text-indent: -2em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #time #register-note .note-pages h4 {
+    font-family: "Noto Serif TC", serif;
+    font-weight: 700;
+    font-size: 1em;
+  }
+  #time #register-note .note-pages ul {
+    font-family: "Noto Serif TC", serif;
+    font-weight: 300;
+    font-size: 0.5em;
+    margin-left: 1em;
+  }
+  #time #register-note .note-pages ul::before {
+    content: attr(aria-label);
+    text-indent: -1em;
+  }
+}
+
+#time > :last-child {
+  background-color: LavenderBlush;
+  padding: 10px 20px;
+  border: 1px solid #f07ab5;
+}
+
+#time > :last-child dl {
+  margin: 0.5em 0;
+  padding-left: 0.5em;
+  border: 1px solid rgba(153, 153, 153, 0.3);
+  line-height: 2.5;
+}
+
+@media screen and (min-width: 1025px) {
+  #time > :last-child dl dt {
+    font-family: "Noto Serif TC", serif;
+    font-weight: 500;
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #time > :last-child dl dt {
+    font-family: "Noto Serif TC", serif;
+    font-weight: 500;
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #time > :last-child dl dt {
+    font-family: "Noto Serif TC", serif;
+    font-weight: 500;
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  #time > :last-child dl dd {
+    font-family: "Noto Serif TC", serif;
+    font-weight: 300;
+    font-size: 1.5em;
+    text-indent: 3em;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #time > :last-child dl dd {
+    font-family: "Noto Serif TC", serif;
+    font-weight: 300;
+    font-size: 1em;
+    text-indent: 2em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #time > :last-child dl dd {
+    font-family: "Noto Serif TC", serif;
+    font-weight: 300;
+    font-size: 0.8em;
+    text-indent: 1.6em;
+  }
+}
+
+#time > :last-child a {
+  margin: 10px auto 0;
+  width: 5em;
   line-height: 2.5em;
-  margin-left: 3em;
-}
-
-#time #register-note .note-pages ul::before {
-  text-indent: -3em;
-  content: attr(aria-label);
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
