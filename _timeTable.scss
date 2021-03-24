@@ -1,0 +1,92 @@
+@mixin timeTable($leng, $gap) {
+    $leng-2: $leng - 2px;
+    $leng-half: $leng / 2;
+    $leng-half-2: $leng-half - 2px;
+    width: 6.5 * $leng + 6 * $gap;
+    height: 3.5 * $leng + 3 * $gap;
+    
+    display: grid;
+    grid-gap: $gap;
+    grid-template-columns: $leng-half repeat(6, 1fr);
+    // 框線設定區
+    & > div:nth-child(n + 2) {
+        border: 1px solid #000;
+        overflow: hidden;
+    }
+    // 尺寸設定區：左上格
+    & > div:first-child {
+        width: $leng-half-2;
+        height: $leng-half-2;
+    }
+    // 尺寸設定區：主列
+    & > div:nth-child(-n + 7):not(:first-child) {
+        width: $leng-2;
+        height: $leng-half-2;
+        line-height: $leng-half-2;
+    }
+    // 尺寸設定區：主欄
+    & > div:nth-child(7n + 8) {
+        width: $leng-half-2;
+        height: $leng-2;
+    }
+    // 尺寸設定區：非主列
+    & > div:nth-child(n + 8):not(:nth-child(7n + 8)) {
+        width: $leng-2;
+        height: $leng-2;
+    }
+    // 格局設定區
+    @for $i from 1 through 3 {
+        .tt-#{$i}col {
+            display: inline-grid;
+            grid-template-columns: repeat($i, 1fr);
+        }
+    }
+    & > div:nth-last-child(2) > .tt-closed {
+        grid-column: 1 / span 3;
+    }
+}
+
+@mixin timeTableText() {
+    @media screen and (min-width: $desktop) {
+        // 尺寸設定區：主列
+        & > div:nth-child(-n + 7):not(:first-child) {
+            @include font-zh(1em, 500);
+        }
+        // 尺寸設定區：主欄
+        & > div:nth-child(7n + 8) {
+            @include font-zh(1em, 300);
+        }
+        // 特殊休診時段
+        .tt-closed {
+            @include font-zh(1em, 700);
+        }
+    }
+    @media screen and (max-width: $tablet) {
+        // 尺寸設定區：主列
+        & > div:nth-child(-n + 7):not(:first-child) {
+            @include font-zh(0.8em, 500);
+        }
+        // 尺寸設定區：主欄
+        & > div:nth-child(7n + 8) {
+            @include font-zh(0.8em, 300);
+        }
+        // 特殊休診時段
+        .tt-closed {
+            @include font-zh(1em, 700);
+        }
+    }
+    @media screen and (max-width: $mobile) {
+        // 尺寸設定區：主列
+        & > div:nth-child(-n + 7):not(:first-child) {
+            @include font-zh(0.8em, 500);
+        }
+        // 尺寸設定區：主欄
+        & > div:nth-child(7n + 8) {
+            @include font-zh(0.5em, 300);
+        }
+        // 特殊休診時段
+        .tt-closed {
+            @include font-zh(0.8em, 700);
+        }
+    }
+}

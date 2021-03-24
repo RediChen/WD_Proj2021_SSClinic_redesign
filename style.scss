@@ -356,8 +356,8 @@
         }
     }
 }
-// 醫療團隊 END ==========================================================
-// *治療項目 ==============================================================
+// 醫療團隊 END =================================================================
+// *治療項目 ====================================================================
 #care {
     margin-top: 200px;
 
@@ -467,69 +467,37 @@
         }
     }
 }
-// 治療項目 END ==========================================================
-// *門診時間 ==============================================================
+// 治療項目 END =================================================================
+// *門診時間 ====================================================================
 #time {
     // Part 0 : 標題
     // Part I : 時間表
     #time-table {
-        $gap: 10px;
-        $leng: 100px;
-        $leng-2: $leng - 2px;
-        $leng-half: $leng / 2;
-        $leng-half-2: $leng-half - 2px;
-        width: 6.5 * $leng + 6 * $gap;
-        height: 3.5 * $leng + 3 * $gap;
+        @import "./timeTable";// 外包的表格格式＆文字大小設定 with RWD
+
         margin: 0 auto;
-        display: grid;
-        grid-gap: $gap;
-        grid-template-columns: $leng-half repeat(6, 1fr);
         text-align: center;
-        //! 有文字的部份實際都會超出一咪咪
-        // 框線設定區
-        & > div:nth-child(n + 2) {
-            border: 1px solid #000;
-            overflow: hidden;
+        // 格式設定
+        @media screen and (min-width: $desktop) {
+            @include timeTable(100px, 10px);
         }
-        // 尺寸設定區：左上格
-        & > div:first-child {
-            width: $leng-half-2;
-            height: $leng-half-2;
+        @media screen and (max-width: $tablet) {
+            @include timeTable(80px, 8px);
         }
-        // 尺寸設定區：主列
-        & > div:nth-child(-n + 7):not(:first-child) {
-            @include font-zh(1em, 500);
-            width: $leng-2;
-            height: $leng-half-2;
-            line-height: $leng-half-2;
+        @media screen and (max-width: $mobile) {
+            @include timeTable(50px, 6px);
         }
-        // 尺寸設定區：主欄
-        & > div:nth-child(7n + 8) {
-            @include font-zh(1em, 300);
-            width: $leng-half-2;
-            height: $leng-2;
-        }
-        // 尺寸設定區：非主列
-        & > div:nth-child(n + 8):not(:nth-child(7n + 8)) {
-            width: $leng-2;
-            height: $leng-2;
-        }
-        // 格局設定區
-        @for $i from 1 through 3 {
-            .tt-#{$i}col {
-                display: inline-grid;
-                grid-template-columns: repeat($i, 1fr);
-            }
-        }
-        & > div:nth-last-child(2) > .tt-closed {
-            grid-column: 1 / span 3;
-        }
+        // 格式設定 END
+        // 格式設定：特殊休診時段
         .tt-shorter {
             grid-template-rows: repeat(1, 3fr 1fr);
             .tt-closed {
                 box-shadow: 3px 6px 6px -3px $color-shade inset;
             }
         }
+        // 文字設定區
+        @include timeTableText() ;
+
         // 顏色分配區
         .tt-children {
             background-color: $color-children;
@@ -542,7 +510,6 @@
         }
         .tt-closed {
             background-color: $color-closed;
-            @include font-zh(1em, 700);
             color: crimson;
         }
     }
