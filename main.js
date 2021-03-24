@@ -3,7 +3,7 @@ var tablet = 1024; //upper bound ; w < 1024
 var mobile = 767; //upper bound ; w < 767
 $("#care-board-3").slick(
     {
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 1,
         fade: true,
         speed: 1200,
