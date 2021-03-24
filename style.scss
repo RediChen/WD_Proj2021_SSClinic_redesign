@@ -173,50 +173,61 @@
 // 診所簡介 END ==========================================================
 //* 醫療團隊 ==============================================================
 #team {
-    // team = {header, buttons, cards}
-    //* Part 0 : 整體
+    //* Part 0 : 整體格局
     margin-top: 50px;
     width: 100%;
+    // team = {header, buttons, cards}
     @media screen and (min-width: $desktop) {
         height: 80vh;
         display: grid;
-        grid-template-columns: 36% auto;
+        grid-template-columns: repeat(1, 4fr 7fr);
         grid-gap: 30px;
-    }
-    @media screen and (max-width: $tablet) {
-        height: 120vh;
-        display: flex;
-        flex-direction: column;
-    }
-
-    //* Part I : 標題
-    header {
-        @media screen and (min-width: $desktop) {
+        header {
             grid-column: 1 / span 2;
         }
     }
-
+    @media screen and (max-width: $tablet) {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        header {
+            flex-grow: 1;
+        }
+        #team-btn-box {
+            flex-grow: 1;
+            order: 4;
+        }
+        #team-card-wrap {
+            flex-grow: 3;
+        }
+    }
     //* Part II : 選取按鈕區
     #team-btn-box {
         $pd: 10px; //padding
         $bd: 10px; //border
+        $gap: 5px;
+        $leng: 100px ;
         padding: $pd;
         width: calc(100% - 2 * $pd - 2 * $bd);
         border: $bd solid rgba($color-26, 0.4);
+        // height: ;
         box-shadow: -8px 8px 8px -3px rgba(#990000, 0.4);
 
-        // @media screen and (min-width: $desktop) {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
         grid-gap: 5px;
-        // }
-        @media screen and (max-width: $tablet) {
-            order: 4;
-        }
         //按鈕 Part 1 : 非顏色的設定
         .team-btn {
-            height: 100px;
+            @media screen and (min-width: $desktop) {
+                height: 100px;
+            }
+            @media screen and (max-width: $tablet) {
+                height: 70px;
+            }
+            @media screen and (max-width: $mobile) {
+                height: 50px;
+            }
 
             h2 {
                 text-align: center;
@@ -264,17 +275,12 @@
     #team-card-wrap {
         background-color: rgba($color-24, 0.6);
         box-shadow: -8px 8px 8px -3px $color-shade;
-
-        // @media screen and (max-width: $tablet) {
-        //     box-shadow: 0 0 8px 8px $color-shade;
-        //     margin-top: 50px;
-        //     padding: 10px;
-        // }
-
+        padding: 3%;
         // card = {img, div-h2, div-about}
         .team-card {
+            height: 45vh;
             @media screen and (min-width: $desktop) {
-                display: grid;
+            display: grid;
                 grid-template-areas: "photos showcases" "names showcases";
                 grid-template-columns: repeat(1, 1fr 3fr);
                 grid-template-rows: repeat(1, 3fr 1fr);
@@ -326,7 +332,7 @@
                     padding: 0 0.5em;
                     border-bottom: 1px solid $color-line;
                     box-shadow: 0 9px 5px -6px #66666666;
-                    @media screen and (max-width: $mobile) {
+                    @media screen and (max-width: $tablet) {
                         margin: 0.5em 0 1em;
                     }
                 }
@@ -334,7 +340,6 @@
         }
         .team-about {
             padding: 0 5%;
-            max-height: 100%;
             overflow: auto; //自動生成內滾動範圍
             background-color: rgba(#aaa, 0.1);
             box-shadow: 10px 0 10px -10px inset rgba(#666, 0.5);
@@ -460,7 +465,7 @@
             margin-top: 20px;
         }
         //Slick 修正區
-        $slick-offset : 170% ;
+        $slick-offset: 170%;
         .slick-arrow::before {
             position: absolute;
             color: #990000;
