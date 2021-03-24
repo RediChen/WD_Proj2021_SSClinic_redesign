@@ -662,7 +662,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 #time #time-table {
-  margin: 0 auto;
+  margin: 0 auto 30px;
   text-align: center;
 }
 
@@ -936,9 +936,10 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 #time #table-eg > div h4 {
   font-family: "Noto Serif TC", serif;
   font-weight: 500;
-  font-size: 1.5em;
+  font-size: 1.2em;
   line-height: 100px;
   text-align: center;
+  text-shadow: 8px 8px 8px rgba(153, 153, 153, 0.3);
 }
 
 @media screen and (max-width: 767px) {
@@ -970,11 +971,18 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
   background-color: #e6e6e6;
 }
 
+#time > :last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 #time #register-note {
-  margin: 0 5%;
+  margin: 30px 5% 0;
 }
 
 #time #register-note .note-btn-box {
+  border: 1px solid #000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1025,72 +1033,97 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
   }
 }
 
-#time #register-note .note-pages {
+#time #register-note > :last-child {
   background-color: antiquewhite;
   padding: 2em 4em;
 }
 
+#time #register-note > :last-child .note-pages {
+  line-height: 2;
+}
+
 @media screen and (min-width: 1025px) {
-  #time #register-note .note-pages h4 {
+  #time #register-note > :last-child .note-pages h4 {
     font-family: "Noto Serif TC", serif;
     font-weight: 700;
     font-size: 2em;
   }
-  #time #register-note .note-pages ul {
+  #time #register-note > :last-child .note-pages ul {
     font-family: "Noto Serif TC", serif;
     font-weight: 300;
     font-size: 1.5em;
     margin-left: 3em;
   }
-  #time #register-note .note-pages ul::before {
+  #time #register-note > :last-child .note-pages ul::before {
     content: attr(aria-label);
     text-indent: -3em;
+    font-family: "Noto Serif TC", serif;
+    font-weight: 500;
+    font-size: 1.5em;
   }
 }
 
 @media screen and (max-width: 1024px) {
-  #time #register-note .note-pages h4 {
+  #time #register-note > :last-child .note-pages h4 {
     font-family: "Noto Serif TC", serif;
     font-weight: 700;
     font-size: 1.5em;
   }
-  #time #register-note .note-pages ul {
+  #time #register-note > :last-child .note-pages ul {
+    font-family: "Noto Serif TC", serif;
+    font-weight: 300;
+    font-size: 1.2em;
+    margin-left: 2.4em;
+  }
+  #time #register-note > :last-child .note-pages ul::before {
+    content: attr(aria-label);
+    text-indent: -2.4em;
+    font-family: "Noto Serif TC", serif;
+    font-weight: 500;
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #time #register-note > :last-child .note-pages h4 {
+    font-family: "Noto Serif TC", serif;
+    font-weight: 700;
+    font-size: 1.2em;
+  }
+  #time #register-note > :last-child .note-pages ul {
     font-family: "Noto Serif TC", serif;
     font-weight: 300;
     font-size: 1em;
     margin-left: 2em;
   }
-  #time #register-note .note-pages ul::before {
+  #time #register-note > :last-child .note-pages ul::before {
     content: attr(aria-label);
     text-indent: -2em;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  #time #register-note .note-pages h4 {
     font-family: "Noto Serif TC", serif;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 1em;
   }
-  #time #register-note .note-pages ul {
-    font-family: "Noto Serif TC", serif;
-    font-weight: 300;
-    font-size: 0.5em;
-    margin-left: 1em;
-  }
-  #time #register-note .note-pages ul::before {
-    content: attr(aria-label);
-    text-indent: -1em;
-  }
 }
 
-#time > :last-child {
+#time #register-note > :last-child a {
+  margin: 0 auto;
+  font-family: "Noto Serif TC", serif;
+  font-weight: 300;
+  font-size: 1em;
+  text-align: center;
+  width: 6em;
+  line-height: 3em;
+  -webkit-filter: hue-rotate(64deg);
+          filter: hue-rotate(64deg);
+}
+
+#time > :last-child > :last-child {
   background-color: LavenderBlush;
   padding: 10px 20px;
   border: 1px solid #f07ab5;
 }
 
-#time > :last-child dl {
+#time > :last-child > :last-child dl {
   margin: 0.5em 0;
   padding-left: 0.5em;
   border: 1px solid rgba(153, 153, 153, 0.3);
@@ -1098,7 +1131,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 @media screen and (min-width: 1025px) {
-  #time > :last-child dl dt {
+  #time > :last-child > :last-child dl dt {
     font-family: "Noto Serif TC", serif;
     font-weight: 500;
     font-size: 2em;
@@ -1106,7 +1139,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 @media screen and (max-width: 1024px) {
-  #time > :last-child dl dt {
+  #time > :last-child > :last-child dl dt {
     font-family: "Noto Serif TC", serif;
     font-weight: 500;
     font-size: 1.5em;
@@ -1114,7 +1147,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 @media screen and (max-width: 767px) {
-  #time > :last-child dl dt {
+  #time > :last-child > :last-child dl dt {
     font-family: "Noto Serif TC", serif;
     font-weight: 500;
     font-size: 1em;
@@ -1122,7 +1155,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 @media screen and (min-width: 1025px) {
-  #time > :last-child dl dd {
+  #time > :last-child > :last-child dl dd {
     font-family: "Noto Serif TC", serif;
     font-weight: 300;
     font-size: 1.5em;
@@ -1131,7 +1164,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 @media screen and (max-width: 1024px) {
-  #time > :last-child dl dd {
+  #time > :last-child > :last-child dl dd {
     font-family: "Noto Serif TC", serif;
     font-weight: 300;
     font-size: 1em;
@@ -1140,7 +1173,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 @media screen and (max-width: 767px) {
-  #time > :last-child dl dd {
+  #time > :last-child > :last-child dl dd {
     font-family: "Noto Serif TC", serif;
     font-weight: 300;
     font-size: 0.8em;
@@ -1148,7 +1181,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
   }
 }
 
-#time > :last-child a {
+#time > :last-child > :last-child a {
   margin: 10px auto 0;
   width: 5em;
   line-height: 2.5em;

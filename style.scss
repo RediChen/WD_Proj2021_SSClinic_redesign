@@ -491,7 +491,7 @@
     // Part 0 : 標題
     // Part I : 時間表
     #time-table {
-        margin: 0 auto;
+        margin: 0 auto 30px;
         text-align: center;
         // 格式設定
         @media screen and (min-width: $desktop) {
@@ -536,18 +536,19 @@
         & > div {
             border-radius: 50%;
             box-shadow: 8px 8px 8px $color-shade;
-            $leng : 100px ;
-                height: $leng;
-                width: $leng;
+            $leng: 100px;
+            height: $leng;
+            width: $leng;
             //RWD：電腦、平板
             h4 {
-                @include font-zh(1.5em, 500);
+                @include font-zh(1.2em, 500);
                 line-height: $leng;
                 text-align: center;
+                text-shadow: 8px 8px 8px $color-shade;
             }
             //RWD：手機
             @media screen and (max-width: $mobile) {
-                $leng : 65px ;
+                $leng: 65px;
                 height: $leng;
                 width: $leng;
                 h4 {
@@ -570,12 +571,19 @@
             }
         }
     }
+    // Part III & IV
+    & > :last-child {
+        display: flex;
+        
+    }
     // Part III : 掛號須知
     #register-note {
         // this = {h3, p, btns, pages}
-        margin: 0 5%;
+        margin: 30px 5% 0;
         .note-btn-box {
+            border: 1px solid #000;
             display: flex;
+            
             .note-btns {
                 display: block;
                 margin-right: 10px;
@@ -602,24 +610,35 @@
                 }
             }
         }
-        // pages = {h4, ul}
-        .note-pages {
+        // pages = {(h4, ul)*3, a}
+        & > :last-child {
             background-color: antiquewhite;
             padding: 2em 4em;
-            // 文字
-            @media screen and (min-width: $desktop) {
-                @include notePageText(2em, 1.5em);
+            .note-pages {
+                line-height: 2;
+                // 文字
+                @media screen and (min-width: $desktop) {
+                    @include notePageText(2em, 1.5em);
+                }
+                @media screen and (max-width: $tablet) {
+                    @include notePageText(1.5em, 1.2em);
+                }
+                @media screen and (max-width: $mobile) {
+                    @include notePageText(1.2em, 1em);
+                }
             }
-            @media screen and (max-width: $tablet) {
-                @include notePageText(1.5em, 1em);
-            }
-            @media screen and (max-width: $mobile) {
-                @include notePageText(1em, 0.5em);
+            a {
+                margin: 0 auto;
+                @include font-zh(1em, 300) ;
+                text-align: center;
+                width: 6em;
+                line-height: 3em;
+                filter: hue-rotate(64deg);
             }
         }
     }
     // Part IV : 門診異動摘要
-    & > :last-child {
+    & > :last-child > :last-child {
         background-color: $color-24;
         padding: 10px 20px;
         border: 1px solid $color-26;

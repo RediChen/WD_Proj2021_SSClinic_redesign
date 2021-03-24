@@ -101,6 +101,7 @@
         &::before {
             content: attr(aria-label);
             text-indent: -2 * $fz_ul;
+            @include font-zh($fz_ul, 500);
         }
     }
 }
