@@ -1,4 +1,17 @@
-//*
+//* 滾動機制 ==========================//
+$("a").each(function() {
+    //* Stage I : 收集參數
+    var target = $(this).attr("data-s2-target") ;
+    var posAdj = $(this).attr("data-s2-offset") ;
+    // (1) target 目標元素名稱，只有name、沒有sharp
+    // (2) posAdj = position adjust 微調目標的座標
+    //TODO 希望可以自動算效果的時間
+    
+
+})
+// 滾動機制 END
+//* 團隊頁面 ==========================//
+// 功能：slick
 var tablet = 1024; //upper bound ; w < 1024
 var mobile = 767; //upper bound ; w < 767
 $("#care-board-3").slick(
@@ -21,7 +34,9 @@ $("#care-board-3").slick(
     }
 );
 
+// 團隊頁面 END
 //* 團隊頁面 ==========================//
+// 功能：按鈕點選式呈現
 // 馬上執行區 =========
 showCard(0);
 // 函數宣告區 =========

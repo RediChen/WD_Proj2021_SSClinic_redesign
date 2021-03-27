@@ -9,24 +9,18 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 //也就說是說還是要寫兩次。
 \*-------------------------*/
 @media screen and (min-width: 1025px) {
-  #intro {
-    margin-top: -80px;
+  #opening {
+    margin-top: -60px;
   }
 }
 
 @media screen and (max-width: 1024px) {
-  #intro {
-    margin-top: -52px;
+  #opening {
+    margin-top: -40px;
   }
 }
 
-@media screen and (max-width: 767px) {
-  #intro {
-    margin-top: -20px;
-  }
-}
-
-#intro > div:first-child img {
+#opening > div:first-child img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -35,7 +29,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
           filter: contrast(0.65) brightness(1.2) saturate(1.3);
 }
 
-#intro > div:first-child #intro-disk {
+#opening > div:first-child #intro-disk {
   position: absolute;
   width: 22em;
   height: 4em;
@@ -45,14 +39,14 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 @media screen and (min-width: 1025px) {
-  #intro > div:first-child #intro-disk {
+  #opening > div:first-child #intro-disk {
     top: 34vh;
     left: 40vw;
   }
 }
 
 @media screen and (max-width: 1024px) {
-  #intro > div:first-child #intro-disk {
+  #opening > div:first-child #intro-disk {
     top: 25vh;
     left: 52%;
     -webkit-transform: translateX(-50%);
@@ -61,7 +55,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 @media screen and (max-width: 767px) {
-  #intro > div:first-child #intro-disk {
+  #opening > div:first-child #intro-disk {
     width: 15em;
     height: 3em;
     top: 21vh;
@@ -71,7 +65,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
   }
 }
 
-#intro > div:first-child h1 {
+#opening > div:first-child h1 {
   position: absolute;
   font-family: "Noto Serif TC", serif;
   font-weight: 900;
@@ -80,7 +74,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 @media screen and (min-width: 1025px) {
-  #intro > div:first-child h1 {
+  #opening > div:first-child h1 {
     top: 26vh;
     left: 41vw;
     text-shadow: 1px -1px 0 LavenderBlush, 2px -2px 0 #e1cdd5, 3px -3px 0 #d1bdc5, 4px -4px 0 #c1adb5, 5px -5px 0 #b19da5;
@@ -88,7 +82,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 @media screen and (max-width: 1024px) {
-  #intro > div:first-child h1 {
+  #opening > div:first-child h1 {
     top: 18vh;
     left: 52%;
     -webkit-transform: translateX(-50%);
@@ -98,7 +92,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 @media screen and (max-width: 767px) {
-  #intro > div:first-child h1 {
+  #opening > div:first-child h1 {
     top: 17vh;
     font-family: "Noto Serif TC", serif;
     font-weight: 900;
@@ -107,7 +101,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
   }
 }
 
-#intro > div:first-child h2 {
+#opening > div:first-child h2 {
   display: block;
   position: absolute;
   padding: 1em 0;
@@ -123,7 +117,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 @media screen and (min-width: 1025px) {
-  #intro > div:first-child h2 {
+  #opening > div:first-child h2 {
     top: 46vh;
     right: 0;
     -webkit-transform: translateX(5px);
@@ -135,7 +129,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 @media screen and (max-width: 1024px) {
-  #intro > div:first-child h2 {
+  #opening > div:first-child h2 {
     width: calc(100%);
     top: 44vh;
     left: 50%;
@@ -146,7 +140,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 @media screen and (max-width: 767px) {
-  #intro > div:first-child h2 {
+  #opening > div:first-child h2 {
     top: 36vh;
     text-shadow: -3px -3px 3px #fff;
     padding: 0.5em 0;
@@ -154,7 +148,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
   }
 }
 
-#intro > div:last-child {
+#opening > div:last-child {
   margin-top: -5px;
   width: 100%;
   height: 100vh;
@@ -164,12 +158,12 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 @media screen and (max-width: 767px) {
-  #intro > div:last-child {
+  #opening > div:last-child {
     height: auto;
   }
 }
 
-#intro > div:last-child > div {
+#opening > div:last-child > div {
   margin: 0 auto;
   padding: 2.5em 2em 5em;
   background-color: rgba(255, 240, 245, 0.8);
@@ -179,55 +173,55 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 @media screen and (min-width: 1025px) {
-  #intro > div:last-child > div {
+  #opening > div:last-child > div {
     width: 40%;
     margin-top: 5%;
   }
 }
 
 @media screen and (max-width: 1024px) {
-  #intro > div:last-child > div {
+  #opening > div:last-child > div {
     width: 70%;
     margin-top: 15%;
   }
 }
 
 @media screen and (max-width: 767px) {
-  #intro > div:last-child > div {
+  #opening > div:last-child > div {
     width: 83%;
     margin-top: 20%;
     padding: 1em 1.5em 5em;
   }
 }
 
-#intro > div:last-child > div p {
+#opening > div:last-child > div p {
   line-height: 2.5;
   text-indent: 2em;
 }
 
-#intro > div:last-child > div p span {
+#opening > div:last-child > div p span {
   color: #dc388f;
   font-weight: 700;
   background-color: rgba(255, 240, 245, 0.3);
 }
 
-#intro > div:last-child > div ul {
+#opening > div:last-child > div ul {
   line-height: 2.5;
   list-style-type: none;
   text-indent: 4em;
 }
 
 @media screen and (max-width: 767px) {
-  #intro > div:last-child > div ul {
+  #opening > div:last-child > div ul {
     text-indent: 2em;
   }
 }
 
-#intro > div:last-child > div ul u {
+#opening > div:last-child > div ul u {
   font-weight: 700;
 }
 
-#intro > div:last-child > div ul span {
+#opening > div:last-child > div ul span {
   color: #dc388f;
   font-weight: 700;
   background-color: rgba(255, 240, 245, 0.3);

@@ -4,16 +4,13 @@
 @import "./var";
 
 //* 診所簡介 ==============================================================
-#intro {
+#opening {
     //避免任何縫隙
     @media screen and (min-width: $desktop) {
         margin-top: -$h-nav-dt + 20px;
     }
     @media screen and (max-width: $tablet) {
         margin-top: -$h-nav-tb + 20px;
-    }
-    @media screen and (max-width: $mobile) {
-        margin-top: -$h-nav-mb + 20px;
     }
     //* Part I : 首頁形象
     & > div:first-child {

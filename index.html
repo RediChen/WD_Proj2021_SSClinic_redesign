@@ -18,12 +18,12 @@
     <!-- 導覽列 ============================================================= -->
     <nav>
         <!-- * Part 1 : LOGO -->
-        <a href="#" class="logo">
+        <a class="logo" data-s2-target="top">
             <picture>
                 <!-- 由上而下依序判斷 -->
                 <source media="(max-width : 767px)" srcset="./LOGO/32px_wFrame.png" />
-                <!-- <source media="(max-width : 1024px)" srcset="./LOGO/64px_wFrame.png" /> -->
                 <img src="./LOGO/64px_wFrame.png" alt="心晴診所 Sunshine Clinic logo" />
+                <!-- 64px for PC, 32px for others -->
             </picture>
         </a>
         <!-- * Part 2 : HBGer -->
@@ -32,23 +32,23 @@
         <div>
             <div></div>
             <!--襯墊-->
-            <a href="#intro">關於心晴</a>
-            <a href="#team">醫療團隊</a>
-            <a href="#care">治療項目</a>
+            <a data-s2-target="intro">關於心晴</a>
+            <a data-s2-target="team">醫療團隊</a>
+            <a data-s2-target="care">治療項目</a>
             <div></div>
             <!--襯墊：logo的位置-->
-            <a href="#time">門診時間</a>
-            <a href="#footer">聯絡我們</a>
-            <a href="#footer">交通方式</a>
+            <a data-s2-target="time">門診時間</a>
+            <a data-s2-target="footer">聯絡我們</a>
+            <a data-s2-target="footer">交通方式</a>
             <div></div>
             <!--襯墊-->
         </div>
     </nav>
     <!-- 導覽列 END ========================================================= -->
     <!-- 診所簡介 =========================================================== -->
-    <section id="intro">
+    <section id="opening">
         <!-- Part I : 首頁形象 -->
-        <div>
+        <div id="home">
             <picture>
                 <source media="(max-width : 1024px)" srcset="./img/Homepage_mobile.png" />
                 <img src="./img/FrontImg_ByMinhPham.jpg" alt="心晴診所">
@@ -59,7 +59,7 @@
             <h2 class="title-2">值得您信賴的專業團隊</h2>
         </div>
         <!-- Part II : 診所簡介 -->
-        <div>
+        <div id="intro">
             <div>
                 <h1 class="title-1">診所簡介</h1>
                 <hr class="hr-1">
@@ -875,7 +875,8 @@
     </section>
     <!-- 門診時間 END ======================================================= -->
     <!-- 頁尾 ============================================================== -->
-    <footer>
+    <footer id="footer">
+        <!-- id name for use in js -->
         <!-- Part 1 : 嵌入Google地圖 -->
         <div id="map">
             <iframe frameborder="0" allowfullscreen="false"

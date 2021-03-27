@@ -52,8 +52,8 @@ a:link, a:visited {
 }
 
 .logo img:hover {
-  -webkit-filter: drop-shadow(0 5px 25px #f07ab5);
-          filter: drop-shadow(0 5px 25px #f07ab5);
+  -webkit-filter: drop-shadow(0 5px 30px rgba(240, 122, 181, 0.5));
+          filter: drop-shadow(0 5px 30px rgba(240, 122, 181, 0.5));
 }
 
 .title-1 {
