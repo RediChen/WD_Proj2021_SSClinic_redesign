@@ -3,7 +3,6 @@
 \*-------------------------*/
 @import "./var";
 //通用樣式設定 ==============================================
-@debug "I'm here~";
 * {
     margin: 0;
     padding: 0;
@@ -35,7 +34,7 @@ a {
 .logo img {
     transition: filter 0.5s;
     &:hover {
-        filter: drop-shadow(0 5px 25px $color-24);
+        filter: drop-shadow(0 5px 25px $color-26);
     }
 }
 .title-1 {
@@ -101,14 +100,11 @@ nav {
     @media screen and (max-width: $tablet) {
         height: $h-nav-tb;
     }
-    @media screen and (max-width: $mobile) {
-        height: $h-nav-mb;
-    }
     width: 100%;
     position: sticky;
     top: 0;
     z-index: 2; //必須加，才不會被沒有設定pos的img擋住
-    background-color: $color-14;
+    background-color: $color-04;
     border-radius: 0 0 80% 80% / 0 0 55% 55%;
     box-shadow: 0 0 3px $color-shade;
     //TODO -(JS)-> 向下滾動時隱藏op0，向上或hover恢復op1
@@ -117,9 +113,9 @@ nav {
     & > a {
         display: block;
         position: absolute;
-        top: 3px;
+        top: 0;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%,20%);
     }
     //* Part 2 : HBGer
     div:nth-child(2) {
@@ -149,13 +145,10 @@ nav {
             // 配合弧度的高度微調：from 內 to 外
             &:nth-child(4),
             &:nth-child(6) {
-                transform: translateY(28px);
+                transform: translateY(12px);
             }
             &:nth-child(4n + 3) {
-                transform: translateY(23px);
-            }
-            &:nth-child(6n + 2) {
-                transform: translateY(12px);
+                transform: translateY(8px);
             }
             // 配合弧度的高度微調 END
             &:link,

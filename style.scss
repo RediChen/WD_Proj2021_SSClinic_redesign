@@ -237,7 +237,20 @@
             background-color: $color-shade;
             // 啟動者的對應強調
             &-active {
-                background-color: $color-14;
+                // background-color: $color-14;
+                &:nth-child(-n + 2) {
+                    background-color: #f8c9a0;
+                }
+                &:nth-child(4),
+                &:nth-child(5) {
+                    background-color: $color-24;
+                }
+                &:nth-child(-3n + 6) {
+                    background-color: HoneyDew;
+                }
+                &:nth-child(n + 7) {
+                    background-color: AliceBlue;
+                }
             }
             // 連結的基本變化
             &:not(.team-btn-active):hover {
