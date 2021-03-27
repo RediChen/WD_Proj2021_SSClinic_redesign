@@ -1,13 +1,38 @@
 //* 滾動機制 ==========================//
-$("a").each(function() {
+//功能：藉由jQuery實現捲動前往指定位置
+$("a").each(function () {
     //* Stage I : 收集參數
-    var target = $(this).attr("data-s2-target") ;
-    var posAdj = $(this).attr("data-s2-offset") ;
+    var target = $(this).attr("data-s2-target");
     // (1) target 目標元素名稱，只有name、沒有sharp
-    // (2) posAdj = position adjust 微調目標的座標
+    if (!target) return true;// 沒有設定此參數的就直接請出
+    console.log("目標是：" + target) ;//TODO delete
+    //====================//
+    var offset = $("#" + target).offset();//jqGetOffset
+    // (2-1) offset 元素在網頁上的座標
+    var posY = offset.top;
+    // (2-2) offset.top 元素在網頁上的y座標
+    console.log("座標為：" + posY) ;//TODO delete
+    //====================//
+    var posAdj = $(this).attr("data-s2-offset");
+    // (3) posAdj = position adjust 微調目標的座標
     //TODO 希望可以自動算效果的時間
-    
 
+    //* Stage II : 參數操作
+    if (posAdj)  posY += posAdj ;
+    // 有要求才改，以免undefined礙事
+
+    //* Stage III : 前往至目的地
+    $(this).click(function (e) { 
+        e.preventDefault();//關閉 a 原本的連結功能
+        $("html").stop().animate({
+            //(1) 插入stop() 讓點選其他按鈕可以中止機制
+            scrollTop: posY
+        }, 800) ;
+    });
+    $("html").on("mousewheel", function () {
+        $("html").stop() ;
+    }) ;
+    //(2) 讓滾輪可以中止機制
 })
 // 滾動機制 END
 //* 團隊頁面 ==========================//
@@ -63,16 +88,16 @@ function showCard(n) {
 showPage(0);
 // 函數宣告區 =========
 function showPage(n) {
-    var i ;
-    var pages = document.getElementsByClassName("note-pages") ;
+    var i;
+    var pages = document.getElementsByClassName("note-pages");
     var btns = document.getElementsByClassName("note-btns");
 
     // hide all
-    for(i = 0 ; i < pages.length ; i++) {
-        pages[i].style.display = "none" ;
-        btns[i].classList.remove("note-btns-active") ;
+    for (i = 0; i < pages.length; i++) {
+        pages[i].style.display = "none";
+        btns[i].classList.remove("note-btns-active");
     }
-    pages[n].style.display = "block" ;
-    btns[n].classList.add("note-btns-active") ;
+    pages[n].style.display = "block";
+    btns[n].classList.add("note-btns-active");
 }
 // 門診頁面 END

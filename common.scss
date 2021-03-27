@@ -13,6 +13,7 @@ body {
 a {
     //reset the default
     text-decoration: none;
+    cursor: pointer;
     &:link,
     &:visited {
         color: initial;
