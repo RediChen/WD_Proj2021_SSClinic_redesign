@@ -228,7 +228,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 #team {
-  margin: 50px 5px 0;
+  margin: 150px 5px 0;
   width: calc(100% - 10px);
 }
 
@@ -486,7 +486,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 #care {
-  margin-top: 200px;
+  margin: 200px 5px 0;
 }
 
 #care .care-card-wrap {
@@ -656,7 +656,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 #time #time-table {
-  margin: 0 auto 30px;
+  margin: 100px auto 30px;
   text-align: center;
 }
 
@@ -913,7 +913,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 10px 0;
+  padding: 10px 15%;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -966,9 +966,19 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 #time > :last-child {
+  margin-top: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media screen and (max-width: 767px) {
+  #time > :last-child {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 #time #register-note {

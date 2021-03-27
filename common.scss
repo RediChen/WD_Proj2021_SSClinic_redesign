@@ -116,12 +116,19 @@ nav {
         position: absolute;
         top: 0;
         left: 50%;
-        transform: translate(-50%,20%);
+        transform: translate(-50%, 20%);
     }
     //* Part 2 : HBGer
     div:nth-child(2) {
-        background-color: $color-24;
+        // background-color: lightgoldenrodyellow;
+        background-image: url(../img/iconHBG.png);
+        position: absolute;
+        top: 7px;
+        right: 25px;
+        height: 32px;
+        width: 32px;
         border-radius: 20%;
+        box-shadow: 2px 2px 3px $color-shade;
         @media screen and (min-width: $desktop) {
             display: none;
         }
@@ -142,7 +149,7 @@ nav {
             padding: 5px 1em;
             @include font-zh(1.5em, 700);
             border-radius: 30%;
-            transition: .5s;
+            transition: 0.5s;
             // 配合弧度的高度微調：from 內 to 外
             &:nth-child(4),
             &:nth-child(6) {

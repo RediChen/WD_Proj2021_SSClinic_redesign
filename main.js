@@ -5,13 +5,11 @@ $("a").each(function () {
     var target = $(this).attr("data-s2-target");
     // (1) target 目標元素名稱，只有name、沒有sharp
     if (!target) return true;// 沒有設定此參數的就直接請出
-    console.log("目標是：" + target) ;//TODO delete
     //====================//
     var offset = $("#" + target).offset();//jqGetOffset
     // (2-1) offset 元素在網頁上的座標
     var posY = offset.top;
     // (2-2) offset.top 元素在網頁上的y座標
-    console.log("座標為：" + posY) ;//TODO delete
     //====================//
     var posAdj = $(this).attr("data-s2-offset");
     // (3) posAdj = position adjust 微調目標的座標
