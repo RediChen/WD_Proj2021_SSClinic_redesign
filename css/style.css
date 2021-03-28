@@ -914,6 +914,10 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
   color: crimson;
 }
 
+#time #time-table .tt-deactivate {
+  background-color: #e6e6e6 !important;
+}
+
 #time #table-eg {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -924,7 +928,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
           justify-content: space-evenly;
 }
 
-#time #table-eg > div {
+#time #table-eg .table-eg-btns {
   border-radius: 50%;
   -webkit-box-shadow: 8px 8px 8px rgba(153, 153, 153, 0.3);
           box-shadow: 8px 8px 8px rgba(153, 153, 153, 0.3);
@@ -932,7 +936,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
   width: 100px;
 }
 
-#time #table-eg > div h4 {
+#time #table-eg .table-eg-btns h4 {
   font-family: "Noto Serif TC", serif;
   font-weight: 500;
   font-size: 1.2em;
@@ -942,11 +946,11 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 @media screen and (max-width: 767px) {
-  #time #table-eg > div {
+  #time #table-eg .table-eg-btns {
     height: 65px;
     width: 65px;
   }
-  #time #table-eg > div h4 {
+  #time #table-eg .table-eg-btns h4 {
     font-family: "Noto Serif TC", serif;
     font-weight: 500;
     font-size: 1em;
@@ -954,19 +958,19 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
   }
 }
 
-#time #table-eg > div:nth-child(1) {
+#time #table-eg .table-eg-btns:nth-child(1) {
   background-color: #fafad1;
 }
 
-#time #table-eg > div:nth-child(2) {
+#time #table-eg .table-eg-btns:nth-child(2) {
   background-color: #d1eefa;
 }
 
-#time #table-eg > div:nth-child(3) {
+#time #table-eg .table-eg-btns:nth-child(3) {
   background-color: #f1dade;
 }
 
-#time #table-eg > div:nth-child(4) {
+#time #table-eg .table-eg-btns:nth-child(4) {
   background-color: #e6e6e6;
 }
 

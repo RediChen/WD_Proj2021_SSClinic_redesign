@@ -258,12 +258,13 @@ nav div:nth-child(3) a:active {
 }
 
 footer {
+  min-height: 100vh;
+  padding: 50px 20px 20px;
   background-color: #fbe9ec;
   -webkit-box-shadow: 0 0 3px rgba(153, 153, 153, 0.3);
           box-shadow: 0 0 3px rgba(153, 153, 153, 0.3);
   display: -ms-grid;
   display: grid;
-  padding: 50px 20px 20px;
 }
 
 @media screen and (min-width: 1025px) {

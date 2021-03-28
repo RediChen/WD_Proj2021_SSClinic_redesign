@@ -187,10 +187,11 @@ nav {
 //導覽列 END ================================================
 footer {
     // Part 0 : 整體設定
+    min-height: 100vh;
+    padding: 50px 20px 20px;
     background-color: $color-14;
     box-shadow: 0 0 3px $color-shade;
     display: grid;
-    padding: 50px 20px 20px;
     // Part 0 : 整體格局 RWD
     @media screen and (min-width: $desktop) {
         grid-template-columns: 65% auto;

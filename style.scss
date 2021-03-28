@@ -528,13 +528,16 @@
             background-color: $color-closed;
             color: crimson;
         }
+        .tt-deactivate {
+            background-color: $color-closed !important;
+        }
     }
     // Part III : 時間表圖例
     #table-eg {
         display: flex;
         padding: 10px 15%;
         justify-content: space-evenly;
-        & > div {
+        .table-eg-btns {
             border-radius: 50%;
             box-shadow: 8px 8px 8px $color-shade;
             $leng: 100px;
