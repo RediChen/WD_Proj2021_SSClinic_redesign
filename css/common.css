@@ -210,20 +210,25 @@ nav div:nth-child(3) a {
   padding: 5px 1em;
   font-family: "Noto Serif TC", serif;
   font-weight: 700;
-  font-size: 1.5em;
+  font-size: 1.2em;
   border-radius: 30%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 nav div:nth-child(3) a:nth-child(4), nav div:nth-child(3) a:nth-child(6) {
-  -webkit-transform: translateY(12px);
-          transform: translateY(12px);
+  -webkit-transform: translateY(15px);
+          transform: translateY(15px);
 }
 
 nav div:nth-child(3) a:nth-child(4n + 3) {
-  -webkit-transform: translateY(8px);
-          transform: translateY(8px);
+  -webkit-transform: translateY(13px);
+          transform: translateY(13px);
+}
+
+nav div:nth-child(3) a:nth-child(6n + 2) {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
 }
 
 nav div:nth-child(3) a:link, nav div:nth-child(3) a:visited {

@@ -8,20 +8,25 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 //採用在個樣式設定取用不同不同的變數
 //也就說是說還是要寫兩次。
 \*-------------------------*/
+#opening {
+  width: 100%;
+}
+
 @media screen and (min-width: 1025px) {
   #opening {
-    margin-top: -60px;
+    margin-top: -80px;
   }
 }
 
 @media screen and (max-width: 1024px) {
   #opening {
-    margin-top: -40px;
+    margin-top: -60px;
   }
 }
 
 #opening > div:first-child img {
   width: 100%;
+  height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
   overflow: hidden;

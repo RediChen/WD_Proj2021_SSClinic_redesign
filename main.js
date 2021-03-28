@@ -22,15 +22,16 @@ $("a").each(function () {
     //* Stage III : 前往至目的地
     $(this).click(function (e) { 
         e.preventDefault();//關閉 a 原本的連結功能
-        $("html").stop().animate({
-            //(1) 插入stop() 讓點選其他按鈕可以中止機制
+        $("html, body").stop().animate({
+            //(1) UX : 插入stop() 讓點選其他按鈕可以中止機制
+            //(2) html, body 是為了跨平台的以防萬一
             scrollTop: posY
         }, 800) ;
     });
-    $("html").on("mousewheel", function () {
-        $("html").stop() ;
+    $("html, body").on("mousewheel", function () {
+        $("html, body").stop() ;
     }) ;
-    //(2) 讓滾輪可以中止機制
+    //(3) UX : 讓滾輪可以中止機制
 })
 // 滾動機制 END
 //* 團隊頁面 ==========================//
@@ -39,10 +40,9 @@ var tablet = 1024; //upper bound ; w < 1024
 var mobile = 767; //upper bound ; w < 767
 $("#care-board-3").slick(
     {
-        slidesToShow: 3,
+        slidesToShow: 2,
         slidesToScroll: 1,
-        fade: true,
-        speed: 1200,
+        speed: 3000,
         responsive: [{
             breakpoint: tablet,
             settings: {

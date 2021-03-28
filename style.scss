@@ -5,18 +5,20 @@
 
 //* 診所簡介 ==============================================================
 #opening {
+    width: 100%;
     //避免任何縫隙
     @media screen and (min-width: $desktop) {
-        margin-top: -$h-nav-dt + 20px;
+        margin-top: -$h-nav-dt;
     }
     @media screen and (max-width: $tablet) {
-        margin-top: -$h-nav-tb + 20px;
+        margin-top: -$h-nav-tb;
     }
     //* Part I : 首頁形象
     & > div:first-child {
         //Part I-1 : 樣式設定
         img {
             width: 100%;
+            height: 100vh;
             object-fit: cover;
             overflow: hidden;
             filter: contrast(0.65) brightness(1.2) saturate(1.3);
