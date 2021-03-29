@@ -13,15 +13,46 @@
     #news-box {
         display: flex;
         flex-flow: column;
-
+        .news-bars,
+        .news-bricks {
+            @media screen and (min-width: $desktop) {
+                width: 70%;
+                margin: 0 auto;
+            }
+            @media screen and (max-width: $tablet) {
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
         .news-bars {
-            display: flex;
+            padding: 1em 3em;
+            border-radius: 1em;
 
-            
-            &:nth-child(odd) {
+            &:nth-of-type(odd) {
+                background-color: #aaa;
+                color: #f2f2f2;
+            }
+            &:nth-of-type(even) {
                 background-color: #eee;
             }
-
+            h2 {
+                float: left;
+            }
+            h3 {
+                float: right;
+            }
+            .news-bricks {
+                clear: both;
+            }
+        }
+        .news-bricks {
+            display: block;
+            display: none;
+            padding: 2em 3em;
+            background-color: rgba($color-26, 0.05);
+            box-shadow: -10px 0 5px -10px $color-shade;
+            @include font-zh(1em, 300);
+            line-height: 2;
         }
     }
 }

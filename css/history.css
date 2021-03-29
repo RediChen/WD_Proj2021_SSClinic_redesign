@@ -30,13 +30,58 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
           flex-flow: column;
 }
 
-#history #news-box .news-bars {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (min-width: 1025px) {
+  #history #news-box .news-bars,
+  #history #news-box .news-bricks {
+    width: 70%;
+    margin: 0 auto;
+  }
 }
 
-#history #news-box .news-bars:nth-child(odd) {
+@media screen and (max-width: 1024px) {
+  #history #news-box .news-bars,
+  #history #news-box .news-bricks {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+#history #news-box .news-bars {
+  padding: 1em 3em;
+  border-radius: 1em;
+}
+
+#history #news-box .news-bars:nth-of-type(odd) {
+  background-color: #aaa;
+  color: #f2f2f2;
+}
+
+#history #news-box .news-bars:nth-of-type(even) {
   background-color: #eee;
+}
+
+#history #news-box .news-bars h2 {
+  float: left;
+}
+
+#history #news-box .news-bars h3 {
+  float: right;
+}
+
+#history #news-box .news-bars .news-bricks {
+  clear: both;
+}
+
+#history #news-box .news-bricks {
+  display: block;
+  display: none;
+  padding: 2em 3em;
+  background-color: rgba(240, 122, 181, 0.05);
+  -webkit-box-shadow: -10px 0 5px -10px rgba(153, 153, 153, 0.3);
+          box-shadow: -10px 0 5px -10px rgba(153, 153, 153, 0.3);
+  font-family: "Noto Serif TC", serif;
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 2;
 }
 /*# sourceMappingURL=history.css.map */
