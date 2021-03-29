@@ -264,67 +264,95 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  #team header {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-  }
   #team #team-btn-box {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
     -webkit-box-ordinal-group: 5;
         -ms-flex-order: 4;
             order: 4;
   }
-  #team #team-card-wrap {
-    -webkit-box-flex: 3;
-        -ms-flex-positive: 3;
-            flex-grow: 3;
-  }
 }
 
 #team #team-btn-box {
-  padding: 10px;
-  width: calc(100% - 2 * $pd - 2 * $bd);
-  border: 10px solid rgba(187, 187, 187, 0.3);
   -webkit-box-shadow: -8px 8px 8px -3px rgba(153, 153, 153, 0.3);
           box-shadow: -8px 8px 8px -3px rgba(153, 153, 153, 0.3);
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: (1fr)[3];
-      grid-template-rows: repeat(3, 1fr);
-  grid-gap: 5px;
-}
-
-#team #team-btn-box .team-btn h2 {
-  text-align: center;
 }
 
 @media screen and (min-width: 1025px) {
-  #team #team-btn-box .team-btn h2 {
+  #team #team-btn-box {
+    width: calc(100% - 2 * $box-pd - 2 * $box-bd);
+    height: calc(2 * $box-pd + 2 * $box-bd + $grid-h + 4 * $gap);
+    border: 10px solid rgba(187, 187, 187, 0.3);
+    padding: 10px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
+    grid-gap: 5px;
+  }
+  #team #team-btn-box h2 {
     font-family: "Noto Serif TC", serif;
-    font-weight: 700;
-    font-size: 2em;
+    font-weight: 500;
+    font-size: 1.5em;
+    line-height: 4.5em;
   }
 }
 
 @media screen and (max-width: 1024px) {
-  #team #team-btn-box .team-btn h2 {
+  #team #team-btn-box {
+    width: calc(100% - 2 * $box-pd - 2 * $box-bd);
+    height: calc(2 * $box-pd + 2 * $box-bd + $grid-h + 4 * $gap);
+    border: 10px solid rgba(187, 187, 187, 0.3);
+    padding: 10px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+  #team #team-btn-box h2 {
     font-family: "Noto Serif TC", serif;
-    font-weight: 300;
-    font-size: 1em;
+    font-weight: 500;
+    font-size: 1.2em;
+    line-height: 3.6em;
   }
 }
 
 @media screen and (max-width: 767px) {
-  #team #team-btn-box .team-btn h2 {
-    font-family: "Noto Serif TC", serif;
-    font-weight: 300;
-    font-size: 12px;
+  #team #team-btn-box {
+    width: calc(100% - 2 * $box-pd - 2 * $box-bd);
+    height: calc(2 * $box-pd + 2 * $box-bd + $grid-h + 4 * $gap);
+    border: 3px solid rgba(187, 187, 187, 0.3);
+    padding: 5px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
+    grid-gap: 5px;
   }
+  #team #team-btn-box h2 {
+    font-family: "Noto Serif TC", serif;
+    font-weight: 500;
+    font-size: 0.8em;
+    line-height: 2.4em;
+  }
+}
+
+#team #team-btn-box .team-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
 }
 
 #team #team-btn-box .team-btn {
@@ -365,7 +393,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 #team #team-card-wrap .team-card > img {
-  width: 120px;
+  width: auto;
   display: block;
   margin: auto;
   -o-object-fit: contain;
@@ -457,6 +485,9 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
         -ms-flex-align: center;
             align-items: center;
   }
+  #team #team-card-wrap .team-card > img {
+    width: 120px;
+  }
   #team #team-card-wrap .team-card h2 {
     margin: 0.5em 0 1em;
   }
@@ -541,13 +572,13 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 
 #care #care-board-2 {
   margin: 60px auto;
-  height: calc(2*$card-m-y + 2*$img-m-y + $img-leng-big + $h2-lh);
+  height: calc(2 * $card-m-y + 2 * $img-m-y + $img-leng-big + $h2-lh);
 }
 
 #care #care-board-2 .care-card {
   text-align: center;
   margin: 60px 20px;
-  height: calc(2*$img-m-y + $img-leng-big + $h2-lh);
+  height: calc(2 * $img-m-y + $img-leng-big + $h2-lh);
   overflow: break-word;
 }
 

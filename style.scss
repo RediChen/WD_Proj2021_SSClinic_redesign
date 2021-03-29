@@ -190,46 +190,48 @@
         height: 100vh;
         display: flex;
         flex-direction: column;
-        header {
-            flex-grow: 1;
-        }
         #team-btn-box {
-            flex-grow: 1;
+            // flex 的順序
             order: 4;
-        }
-        #team-card-wrap {
-            flex-grow: 3;
         }
     }
     //* Part II : 選取按鈕區
     #team-btn-box {
-        $pd: 10px; //padding
-        $bd: 10px; //border
-        $gap: 5px;
-        $leng: 100px;
-        padding: $pd;
-        width: calc(100% - 2 * $pd - 2 * $bd);
-        border: $bd solid rgba(#bbb, 0.3);
+        // $leng: 100px;
         box-shadow: -8px 8px 8px -3px $color-shade;
 
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        grid-gap: 5px;
-        //按鈕 Part 1 : 非顏色的設定
-        .team-btn {
+        @mixin box-setup($box-bd, $box-pd, $gap, $f-size) {
+            //pd = padding, bd = border
+            $grid-h : 3*$f-size ;
+            width: calc(100% - 2 * $box-pd - 2 * $box-bd);
+            height: calc(2 * $box-pd + 2 * $box-bd + $grid-h + 4 * $gap);
+            border: $box-bd solid rgba(#bbb, 0.3);
+            padding: $box-pd;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-gap: $gap;
             h2 {
-                text-align: center;
-                @media screen and (min-width: $desktop) {
-                    @include font-zh(2em, 700);
-                }
-                @media screen and (max-width: $tablet) {
-                    @include font-zh(1em, 300);
-                }
-                @media screen and (max-width: $mobile) {
-                    @include font-zh(12px, 300);
-                }
+                @include font-zh($f-size, 500);
+                line-height: $grid-h;
             }
+        }
+        @media screen and (min-width: $desktop) {
+            @include box-setup(10px, 10px, 5px, 1.5em);
+        }
+        @media screen and (max-width: $tablet) {
+            @include box-setup(10px, 10px, 10px, 1.2em);
+        }
+        @media screen and (max-width: $mobile) {
+            @include box-setup(3px, 5px, 5px, 0.8em);
+        }
+
+        //按鈕 Part 1 : 格式的設定
+        .team-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center; //for RWD : mobile
+            text-align: center; //for RWD : desktop
         }
         //按鈕 Part 2 : 顏色的設定
         .team-btn {
@@ -270,7 +272,7 @@
             //* 共通設定
             // 照片
             & > img {
-                width: 120px;
+                width: auto;
                 display: block;
                 margin: auto;
                 object-fit: contain;
@@ -326,10 +328,13 @@
             @media screen and (max-width: $mobile) {
                 height: 70vh;
                 padding: 0 1em;
-                
+
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                & > img {
+                    width: 120px;
+                }
                 h2 {
                     margin: 0.5em 0 1em;
                 }
@@ -379,7 +384,6 @@
                 width: 128px;
                 height: 128px;
             }
-            
         }
     }
     //* board 1
@@ -403,18 +407,18 @@
     //* board 2
     #care-board-2 {
         // board2 = {card | icon, h2}_9
-        $card-m-y : 60px ;
-        $img-m-y : 15px ;
-        $img-leng : 115px ;
-        $img-leng-big : 140px ;
-        $h2-lh : 3em ;
+        $card-m-y: 60px;
+        $img-m-y: 15px;
+        $img-leng: 115px;
+        $img-leng-big: 140px;
+        $h2-lh: 3em;
         margin: $card-m-y auto;
-        height: calc(2*$card-m-y + 2*$img-m-y + $img-leng-big + $h2-lh);
+        height: calc(2 * $card-m-y + 2 * $img-m-y + $img-leng-big + $h2-lh);
 
         .care-card {
             text-align: center;
             margin: $card-m-y 20px;
-            height: calc(2*$img-m-y + $img-leng-big + $h2-lh) ;
+            height: calc(2 * $img-m-y + $img-leng-big + $h2-lh);
             // max-width: $img-leng + 10px;
             overflow: break-word;
             & > div {
@@ -446,7 +450,7 @@
             border-radius: 35px;
             box-shadow: 0 2px 8px #55555555;
             & > div {
-                $leng : $img-leng-big ;
+                $leng: $img-leng-big;
                 height: $leng;
                 width: $leng;
                 background-image: url(../img/cloudy1.png);
@@ -457,7 +461,6 @@
             }
         }
         //Slick 修正區 END
-
     }
     //* board 3
     #care-board-3 {
