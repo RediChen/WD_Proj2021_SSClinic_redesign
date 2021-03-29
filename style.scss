@@ -202,7 +202,7 @@
 
         @mixin box-setup($box-bd, $box-pd, $gap, $f-size) {
             //pd = padding, bd = border
-            $grid-h : 3*$f-size ;
+            $grid-h: 3 * $f-size;
             width: calc(100% - 2 * $box-pd - 2 * $box-bd);
             height: calc(2 * $box-pd + 2 * $box-bd + $grid-h + 4 * $gap);
             border: $box-bd solid rgba(#bbb, 0.3);
@@ -328,6 +328,7 @@
             @media screen and (max-width: $mobile) {
                 height: 70vh;
                 padding: 0 1em;
+                min-width: 95%;
 
                 display: flex;
                 flex-direction: column;
@@ -342,10 +343,16 @@
             // RWD 設定 END
         }
         .team-about {
+            // card = {img, div-h2, div-about}
+            // about = {sub-card}_n
             padding: 0 5%;
             overflow: auto; //自動生成內滾動範圍
-            background-color: rgba(#f2f2f2, 0.7);
+            background-color: #f2f2f2;
             box-shadow: 10px 0 10px -10px inset rgba(#666, 0.5);
+            @media screen and (max-width: $mobile) {
+                height: 50vh;
+                min-width: 90%;
+            }
 
             .team-sub-card {
                 padding: 1em 0;

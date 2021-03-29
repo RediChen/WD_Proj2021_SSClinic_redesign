@@ -474,6 +474,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
   #team #team-card-wrap .team-card {
     height: 70vh;
     padding: 0 1em;
+    min-width: 95%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -496,9 +497,16 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 #team #team-card-wrap .team-about {
   padding: 0 5%;
   overflow: auto;
-  background-color: rgba(242, 242, 242, 0.7);
+  background-color: #f2f2f2;
   -webkit-box-shadow: 10px 0 10px -10px inset rgba(102, 102, 102, 0.5);
           box-shadow: 10px 0 10px -10px inset rgba(102, 102, 102, 0.5);
+}
+
+@media screen and (max-width: 767px) {
+  #team #team-card-wrap .team-about {
+    height: 50vh;
+    min-width: 90%;
+  }
 }
 
 #team #team-card-wrap .team-about .team-sub-card {
