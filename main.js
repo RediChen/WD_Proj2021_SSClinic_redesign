@@ -8,7 +8,7 @@ $("#nav-hbger").click(function () {
     $("#nav-link-wrap").slideToggle("normal");
 });
 $(".nav-link").click(function () {
-    $("#nav-link-wrap").hide() ;
+    if(isMobile.matches) $("#nav-link-wrap").hide() ;
 })
 // 漢堡選單 END
 
