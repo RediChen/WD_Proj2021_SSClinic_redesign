@@ -41,7 +41,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 @media screen and (max-width: 1024px) {
   #history #news-box .news-bars,
   #history #news-box .news-bricks {
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
   }
 }
