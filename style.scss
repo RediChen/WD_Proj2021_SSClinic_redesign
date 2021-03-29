@@ -421,7 +421,10 @@
         $h2-lh: 3em;
         margin: $card-m-y auto;
         height: calc(2 * $card-m-y + 2 * $img-m-y + $img-leng-big + $h2-lh);
-
+        @media screen and (max-width: $mobile) {
+            $img-leng-big: 125px;
+            height: calc(2 * $card-m-y + 2 * $img-m-y + $img-leng-big + $h2-lh);
+        }
         .care-card {
             text-align: center;
             margin: $card-m-y 20px;
@@ -462,6 +465,12 @@
                 width: $leng;
                 background-image: url(../img/cloudy1.png);
                 background-size: $leng $leng;
+                @media screen and (max-width: $mobile) {
+                    $img-leng-big: 125px;
+                    height: $leng;
+                    width: $leng;
+                    background-size: $leng $leng;
+                }
             }
             h2 {
                 font-size: 1.5em;

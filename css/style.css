@@ -583,6 +583,12 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
   height: calc(2 * $card-m-y + 2 * $img-m-y + $img-leng-big + $h2-lh);
 }
 
+@media screen and (max-width: 767px) {
+  #care #care-board-2 {
+    height: calc(2 * $card-m-y + 2 * $img-m-y + $img-leng-big + $h2-lh);
+  }
+}
+
 #care #care-board-2 .care-card {
   text-align: center;
   margin: 60px 20px;
@@ -621,10 +627,18 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 #care #care-board-2 .slick-current > div {
-  height: 140px;
-  width: 140px;
+  height: 125px;
+  width: 125px;
   background-image: url(../img/cloudy1.png);
-  background-size: 140px 140px;
+  background-size: 125px 125px;
+}
+
+@media screen and (max-width: 767px) {
+  #care #care-board-2 .slick-current > div {
+    height: 125px;
+    width: 125px;
+    background-size: 125px 125px;
+  }
 }
 
 #care #care-board-2 .slick-current h2 {
