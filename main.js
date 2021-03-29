@@ -12,10 +12,11 @@ $("a").each(function () {
     //====================//
     var offset = $("#" + target).offset();//jqGetOffset
     // (2-1) offset 元素在網頁上的座標
+    //! 內捲動空間會跟著算入
     var posY = offset.top;
     // (2-2) offset.top 元素在網頁上的y座標
     //====================//
-    var posAdj = $(this).attr("data-s2-offset");
+    var posAdj = parseInt($(this).attr("data-s2-offset"));
     // (3) posAdj = position adjust 微調目標的座標
     //TODO 希望可以自動算效果的時間
 
