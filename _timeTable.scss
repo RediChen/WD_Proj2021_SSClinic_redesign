@@ -1,3 +1,4 @@
+//* 表格格局的RWD設定
 @mixin timeTable($leng, $gap) {
     //$leng 必須輸入偶數
     $leng-2: $leng - 2px;
@@ -45,7 +46,7 @@
         grid-column: 1 / span 3;
     }
 }
-
+//* 表格文字的RWD設定
 @mixin timeTableText() {
     @media screen and (min-width: $desktop) {
         // 尺寸設定區：主列
@@ -90,7 +91,7 @@
         }
     }
 }
-
+//* 須知文字的RWD設定
 @mixin notePageText($fz_h4, $fz_ul) {
     h4 {
         @include font-zh($fz_h4, 700);

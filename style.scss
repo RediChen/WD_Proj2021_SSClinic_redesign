@@ -530,7 +530,7 @@
 // *門診時間 ====================================================================
 #time {
     @import "./timeTable"; // 外包的表格格式＆文字大小設定 with RWD
-    // Part 0 : 標題
+    // Part 0 : 整體
     // Part I : 標題
     // Part II : 時間表
     #time-table {
@@ -618,10 +618,21 @@
             }
         }
     }
-    // Part IV & V
+    // Part IV & V 兩者的共同設定
     & > :last-child {
         margin-top: 100px;
         display: flex;
+        @media screen and (min-width: $desktop) {
+            justify-content: space-evenly;
+            align-items: flex-start;
+            & > div {
+                //須知叮嚀＆異動公告
+                width: 30%;
+                border: 1px solid $color-26;
+                background-color: rgba($color-24, 0.5);
+                margin: 30px 0 0;
+            }
+        }
         @media screen and (max-width: $mobile) {
             flex-direction: column;
         }
@@ -629,24 +640,25 @@
     // Part IV : 掛號須知
     #register-note {
         // this = {h3, p, btns, pages}
-        margin: 30px 5% 0;
+        @media screen and (min-width: $desktop) {
+            width: 50%;
+        }
         .note-btn-box {
-            border: 1px solid #000;
             display: flex;
 
             .note-btns {
                 display: block;
                 margin-right: 10px;
                 padding: 1em 2em 0.5em;
-                background-color: hsl(34, 60%, 75%);
+                background-color: rgba($color-26, 0.1);
                 border-radius: 10% 10% 0 0/ 20% 20% 0 0;
                 transition: filter 0.5s;
                 &:not(.note-btns-active):hover {
-                    filter: brightness(1.1);
+                    filter:saturate(2);
                 }
                 // 啟動者的對應強調
                 &-active {
-                    background-color: antiquewhite;
+                background-color: rgba($color-26, 0.3);
                 }
                 // 文字
                 @media screen and (min-width: $desktop) {
@@ -662,19 +674,19 @@
         }
         // pages = {(h4, ul)*3, a}
         & > :last-child {
-            background-color: antiquewhite;
             padding: 2em 4em;
+            background-color: rgba($color-24, 0.8);
             .note-pages {
                 line-height: 2;
                 // 文字
                 @media screen and (min-width: $desktop) {
-                    @include notePageText(2em, 1.5em);
-                }
-                @media screen and (max-width: $tablet) {
                     @include notePageText(1.5em, 1.2em);
                 }
-                @media screen and (max-width: $mobile) {
+                @media screen and (max-width: $tablet) {
                     @include notePageText(1.2em, 1em);
+                }
+                @media screen and (max-width: $mobile) {
+                    @include notePageText(1em, 0.8em);
                 }
             }
             a {
@@ -683,15 +695,13 @@
                 text-align: center;
                 width: 6em;
                 line-height: 3em;
-                filter: hue-rotate(64deg);
+                // filter: hue-rotate(64deg);
             }
         }
     }
     // Part V : 門診異動摘要
     & > :last-child > :last-child {
-        background-color: $color-24;
         padding: 10px 20px;
-        border: 1px solid $color-26;
         dl {
             margin: 0.5em 0;
             padding-left: 0.5em;
@@ -699,10 +709,10 @@
             line-height: 2.5;
             dt {
                 @media screen and (min-width: $desktop) {
-                    @include font-zh(2em, 500);
+                    @include font-zh(1.5em, 500);
                 }
                 @media screen and (max-width: $tablet) {
-                    @include font-zh(1.5em, 500);
+                    @include font-zh(1.2em, 500);
                 }
                 @media screen and (max-width: $mobile) {
                     @include font-zh(1em, 500);
@@ -710,7 +720,7 @@
             }
             dd {
                 @media screen and (min-width: $desktop) {
-                    @include font-zh(1.5em, 300);
+                    @include font-zh(1.2em, 300);
                     text-indent: 3em;
                 }
                 @media screen and (max-width: $tablet) {
