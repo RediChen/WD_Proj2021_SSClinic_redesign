@@ -364,12 +364,29 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
   padding: 3%;
 }
 
-#team #team-card-wrap .team-card {
-  height: 45vh;
+#team #team-card-wrap .team-card > img {
+  width: 120px;
+  display: block;
+  margin: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+#team #team-card-wrap .team-card > div:nth-child(2) {
+  text-align: center;
+}
+
+#team #team-card-wrap .team-card > div:nth-child(2) h2 {
+  padding: 0 0.5em;
+  display: inline-block;
+  border-bottom: 1px solid indigo;
+  -webkit-box-shadow: 0 9px 5px -6px #66666666;
+          box-shadow: 0 9px 5px -6px #66666666;
 }
 
 @media screen and (min-width: 1025px) {
   #team #team-card-wrap .team-card {
+    height: 45vh;
     display: -ms-grid;
     display: grid;
         grid-template-areas: "photos showcases" "names showcases";
@@ -398,6 +415,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 
 @media screen and (max-width: 1024px) {
   #team #team-card-wrap .team-card {
+    height: 60vh;
     display: -ms-grid;
     display: grid;
         grid-template-areas: "photos showcases" "names showcases";
@@ -426,6 +444,8 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 
 @media screen and (max-width: 767px) {
   #team #team-card-wrap .team-card {
+    height: 70vh;
+    padding: 0 1em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -437,29 +457,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
         -ms-flex-align: center;
             align-items: center;
   }
-}
-
-#team #team-card-wrap .team-card img {
-  display: block;
-  margin: 0 auto;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
-#team #team-card-wrap .team-card > div:nth-child(2) {
-  text-align: center;
-}
-
-#team #team-card-wrap .team-card > div:nth-child(2) h2 {
-  display: inline-block;
-  padding: 0 0.5em;
-  border-bottom: 1px solid indigo;
-  -webkit-box-shadow: 0 9px 5px -6px #66666666;
-          box-shadow: 0 9px 5px -6px #66666666;
-}
-
-@media screen and (max-width: 1024px) {
-  #team #team-card-wrap .team-card > div:nth-child(2) h2 {
+  #team #team-card-wrap .team-card h2 {
     margin: 0.5em 0 1em;
   }
 }
@@ -467,7 +465,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 #team #team-card-wrap .team-about {
   padding: 0 5%;
   overflow: auto;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(242, 242, 242, 0.7);
   -webkit-box-shadow: 10px 0 10px -10px inset rgba(102, 102, 102, 0.5);
           box-shadow: 10px 0 10px -10px inset rgba(102, 102, 102, 0.5);
 }

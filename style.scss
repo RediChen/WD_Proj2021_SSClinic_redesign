@@ -265,10 +265,30 @@
         background-color: rgba($color-24, 0.6);
         box-shadow: -8px 8px 8px -3px $color-shade;
         padding: 3%;
-        // card = {img, div-h2, div-about}
         .team-card {
-            height: 45vh;
+            // card = {img, div-h2, div-about}
+            //* 共通設定
+            // 照片
+            & > img {
+                width: 120px;
+                display: block;
+                margin: auto;
+                object-fit: contain;
+            }
+            // 成員姓名
+            & > div:nth-child(2) {
+                text-align: center;
+                h2 {
+                    padding: 0 0.5em;
+                    display: inline-block;
+                    border-bottom: 1px solid $color-line;
+                    box-shadow: 0 9px 5px -6px #66666666;
+                }
+            }
+            // 共通設定 END
+            //* RWD 設定
             @media screen and (min-width: $desktop) {
+                height: 45vh;
                 display: grid;
                 grid-template-areas: "photos showcases" "names showcases";
                 grid-template-columns: repeat(1, 1fr 3fr);
@@ -286,6 +306,7 @@
                 //area 命名 END
             }
             @media screen and (max-width: $tablet) {
+                height: 60vh;
                 display: grid;
                 grid-template-areas: "photos showcases" "names showcases";
                 grid-template-columns: repeat(1, 1fr 3fr);
@@ -303,34 +324,22 @@
                 //area 命名 END
             }
             @media screen and (max-width: $mobile) {
+                height: 70vh;
+                padding: 0 1em;
+                
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-            }
-            // 照片
-            img {
-                display: block;
-                margin: 0 auto;
-                object-fit: contain;
-            }
-            // 成員姓名
-            & > div:nth-child(2) {
-                text-align: center;
                 h2 {
-                    display: inline-block;
-                    padding: 0 0.5em;
-                    border-bottom: 1px solid $color-line;
-                    box-shadow: 0 9px 5px -6px #66666666;
-                    @media screen and (max-width: $tablet) {
-                        margin: 0.5em 0 1em;
-                    }
+                    margin: 0.5em 0 1em;
                 }
             }
+            // RWD 設定 END
         }
         .team-about {
             padding: 0 5%;
             overflow: auto; //自動生成內滾動範圍
-            background-color: rgba(#fff, 0.7);
+            background-color: rgba(#f2f2f2, 0.7);
             box-shadow: 10px 0 10px -10px inset rgba(#666, 0.5);
 
             .team-sub-card {
