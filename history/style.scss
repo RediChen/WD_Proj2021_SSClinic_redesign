@@ -1,0 +1,12 @@
+/*-------------------------*\
+    「歷史公告」頁面樣式
+\*-------------------------*/
+@import "./var";
+#history {
+    @media screen and (min-width: $desktop) {
+        margin-top: $h-nav-dt;
+    }
+    @media screen and (max-width: $tablet) {
+        margin-top: $h-nav-tb;
+    }
+}

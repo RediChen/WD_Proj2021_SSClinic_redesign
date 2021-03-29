@@ -2,6 +2,13 @@
 const isMobile = window.matchMedia("(max-width: 767px)");
 //TODO 待研究這個變數到底是什麼
 // 全域共用區 END
+
+//* 漢堡選單 ==========================//
+$("nav-hbger").click(function () {
+    $("nav-link-wrap").toggle("normal");
+});
+// 漢堡選單 END
+
 //* 滾動機制 ==========================//
 //功能：藉由jQuery實現捲動前往指定位置
 $("a").each(function () {
@@ -82,7 +89,7 @@ $('#care-board-2').slick(
                     centerMode: true,
                     centerPadding: '40px',
                     slidesToShow: 3,
-                    swipeToSlide : true
+                    swipeToSlide: true
                 }
             },
             {
@@ -94,7 +101,7 @@ $('#care-board-2').slick(
                     centerMode: true,
                     centerPadding: '40px',
                     slidesToShow: 1,
-                    swipeToSlide : true
+                    swipeToSlide: true
                 }
             }
         ]

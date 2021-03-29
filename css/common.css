@@ -168,7 +168,7 @@ nav > a {
           transform: translate(-50%, 20%);
 }
 
-nav div:nth-child(2) {
+nav #nav-hbger {
   background-image: url(../img/iconHBG.png);
   position: absolute;
   top: 7px;
@@ -181,18 +181,28 @@ nav div:nth-child(2) {
 }
 
 @media screen and (min-width: 1025px) {
-  nav div:nth-child(2) {
+  nav #nav-hbger {
     display: none;
   }
 }
 
 @media screen and (max-width: 1024px) {
-  nav div:nth-child(2) {
+  nav #nav-hbger {
     display: block;
   }
 }
 
-nav div:nth-child(3) {
+nav #nav-hbger:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+nav #nav-hbger:active {
+  -webkit-filter: invert(30%);
+          filter: invert(30%);
+}
+
+nav #nav-link-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -200,11 +210,11 @@ nav div:nth-child(3) {
       justify-content: space-around;
 }
 
-nav div:nth-child(3) div:nth-of-type(2) {
+nav #nav-link-wrap div:nth-of-type(2) {
   width: 128px;
 }
 
-nav div:nth-child(3) a {
+nav #nav-link-wrap a {
   display: block;
   line-height: 2;
   padding: 5px 1em;
@@ -216,44 +226,60 @@ nav div:nth-child(3) a {
   transition: 0.5s;
 }
 
-nav div:nth-child(3) a:nth-child(4), nav div:nth-child(3) a:nth-child(6) {
+nav #nav-link-wrap a:nth-child(4), nav #nav-link-wrap a:nth-child(6) {
   -webkit-transform: translateY(15px);
           transform: translateY(15px);
 }
 
-nav div:nth-child(3) a:nth-child(4n + 3) {
+nav #nav-link-wrap a:nth-child(4n + 3) {
   -webkit-transform: translateY(13px);
           transform: translateY(13px);
 }
 
-nav div:nth-child(3) a:nth-child(6n + 2) {
+nav #nav-link-wrap a:nth-child(6n + 2) {
   -webkit-transform: translateY(10px);
           transform: translateY(10px);
 }
 
-nav div:nth-child(3) a:link, nav div:nth-child(3) a:visited {
+nav #nav-link-wrap a:link, nav #nav-link-wrap a:visited {
   color: #000;
 }
 
-nav div:nth-child(3) a:hover {
+nav #nav-link-wrap a:hover {
   -webkit-box-shadow: 0 0 10px 10px rgba(240, 122, 181, 0.3) inset;
           box-shadow: 0 0 10px 10px rgba(240, 122, 181, 0.3) inset;
 }
 
-nav div:nth-child(3) a:active {
+nav #nav-link-wrap a:active {
   -webkit-filter: brightness(125%);
           filter: brightness(125%);
 }
 
 @media screen and (max-width: 1024px) {
-  nav div:nth-child(3) {
-    position: absolute;
-    right: -100%;
+  nav #nav-link-wrap {
     display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 3em 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column;
             flex-flow: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    z-index: 2;
+  }
+  nav #nav-link-wrap a {
+    font-family: "Noto Serif TC", serif;
+    font-weight: 700;
+    font-size: 1.5em;
+    line-height: 3;
   }
 }
 
