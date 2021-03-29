@@ -4,9 +4,12 @@ const isMobile = window.matchMedia("(max-width: 767px)");
 // 全域共用區 END
 
 //* 漢堡選單 ==========================//
-$("nav-hbger").click(function () {
-    $("nav-link-wrap").toggle("normal");
+$("#nav-hbger").click(function () {
+    $("#nav-link-wrap").slideToggle("normal");
 });
+$(".nav-link").click(function () {
+    $("#nav-link-wrap").hide() ;
+})
 // 漢堡選單 END
 
 //* 滾動機制 ==========================//

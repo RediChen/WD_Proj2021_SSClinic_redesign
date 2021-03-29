@@ -1,12 +1,27 @@
 /*-------------------------*\
     「歷史公告」頁面樣式
 \*-------------------------*/
-@import "./var";
+@import "../var";
 #history {
     @media screen and (min-width: $desktop) {
         margin-top: $h-nav-dt;
     }
     @media screen and (max-width: $tablet) {
         margin-top: $h-nav-tb;
+    }
+
+    #news-box {
+        display: flex;
+        flex-flow: column;
+
+        .news-bars {
+            display: flex;
+
+            
+            &:nth-child(odd) {
+                background-color: #eee;
+            }
+
+        }
     }
 }
