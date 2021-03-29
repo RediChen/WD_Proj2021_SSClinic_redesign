@@ -8,7 +8,7 @@
     padding: 0;
 }
 body {
-    background-color: snow;
+    background: radial-gradient(#ffeeee, #f2f2f2);
 }
 a {
     //reset the default
@@ -35,7 +35,7 @@ a {
 .logo img {
     transition: filter 0.5s;
     &:hover {
-        filter: drop-shadow(0 5px 30px rgba($color-26, 0.5));
+        filter: drop-shadow(0 5px 30px rgba($color-24, 0.9));
     }
 }
 .title-1 {
@@ -105,7 +105,7 @@ nav {
     position: sticky;
     top: 0;
     z-index: 2; //必須加，才不會被沒有設定pos的img擋住
-    background-color: $color-04;
+    background-color: $color-16;
     border-radius: 0 0 80% 80% / 0 0 55% 55%;
     box-shadow: 0 0 3px $color-shade;
     //TODO -(JS)-> 向下滾動時隱藏op0，向上或hover恢復op1
@@ -116,7 +116,12 @@ nav {
         position: absolute;
         top: 0;
         left: 50%;
-        transform: translate(-50%, 5%);
+        @media screen and (min-width: $desktop) {
+            transform: translate(-50%, 20%);
+        }
+        @media screen and (max-width: $tablet) {
+            transform: translate(-50%, 5%);
+        }
     }
     //* Part 2 : HBGer
     #nav-hbger {
@@ -147,14 +152,16 @@ nav {
     #nav-link-wrap {
         display: flex;
         justify-content: space-around;
+        //LOGO的位置
         div:nth-of-type(2) {
-            width: 128px; //LOGO的位置
+            width: 128px;
         }
         a {
             display: block;
             line-height: 2;
             padding: 5px 1em;
             @include font-zh(1.2em, 700);
+            color : $color-14 ;
             border-radius: 30%;
             transition: 0.5s;
             // 配合弧度的高度微調：from 內 to 外
@@ -209,7 +216,7 @@ footer {
     min-height: 100vh;
     padding: 50px 20px 20px;
     margin-top: 50px;
-    background-color: $color-14;
+    background-color: $color-16;
     box-shadow: 0 0 3px $color-shade;
     display: grid;
     // Part 0 : 整體格局 RWD

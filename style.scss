@@ -29,6 +29,7 @@
             height: 4em;
             border-radius: 50%;
             box-shadow: 0 0 40px 10px $color-24 inset;
+            transition: .6s;
             @media screen and (min-width: $desktop) {
                 top: 34vh;
                 left: 40vw;
@@ -45,11 +46,14 @@
                 left: 52%;
                 box-shadow: 0 0 20px 10px $color-24 inset;
             }
+            &:hover {
+                transform: scale(1.2);
+            }
         }
         h1 {
             position: absolute;
             @include font-zh(5em, 900);
-            color: $color-24;
+            color: $color-16;
             @media screen and (min-width: $desktop) {
                 top: 26vh;
                 left: 41vw;
