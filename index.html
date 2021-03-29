@@ -572,12 +572,12 @@
             <h1 class="title-1">治療項目</h1>
             <hr class="hr-1">
         </header>
-        <!-- Part I : 主要治療項目 -->
+        <!--* Part I : 主要治療項目 -->
         <header>
             <h2 class="title-2">主要治療項目</h2>
             <hr class="hr-3">
         </header>
-        <div class="care-card-wrap" id="care-board-1">
+        <div class="care-card-boards" id="care-board-1">
             <div class="care-card">
                 <img src="./img/unhappy.png" alt="過動症" title="耶～～～～～～">
                 <h2 class="title-2">過動症</h2>
@@ -603,12 +603,13 @@
                 <h2 class="title-2">自律神經失調</h2>
             </div>
         </div>
-        <!-- Part II : 所有治療項目 -->
+        <!--* Part II : 所有治療項目 -->
         <header>
             <h2 class="title-2">所有治療項目</h2>
             <hr class="hr-3">
         </header>
-        <div class="care-card-wrap" id="care-board-2">
+        <div class="care-card-boards" id="care-board-2">
+            <!-- board2 = {card | div, h2}_9 -->
             <div class="care-card">
                 <div></div>
                 <h2 class="title-2">失眠</h2>
@@ -659,23 +660,23 @@
             </div>
             <div class="care-card">
                 <div></div>
-                <h2 class="title-2">兒童青少年情緒障礙</h2>
+                <h2 class="title-2">兒童青少年<wbr>情緒障礙</h2>
             </div>
             <div class="care-card">
                 <div></div>
-                <h2 class="title-2">壓力調適與壓力紓解</h2>
+                <h2 class="title-2">壓力調適<wbr>與壓力紓解</h2>
             </div>
             <div class="care-card">
                 <div></div>
-                <h2 class="title-2">急性或慢性精神病(躁鬱症、思覺失調症)</h2>
+                <h2 class="title-2">急性或慢性<wbr>精神病<wbr>(躁鬱症、<wbr>思覺失調症)</h2>
             </div>
             <div class="care-card">
                 <div></div>
-                <h2 class="title-2">老年性精神病</h2>
+                <h2 class="title-2">老年性<wbr>精神病</h2>
             </div>
             <div class="care-card">
                 <div></div>
-                <h2 class="title-2">更年期情緒障礙</h2>
+                <h2 class="title-2">更年期<wbr>情緒障礙</h2>
             </div>
         </div>
         <!-- Part III : 其他服務項目 -->
@@ -683,7 +684,7 @@
             <h2 class="title-2">其他服務項目</h2>
             <hr class="hr-3">
         </header>
-        <div class="care-card-wrap" id="care-board-3">
+        <div class="care-card-boards" id="care-board-3">
             <div class="care-card">
                 <img src="./img/warm_heart.png" alt="">
                 <h3 class="title-2">心理困擾與疾病之衛教</h3>
@@ -958,7 +959,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--  CDN of slick  -->
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!--  my own js  -->
     <script src="./main.js"></script>
+    <script src="./time.js"></script>
 </body>
 
 </html>

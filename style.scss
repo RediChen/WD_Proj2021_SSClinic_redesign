@@ -92,7 +92,7 @@
                 transform: translateX($offset-ls);
                 padding-left: 3vw;
                 padding-right: 15vw;
-                text-shadow:3px -3px 3px #fff;
+                text-shadow: 3px -3px 3px #fff;
             }
             @media screen and (max-width: $tablet) {
                 width: calc(100%);
@@ -356,13 +356,10 @@
     margin: 200px 5px 0;
     // margin-top: 200px;
     //* 共同樣式
-    .care-card-wrap {
-        //boards
-        margin: 50px auto;
-        padding: 50px;
+    .care-card-boards {
         box-shadow: 0 0 15px 15px rgba($color-24, 0.8);
         @media screen and (min-width: $desktop) {
-            max-width: 70vw;
+            max-width: 75vw;
         }
 
         .care-card {
@@ -373,24 +370,19 @@
                 width: 128px;
                 height: 128px;
             }
-            & > h2 {
-                text-align: center;
-            }
+            
         }
     }
     //* board 1
     #care-board-1 {
         // background-color: rgba($color-24, 0.6);
+        margin: 50px auto;
         display: grid;
-        grid-gap: 50px;
 
         @media screen and (min-width: $desktop) {
+            max-width: 800px;
             grid-template-columns: repeat(3, 1fr);
-
-            .care-card {
-                width: 100%;
-                padding: 45px 0 70px;
-            }
+            grid-row-gap: 50px;
         }
         @media screen and (max-width: $tablet) {
             grid-template-columns: repeat(2, 1fr);
@@ -401,16 +393,30 @@
     }
     //* board 2
     #care-board-2 {
+        // board2 = {card | icon, h2}_9
+        $card-m-y : 60px ;
+        $img-m-y : 15px ;
+        $img-leng : 115px ;
+        $img-leng-big : 140px ;
+        $h2-lh : 3em ;
+        margin: $card-m-y auto;
+        height: calc(2*$card-m-y + 2*$img-m-y + $img-leng-big + $h2-lh);
+
         .care-card {
             text-align: center;
+            margin: $card-m-y 20px;
+            height: calc(2*$img-m-y + $img-leng-big + $h2-lh) ;
+            // max-width: $img-leng + 10px;
+            overflow: break-word;
             & > div {
+                // 圖片
                 background-image: url(../img/cloudy0.png);
-                margin: 15px auto;
-                width: 115px;
-                height: 115px;
+                margin: $img-m-y auto;
+                width: $img-leng;
+                height: $img-leng;
                 border-radius: 50%;
+                text-align: center;
             }
-            //TODO 將此機制複製到行動裝置 by JS
             &:hover {
                 border-radius: 35px;
                 box-shadow: 0 2px 8px #55555555;
@@ -418,28 +424,36 @@
                     background-image: url(../img/cloudy1.png);
                 }
             }
-        }
-        @media screen and (min-width: $desktop) {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-
-            .care-card {
-                margin: 10px 15px;
+            & > h2 {
+                text-align: center;
+                line-height: $h2-lh;
             }
         }
-        //TODO [全部展開]-(JS)->from overf:auto to overf:none
-        @media screen and (max-width: $tablet) {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+        //Slick 修正區
+        .slick-current {
+            // width: 280px;
+            // height: 200px;
+            // max-width: none;
+            border-radius: 35px;
+            box-shadow: 0 2px 8px #55555555;
+            & > div {
+                $leng : $img-leng-big ;
+                height: $leng;
+                width: $leng;
+                background-image: url(../img/cloudy1.png);
+                background-size: $leng $leng;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
         }
-        @media screen and (max-width: $mobile) {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-        }
+        //Slick 修正區 END
+
     }
     //* board 3
     #care-board-3 {
         overflow: hidden;
+        margin: 50px auto;
         padding: 30px;
         @media screen and (min-width: $desktop) {
             width: 60%;
@@ -529,7 +543,8 @@
             color: crimson;
         }
         .tt-deactivate {
-            background-color: $color-closed !important;
+            // 只顯示一種顏色時，其他格子的低調色
+            background-color: hsl(0, 0%, 80%) !important;
         }
     }
     // Part III : 時間表圖例
@@ -590,7 +605,7 @@
         .note-btn-box {
             border: 1px solid #000;
             display: flex;
-            
+
             .note-btns {
                 display: block;
                 margin-right: 10px;
@@ -636,7 +651,7 @@
             }
             a {
                 margin: 0 auto;
-                @include font-zh(1em, 300) ;
+                @include font-zh(1em, 300);
                 text-align: center;
                 width: 6em;
                 line-height: 3em;

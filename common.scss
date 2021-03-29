@@ -50,7 +50,7 @@ a {
 }
 .title-2 {
     text-align: center;
-    @include font-zh(1.5em, 700);
+    @include font-zh(1.2em, 700);
     @media screen and (max-width: $mobile) {
         @include font-zh(1em, 900);
     }

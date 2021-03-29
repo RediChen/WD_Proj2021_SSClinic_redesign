@@ -48,7 +48,6 @@ function showCard(n) {
     var cards = document.getElementsByClassName("team-card");
     var btns = document.getElementsByClassName("team-btn");
 
-
     //全部卡片隱藏，全部按鈕還原
     for (i = 0; i < cards.length; i++) {
         cards[i].style.display = "none";
@@ -64,99 +63,59 @@ function showCard(n) {
 // 功能：slick
 var tablet = 1024; //upper bound ; w < 1024
 var mobile = 767; //upper bound ; w < 767
+$('#care-board-2').slick(
+    {
+        autoplay: true,
+        autoplaySpeed: 4500,
+        centerMode: true,
+        centerPadding: '100px',
+        slidesToShow: 3,
+        easing: 'cubic-bezier(0.45, 0, 0.55, 1)',
+        responsive: [
+            {
+                breakpoint: 769,
+                settings: {
+                    autoplay: true,
+                    autoplaySpeed: 3000,
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 3,
+                    swipeToSlide : true
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    autoplay: true,
+                    autoplaySpeed: 3000,
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1,
+                    swipeToSlide : true
+                }
+            }
+        ]
+    }
+);
+
 $("#care-board-3").slick(
     {
         slidesToShow: 2,
         slidesToScroll: 1,
         speed: 3000,
-        responsive: [{
-            breakpoint: tablet,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                fade: false,
-                speed: 400
+        responsive: [
+            {
+                breakpoint: tablet,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    fade: false,
+                    speed: 400
+                }
             }
-        }
         ]
     }
 );
 // 治療頁面 END
-//* 門診頁面 I : 表格單色化 ==========================//
-// var egBtns = document.getElementsByClassName("table-eg-btns") ;
-$(".table-eg-btns").each(function () {
-    var color = $(this).attr("data-tt-label");
-    if (color === undefined) return true;// 沒有設定此參數的就直接中止
-    console.log("抓到了 " + color);
-    if (isMobile.matches) {
-        $(this).mousedown(addGray(color));
-        $(this).mouseup(removeGray());
-        console.log("行動裝置");
-    } else {
-        //* 以下的是會失敗的外包版本
-        // $(this).hover(addGray(color), removeGray());
-        console.log("電腦");
-        //* 以下的是會成功的嵌入版本
-        $(this).hover(
-            function () {
-                var i;
-                var cols = document.getElementsByClassName("tt-cols");
-                for (i = 0; i < cols.length; i++) {
-                    if (!cols[i].classList.contains(color)) {
-                        cols[i].classList.add("tt-deactivate");
-                    }
-                }
-            },
-            function () {
-                var i;
-                var cols = document.getElementsByClassName("tt-cols");
-                for (i = 0; i < cols.length; i++) {
-                    cols[i].classList.remove("tt-deactivate");
-                }
-            }
-        );
-    }
-});
-//* 以下的是會失敗的外包版本
-function addGray(colorLabel) {
-    console.log("進來了！");
-    console.log("現在的顏色是 " + colorLabel);
-
-    var i;
-    var cols = document.getElementsByClassName("tt-cols");
-    for (i = 0; i < cols.length; i++) {
-        if (!cols[i].classList.contains(colorLabel)) {
-            cols[i].classList.add("tt-deactivate");
-            // console.log("add i = " + i);
-        }
-    }
-}
-function removeGray() {
-    console.log("離開了！");
-
-    var i;
-    var cols = document.getElementsByClassName("tt-cols");
-    for (i = 0; i < cols.length; i++) {
-        cols[i].classList.remove("tt-deactivate");
-    }
-}
-
-// 門診頁面 I : 表格單色化 END
-//* 門診頁面 II : 小分頁 ==========================//
-// 馬上執行區 =========
-showPage(0);
-// 函數宣告區 =========
-function showPage(n) {
-    var i;
-    var pages = document.getElementsByClassName("note-pages");
-    var btns = document.getElementsByClassName("note-btns");
-
-    // hide all
-    for (i = 0; i < pages.length; i++) {
-        pages[i].style.display = "none";
-        btns[i].classList.remove("note-btns-active");
-    }
-    pages[n].style.display = "block";
-    btns[n].classList.add("note-btns-active");
-}
-// 門診頁面 II : 小分頁 END

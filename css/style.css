@@ -494,44 +494,36 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
   margin: 200px 5px 0;
 }
 
-#care .care-card-wrap {
-  margin: 50px auto;
-  padding: 50px;
+#care .care-card-boards {
   -webkit-box-shadow: 0 0 15px 15px rgba(255, 240, 245, 0.8);
           box-shadow: 0 0 15px 15px rgba(255, 240, 245, 0.8);
 }
 
 @media screen and (min-width: 1025px) {
-  #care .care-card-wrap {
-    max-width: 70vw;
+  #care .care-card-boards {
+    max-width: 75vw;
   }
 }
 
-#care .care-card-wrap .care-card > img {
+#care .care-card-boards .care-card > img {
   display: block;
   margin: 0 auto;
   width: 128px;
   height: 128px;
 }
 
-#care .care-card-wrap .care-card > h2 {
-  text-align: center;
-}
-
 #care #care-board-1 {
+  margin: 50px auto;
   display: -ms-grid;
   display: grid;
-  grid-gap: 50px;
 }
 
 @media screen and (min-width: 1025px) {
   #care #care-board-1 {
+    max-width: 800px;
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
-  }
-  #care #care-board-1 .care-card {
-    width: 100%;
-    padding: 45px 0 70px;
+    grid-row-gap: 50px;
   }
 }
 
@@ -549,8 +541,16 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
   }
 }
 
+#care #care-board-2 {
+  margin: 60px auto;
+  height: calc(2*$card-m-y + 2*$img-m-y + $img-leng-big + $h2-lh);
+}
+
 #care #care-board-2 .care-card {
   text-align: center;
+  margin: 60px 20px;
+  height: calc(2*$img-m-y + $img-leng-big + $h2-lh);
+  overflow: break-word;
 }
 
 #care #care-board-2 .care-card > div {
@@ -559,6 +559,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
   width: 115px;
   height: 115px;
   border-radius: 50%;
+  text-align: center;
 }
 
 #care #care-board-2 .care-card:hover {
@@ -571,38 +572,31 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
   background-image: url(../img/cloudy1.png);
 }
 
-@media screen and (min-width: 1025px) {
-  #care #care-board-2 {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[5];
-        grid-template-columns: repeat(5, 1fr);
-  }
-  #care #care-board-2 .care-card {
-    margin: 10px 15px;
-  }
+#care #care-board-2 .care-card > h2 {
+  text-align: center;
+  line-height: 3em;
 }
 
-@media screen and (max-width: 1024px) {
-  #care #care-board-2 {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
-  }
+#care #care-board-2 .slick-current {
+  border-radius: 35px;
+  -webkit-box-shadow: 0 2px 8px #55555555;
+          box-shadow: 0 2px 8px #55555555;
 }
 
-@media screen and (max-width: 767px) {
-  #care #care-board-2 {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-  }
+#care #care-board-2 .slick-current > div {
+  height: 140px;
+  width: 140px;
+  background-image: url(../img/cloudy1.png);
+  background-size: 140px 140px;
+}
+
+#care #care-board-2 .slick-current h2 {
+  font-size: 1.5em;
 }
 
 #care #care-board-3 {
   overflow: hidden;
+  margin: 50px auto;
   padding: 30px;
 }
 
@@ -915,7 +909,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 #time #time-table .tt-deactivate {
-  background-color: #e6e6e6 !important;
+  background-color: #cccccc !important;
 }
 
 #time #table-eg {
