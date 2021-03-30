@@ -53,7 +53,7 @@
         h1 {
             position: absolute;
             @include font-zh(5em, 900);
-            color: $color-16;
+            color: #ff61b0;
             @media screen and (min-width: $desktop) {
                 top: 26vh;
                 left: 41vw;

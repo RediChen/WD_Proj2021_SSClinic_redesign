@@ -105,7 +105,7 @@ nav {
     position: sticky;
     top: 0;
     z-index: 2; //必須加，才不會被沒有設定pos的img擋住
-    background-color: $color-16;
+    background: $color-16;
     border-radius: 0 0 80% 80% / 0 0 55% 55%;
     box-shadow: 0 0 3px $color-shade;
     //TODO -(JS)-> 向下滾動時隱藏op0，向上或hover恢復op1
@@ -216,7 +216,7 @@ footer {
     min-height: 100vh;
     padding: 50px 20px 20px;
     margin-top: 50px;
-    background-color: $color-16;
+    background: $color-16;
     box-shadow: 0 0 3px $color-shade;
     display: grid;
     // Part 0 : 整體格局 RWD
