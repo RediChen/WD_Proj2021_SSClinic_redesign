@@ -177,44 +177,46 @@ nav {
         div:nth-of-type(2) {
             width: 128px;
         }
-        a {
+        .nav-link {
             display: block;
             line-height: 2;
             padding: 5px 1em;
             @include font-zh(1.2em, 700);
-            color: $color-14;
+            color: $color-16;
             border-radius: 30%;
             transition: 0.5s;
             // 配合弧度的高度微調：from 內 to 外
-            &:nth-child(4),
-            &:nth-child(6) {
-                transform: translateY(15px);
-            }
-            &:nth-child(4n + 3) {
-                transform: translateY(13px);
-            }
-            &:nth-child(6n + 2) {
-                transform: translateY(10px);
+            @media screen and (min-width: $desktop) {
+                &:nth-child(4),
+                &:nth-child(6) {
+                    transform: translateY(15px);
+                }
+                &:nth-child(4n + 3) {
+                    transform: translateY(13px);
+                }
+                &:nth-child(6n + 2) {
+                    transform: translateY(10px);
+                }
             }
             // 配合弧度的高度微調 END
             &:link,
-            &:visited {
-                color: #000;
-            }
-            &:hover {
-                box-shadow: 0 0 10px 10px rgba($color-26, 0.3) inset;
-            }
-            &:active {
-                // filter: invert(20%);
-                filter: brightness(125%);
-            }
+                &:visited {
+                    color: #000;
+                }
+                &:hover {
+                    box-shadow: 0 0 10px 10px rgba($color-26, 0.3) inset;
+                }
+                &:active {
+                    // filter: invert(20%);
+                    filter: brightness(125%);
+                }
         }
         @media screen and (max-width: $tablet) {
             display: none;
             position: absolute;
             top: 0;
             left: 0;
-            width: 300px;
+            width: 40vw;
             height: 100vh;
             text-align: center;
             background-color: #f2f2f2;

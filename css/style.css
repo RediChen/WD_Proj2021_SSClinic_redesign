@@ -713,7 +713,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 #time #time-table {
-  margin: 100px auto 30px;
+  margin: 80px auto 30px;
   text-align: center;
 }
 
@@ -739,10 +739,12 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
     width: 98px;
     height: 48px;
     line-height: 48px;
+    background-color: #ffffff88;
   }
   #time #time-table > div:nth-child(7n + 8) {
     width: 48px;
     height: 98px;
+    background-color: #ffffff88;
   }
   #time #time-table > div:nth-child(n + 8):not(:nth-child(7n + 8)) {
     width: 98px;
@@ -795,10 +797,12 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
     width: 78px;
     height: 38px;
     line-height: 38px;
+    background-color: #ffffff88;
   }
   #time #time-table > div:nth-child(7n + 8) {
     width: 38px;
     height: 78px;
+    background-color: #ffffff88;
   }
   #time #time-table > div:nth-child(n + 8):not(:nth-child(7n + 8)) {
     width: 78px;
@@ -851,10 +855,12 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
     width: 48px;
     height: 23px;
     line-height: 23px;
+    background-color: #ffffff88;
   }
   #time #time-table > div:nth-child(7n + 8) {
     width: 23px;
     height: 48px;
+    background-color: #ffffff88;
   }
   #time #time-table > div:nth-child(n + 8):not(:nth-child(7n + 8)) {
     width: 48px;
@@ -984,15 +990,15 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
   border-radius: 50%;
   -webkit-box-shadow: 8px 8px 8px rgba(153, 153, 153, 0.3);
           box-shadow: 8px 8px 8px rgba(153, 153, 153, 0.3);
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
 }
 
 #time #table-eg .table-eg-btns h4 {
   font-family: "Noto Serif TC", serif;
   font-weight: 500;
-  font-size: 1.2em;
-  line-height: 100px;
+  font-size: 1em;
+  line-height: 80px;
   text-align: center;
   text-shadow: 8px 8px 8px rgba(153, 153, 153, 0.3);
 }

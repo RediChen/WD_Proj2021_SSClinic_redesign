@@ -24,11 +24,13 @@
         width: $leng-2;
         height: $leng-half-2;
         line-height: $leng-half-2;
+        background-color: #ffffff88;
     }
     // 尺寸設定區：主欄
     & > div:nth-child(7n + 8) {
         width: $leng-half-2;
         height: $leng-2;
+        background-color: #ffffff88;
     }
     // 尺寸設定區：非主列
     & > div:nth-child(n + 8):not(:nth-child(7n + 8)) {
@@ -49,11 +51,11 @@
 //* 表格文字的RWD設定
 @mixin timeTableText() {
     @media screen and (min-width: $desktop) {
-        // 尺寸設定區：主列
+        // 文字設定區：主列
         & > div:nth-child(-n + 7):not(:first-child) {
             @include font-zh(1em, 500);
         }
-        // 尺寸設定區：主欄
+        // 文字設定區：主欄
         & > div:nth-child(7n + 8) {
             @include font-zh(1em, 300);
         }
@@ -63,11 +65,11 @@
         }
     }
     @media screen and (max-width: $tablet) {
-        // 尺寸設定區：主列
+        // 文字設定區：主列
         & > div:nth-child(-n + 7):not(:first-child) {
             @include font-zh(0.8em, 500);
         }
-        // 尺寸設定區：主欄
+        // 文字設定區：主欄
         & > div:nth-child(7n + 8) {
             @include font-zh(0.8em, 300);
         }
@@ -77,11 +79,11 @@
         }
     }
     @media screen and (max-width: $mobile) {
-        // 尺寸設定區：主列
+        // 文字設定區：主列
         & > div:nth-child(-n + 7):not(:first-child) {
             @include font-zh(0.8em, 500);
         }
-        // 尺寸設定區：主欄
+        // 文字設定區：主欄
         & > div:nth-child(7n + 8) {
             @include font-zh(10px, 300);
         }

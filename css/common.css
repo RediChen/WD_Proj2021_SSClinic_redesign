@@ -250,44 +250,44 @@ nav #nav-link-wrap div:nth-of-type(2) {
   width: 128px;
 }
 
-nav #nav-link-wrap a {
+nav #nav-link-wrap .nav-link {
   display: block;
   line-height: 2;
   padding: 5px 1em;
   font-family: "Noto Serif TC", serif;
   font-weight: 700;
   font-size: 1.2em;
-  color: #fbe9ec;
+  color: #6e0837;
   border-radius: 30%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-nav #nav-link-wrap a:nth-child(4), nav #nav-link-wrap a:nth-child(6) {
-  -webkit-transform: translateY(15px);
-          transform: translateY(15px);
+@media screen and (min-width: 1025px) {
+  nav #nav-link-wrap .nav-link:nth-child(4), nav #nav-link-wrap .nav-link:nth-child(6) {
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+  nav #nav-link-wrap .nav-link:nth-child(4n + 3) {
+    -webkit-transform: translateY(13px);
+            transform: translateY(13px);
+  }
+  nav #nav-link-wrap .nav-link:nth-child(6n + 2) {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
 }
 
-nav #nav-link-wrap a:nth-child(4n + 3) {
-  -webkit-transform: translateY(13px);
-          transform: translateY(13px);
-}
-
-nav #nav-link-wrap a:nth-child(6n + 2) {
-  -webkit-transform: translateY(10px);
-          transform: translateY(10px);
-}
-
-nav #nav-link-wrap a:link, nav #nav-link-wrap a:visited {
+nav #nav-link-wrap .nav-link:link, nav #nav-link-wrap .nav-link:visited {
   color: #000;
 }
 
-nav #nav-link-wrap a:hover {
+nav #nav-link-wrap .nav-link:hover {
   -webkit-box-shadow: 0 0 10px 10px rgba(240, 122, 181, 0.3) inset;
           box-shadow: 0 0 10px 10px rgba(240, 122, 181, 0.3) inset;
 }
 
-nav #nav-link-wrap a:active {
+nav #nav-link-wrap .nav-link:active {
   -webkit-filter: brightness(125%);
           filter: brightness(125%);
 }
@@ -298,7 +298,7 @@ nav #nav-link-wrap a:active {
     position: absolute;
     top: 0;
     left: 0;
-    width: 300px;
+    width: 40vw;
     height: 100vh;
     text-align: center;
     background-color: #f2f2f2;

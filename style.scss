@@ -538,7 +538,7 @@
     // Part I : 標題
     // Part II : 時間表
     #time-table {
-        margin: 100px auto 30px;
+        margin: 80px auto 30px;
         text-align: center;
         // 格式設定
         @media screen and (min-width: $desktop) {
@@ -587,12 +587,12 @@
         .table-eg-btns {
             border-radius: 50%;
             box-shadow: 8px 8px 8px $color-shade;
-            $leng: 100px;
+            $leng: 80px;
             height: $leng;
             width: $leng;
             //RWD：電腦、平板
             h4 {
-                @include font-zh(1.2em, 500);
+                @include font-zh(1em, 500);
                 line-height: $leng;
                 text-align: center;
                 text-shadow: 8px 8px 8px $color-shade;
