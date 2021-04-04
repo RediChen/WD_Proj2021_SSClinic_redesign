@@ -18,7 +18,7 @@ $("a").each(function () {
     //* Stage I : 收集參數
     var target = $(this).attr("data-s2-target");
     // (1) target 目標元素名稱，只有name、沒有sharp
-    if (!target) return false;// 沒有設定此參數的就直接中止
+    if (!target) return true;// 沒有設定此參數的就直接中止
     //====================//
     var offset = $("#" + target).offset();//jqGetOffset
     // (2-1) offset 元素在網頁上的座標
@@ -36,8 +36,6 @@ $("a").each(function () {
 
     //* Stage III : 前往至目的地
     $(this).click(function (e) {
-        console.log("我被點惹！") ;
-        //TODO
         e.preventDefault();//關閉 a 原本的連結功能
         $("html, body").stop().animate({
             //(1) UX : 插入stop() 讓點選其他按鈕可以中止機制

@@ -129,7 +129,7 @@ nav {
     background: $color-16;
     border-radius: 0 0 80% 80% / 0 0 55% 55%;
     box-shadow: 0 0 3px $color-shade;
-    //TODO -(JS)-> 向下滾動時隱藏op0，向上或hover恢復op1
+    //TODO -(JS)-> 向下滾動時隱藏op0.5，向上或hover恢復op1
 
     //* Part 1 : LOGO
     & > a {
@@ -362,6 +362,12 @@ footer {
     }
     // Part 4 : 友善連結
     #friend-link {
+        @media screen and (min-width: $desktop) {
+            margin: 100px 0 50px;
+        }
+        @media screen and (max-width: $tablet) {
+            margin: 60px 0 30px;
+        }
         display: flex;
         justify-content: space-evenly;
         a {
