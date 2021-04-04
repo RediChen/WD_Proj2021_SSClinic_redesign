@@ -36,6 +36,8 @@ $("a").each(function () {
 
     //* Stage III : 前往至目的地
     $(this).click(function (e) {
+        console.log("我被點惹！") ;
+        //TODO
         e.preventDefault();//關閉 a 原本的連結功能
         $("html, body").stop().animate({
             //(1) UX : 插入stop() 讓點選其他按鈕可以中止機制

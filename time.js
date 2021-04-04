@@ -6,15 +6,12 @@
 $(".table-eg-btns").each(function () {
     var color = $(this).attr("data-tt-label");
     if (color === undefined) return true;// 沒有設定此參數的就直接中止
-    console.log("抓到了 " + color);
     if (isMobile.matches) {
         $(this).mousedown(addGray(color));
         $(this).mouseup(removeGray());
-        console.log("行動裝置");
     } else {
         //* 以下的是會失敗的外包版本
         // $(this).hover(addGray(color), removeGray());
-        console.log("電腦");
         //* 以下的是會成功的嵌入版本
         $(this).hover(
             function () {
@@ -38,9 +35,6 @@ $(".table-eg-btns").each(function () {
 });
 //* 以下的是會失敗的外包版本
 function addGray(colorLabel) {
-    console.log("進來了！");
-    console.log("現在的顏色是 " + colorLabel);
-
     var i;
     var cols = document.getElementsByClassName("tt-cols");
     for (i = 0; i < cols.length; i++) {
@@ -51,8 +45,6 @@ function addGray(colorLabel) {
     }
 }
 function removeGray() {
-    console.log("離開了！");
-
     var i;
     var cols = document.getElementsByClassName("tt-cols");
     for (i = 0; i < cols.length; i++) {

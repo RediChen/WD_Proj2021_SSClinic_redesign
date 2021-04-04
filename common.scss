@@ -92,11 +92,28 @@ a {
     border-color: $color-26;
 }
 //通用樣式設定 END ===========================================
-//to the top ====================================================
+//* to the top ====================================================
 #tothetop {
+    display: block;
+    background-image: url(../img/iconTothetop.png);
+    background-color: $color-14;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    $leng: 32px;
+    width: $leng;
+    height: $leng;
+    border-radius: 50%;
+    box-shadow: 0 0 5px $color-14;
+    cursor: pointer;
+    transition: box-shadow 0.5s;
+
+    &:hover {
+        box-shadow: 0 0 15px $color-14;
+    }
 }
 //to the top END ====================================================
-//導覽列 ====================================================
+//* 導覽列 ====================================================
 nav {
     //* Part 0 : 通用樣式設定
     @media screen and (min-width: $desktop) {
@@ -360,7 +377,7 @@ footer {
         p {
             color: #f2f2f2;
             line-height: 3em;
-            text-align: center; 
+            text-align: center;
         }
     }
 }
