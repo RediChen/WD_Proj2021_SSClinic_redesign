@@ -138,7 +138,8 @@ a:link, a:visited {
 #tothetop {
   display: block;
   background-image: url(../img/iconTothetop.png);
-  background-color: #fbe9ec;
+  -webkit-filter: invert(13%) sepia(29%) saturate(7468%) hue-rotate(-45deg) brightness(78%) contrast(104%);
+          filter: invert(13%) sepia(29%) saturate(7468%) hue-rotate(-45deg) brightness(78%) contrast(104%);
   position: fixed;
   bottom: 15px;
   right: 15px;
@@ -206,6 +207,7 @@ nav > a {
 
 nav #nav-hbger {
   background-image: url(../img/iconHBG.png);
+  background-color: #fbe9ec;
   position: absolute;
   top: 7px;
   right: 25px;
@@ -257,10 +259,21 @@ nav #nav-link-wrap .nav-link {
   font-family: "Noto Serif TC", serif;
   font-weight: 700;
   font-size: 1.2em;
-  color: #6e0837;
   border-radius: 30%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+@media screen and (min-width: 1025px) {
+  nav #nav-link-wrap .nav-link {
+    color: #fbe9ec;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  nav #nav-link-wrap .nav-link {
+    color: #6e0837;
+  }
 }
 
 @media screen and (min-width: 1025px) {
@@ -310,7 +323,7 @@ nav #nav-link-wrap .nav-link:active {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
-    z-index: 2;
+    z-index: 3;
   }
   nav #nav-link-wrap a {
     font-family: "Noto Serif TC", serif;

@@ -96,7 +96,8 @@ a {
 #tothetop {
     display: block;
     background-image: url(../img/iconTothetop.png);
-    background-color: $color-14;
+    // background-color: $color-14;
+    filter: invert(13%) sepia(29%) saturate(7468%) hue-rotate(-45deg) brightness(78%) contrast(104%);
     position: fixed;
     bottom: 15px;
     right: 15px;
@@ -148,6 +149,7 @@ nav {
     #nav-hbger {
         // background-color: lightgoldenrodyellow;
         background-image: url(../img/iconHBG.png);
+        background-color: $color-14;
         position: absolute;
         top: 7px;
         right: 25px;
@@ -182,7 +184,12 @@ nav {
             line-height: 2;
             padding: 5px 1em;
             @include font-zh(1.2em, 700);
-            color: $color-16;
+            @media screen and (min-width: $desktop) {
+                color: $color-14;
+            }
+            @media screen and (max-width: $tablet) {
+                color: $color-16;
+            }
             border-radius: 30%;
             transition: 0.5s;
             // 配合弧度的高度微調：from 內 to 外
@@ -200,16 +207,16 @@ nav {
             }
             // 配合弧度的高度微調 END
             &:link,
-                &:visited {
-                    color: #000;
-                }
-                &:hover {
-                    box-shadow: 0 0 10px 10px rgba($color-26, 0.3) inset;
-                }
-                &:active {
-                    // filter: invert(20%);
-                    filter: brightness(125%);
-                }
+            &:visited {
+                color: #000;
+            }
+            &:hover {
+                box-shadow: 0 0 10px 10px rgba($color-26, 0.3) inset;
+            }
+            &:active {
+                // filter: invert(20%);
+                filter: brightness(125%);
+            }
         }
         @media screen and (max-width: $tablet) {
             display: none;
@@ -223,7 +230,7 @@ nav {
             padding: 3em 0;
             flex-flow: column;
             justify-content: start;
-            z-index: 2;
+            z-index: 3;
             a {
                 @include font-zh(1.5em, 700);
                 line-height: 3;

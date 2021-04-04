@@ -5,10 +5,11 @@ const isMobile = window.matchMedia("(max-width: 767px)");
 
 //* 漢堡選單 ==========================//
 $("#nav-hbger").click(function () {
-    $("#nav-link-wrap").animate({width:'toggle'}, 500);
+    $("#nav-link-wrap").fadeToggle();
+    // $("#nav-link-wrap").toggle('slide',{direction: 'left'}, 1000);
 });
 $(".nav-link").click(function () {
-    if(isMobile.matches) $("#nav-link-wrap").hide() ;
+    if (isMobile.matches) $("#nav-link-wrap").hide();
 })
 // 漢堡選單 END
 
