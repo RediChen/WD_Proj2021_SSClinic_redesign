@@ -8,7 +8,9 @@
     padding: 0;
 }
 body {
-    background: radial-gradient(#ffeeee, #f2f2f2);
+    // background: radial-gradient(#ffeeee, #f2f2f2);
+    background: url(http://api.thumbr.it/whitenoise-361x370.png?background=ffffffff&noise=ffeeee&density=15&opacity=15) ;
+    background-repeat: repeat;
 }
 a {
     //reset the default

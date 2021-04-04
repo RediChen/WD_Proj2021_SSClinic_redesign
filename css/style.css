@@ -728,7 +728,9 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
         grid-template-columns: 50px repeat(6, 1fr);
   }
   #time #time-table > div:nth-child(n + 2) {
-    border: 1px solid #000;
+    border: 1px solid #55555555;
+    -webkit-box-shadow: 2px 2px 2px rgba(153, 153, 153, 0.3);
+            box-shadow: 2px 2px 2px rgba(153, 153, 153, 0.3);
     overflow: hidden;
   }
   #time #time-table > div:first-child {
@@ -786,7 +788,9 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
         grid-template-columns: 40px repeat(6, 1fr);
   }
   #time #time-table > div:nth-child(n + 2) {
-    border: 1px solid #000;
+    border: 1px solid #55555555;
+    -webkit-box-shadow: 2px 2px 2px rgba(153, 153, 153, 0.3);
+            box-shadow: 2px 2px 2px rgba(153, 153, 153, 0.3);
     overflow: hidden;
   }
   #time #time-table > div:first-child {
@@ -844,7 +848,9 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
         grid-template-columns: 25px repeat(6, 1fr);
   }
   #time #time-table > div:nth-child(n + 2) {
-    border: 1px solid #000;
+    border: 1px solid #55555555;
+    -webkit-box-shadow: 2px 2px 2px rgba(153, 153, 153, 0.3);
+            box-shadow: 2px 2px 2px rgba(153, 153, 153, 0.3);
     overflow: hidden;
   }
   #time #time-table > div:first-child {

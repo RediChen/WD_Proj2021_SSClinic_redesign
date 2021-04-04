@@ -11,7 +11,8 @@
     grid-template-columns: $leng-half repeat(6, 1fr);
     // 框線設定區
     & > div:nth-child(n + 2) {
-        border: 1px solid #000;
+        border: 1px solid #55555555;
+        box-shadow: 2px 2px 2px $color-shade;
         overflow: hidden;
     }
     // 尺寸設定區：左上格
