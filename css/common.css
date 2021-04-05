@@ -14,7 +14,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 body {
-  background: url(http://api.thumbr.it/whitenoise-361x370.png?background=ffffffff&noise=ffeeee&density=15&opacity=15);
+  background: url(http://api.thumbr.it/whitenoise-300x300.png?background=ffffffff&noise=ffeeee&density=15&opacity=15);
   background-repeat: repeat;
 }
 
@@ -139,16 +139,14 @@ a:link, a:visited {
 #tothetop {
   display: block;
   background-image: url(../img/iconTothetop.png);
-  -webkit-filter: invert(13%) sepia(29%) saturate(7468%) hue-rotate(-45deg) brightness(78%) contrast(104%);
-          filter: invert(13%) sepia(29%) saturate(7468%) hue-rotate(-45deg) brightness(78%) contrast(104%);
+  -webkit-filter: invert(100%) sepia(5%) saturate(249%) hue-rotate(178deg) brightness(116%) contrast(100%) drop-shadow(0 0 1px black);
+          filter: invert(100%) sepia(5%) saturate(249%) hue-rotate(178deg) brightness(116%) contrast(100%) drop-shadow(0 0 1px black);
   position: fixed;
   bottom: 15px;
   right: 15px;
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  -webkit-box-shadow: 0 0 5px #fbe9ec;
-          box-shadow: 0 0 5px #fbe9ec;
   cursor: pointer;
   -webkit-transition: -webkit-box-shadow 0.5s;
   transition: -webkit-box-shadow 0.5s;
