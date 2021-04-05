@@ -387,6 +387,7 @@ footer {
             img {
                 width: auto;
                 height: auto;
+                filter: drop-shadow(-3px 3px 3px $color-shade);
             }
         }
     }

@@ -507,6 +507,8 @@ footer #friend-link {
 footer #friend-link a img {
   width: auto;
   height: auto;
+  -webkit-filter: drop-shadow(-3px 3px 3px rgba(153, 153, 153, 0.3));
+          filter: drop-shadow(-3px 3px 3px rgba(153, 153, 153, 0.3));
 }
 
 footer div:last-child {
