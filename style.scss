@@ -29,7 +29,6 @@
             height: 4em;
             border-radius: 50%;
             box-shadow: 0 0 40px 10px $color-24 inset;
-            transition: 0.6s;
             @media screen and (min-width: $desktop) {
                 top: 34vh;
                 left: 40vw;
@@ -45,9 +44,6 @@
                 top: 21vh;
                 left: 52%;
                 box-shadow: 0 0 20px 10px $color-24 inset;
-            }
-            &:hover {
-                transform: scale(1.2);
             }
         }
         h1 {
@@ -119,8 +115,9 @@
         margin-top: -5px; //修正picture未知原因造成的隙縫
         width: 100%;
         height: 100vh;
-        overflow: hidden;
-        background-image: linear-gradient(180deg, snow, #f1e5e6 85%, #f1e5e6 90%, snow);
+        $color1 : #fffafaaa ;
+        $color2 : #f7d3d6aa ;
+        background-image: linear-gradient(180deg, $color1, $color2 80%, $color2 90%, $color1);
         @media screen and (max-width: $mobile) {
             height: auto;
         }
@@ -128,7 +125,7 @@
         & > div {
             margin: 0 auto;
             padding: 2.5em 2em 5em;
-            background-color: rgba($color-24, 0.8);
+            background-color: rgba(snow, 1);
             box-shadow: 5px 5px 20px $color-shade;
             border-radius: 5%;
 
@@ -178,11 +175,11 @@
 //* 醫療團隊 ==============================================================
 #team {
     //* Part 0 : 整體格局
-    $title-h : 80px ;
-    $card-pd : 1em ;// also gap
-    $card-h-real : 540px ;
-    $card-h : calc($card-h-real - 2*$card-pd) ;
-    $section-h : calc($title-h + $card-h) ;
+    $title-h: 80px;
+    $card-pd: 1em; // also gap
+    $card-h-real: 540px;
+    $card-h: calc($card-h-real - 2 * $card-pd);
+    $section-h: calc($title-h + $card-h);
 
     margin: 150px 5px 100px;
     width: 100%;
@@ -213,9 +210,9 @@
 
         @mixin box-setup($box-bd, $box-pd, $gap, $f-sz) {
             //pd = padding, bd = border, f-sz = font-size
-            $grid-h: 2*$f-sz;
-            $leng-real : $card-h-real ;//TODO 待轉換RWD
-            $leng : calc($leng-real - 2*$box-bd - 2*$box-pd - 2*$gap) ;
+            $grid-h: 2 * $f-sz;
+            $leng-real: $card-h-real; //TODO 待轉換RWD
+            $leng: calc($leng-real - 2 * $box-bd - 2 * $box-pd - 2 * $gap);
             width: $leng;
             height: $leng;
             border: $box-bd solid rgba(#bbb, 0.3);
@@ -276,8 +273,7 @@
     }
     //* Part III : 詳細介紹
     #team-card-wrap {
-        
-        background-color: rgba($color-24, 0.6);
+        background-color: rgba($color-shade, 0.1);
         box-shadow: -8px 8px 8px -3px $color-shade;
         height: 450px;
         padding: 3em;
