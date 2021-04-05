@@ -606,6 +606,7 @@
             $leng: 80px;
             height: $leng;
             width: $leng;
+            cursor: default;
             //RWD：電腦、平板
             h4 {
                 @include font-zh(1em, 500);
@@ -613,6 +614,7 @@
                 text-align: center;
                 text-shadow: 8px 8px 8px $color-shade;
             }
+            //RWD：電腦、平板 END
             //RWD：手機
             @media screen and (max-width: $mobile) {
                 $leng: 65px;

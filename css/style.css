@@ -1006,6 +1006,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
           box-shadow: 8px 8px 8px rgba(153, 153, 153, 0.3);
   height: 80px;
   width: 80px;
+  cursor: default;
 }
 
 #time #table-eg .table-eg-btns h4 {
