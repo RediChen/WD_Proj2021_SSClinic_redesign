@@ -4,8 +4,8 @@
     $leng-2: $leng - 2px;
     $leng-half: $leng / 2;
     $leng-half-2: $leng-half - 2px;
-    width: 6.5 * $leng + 6 * $gap;
-    height: 3.5 * $leng + 3 * $gap;
+    width: 6.5*$leng + 6*$gap;
+    height: 3.5*$leng + 3*$gap;
     display: grid;
     grid-gap: $gap;
     grid-template-columns: $leng-half repeat(6, 1fr);
