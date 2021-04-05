@@ -11,6 +11,8 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
