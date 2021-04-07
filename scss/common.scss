@@ -109,7 +109,6 @@ a {
     width: $leng;
     height: $leng;
     border-radius: 50%;
-    // box-shadow: 0 0 5px $color-14;
     cursor: pointer;
     transition: box-shadow 0.5s;
 
@@ -146,14 +145,17 @@ nav {
             transform: translate(-50%, 20%);
         }
         @media screen and (max-width: $tablet) {
-            transform: translate(-50%, 5%);
+            transform: translate(-50%, 3%);
+        }
+        @media screen and (max-width: $mobile) {
+            transform: translate(-50%, 40%);
         }
     }
     //* Part 2 : HBGer
     #nav-hbger {
         // background-color: lightgoldenrodyellow;
-        background-image: url(../img/iconHBG.png);
-        background-color: $color-14;
+        background-image: url(../icons/iconHBG.png);
+        background-color: #ddd;
         position: absolute;
         top: 7px;
         right: 25px;

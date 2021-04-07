@@ -201,14 +201,21 @@ nav > a {
 
 @media screen and (max-width: 1024px) {
   nav > a {
-    -webkit-transform: translate(-50%, 5%);
-            transform: translate(-50%, 5%);
+    -webkit-transform: translate(-50%, 3%);
+            transform: translate(-50%, 3%);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  nav > a {
+    -webkit-transform: translate(-50%, 40%);
+            transform: translate(-50%, 40%);
   }
 }
 
 nav #nav-hbger {
-  background-image: url(../img/iconHBG.png);
-  background-color: #fbe9ec;
+  background-image: url(../icons/iconHBG.png);
+  background-color: #ddd;
   position: absolute;
   top: 7px;
   right: 25px;
