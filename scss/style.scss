@@ -135,12 +135,12 @@
             }
             @media screen and (max-width: $tablet) {
                 width: 70%;
-                margin-top: 15%;
+                margin-top: 8%;
             }
             @media screen and (max-width: $mobile) {
-                width: 83%;
-                margin-top: 20%;
-                padding: 1em 1.5em 5em;
+                width: 90%;
+                margin-top: 10%;
+                padding: 1em 1em 5em;
             }
             p {
                 line-height: 2.5;
@@ -174,6 +174,7 @@
 // 診所簡介 END ==========================================================
 //* 醫療團隊 ==============================================================
 #team {
+    border: 5px solid goldenrod;
     //* Part 0 : 整體格局
     $title-h: 80px;
     $card-pd: 1em; // also gap
@@ -181,11 +182,11 @@
     $card-h: calc($card-h-real - 2 * $card-pd);
     $section-h: calc($title-h + $card-h);
 
-    margin: 150px 5px 100px;
     width: 100%;
     // team = {header, buttons, cards}
     @media screen and (min-width: $desktop) {
         height: $section-h;
+        margin: 150px 5px 100px;
         display: grid;
         grid-template-columns: repeat(1, 4fr 7fr);
         grid-template-rows: repeat(1, 1fr 4fr);
@@ -195,6 +196,7 @@
         }
     }
     @media screen and (max-width: $tablet) {
+        margin: 100px 5px;
         height: 100vh;
         display: flex;
         flex-direction: column;
@@ -208,14 +210,14 @@
         // box = { btn > text }_9
         box-shadow: -8px 8px 8px -3px $color-shade;
 
-        @mixin box-setup($box-bd, $box-pd, $gap, $f-sz) {
+        @mixin box-setup($box-leng, $box-pd, $gap, $f-sz) {
             //pd = padding, bd = border, f-sz = font-size
             $grid-h: 2 * $f-sz;
             $leng-real: $card-h-real; //TODO 待轉換RWD
-            $leng: calc($leng-real - 2 * $box-bd - 2 * $box-pd - 2 * $gap);
+            $leng: calc($leng-real - 2*$box-pd - 2*$box-pd - 2*$gap);
             width: $leng;
             height: $leng;
-            border: $box-bd solid rgba(#bbb, 0.3);
+            border: $box-pd solid $color-05;
             padding: $box-pd;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -226,13 +228,13 @@
             }
         }
         @media screen and (min-width: $desktop) {
-            @include box-setup(10px, 10px, 5px, 1.5em);
+            @include box-setup(540px, 10px, 5px, 1.5em);
         }
         @media screen and (max-width: $tablet) {
-            @include box-setup(10px, 10px, 10px, 1.2em);
+            @include box-setup(400px, 10px, 10px, 1.2em);
         }
         @media screen and (max-width: $mobile) {
-            @include box-setup(3px, 5px, 5px, 0.8em);
+            @include box-setup(360px, 5px, 5px, 0.8em);
         }
 
         //按鈕 Part 1 : 格式的設定
@@ -241,6 +243,7 @@
             align-items: center;
             justify-content: center; //for RWD : mobile
             text-align: center; //for RWD : desktop
+            cursor: default;
         }
         //按鈕 Part 2 : 顏色的設定
         .team-btn {
@@ -273,40 +276,28 @@
     }
     //* Part III : 詳細介紹
     #team-card-wrap {
-        background-color: rgba($color-shade, 0.1);
+        background-color: rgba($color-05, 0.3);
         box-shadow: -8px 8px 8px -3px $color-shade;
-        height: 450px;
-        padding: 3em;
+
         .team-card {
+            border: 5px solid gold;
             // card = {img, div-h2, div-about}
             //* 共通設定
-            // 高度
+            // 內外距
             @media screen and (min-width: $desktop) {
+                // height: 450px;
                 height: 100%;
-                // height: 350px;
+                padding: 3em;
             }
             @media screen and (max-width: $tablet) {
-                height: 60vh;
+                // height: 60vh;
+                height: 350px;
+                padding: 3em;
             }
             @media screen and (max-width: $mobile) {
-                height: 70vh;
-            }
-            // 照片
-            & > img {
-                width: auto;
-                display: block;
-                margin: auto;
-                object-fit: contain;
-            }
-            // 成員姓名
-            & > div:nth-child(2) {
-                text-align: center;
-                h2 {
-                    padding: 0 0.5em;
-                    display: inline-block;
-                    border-bottom: 1px solid $color-line;
-                    box-shadow: 0 9px 5px -6px #66666666;
-                }
+                height: auto;
+                width: 100%;
+                padding: 1em 1.5em;
             }
             // 共通設定 END
             //* 格局設定
@@ -333,6 +324,7 @@
                 grid-template-areas: "photos showcases" "names showcases";
                 grid-template-columns: repeat(1, 1fr 3fr);
                 grid-template-rows: repeat(1, 3fr 2fr);
+                grid-gap: 1em;
                 //area 命名
                 & > img {
                     grid-area: photos;
@@ -346,45 +338,57 @@
                 //area 命名 END
             }
             @media screen and (max-width: $mobile) {
-                padding: 0 1em;
-                min-width: 95%;
-
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 & > img {
-                    width: 120px;
+                    height: 20vh;
                 }
                 h2 {
                     margin: 0.5em 0 1em;
                 }
             }
-            // 格局設定 END
+            // 照片
+            & > img {
+                width: auto;
+                display: block;
+                object-fit: contain;
         }
-        .team-about {
-            // card = {img, div-h2, div-about}
-            // about = {sub-card}_n
-            padding: 0 5%;
-            overflow: auto; //自動生成內滾動範圍
-            background-color: $color-04;
-            box-shadow: 10px 0 10px -10px inset $color-shade;
-            @media screen and (max-width: $mobile) {
-                height: 50vh;
-                min-width: 90%;
+            // 成員姓名
+            & > div:nth-child(2) {
+                text-align: center;
+                h2 {
+                    padding: 0 0.5em;
+                    display: inline-block;
+                    border-bottom: 1px solid $color-line;
+                    box-shadow: 0 9px 5px -6px $color-06;
+                }
             }
-
-            .team-sub-card {
-                padding: 1em 0;
-                h3 {
-                    text-indent: 2em;
-                    margin-bottom: -0.3em;
+            // 格局設定 END
+            .team-about {
+                // card = {img, div-h2, div-about}
+                // about = {sub-card}_n
+                padding: 0 5%;
+                overflow: auto; //自動生成內滾動範圍
+                background-color: $color-04;
+                box-shadow: 10px 0 10px -10px inset $color-shade;
+                @media screen and (max-width: $mobile) {
+                    height: 50vh;
+                    min-width: 90%;
                 }
-                ul {
-                    list-style-type: none;
-                }
-                p,
-                li {
-                    line-height: 2.5;
+                .team-sub-card {
+                    padding: 1em 0;
+                    h3 {
+                        text-indent: 2em;
+                        margin-bottom: -0.3em;
+                    }
+                    ul {
+                        list-style-type: none;
+                    }
+                    p,
+                    li {
+                        line-height: 2.5;
+                    }
                 }
             }
         }
@@ -437,15 +441,15 @@
         $img-leng-big: 140px;
         $h2-lh: 3em;
         margin: $card-m-y auto;
-        height: calc(2*$card-m-y + 2*$img-m-y + $img-leng-big + $h2-lh);
+        height: calc(2 * $card-m-y + 2 * $img-m-y + $img-leng-big + $h2-lh);
         @media screen and (max-width: $mobile) {
             $img-leng-big: 125px;
-            height: calc(2*$card-m-y + 2*$img-m-y + $img-leng-big + $h2-lh);
+            height: calc(2 * $card-m-y + 2 * $img-m-y + $img-leng-big + $h2-lh);
         }
         .care-card {
             text-align: center;
             margin: $card-m-y 20px;
-            height: calc(2*$img-m-y + $img-leng-big + $h2-lh);
+            height: calc(2 * $img-m-y + $img-leng-big + $h2-lh);
             // max-width: $img-leng + 10px;
             overflow: break-word;
             & > div {

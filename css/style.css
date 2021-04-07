@@ -186,15 +186,15 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 @media screen and (max-width: 1024px) {
   #opening > div:last-child > div {
     width: 70%;
-    margin-top: 15%;
+    margin-top: 8%;
   }
 }
 
 @media screen and (max-width: 767px) {
   #opening > div:last-child > div {
-    width: 83%;
-    margin-top: 20%;
-    padding: 1em 1.5em 5em;
+    width: 90%;
+    margin-top: 10%;
+    padding: 1em 1em 5em;
   }
 }
 
@@ -232,13 +232,14 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 #team {
-  margin: 150px 5px 100px;
+  border: 5px solid goldenrod;
   width: 100%;
 }
 
 @media screen and (min-width: 1025px) {
   #team {
     height: calc($title-h + $card-h);
+    margin: 150px 5px 100px;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (4fr 7fr)[1];
@@ -256,6 +257,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 
 @media screen and (max-width: 1024px) {
   #team {
+    margin: 100px 5px;
     height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -279,9 +281,9 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 
 @media screen and (min-width: 1025px) {
   #team #team-btn-box {
-    width: calc($leng-real - 2 * $box-bd - 2 * $box-pd - 2 * $gap);
-    height: calc($leng-real - 2 * $box-bd - 2 * $box-pd - 2 * $gap);
-    border: 10px solid rgba(187, 187, 187, 0.3);
+    width: calc($leng-real - 2*$box-pd - 2*$box-pd - 2*$gap);
+    height: calc($leng-real - 2*$box-pd - 2*$box-pd - 2*$gap);
+    border: 10px solid #ddd;
     padding: 10px;
     display: -ms-grid;
     display: grid;
@@ -300,9 +302,9 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 
 @media screen and (max-width: 1024px) {
   #team #team-btn-box {
-    width: calc($leng-real - 2 * $box-bd - 2 * $box-pd - 2 * $gap);
-    height: calc($leng-real - 2 * $box-bd - 2 * $box-pd - 2 * $gap);
-    border: 10px solid rgba(187, 187, 187, 0.3);
+    width: calc($leng-real - 2*$box-pd - 2*$box-pd - 2*$gap);
+    height: calc($leng-real - 2*$box-pd - 2*$box-pd - 2*$gap);
+    border: 10px solid #ddd;
     padding: 10px;
     display: -ms-grid;
     display: grid;
@@ -321,9 +323,9 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 
 @media screen and (max-width: 767px) {
   #team #team-btn-box {
-    width: calc($leng-real - 2 * $box-bd - 2 * $box-pd - 2 * $gap);
-    height: calc($leng-real - 2 * $box-bd - 2 * $box-pd - 2 * $gap);
-    border: 3px solid rgba(187, 187, 187, 0.3);
+    width: calc($leng-real - 2*$box-pd - 2*$box-pd - 2*$gap);
+    height: calc($leng-real - 2*$box-pd - 2*$box-pd - 2*$gap);
+    border: 5px solid #ddd;
     padding: 5px;
     display: -ms-grid;
     display: grid;
@@ -351,6 +353,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  cursor: default;
 }
 
 #team #team-btn-box .team-btn {
@@ -384,49 +387,35 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 #team #team-card-wrap {
-  background-color: rgba(153, 153, 153, 0.1);
+  background-color: rgba(221, 221, 221, 0.3);
   -webkit-box-shadow: -8px 8px 8px -3px rgba(153, 153, 153, 0.3);
           box-shadow: -8px 8px 8px -3px rgba(153, 153, 153, 0.3);
-  height: 450px;
-  padding: 3em;
+}
+
+#team #team-card-wrap .team-card {
+  border: 5px solid gold;
 }
 
 @media screen and (min-width: 1025px) {
   #team #team-card-wrap .team-card {
     height: 100%;
+    padding: 3em;
   }
 }
 
 @media screen and (max-width: 1024px) {
   #team #team-card-wrap .team-card {
-    height: 60vh;
+    height: 350px;
+    padding: 3em;
   }
 }
 
 @media screen and (max-width: 767px) {
   #team #team-card-wrap .team-card {
-    height: 70vh;
+    height: auto;
+    width: 100%;
+    padding: 1em 1.5em;
   }
-}
-
-#team #team-card-wrap .team-card > img {
-  width: auto;
-  display: block;
-  margin: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
-#team #team-card-wrap .team-card > div:nth-child(2) {
-  text-align: center;
-}
-
-#team #team-card-wrap .team-card > div:nth-child(2) h2 {
-  padding: 0 0.5em;
-  display: inline-block;
-  border-bottom: 1px solid indigo;
-  -webkit-box-shadow: 0 9px 5px -6px #66666666;
-          box-shadow: 0 9px 5px -6px #66666666;
 }
 
 @media screen and (min-width: 1025px) {
@@ -467,6 +456,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
         grid-template-columns: repeat(1, 1fr 3fr);
     -ms-grid-rows: (3fr 2fr)[1];
         grid-template-rows: repeat(1, 3fr 2fr);
+    grid-gap: 1em;
   }
   #team #team-card-wrap .team-card > img {
     -ms-grid-row: 1;
@@ -488,8 +478,6 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 
 @media screen and (max-width: 767px) {
   #team #team-card-wrap .team-card {
-    padding: 0 1em;
-    min-width: 95%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -502,14 +490,33 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
             align-items: center;
   }
   #team #team-card-wrap .team-card > img {
-    width: 120px;
+    height: 20vh;
   }
   #team #team-card-wrap .team-card h2 {
     margin: 0.5em 0 1em;
   }
 }
 
-#team #team-card-wrap .team-about {
+#team #team-card-wrap .team-card > img {
+  width: auto;
+  display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+#team #team-card-wrap .team-card > div:nth-child(2) {
+  text-align: center;
+}
+
+#team #team-card-wrap .team-card > div:nth-child(2) h2 {
+  padding: 0 0.5em;
+  display: inline-block;
+  border-bottom: 1px solid indigo;
+  -webkit-box-shadow: 0 9px 5px -6px #55555555;
+          box-shadow: 0 9px 5px -6px #55555555;
+}
+
+#team #team-card-wrap .team-card .team-about {
   padding: 0 5%;
   overflow: auto;
   background-color: #fdfdfd;
@@ -518,27 +525,27 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 @media screen and (max-width: 767px) {
-  #team #team-card-wrap .team-about {
+  #team #team-card-wrap .team-card .team-about {
     height: 50vh;
     min-width: 90%;
   }
 }
 
-#team #team-card-wrap .team-about .team-sub-card {
+#team #team-card-wrap .team-card .team-about .team-sub-card {
   padding: 1em 0;
 }
 
-#team #team-card-wrap .team-about .team-sub-card h3 {
+#team #team-card-wrap .team-card .team-about .team-sub-card h3 {
   text-indent: 2em;
   margin-bottom: -0.3em;
 }
 
-#team #team-card-wrap .team-about .team-sub-card ul {
+#team #team-card-wrap .team-card .team-about .team-sub-card ul {
   list-style-type: none;
 }
 
-#team #team-card-wrap .team-about .team-sub-card p,
-#team #team-card-wrap .team-about .team-sub-card li {
+#team #team-card-wrap .team-card .team-about .team-sub-card p,
+#team #team-card-wrap .team-card .team-about .team-sub-card li {
   line-height: 2.5;
 }
 
@@ -595,19 +602,19 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 
 #care #care-board-2 {
   margin: 60px auto;
-  height: calc(2*$card-m-y + 2*$img-m-y + $img-leng-big + $h2-lh);
+  height: calc(2 * $card-m-y + 2 * $img-m-y + $img-leng-big + $h2-lh);
 }
 
 @media screen and (max-width: 767px) {
   #care #care-board-2 {
-    height: calc(2*$card-m-y + 2*$img-m-y + $img-leng-big + $h2-lh);
+    height: calc(2 * $card-m-y + 2 * $img-m-y + $img-leng-big + $h2-lh);
   }
 }
 
 #care #care-board-2 .care-card {
   text-align: center;
   margin: 60px 20px;
-  height: calc(2*$img-m-y + $img-leng-big + $h2-lh);
+  height: calc(2 * $img-m-y + $img-leng-big + $h2-lh);
   overflow: break-word;
 }
 
