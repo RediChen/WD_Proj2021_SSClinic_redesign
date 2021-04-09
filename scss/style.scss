@@ -183,7 +183,7 @@
 // 診所簡介 END ==========================================================
 //* 醫療團隊 ==============================================================
 #team {
-    border: 5px solid goldenrod;
+    border: 5px solid goldenrod;//TODO==============================delete
     //* Part 0 : 整體格局
     $title-h: 80px;
     $card-pd: 1em; // also gap
@@ -289,7 +289,7 @@
         box-shadow: -8px 8px 8px -3px $color-shade;
 
         .team-card {
-            border: 5px solid gold;
+            border: 5px solid gold;//TODO==============================delete
             // card = {img, div-h2, div-about}
             //* 共通設定
             // 內外距
