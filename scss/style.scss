@@ -13,16 +13,22 @@
     @media screen and (max-width: $tablet) {
         margin-top: -$h-nav-tb;
     }
+
     //* Part I : 首頁形象
     & > div:first-child {
-        //Part I-1 : 樣式設定
-        img {
-            width: 100%;
-            height: 100vh;
-            object-fit: cover;
-            overflow: hidden;
-            filter: contrast(0.65) brightness(1.2) saturate(1.3);
+        height: 100vh;
+        @media screen and (min-width: $desktop) {
+            background-image: url("../img/FrontImg_desktop.jpg");
         }
+        @media screen and (max-width: $tablet) {
+            background-image: url("../img/FrontImg_tablet.png");
+        }
+        background-size: auto 100vh;
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow: hidden;
+        filter: contrast(0.65) brightness(1.2) saturate(1.3);
+        //Part I-1 : 樣式設定
         #intro-disk {
             position: absolute;
             width: 22em;
@@ -214,7 +220,7 @@
             //pd = padding, bd = border, f-sz = font-size
             $grid-h: 2 * $f-sz;
             $leng-real: $card-h-real; //TODO 待轉換RWD
-            $leng: calc($leng-real - 2*$box-pd - 2*$box-pd - 2*$gap);
+            $leng: calc($leng-real - 2 * $box-pd - 2 * $box-pd - 2 * $gap);
             width: $leng;
             height: $leng;
             border: $box-pd solid $color-05;
@@ -353,7 +359,7 @@
                 width: auto;
                 display: block;
                 object-fit: contain;
-        }
+            }
             // 成員姓名
             & > div:nth-child(2) {
                 text-align: center;

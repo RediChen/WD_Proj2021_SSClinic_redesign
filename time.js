@@ -7,31 +7,44 @@ $(".table-eg-btns").each(function () {
     var color = $(this).attr("data-tt-label");
     if (color === undefined) return true;// 沒有設定此參數的就直接中止
     if (isMobile.matches) {
-        $(this).mousedown(addGray(color));
-        $(this).mouseup(removeGray());
-    } else {
-        //* 以下的是會失敗的外包版本
-        // $(this).hover(addGray(color), removeGray());
-        //* 以下的是會成功的嵌入版本
-        $(this).hover(
-            function () {
-                var i;
-                var cols = document.getElementsByClassName("tt-cols");
-                for (i = 0; i < cols.length; i++) {
-                    if (!cols[i].classList.contains(color)) {
-                        cols[i].classList.add("tt-deactivate");
-                    }
-                }
-            },
-            function () {
-                var i;
-                var cols = document.getElementsByClassName("tt-cols");
-                for (i = 0; i < cols.length; i++) {
-                    cols[i].classList.remove("tt-deactivate");
+        var cols = document.getElementsByClassName("tt-cols");
+        // $(this).stop().on("tap",function () {
+        //     var i;
+        //     for (i = 0; i < cols.length; i++) {
+        //         if (!cols[i].classList.contains(color)) {
+        //             cols[i].classList.add("tt-deactivate");
+        //         }
+        //     }
+        // }).delay(2000).()
+        // $(this).on("taphold",function () {
+        //     var i;
+        //     for (i = 0; i < cols.length; i++) {
+        //         cols[i].classList.remove("tt-deactivate");
+        //     }
+        // });
+    }
+
+    //* 以下的是會失敗的外包版本
+    // $(this).hover(addGray(color), removeGray());
+    //* 以下的是會成功的嵌入版本
+    $(this).hover(
+        function () {
+            var i;
+            var cols = document.getElementsByClassName("tt-cols");
+            for (i = 0; i < cols.length; i++) {
+                if (!cols[i].classList.contains(color)) {
+                    cols[i].classList.add("tt-deactivate");
                 }
             }
-        );
-    }
+        },
+        function () {
+            var i;
+            var cols = document.getElementsByClassName("tt-cols");
+            for (i = 0; i < cols.length; i++) {
+                cols[i].classList.remove("tt-deactivate");
+            }
+        }
+    );
 });
 //* 以下的是會失敗的外包版本
 function addGray(colorLabel) {
