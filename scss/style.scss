@@ -16,16 +16,19 @@
 
     //* Part I : 首頁形象
     & > div:first-child {
+        //Part I-0 : 圖片設定
         height: 100vh;
+        width: 100%;
         @media screen and (min-width: $desktop) {
             background-image: url("../img/FrontImg_desktop.jpg");
         }
         @media screen and (max-width: $tablet) {
             background-image: url("../img/FrontImg_tablet.png");
         }
-        background-size: auto 100vh;
+        background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+        
         overflow: hidden;
         filter: contrast(0.65) brightness(1.2) saturate(1.3);
         //Part I-1 : 樣式設定

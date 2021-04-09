@@ -26,7 +26,8 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 
 #opening > div:first-child {
   height: 100vh;
-  background-size: auto 100vh;
+  width: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   overflow: hidden;
