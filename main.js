@@ -52,7 +52,7 @@ $("a").each(function () {
 })
 // 滾動機制 END
 //* 形象頁面 ==========================//
-$("#home>h1").delay(1000).fadeIn("normal") ;
+$("#home h1").delay(5000).fadeOut("normal") ;
 console.log("有沒有問題啊？") ;
 // 形象頁面 END
 //* 團隊頁面 ==========================//

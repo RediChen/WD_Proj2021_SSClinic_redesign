@@ -15,7 +15,7 @@
     }
 
     //* Part I : 首頁形象
-    & > div:first-child {
+    #home {
         //Part I-0 : 圖片設定
         height: 100vh;
         width: 100%;
@@ -119,14 +119,13 @@
         }
     }
     //* Part II : 診所簡介
-    & > div:last-child {
+    #intro {
         // 背景
-        margin-top: -5px; //修正picture未知原因造成的隙縫
         width: 100%;
         height: 100vh;
         $color1: #fffafaaa;
-        $color2: #f7d3d6aa;
-        background-image: linear-gradient(180deg, $color1, $color2 80%, $color2 90%, $color1);
+        $color2: hsla(332, 87%, 23%, 0.1);
+        background-image: linear-gradient(180deg, $color1 10%, $color2 80%, $color2 85%, $color1);
         @media screen and (max-width: $mobile) {
             height: auto;
         }
