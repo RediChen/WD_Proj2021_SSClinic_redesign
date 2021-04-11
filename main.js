@@ -1,7 +1,6 @@
 //* 全域共用區
 const isMobile = window.matchMedia("(max-width: 767px)");
 //TODO 待研究這個變數到底是什麼
-AOS.init() ;
 // 全域共用區 END
 
 //* 漢堡選單 ==========================//

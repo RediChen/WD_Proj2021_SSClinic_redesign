@@ -78,11 +78,11 @@
         <!-- team = {header, buttons, cards} -->
         <!-- Part I : 標題 -->
         <header>
-            <h1 class="title-1">醫療團隊</h1>
+            <h1 class="title-1" data-aos="zoom-in-left">醫療團隊</h1>
             <hr class="hr-1">
         </header>
         <!-- Part II : 選取按鈕 -->
-        <div id="team-btn-box">
+        <div id="team-btn-box" data-aos="flip-right">
             <div class="team-btn" onclick="showCard(0)">
                 <h2>林為文<br>總院長</h2>
             </div>
@@ -967,7 +967,12 @@
     <!--  CDN of slick  -->
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!--  CDN of aos  -->
+    <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init();</script> -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <!--  my own js  -->
     <script src="./main.js"></script>
     <script src="./time.js"></script>
