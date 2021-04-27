@@ -216,11 +216,25 @@ nav > a {
 nav #nav-toggle {
   top: 10px;
   right: 25px;
-  /* 超橢圓設定 */
   width: 32px;
   height: 32px;
   border-radius: 20%;
-  /* 超橢圓設定 END */
+  /* 1 of 3 : 超橢圓設定 END */
+  -webkit-transition: 1s;
+  transition: 1s;
+  /* 3 of 3 : 動畫設定 END */
+}
+
+@media screen and (min-width: 1025px) {
+  nav #nav-toggle {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  nav #nav-toggle {
+    display: block;
+  }
 }
 
 nav #nav-toggle, nav #nav-toggle::before, nav #nav-toggle::after {
@@ -249,8 +263,9 @@ nav #nav-toggle::after {
 }
 
 nav #nav-toggle #nav-hbg {
-  top: calc(50% - 2px);
+  top: 14px;
   left: 4px;
+  /* 2 of 3 : 三條線設定 END */
 }
 
 nav #nav-toggle #nav-hbg, nav #nav-toggle #nav-hbg::before, nav #nav-toggle #nav-hbg::after {
@@ -258,8 +273,6 @@ nav #nav-toggle #nav-hbg, nav #nav-toggle #nav-hbg::before, nav #nav-toggle #nav
   width: 24px;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 1px 1px 4px rgba(153, 153, 153, 0.3);
-          box-shadow: 1px 1px 4px rgba(153, 153, 153, 0.3);
   border-radius: 1px;
   content: "";
 }
@@ -272,21 +285,36 @@ nav #nav-toggle #nav-hbg::after {
   top: 8px;
 }
 
-@media screen and (min-width: 1025px) {
-  nav #nav-toggle {
-    display: none;
-  }
+nav #nav-toggle #nav-hbg, nav #nav-toggle #nav-hbg::before, nav #nav-toggle #nav-hbg::after {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-@media screen and (max-width: 1024px) {
-  nav #nav-toggle {
-    display: block;
-  }
+nav #nav-toggle.active #nav-hbg {
+  -webkit-transition: 2s;
+  transition: 2s;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  background-color: transparent;
 }
 
-nav #nav-toggle:hover {
-  -webkit-filter: brightness(1.1);
-          filter: brightness(1.1);
+nav #nav-toggle.active #nav-hbg, nav #nav-toggle.active #nav-hbg::before, nav #nav-toggle.active #nav-hbg::after {
+  -webkit-transform-origin: initial;
+          transform-origin: initial;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+nav #nav-toggle.active #nav-hbg::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 0;
+}
+
+nav #nav-toggle.active #nav-hbg::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 0;
 }
 
 nav #nav-link-wrap {

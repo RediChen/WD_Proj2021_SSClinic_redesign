@@ -4,12 +4,14 @@ const isMobile = window.matchMedia("(max-width: 767px)");
 // 全域共用區 END
 
 //* 漢堡選單 ==========================//
-$("#nav-hbger").click(function () {
+$("#nav-toggle").click(function () {
+    $(this).toggleClass("active")
     $("#nav-link-wrap").fadeToggle();
     // $("#nav-link-wrap").toggle('slide',{direction: 'left'}, 1000);
 });
 $(".nav-link").click(function () {
     if (isMobile.matches) $("#nav-link-wrap").hide();
+    else $("#nav-link-wrap").show();
 })
 // 漢堡選單 END
 
