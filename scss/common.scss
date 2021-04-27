@@ -153,17 +153,61 @@ nav {
         }
     }
     //* Part 2 : HBGer
-    #nav-hbger {
-        background-image: url(../icons/iconHBG.png);
-        background-color: $color-04;
-        position: absolute;
-        top: 7px;
+    #nav-toggle {
+        &,
+        &::before,
+        &::after {
+            position: absolute;
+            background-color: $color-04;
+        }
+        top: 10px;
         right: 25px;
-        height: 32px;
-        width: 32px;
+        /* 超橢圓設定 */
+        $leng: 32px;
+        width: $leng;
+        height: $leng;
         border-radius: 20%;
-        box-shadow: 2px 2px 3px $color-shade;
-        // z-index: 3;
+        //* LAB
+        @mixin setSquircle($r1, $r2, $s1, $s2) {
+            content: " ";
+            border-radius: #{$r1} / #{$r2};
+            //r1, r2 若沒有數值化，斜線會被當成除號運算
+            top: $s1;
+            bottom: $s1;
+            right: $s2;
+            left: $s2;
+            z-index: -1;
+        }
+        &::before {
+            @include setSquircle(2%, 50%, 17%, -1.5%) ;
+        }
+        &::after {
+            @include setSquircle(50%, 2%, -1.5%, 17%) ;
+        }
+        //* LAB END
+        /* 超橢圓設定 END */
+        #nav-hbg {
+            &,
+            &::before,
+            &::after {
+                height: 4px;
+                width: 24px;
+                position: absolute;
+                background-color: rgba(black, 0.75);
+                box-shadow: 1px 1px 4px $color-shade;
+                border-radius: 1px;
+                content: "";
+            }
+            top: calc(50% - 2px);
+            left: 4px;
+            $gap: 8px ;
+            &::before {
+                top: -$gap;
+            }
+            &::after {
+                top: $gap;
+            }
+        }
         @media screen and (min-width: $desktop) {
             display: none;
         }
@@ -171,12 +215,33 @@ nav {
             display: block;
         }
         &:hover {
-            transform: scale(1.1);
-        }
-        &:active {
-            filter: invert(30%);
+            filter: brightness(1.1);
         }
     }
+    // #nav-hbger {
+    //     background-image: url(../icons/iconHBG.png);
+    //     background-color: $color-04;
+    //     position: absolute;
+    //     top: 7px;
+    //     right: 25px;
+    //     height: 32px;
+    //     width: 32px;
+    //     border-radius: 20%;
+    //     box-shadow: 2px 2px 3px $color-shade;
+    //     // z-index: 3;
+    //     @media screen and (min-width: $desktop) {
+    //         display: none;
+    //     }
+    //     @media screen and (max-width: $tablet) {
+    //         display: block;
+    //     }
+    //     &:hover {
+    //         transform: scale(1.1);
+    //     }
+    //     &:active {
+    //         filter: invert(30%);
+    //     }
+    // }
     //* Part 3 : LINKs
     #nav-link-wrap {
         display: flex;

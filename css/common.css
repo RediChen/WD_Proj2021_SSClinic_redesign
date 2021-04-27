@@ -213,39 +213,80 @@ nav > a {
   }
 }
 
-nav #nav-hbger {
-  background-image: url(../icons/iconHBG.png);
-  background-color: #fdfdfd;
-  position: absolute;
-  top: 7px;
+nav #nav-toggle {
+  top: 10px;
   right: 25px;
-  height: 32px;
+  /* 超橢圓設定 */
   width: 32px;
+  height: 32px;
   border-radius: 20%;
-  -webkit-box-shadow: 2px 2px 3px rgba(153, 153, 153, 0.3);
-          box-shadow: 2px 2px 3px rgba(153, 153, 153, 0.3);
+  /* 超橢圓設定 END */
+}
+
+nav #nav-toggle, nav #nav-toggle::before, nav #nav-toggle::after {
+  position: absolute;
+  background-color: #fdfdfd;
+}
+
+nav #nav-toggle::before {
+  content: " ";
+  border-radius: 2% / 50%;
+  top: 17%;
+  bottom: 17%;
+  right: -1.5%;
+  left: -1.5%;
+  z-index: -1;
+}
+
+nav #nav-toggle::after {
+  content: " ";
+  border-radius: 50% / 2%;
+  top: -1.5%;
+  bottom: -1.5%;
+  right: 17%;
+  left: 17%;
+  z-index: -1;
+}
+
+nav #nav-toggle #nav-hbg {
+  top: calc(50% - 2px);
+  left: 4px;
+}
+
+nav #nav-toggle #nav-hbg, nav #nav-toggle #nav-hbg::before, nav #nav-toggle #nav-hbg::after {
+  height: 4px;
+  width: 24px;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 1px 4px rgba(153, 153, 153, 0.3);
+          box-shadow: 1px 1px 4px rgba(153, 153, 153, 0.3);
+  border-radius: 1px;
+  content: "";
+}
+
+nav #nav-toggle #nav-hbg::before {
+  top: -8px;
+}
+
+nav #nav-toggle #nav-hbg::after {
+  top: 8px;
 }
 
 @media screen and (min-width: 1025px) {
-  nav #nav-hbger {
+  nav #nav-toggle {
     display: none;
   }
 }
 
 @media screen and (max-width: 1024px) {
-  nav #nav-hbger {
+  nav #nav-toggle {
     display: block;
   }
 }
 
-nav #nav-hbger:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-nav #nav-hbger:active {
-  -webkit-filter: invert(30%);
-          filter: invert(30%);
+nav #nav-toggle:hover {
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
 }
 
 nav #nav-link-wrap {
