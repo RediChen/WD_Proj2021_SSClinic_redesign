@@ -9,8 +9,12 @@
     box-sizing: border-box; //todo for what
 }
 body {
+    //[A] 雙色漸層
     // background: radial-gradient(#ffeeee, #f2f2f2);
-    background: url(http://api.thumbr.it/whitenoise-300x300.png?background=ffffff&noise=ffeeee&density=45&opacity=45);
+    //[B] 雜訊材質
+    // background: url(http://api.thumbr.it/whitenoise-300x300.png?background=ffffff&noise=ffeeee&density=45&opacity=45);
+    //[C] 壁紙花紋
+    background-image: url(../img/bgPattern_32px.png);
     background-repeat: repeat;
 }
 a {
@@ -170,7 +174,7 @@ nav {
         }
         top: 10px;
         right: 25px;
-        //* 1 of 3 : 超橢圓設定
+        //* (HBGer) 1 of 3 : 超橢圓設定
         // 超橢圓 = {before, &, after}
         width: $leng;
         height: $leng;
@@ -194,7 +198,7 @@ nav {
         }
         /* 1 of 3 : 超橢圓設定 END */
         #nav-hbg {
-            //* 2 of 3 : 三條線設定
+            //* (HBGer) 2 of 3 : 三條線設定
             // 三 = {before, &, after}
             &,
             &::before,
@@ -217,7 +221,7 @@ nav {
             }
             /* 2 of 3 : 三條線設定 END */
         }
-        //* 3 of 3 : 動畫設定
+        //* (HBGer) 3 of 3 : 動畫設定
         $unit_theta: -45deg;
         #nav-hbg {
             &,

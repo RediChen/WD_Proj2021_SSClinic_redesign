@@ -124,7 +124,7 @@
         width: 100%;
         height: 100vh;
         $color1: #fffafaaa;
-        $color2: hsla(332, 87%, 23%, 0.1);
+        $color2: hsla(332, 100%, 79%, 0.45);
         background-image: linear-gradient(180deg, $color1 10%, $color2 80%, $color2 85%, $color1);
         @media screen and (max-width: $mobile) {
             height: auto;
