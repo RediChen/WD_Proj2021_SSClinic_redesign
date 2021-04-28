@@ -255,8 +255,8 @@ nav {
     #nav-link-wrap {
         display: flex;
         justify-content: space-around;
-        //LOGO的位置
         div:nth-of-type(2) {
+            //騰出LOGO的位置
             width: 128px;
         }
         .nav-link {
@@ -286,12 +286,27 @@ nav {
                 }
             }
             // 配合弧度的高度微調 END
+            // hover 等設定
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 0;
+                border: 3px solid transparent;
+                transition: .5s;
+            }
             &:link,
             &:visited {
                 color: #000;
             }
             &:hover {
-                box-shadow: 0 0 10px 10px rgba($color-26, 0.3) inset;
+                &::after {
+                    width: 90%;
+                    border-color: hsl(330, 75%, 77%);
+                }
             }
             &:active {
                 // filter: invert(20%);

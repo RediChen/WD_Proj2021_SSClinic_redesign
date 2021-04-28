@@ -339,6 +339,7 @@ nav #nav-link-wrap .nav-link {
   border-radius: 30%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  position: relative;
 }
 
 @media screen and (min-width: 1025px) {
@@ -368,13 +369,26 @@ nav #nav-link-wrap .nav-link {
   }
 }
 
+nav #nav-link-wrap .nav-link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 0;
+  border: 3px solid transparent;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
 nav #nav-link-wrap .nav-link:link, nav #nav-link-wrap .nav-link:visited {
   color: #000;
 }
 
-nav #nav-link-wrap .nav-link:hover {
-  -webkit-box-shadow: 0 0 10px 10px rgba(240, 122, 181, 0.3) inset;
-          box-shadow: 0 0 10px 10px rgba(240, 122, 181, 0.3) inset;
+nav #nav-link-wrap .nav-link:hover::after {
+  width: 90%;
+  border-color: #f098c4;
 }
 
 nav #nav-link-wrap .nav-link:active {
