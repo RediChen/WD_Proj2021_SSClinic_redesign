@@ -22,13 +22,13 @@ $("a").each(function () {
     var target = $(this).attr("data-s2-target");
     // (1) target 目標元素名稱，只有name、沒有sharp
     if (!target) return true;// 沒有設定此參數的就直接中止
-    //====================//
+
     var offset = $("#" + target).offset();//jqGetOffset
     // (2-1) offset 元素在網頁上的座標
     //! 內捲動空間會跟著算入
     var posY = offset.top;
     // (2-2) offset.top 元素在網頁上的y座標
-    //====================//
+    
     var posAdj = parseInt($(this).attr("data-s2-offset"));
     // (3) posAdj = position adjust 微調目標的座標
     //TODO 希望可以自動算效果的時間
@@ -53,7 +53,7 @@ $("a").each(function () {
 })
 // 滾動機制 END
 //* 形象頁面 ==========================//
-$("#home h1").hide().delay(1000).fadeIn("normal") ;
+$("#home h1").hide().delay(1000).fadeIn("normal");
 // 形象頁面 END
 //* 團隊頁面 ==========================//
 // 功能：按鈕點選式呈現

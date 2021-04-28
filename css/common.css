@@ -220,8 +220,6 @@ nav #nav-toggle {
   height: 32px;
   border-radius: 20%;
   /* 1 of 3 : 超橢圓設定 END */
-  -webkit-transition: 1s;
-  transition: 1s;
   /* 3 of 3 : 動畫設定 END */
 }
 
@@ -243,7 +241,7 @@ nav #nav-toggle, nav #nav-toggle::before, nav #nav-toggle::after {
 }
 
 nav #nav-toggle::before {
-  content: " ";
+  content: "";
   border-radius: 2% / 50%;
   top: 17%;
   bottom: 17%;
@@ -253,7 +251,7 @@ nav #nav-toggle::before {
 }
 
 nav #nav-toggle::after {
-  content: " ";
+  content: "";
   border-radius: 50% / 2%;
   top: -1.5%;
   bottom: -1.5%;
@@ -286,34 +284,30 @@ nav #nav-toggle #nav-hbg::after {
 }
 
 nav #nav-toggle #nav-hbg, nav #nav-toggle #nav-hbg::before, nav #nav-toggle #nav-hbg::after {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 300ms;
+  transition: 300ms;
 }
 
 nav #nav-toggle.active #nav-hbg {
-  -webkit-transition: 2s;
-  transition: 2s;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
   background-color: transparent;
 }
 
 nav #nav-toggle.active #nav-hbg, nav #nav-toggle.active #nav-hbg::before, nav #nav-toggle.active #nav-hbg::after {
-  -webkit-transform-origin: initial;
-          transform-origin: initial;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 700ms;
+  transition: 700ms;
 }
 
 nav #nav-toggle.active #nav-hbg::before {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
   top: 0;
 }
 
 nav #nav-toggle.active #nav-hbg::after {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
   top: 0;
 }
 
@@ -378,8 +372,8 @@ nav #nav-link-wrap .nav-link::after {
           transform: translateX(-50%);
   width: 0;
   border: 3px solid transparent;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 nav #nav-link-wrap .nav-link:link, nav #nav-link-wrap .nav-link:visited {

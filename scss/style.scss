@@ -190,7 +190,6 @@
     $card-h: calc(#{$card-h-real} - 2 * #{$card-pd});
     $section-h: calc(#{$title-h} + #{$card-h});
 
-
     width: 100%;
     // team = {header, buttons, cards}
     @media screen and (min-width: $desktop) {
@@ -210,8 +209,7 @@
         display: flex;
         flex-direction: column;
         #team-btn-box {
-            // flex 的順序
-            order: 4;
+            order: 4; // flex 的順序
         }
     }
     //* Part II : 選取按鈕區
@@ -287,7 +285,7 @@
     #team-card-wrap {
         background-color: rgba($color-05, 0.3);
         box-shadow: -8px 8px 8px -3px $color-shade;
-        height: $card-h ;
+        height: $card-h;
 
         .team-card {
             // card = {img, div-h2, div-about}

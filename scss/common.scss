@@ -177,7 +177,7 @@ nav {
         border-radius: 20%;
 
         @mixin setSquircle($r1, $r2, $s1, $s2) {
-            content: " ";
+            content: "";
             border-radius: #{$r1} / #{$r2};
             //r1, r2 若沒有數值化，斜線會被當成除號運算
             top: $s1;
@@ -218,30 +218,28 @@ nav {
             /* 2 of 3 : 三條線設定 END */
         }
         //* 3 of 3 : 動畫設定
-        $unit_time: 0.5s;
-        $unit_theta: 45deg;
-        transition: 2 * $unit_time;
+        $unit_theta: -45deg;
         #nav-hbg {
             &,
             &::before,
             &::after {
-                transition: $unit_time;
+                //回復動畫的緩動
+                transition: 300ms;
             }
         }
         &.active {
             #nav-hbg {
-                transition: 4 * $unit_time;
-                transform: rotate(4 * $unit_theta);
-                background-color: transparent;
                 &,
                 &::before,
                 &::after {
-                    transform-origin: initial;
-                    transition: $unit_time;
+                    //變成叉叉的動畫緩動
+                    transition: 700ms;
                 }
+                transform: rotate(4 * $unit_theta);
+                background-color: transparent;
                 &::before {
                     transform: rotate($unit_theta);
-                    top: 0;
+                    top: 0; //回到正中央，以形成叉叉
                 }
                 &::after {
                     transform: rotate(-$unit_theta);
@@ -296,7 +294,7 @@ nav {
                 transform: translateX(-50%);
                 width: 0;
                 border: 3px solid transparent;
-                transition: .5s;
+                transition: 0.5s;
             }
             &:link,
             &:visited {
