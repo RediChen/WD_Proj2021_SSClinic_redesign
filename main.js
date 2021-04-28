@@ -15,43 +15,6 @@ $(".nav-link").click(function () {
 })
 // 漢堡選單 END
 
-//* 滾動機制 ==========================//
-//功能：藉由jQuery實現捲動前往指定位置
-$("a").each(function () {
-    //* Stage I : 收集參數
-    var target = $(this).attr("data-s2-target");
-    // (1) target 目標元素名稱，只有name、沒有sharp
-    if (!target) return true;// 沒有設定此參數的就直接中止
-
-    var offset = $("#" + target).offset();//jqGetOffset
-    // (2-1) offset 元素在網頁上的座標
-    //! 內捲動空間會跟著算入
-    var posY = offset.top;
-    // (2-2) offset.top 元素在網頁上的y座標
-    
-    var posAdj = parseInt($(this).attr("data-s2-offset"));
-    // (3) posAdj = position adjust 微調目標的座標
-    //TODO 希望可以自動算效果的時間
-
-    //* Stage II : 參數操作
-    if (posAdj) posY += posAdj;
-    // 有要求才改，以免undefined礙事
-
-    //* Stage III : 前往至目的地
-    $(this).click(function (e) {
-        e.preventDefault();//關閉 a 原本的連結功能
-        $("html, body").stop().animate({
-            //(1) UX : 插入stop() 讓點選其他按鈕可以中止機制
-            //(2) html, body 是為了跨平台的以防萬一
-            scrollTop: posY
-        }, 800);
-    });
-    $("html, body").on("mousewheel", function () {
-        $("html, body").stop();
-    });
-    //(3) UX : 讓滾輪可以中止機制
-})
-// 滾動機制 END
 //* 形象頁面 ==========================//
 $("#home h1").hide().delay(1000).fadeIn("normal");
 // 形象頁面 END
