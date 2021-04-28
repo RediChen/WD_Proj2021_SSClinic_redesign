@@ -1,7 +1,7 @@
 /*-------------------------*\
     「歷史公告」頁面樣式
 \*-------------------------*/
-@import "../var";
+@import "../scss/var";
 #history {
     @media screen and (min-width: $desktop) {
         margin-top: $h-nav-dt;
@@ -15,31 +15,33 @@
         flex-flow: column;
         .news-bars,
         .news-bricks {
+            margin: 0 auto;
             @media screen and (min-width: $desktop) {
                 width: 70%;
-                margin: 0 auto;
             }
             @media screen and (max-width: $tablet) {
                 width: 80%;
-                margin: 0 auto;
             }
         }
         .news-bars {
             padding: 1em 3em;
             border-radius: 1em;
+            box-shadow: 0 2px 4px $color-shade;
 
             &:nth-of-type(odd) {
-                background-color: #aaa;
-                color: #f2f2f2;
+                background-color: #ccc;
+                // color: #f2f2f2;
             }
             &:nth-of-type(even) {
-                background-color: #eee;
+                background-color: #f2f2f2;
             }
             h2 {
                 float: left;
+                @include font-zh(1.2em, 700);
             }
             h3 {
                 float: right;
+                @include font-zh(1em, 500);
             }
             .news-bricks {
                 clear: both;
@@ -47,10 +49,16 @@
         }
         .news-bricks {
             display: block;
-            display: none;
-            padding: 2em 3em;
-            background-color: rgba($color-26, 0.05);
-            box-shadow: -10px 0 5px -10px $color-shade;
+            z-index: -1;
+            &:nth-of-type(n + 2) {
+                display: none;
+            }
+            margin-top: -1.5em;
+            padding: 3.5em 3em 2em;
+            //上方預留要被標題擋住的空間
+            background-color: hsl(330, 90%, 99%);
+            box-shadow: -3px 0 10px $color-shade;
+            border-radius: 0 0 1em 1em;
             @include font-zh(1em, 300);
             line-height: 2;
         }

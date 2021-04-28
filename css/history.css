@@ -30,11 +30,15 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
           flex-flow: column;
 }
 
+#history #news-box .news-bars,
+#history #news-box .news-bricks {
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 1025px) {
   #history #news-box .news-bars,
   #history #news-box .news-bricks {
     width: 70%;
-    margin: 0 auto;
   }
 }
 
@@ -42,30 +46,36 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
   #history #news-box .news-bars,
   #history #news-box .news-bricks {
     width: 80%;
-    margin: 0 auto;
   }
 }
 
 #history #news-box .news-bars {
   padding: 1em 3em;
   border-radius: 1em;
+  -webkit-box-shadow: 0 2px 4px rgba(153, 153, 153, 0.3);
+          box-shadow: 0 2px 4px rgba(153, 153, 153, 0.3);
 }
 
 #history #news-box .news-bars:nth-of-type(odd) {
-  background-color: #aaa;
-  color: #f2f2f2;
+  background-color: #ccc;
 }
 
 #history #news-box .news-bars:nth-of-type(even) {
-  background-color: #eee;
+  background-color: #f2f2f2;
 }
 
 #history #news-box .news-bars h2 {
   float: left;
+  font-family: "Noto Serif TC", serif;
+  font-weight: 700;
+  font-size: 1.2em;
 }
 
 #history #news-box .news-bars h3 {
   float: right;
+  font-family: "Noto Serif TC", serif;
+  font-weight: 500;
+  font-size: 1em;
 }
 
 #history #news-box .news-bars .news-bricks {
@@ -74,14 +84,20 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 
 #history #news-box .news-bricks {
   display: block;
-  display: none;
-  padding: 2em 3em;
-  background-color: rgba(240, 122, 181, 0.05);
-  -webkit-box-shadow: -10px 0 5px -10px rgba(153, 153, 153, 0.3);
-          box-shadow: -10px 0 5px -10px rgba(153, 153, 153, 0.3);
+  z-index: -1;
+  margin-top: -1.5em;
+  padding: 3.5em 3em 2em;
+  background-color: #fffafc;
+  -webkit-box-shadow: -3px 0 10px rgba(153, 153, 153, 0.3);
+          box-shadow: -3px 0 10px rgba(153, 153, 153, 0.3);
+  border-radius: 0 0 1em 1em;
   font-family: "Noto Serif TC", serif;
   font-weight: 300;
   font-size: 1em;
   line-height: 2;
+}
+
+#history #news-box .news-bricks:nth-of-type(n + 2) {
+  display: none;
 }
 /*# sourceMappingURL=history.css.map */

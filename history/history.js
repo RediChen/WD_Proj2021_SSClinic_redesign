@@ -6,10 +6,15 @@
 //     }) ;
 // }) ;
 
-for ( let i = 0 ; i < 5 ; i++) {
-    var bars = document.getElementsByClassName(".news-bars") ;
-    var bricks = document.getElementsByClassName(".news-bricks") ;
-    bars[i].click(function () {
-        $bricks[i].slideToggle("normal") ;
-    })
-}
+// for ( let i = 0 ; i < 5 ; i++) {
+//     var bars = document.getElementsByClassName(".news-bars") ;
+//     var bricks = document.getElementsByClassName(".news-bricks") ;
+//     bars[i].click(function () {
+//         $bricks[i].slideToggle("normal") ;
+//     })
+// }
+// $("#a1").click(function (e) { 
+//     e.preventDefault();
+//     console.log(this) ;//todo=======delete
+//     $("#b1").slideToggle();
+// });
