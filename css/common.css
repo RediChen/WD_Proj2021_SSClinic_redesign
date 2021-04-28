@@ -325,14 +325,14 @@ nav #nav-link-wrap div:nth-of-type(2) {
 
 nav #nav-link-wrap .nav-link {
   display: block;
-  line-height: 2;
   padding: 5px 1em;
-  font-family: "Noto Serif TC", serif;
-  font-weight: 700;
-  font-size: 1.2em;
   border-radius: 30%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  line-height: 2;
+  font-family: "Noto Serif TC", serif;
+  font-weight: 700;
+  font-size: 1.2em;
   position: relative;
 }
 
@@ -374,10 +374,6 @@ nav #nav-link-wrap .nav-link::after {
   border: 3px solid transparent;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-}
-
-nav #nav-link-wrap .nav-link:link, nav #nav-link-wrap .nav-link:visited {
-  color: #000;
 }
 
 nav #nav-link-wrap .nav-link:hover::after {

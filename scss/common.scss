@@ -263,8 +263,11 @@ nav {
         }
         .nav-link {
             display: block;
-            line-height: 2;
             padding: 5px 1em;
+            border-radius: 30%;
+            transition: 0.5s;
+            //* 文字樣式
+            line-height: 2;
             @include font-zh(1.2em, 700);
             @media screen and (min-width: $desktop) {
                 color: $color-14;
@@ -272,9 +275,8 @@ nav {
             @media screen and (max-width: $tablet) {
                 color: $color-16;
             }
-            border-radius: 30%;
-            transition: 0.5s;
-            // 配合弧度的高度微調：from 內 to 外
+            // 文字樣式 END
+            //* 配合弧度的高度微調：from 內 to 外
             @media screen and (min-width: $desktop) {
                 &:nth-child(4),
                 &:nth-child(6) {
@@ -288,7 +290,7 @@ nav {
                 }
             }
             // 配合弧度的高度微調 END
-            // hover 等設定
+            //* hover 等設定
             position: relative;
             &::after {
                 content: "";
@@ -300,20 +302,15 @@ nav {
                 border: 3px solid transparent;
                 transition: 0.5s;
             }
-            &:link,
-            &:visited {
-                color: #000;
-            }
-            &:hover {
-                &::after {
-                    width: 90%;
-                    border-color: hsl(330, 75%, 77%);
-                }
+            &:hover::after {
+                width: 90%;
+                border-color: hsl(330, 75%, 77%);
             }
             &:active {
                 // filter: invert(20%);
                 filter: brightness(125%);
             }
+            // hover 等設定 END
         }
         @media screen and (max-width: $tablet) {
             display: none;
@@ -472,7 +469,7 @@ footer {
         display: flex;
         justify-content: space-evenly;
         @media screen and (min-width: $desktop) {
-            margin: 50px 0 ;
+            margin: 50px 0;
         }
         @media screen and (max-width: $tablet) {
             margin: 60px 0 30px;

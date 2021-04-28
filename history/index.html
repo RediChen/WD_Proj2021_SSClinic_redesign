@@ -15,31 +15,34 @@
 </head>
 
 <body>
+    <a id="tothetop" data-s2-target="home"></a>
     <!-- 導覽列 ============================================================= -->
     <nav>
         <!-- * Part 1 : LOGO -->
         <a class="logo" data-s2-target="home">
             <picture>
                 <!-- 由上而下依序判斷 -->
-                <source media="(max-width : 767px)" srcset="../LOGO/32px_wFrame.png" />
-                <img src="../LOGO/64px_wFrame.png" alt="心晴診所 Sunshine Clinic logo" />
+                <source media="(max-width : 767px)" srcset="../favicon/32px_wFrame.png" />
+                <img src="../favicon/64px_wFrame.png" alt="心晴診所 Sunshine Clinic logo" />
                 <!-- 64px for PC, 32px for others -->
             </picture>
         </a>
         <!-- * Part 2 : HBGer -->
-        <div id="nav-hbger"></div>
+        <div id="nav-toggle">
+            <div id="nav-hbg"></div>
+        </div>
         <!-- * Part 3 : LINKs -->
         <div id="nav-link-wrap">
             <div></div>
             <!--襯墊-->
-            <a href="../index.html">關於心晴</a>
-            <a href="../index.html">醫療團隊</a>
-            <a href="../index.html">治療項目</a>
+            <a class="nav-link" href="../index.html#intro">關於心晴</a>
+            <a class="nav-link" href="../index.html#team">醫療團隊</a>
+            <a class="nav-link" href="../index.html#care">治療項目</a>
             <div></div>
             <!--襯墊：logo的位置-->
-            <a href="../index.html">門診時間</a>
-            <a href="../index.html">聯絡我們</a>
-            <a href="../index.html">交通方式</a>
+            <a class="nav-link" href="../index.html#time">門診時間</a>
+            <a class="nav-link" href="../index.html#footer">聯絡我們</a>
+            <a class="nav-link" href="../index.html#footer">交通方式</a>
             <div></div>
             <!--襯墊-->
         </div>
