@@ -1,21 +1,21 @@
 //* 全域共用區
-const isNotPC = window.matchMedia("(max-width: 1024px)");
-const isMobile = window.matchMedia("(max-width: 767px)");
-//TODO 待研究這個變數到底是什麼
+const tablet = 1024; //upper bound ; width <= 1024
+const mobile = 767; //upper bound ; width <= 767
+var isNotPC = window.matchMedia("(max-width: " + tablet + 'px)');
+var isMobile = window.matchMedia("(max-width: " + mobile + 'px)');
 // 全域共用區 END
 
 //* 漢堡選單 ==========================//
+// 功能：漢堡按鈕與nav的互動機制
 $("#nav-toggle").click(function () {
     $(this).toggleClass("active") ;
     $("#nav-link-wrap").fadeToggle();
-    // $("#nav-link-wrap").toggle('slide',{direction: 'left'}, 1000);
 });
 $(".nav-link").click(function () {
     if (isNotPC.matches) {
         $("#nav-link-wrap").hide();
         $("#nav-toggle").removeClass("active") ;
     }
-    // else $("#nav-link-wrap").show();
 })
 // 漢堡選單 END
 //* 團隊頁面 ==========================//
@@ -41,8 +41,7 @@ function showCard(n) {
 // 團頁面 END
 //* 治療頁面 ==========================//
 // 功能：slick
-var tablet = 1024; //upper bound ; w < 1024
-var mobile = 767; //upper bound ; w < 767
+
 $('#care-board-2').slick(
     {
         autoplay: true,
