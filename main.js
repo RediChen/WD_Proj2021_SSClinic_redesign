@@ -1,23 +1,23 @@
 //* 全域共用區
+const isNotPC = window.matchMedia("(max-width: 1024px)");
 const isMobile = window.matchMedia("(max-width: 767px)");
 //TODO 待研究這個變數到底是什麼
 // 全域共用區 END
 
 //* 漢堡選單 ==========================//
 $("#nav-toggle").click(function () {
-    $(this).toggleClass("active")
+    $(this).toggleClass("active") ;
     $("#nav-link-wrap").fadeToggle();
     // $("#nav-link-wrap").toggle('slide',{direction: 'left'}, 1000);
 });
 $(".nav-link").click(function () {
-    if (isMobile.matches) $("#nav-link-wrap").hide();
-    else $("#nav-link-wrap").show();
+    if (isNotPC.matches) {
+        $("#nav-link-wrap").hide();
+        $("#nav-toggle").removeClass("active") ;
+    }
+    // else $("#nav-link-wrap").show();
 })
 // 漢堡選單 END
-
-//* 形象頁面 ==========================//
-$("#home h1").hide().delay(1000).fadeIn("normal");
-// 形象頁面 END
 //* 團隊頁面 ==========================//
 // 功能：按鈕點選式呈現
 // 馬上執行區 =========
@@ -79,7 +79,6 @@ $('#care-board-2').slick(
         ]
     }
 );
-
 $("#care-board-3").slick(
     {
         slidesToShow: 2,

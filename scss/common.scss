@@ -172,7 +172,7 @@ nav {
             position: absolute;
             background-color: $color-04;
         }
-        top: 10px;
+        top: ($h-nav-tb - $leng) / 3;
         right: 25px;
         //* (HBGer) 1 of 3 : 超橢圓設定
         // 超橢圓 = {before, &, after}
