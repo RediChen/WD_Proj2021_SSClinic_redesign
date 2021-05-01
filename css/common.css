@@ -16,7 +16,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 body {
-  background-image: url(../img/bgPattern_32px.png);
+  background-image: url(../img/bgPattern_64px.png);
   background-repeat: repeat;
 }
 
