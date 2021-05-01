@@ -453,6 +453,7 @@
         // centerPd 須與js的設定連動
         $h2-lh: 3rem;
         margin: $card-m-y auto;
+        box-shadow: 15px 0 15px -5px $color-shade inset, -15px 0 15px -5px $color-shade inset;
         @mixin setupBoard($img-LENG) {
             height: calc(2 * #{$card-m-y} + 2 * #{$img-m-y} + #{$img-LENG} + #{$h2-lh});
         }
