@@ -612,20 +612,39 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 
 #care #care-board-2 {
   margin: 60px auto;
-  height: calc(2 * $card-m-y + 2 * $img-m-y + $img-leng-big + $h2-lh);
+}
+
+@media screen and (min-width: 1025px) {
+  #care #care-board-2 {
+    height: calc(2 * 60px + 2 * 15px + 140px + 3rem);
+  }
 }
 
 @media screen and (max-width: 767px) {
   #care #care-board-2 {
-    height: calc(2 * $card-m-y + 2 * $img-m-y + $img-leng-big + $h2-lh);
+    height: calc(2 * 60px + 2 * 15px + 125px + 3rem);
   }
 }
 
 #care #care-board-2 .care-card {
-  text-align: center;
   margin: 60px 20px;
-  height: calc(2 * $img-m-y + $img-leng-big + $h2-lh);
+  width: 140px;
+  text-align: center;
   overflow: break-word;
+}
+
+@media screen and (min-width: 1025px) {
+  #care #care-board-2 .care-card {
+    height: calc(2 * 15px + 140px + 3rem);
+    max-width: 180px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #care #care-board-2 .care-card {
+    height: calc(2 * 15px + 125px + 3rem);
+    max-width: 165px;
+  }
 }
 
 #care #care-board-2 .care-card > div {
@@ -650,7 +669,12 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 
 #care #care-board-2 .care-card > h2 {
   text-align: center;
-  line-height: 3em;
+  line-height: 3rem;
+}
+
+#care #care-board-2 .slick-list {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 #care #care-board-2 .slick-current {
@@ -660,10 +684,15 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 #care #care-board-2 .slick-current > div {
-  height: 125px;
-  width: 125px;
   background-image: url(../img/cloudy1.png);
-  background-size: 125px 125px;
+}
+
+@media screen and (min-width: 1025px) {
+  #care #care-board-2 .slick-current > div {
+    height: 140px;
+    width: 140px;
+    background-size: 140px 140px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -675,7 +704,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 #care #care-board-2 .slick-current h2 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 #care #care-board-3 {

@@ -47,8 +47,10 @@ $('#care-board-2').slick(
         autoplay: true,
         autoplaySpeed: 4500,
         centerMode: true,
-        centerPadding: '100px',
+        centerPadding: '50px',
         slidesToShow: 3,
+        respondTo: 'slider',
+        variableWidth: true,
         easing: 'cubic-bezier(0.45, 0, 0.55, 1)',
         responsive: [
             {
@@ -58,8 +60,9 @@ $('#care-board-2').slick(
                     autoplaySpeed: 3000,
                     arrows: false,
                     centerMode: true,
-                    centerPadding: '40px',
+                    centerPadding: '0',
                     slidesToShow: 3,
+                    variableWidth: false,
                     swipeToSlide: true
                 }
             },
@@ -70,7 +73,7 @@ $('#care-board-2').slick(
                     autoplaySpeed: 3000,
                     arrows: false,
                     centerMode: true,
-                    centerPadding: '40px',
+                    centerPadding: '0',
                     slidesToShow: 1,
                     swipeToSlide: true
                 }
