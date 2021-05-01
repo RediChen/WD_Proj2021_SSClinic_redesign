@@ -138,6 +138,12 @@ a:link, a:visited {
   border-color: #f07ab5;
 }
 
+.clearfix::before, .clearfix::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
 #tothetop {
   display: block;
   background-image: url(../icons/iconTothetop.png);

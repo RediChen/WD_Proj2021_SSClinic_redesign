@@ -98,6 +98,14 @@ a {
     max-width: 25%;
     border-color: $color-26;
 }
+.clearfix {
+    &::before,
+    &::after {
+        content: '';
+        clear: both;
+        display: table;
+    }
+}
 //通用樣式設定 END ===========================================
 //* to the top ====================================================
 #tothetop {

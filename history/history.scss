@@ -9,12 +9,10 @@
     @media screen and (max-width: $tablet) {
         margin-top: $h-nav-tb;
     }
-
     #news-box {
         display: flex;
         flex-flow: column;
-        .news-bars,
-        .news-bricks {
+        & > * {
             margin: 0 auto;
             @media screen and (min-width: $desktop) {
                 width: 70%;
@@ -23,7 +21,7 @@
                 width: 80%;
             }
         }
-        .news-bars {
+        & > div {
             padding: 1em 3em;
             border-radius: 1em;
             box-shadow: 0 2px 4px $color-shade;
@@ -43,16 +41,10 @@
                 float: right;
                 @include font-zh(1em, 500);
             }
-            .news-bricks {
-                clear: both;
-            }
         }
-        .news-bricks {
-            display: block;
+        & > p {
+            display: none;
             z-index: -1;
-            &:nth-of-type(n + 2) {
-                display: none;
-            }
             margin-top: -1.5em;
             padding: 3.5em 3em 2em;
             //上方預留要被標題擋住的空間

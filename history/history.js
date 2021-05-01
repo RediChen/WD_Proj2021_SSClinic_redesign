@@ -1,22 +1,6 @@
-$("news-bars").each(function (index, bars) {
-    var bricks = $(".news-bricks") ;
-    console.log('我在這裡！') ;
-    
-    console.log("知道了 " + bricks.length) ;
-    bars[index].click(function () {
-        bricks[index].slideToggle() ;
-    }) ;
+$("#news-box > div").click(function () {
+    var i = $("#news-box").children("#news-box > div").index(this);//index
+    i++ ;// from array index to nth
+    $("#news-box > p:not(:nth-of-type(" + i + "))").slideUp() ;
+    $("#news-box > p:nth-of-type(" + i + ")").slideToggle() ;
 }) ;
-
-// for ( let i = 0 ; i < 5 ; i++) {
-//     var bars = document.getElementsByClassName(".news-bars") ;
-//     var bricks = document.getElementsByClassName(".news-bricks") ;
-//     bars[i].click(function () {
-//         $bricks[i].slideToggle("normal") ;
-//     })
-// }
-// $("#a1").click(function (e) { 
-//     e.preventDefault();
-//     console.log(this) ;//todo=======delete
-//     $("#b1").slideToggle();
-// });
