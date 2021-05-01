@@ -408,7 +408,8 @@
     // margin-top: 200px;
     //* 共同樣式
     .care-card-boards {
-        box-shadow: 0 0 15px 15px rgba($color-24, 0.8);
+        background-color: $color-04;
+        box-shadow: 5px 5px 7px 2px $color-shade;
         @media screen and (min-width: $desktop) {
             max-width: 75vw;
         }
