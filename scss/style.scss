@@ -3,7 +3,7 @@
 \*-------------------------*/
 @import "./var";
 
-//* 診所簡介 ==============================================================
+//* 診所簡介 ===============================================================
 #opening {
     width: 100%;
     //避免任何縫隙
@@ -179,26 +179,27 @@
         }
     }
 }
-// 診所簡介 END ==========================================================
-//* 醫療團隊 ==============================================================
+// 診所簡介 END ============================================================
+//* 醫療團隊 ===============================================================
 #team {
-    border: 5px solid goldenrod; //TODO==============================delete
     //* Part 0 : 整體格局
     $title-h: 80px;
-    $card-pd: 1em; // also gap
-    $card-h-real: 540px;
-    $card-h: calc(#{$card-h-real} - 2 * #{$card-pd});
+    $card-pd: 1rem; // also gap
+    $card-h: 540px;
+    // $card-h: calc(#{$card-h-real} - 2 * #{$card-pd});
     $section-h: calc(#{$title-h} + #{$card-h});
 
     width: 100%;
     // team = {header, buttons, cards}
     @media screen and (min-width: $desktop) {
-        height: $section-h;
+        // height: $section-h;
+        height: auto;
         margin: 150px 5px 100px;
         display: grid;
         grid-template-columns: repeat(1, 4fr 7fr);
-        grid-template-rows: repeat(1, 1fr 4fr);
-        grid-gap: 30px;
+        grid-template-rows: auto auto;
+        row-gap: 2 * $card-pd;
+        column-gap: 4 * $card-pd;
         header {
             grid-column: 1 / span 2;
         }
@@ -220,7 +221,7 @@
         @mixin box-setup($box-leng, $box-pd, $gap, $f-sz) {
             //pd = padding, bd = border, f-sz = font-size
             $grid-h: 2 * $f-sz;
-            $leng-real: $card-h-real; //TODO 待轉換RWD
+            $leng-real: $card-h; //TODO 待轉換RWD
             $leng: calc($leng-real - 2 * $box-pd - 2 * $box-pd - 2 * $gap);
             width: $leng;
             height: $leng;
@@ -290,7 +291,7 @@
         .team-card {
             // card = {img, div-h2, div-about}
             //* 共通設定
-            // 內外距
+            // 內距 & 高度
             @media screen and (min-width: $desktop) {
                 // height: 450px;
                 height: 100%;
@@ -401,8 +402,8 @@
         }
     }
 }
-// 醫療團隊 END =================================================================
-// *治療項目 ====================================================================
+// 醫療團隊 END ============================================================
+// *治療項目 ===============================================================
 #care {
     margin: 200px 5px 0;
     // margin-top: 200px;
@@ -449,7 +450,7 @@
         $img-LENG-pc: 140px; // center mode的放大版尺寸 for PC
         $img-LENG-tb: 125px; // center mode的放大版尺寸 for 行動裝置
         $centerPd-pc: 100px; // center mode的padding(gap) for PC
-        $centerPd-tb: 40px;// center mode的padding(gap) for 行動裝置
+        $centerPd-tb: 40px; // center mode的padding(gap) for 行動裝置
         // centerPd 須與js的設定連動
         $h2-lh: 3rem;
         margin: $card-m-y auto;

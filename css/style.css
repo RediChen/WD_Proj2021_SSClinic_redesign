@@ -244,21 +244,22 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 #team {
-  border: 5px solid goldenrod;
   width: 100%;
 }
 
 @media screen and (min-width: 1025px) {
   #team {
-    height: calc(80px + calc(540px - 2 * 1em));
+    height: auto;
     margin: 150px 5px 100px;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (4fr 7fr)[1];
         grid-template-columns: repeat(1, 4fr 7fr);
-    -ms-grid-rows: (1fr 4fr)[1];
-        grid-template-rows: repeat(1, 1fr 4fr);
-    grid-gap: 30px;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
+    row-gap: 2rem;
+    -webkit-column-gap: 4rem;
+            column-gap: 4rem;
   }
   #team header {
     -ms-grid-column: 1;
@@ -402,7 +403,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
   background-color: rgba(221, 221, 221, 0.3);
   -webkit-box-shadow: -8px 8px 8px -3px rgba(153, 153, 153, 0.3);
           box-shadow: -8px 8px 8px -3px rgba(153, 153, 153, 0.3);
-  height: calc(540px - 2 * 1em);
+  height: 540px;
 }
 
 @media screen and (min-width: 1025px) {
