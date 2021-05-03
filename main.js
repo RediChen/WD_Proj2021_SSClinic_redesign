@@ -17,6 +17,12 @@ $(".nav-link").click(function () {
         $("#nav-toggle").removeClass("active") ;
     }
 })
+$("nav > a.logo").click(function () {
+    if (isNotPC.matches) {
+        $("#nav-link-wrap").hide();
+        $("#nav-toggle").removeClass("active") ;
+    }
+})
 // 漢堡選單 END
 //* 團隊頁面 ==========================//
 // 功能：按鈕點選式呈現
