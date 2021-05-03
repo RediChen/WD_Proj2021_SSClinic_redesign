@@ -183,23 +183,21 @@
 //* 醫療團隊 ===============================================================
 #team {
     //* Part 0 : 整體格局
+    // team = {header, buttons, cards}
     $title-h: 80px;
     $card-pd: 1rem; // also gap
     $card-h: 540px;
-    // $card-h: calc(#{$card-h-real} - 2 * #{$card-pd});
     $section-h: calc(#{$title-h} + #{$card-h});
-
     width: 100%;
-    // team = {header, buttons, cards}
     @media screen and (min-width: $desktop) {
-        // height: $section-h;
         height: auto;
-        margin: 150px 5px 100px;
+        margin: 150px 0 100px;
+        padding: 0 20px;
         display: grid;
         grid-template-columns: repeat(1, 4fr 7fr);
         grid-template-rows: auto auto;
         row-gap: 2 * $card-pd;
-        column-gap: 4 * $card-pd;
+        column-gap: 3 * $card-pd;
         header {
             grid-column: 1 / span 2;
         }
@@ -284,7 +282,7 @@
     }
     //* Part III : 詳細介紹
     #team-card-wrap {
-        background-color: rgba($color-05, 0.3);
+        background-color: rgba($color-05, 0.5);
         box-shadow: -8px 8px 8px -3px $color-shade;
         height: $card-h;
 

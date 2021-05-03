@@ -250,7 +250,8 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 @media screen and (min-width: 1025px) {
   #team {
     height: auto;
-    margin: 150px 5px 100px;
+    margin: 150px 0 100px;
+    padding: 0 20px;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (4fr 7fr)[1];
@@ -258,8 +259,8 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
     -ms-grid-rows: auto auto;
         grid-template-rows: auto auto;
     row-gap: 2rem;
-    -webkit-column-gap: 4rem;
-            column-gap: 4rem;
+    -webkit-column-gap: 3rem;
+            column-gap: 3rem;
   }
   #team header {
     -ms-grid-column: 1;
@@ -400,7 +401,7 @@ RWD的變數改變不採取更改變數值的方案，因為不可行
 }
 
 #team #team-card-wrap {
-  background-color: rgba(221, 221, 221, 0.3);
+  background-color: rgba(221, 221, 221, 0.5);
   -webkit-box-shadow: -8px 8px 8px -3px rgba(153, 153, 153, 0.3);
           box-shadow: -8px 8px 8px -3px rgba(153, 153, 153, 0.3);
   height: 540px;
