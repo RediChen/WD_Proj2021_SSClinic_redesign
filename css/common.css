@@ -139,7 +139,7 @@ a:link, a:visited {
 }
 
 .clearfix::before, .clearfix::after {
-  content: '';
+  content: "";
   clear: both;
   display: table;
 }
@@ -558,9 +558,20 @@ footer #time-footer a {
 
 footer dl {
   background-color: rgba(255, 240, 245, 0.15);
-  margin-left: 50px;
-  line-height: 3em;
-  text-indent: 1.5em;
+  line-height: 3rem;
+  text-indent: 1.5rem;
+}
+
+@media screen and (min-width: 1025px) {
+  footer dl {
+    margin-left: 50px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  footer dl {
+    margin-left: 0;
+  }
 }
 
 footer dl img {
@@ -587,8 +598,15 @@ footer dl dt a:hover {
 footer dl dd {
   font-family: "Noto Serif TC", serif;
   font-weight: 300;
-  font-size: 0.8em;
+  font-size: 0.8rem;
   background-color: rgba(255, 240, 245, 0.3);
+}
+
+@media screen and (max-width: 1024px) {
+  footer dl dd {
+    padding-left: 8rem;
+    text-indent: -6.5rem;
+  }
 }
 
 footer #friend-link {

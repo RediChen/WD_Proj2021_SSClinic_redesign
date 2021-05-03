@@ -101,7 +101,7 @@ a {
 .clearfix {
     &::before,
     &::after {
-        content: '';
+        content: "";
         clear: both;
         display: table;
     }
@@ -452,9 +452,14 @@ footer {
     // Part 3 : 聯絡 & 交通方式
     dl {
         background-color: rgba($color-24, 0.15);
-        margin-left: 50px;
-        line-height: 3em;
-        text-indent: 1.5em;
+        line-height: 3rem;
+        text-indent: 1.5rem;
+        @media screen and (min-width: $desktop) {
+            margin-left: 50px;
+        }
+        @media screen and (max-width: $tablet) {
+            margin-left: 0;
+        }
         img {
             vertical-align: middle;
             margin-right: 0.5em;
@@ -470,9 +475,13 @@ footer {
             }
         }
         dd {
-            @include font-zh(0.8em, 300);
+            @include font-zh(0.8rem, 300);
             background-color: rgba($color-24, 0.3);
-            // text-indent: 0.5em;
+            @media screen and (max-width: $tablet) {
+                // 因應換行的首行凸排
+                padding-left: 8rem;
+                text-indent: -6.5rem;
+            }
         }
     }
     // Part 4 : 友善連結

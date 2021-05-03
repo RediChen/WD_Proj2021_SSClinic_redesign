@@ -6,17 +6,19 @@ var isMobile = window.matchMedia("(max-width: " + mobile + 'px)');
 // 全域共用區 END
 
 //* 漢堡選單 ==========================//
-// 功能：漢堡按鈕與nav的互動機制
+// 功能 1 ：漢堡按鈕與nav的互動機制
 $("#nav-toggle").click(function () {
     $(this).toggleClass("active") ;
     $("#nav-link-wrap").fadeToggle();
 });
+// 功能 2 ：選單開啟時，點擊選單後，關閉選單
 $(".nav-link").click(function () {
     if (isNotPC.matches) {
         $("#nav-link-wrap").hide();
         $("#nav-toggle").removeClass("active") ;
     }
 })
+// 功能 3 ：選單開啟時，點擊首頁logo後，關閉選單
 $("nav > a.logo").click(function () {
     if (isNotPC.matches) {
         $("#nav-link-wrap").hide();
