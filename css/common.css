@@ -2,12 +2,10 @@
 /*-------------------------*\
         頁首、頁尾樣式
 \*-------------------------*/
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;500;700;900&display=swap");
 /*-------------------------*\
-RWD的變數改變不採取更改變數值的方案，因為不可行
-//採用在個樣式設定取用不同不同的變數
-//也就說是說還是要寫兩次。
+    各頁面共用樣式設定
 \*-------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;500;700;900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -142,6 +140,104 @@ a:link, a:visited {
   content: "";
   clear: both;
   display: table;
+}
+
+#loading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(29deg, #ffd9f2, #ffc779);
+  z-index: 99;
+}
+
+#loading #heart {
+  width: 160px;
+  height: 160px;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: relative;
+  margin: 0 auto;
+  top: 15%;
+  -webkit-transform: translateY(50%) rotate(45deg);
+          transform: translateY(50%) rotate(45deg);
+  border-bottom-right-radius: 24px;
+  -webkit-animation-name: floating-heart;
+          animation-name: floating-heart;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+#loading #heart::before, #loading #heart::after {
+  content: "";
+  width: 160px;
+  height: 80px;
+  position: absolute;
+}
+
+#loading #heart::before {
+  border-radius: 0 0 80px 80px;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+#loading #heart::after {
+  top: -50%;
+  border-radius: 80px 80px 0 0;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+#loading h1 {
+  position: relative;
+  color: #fdfdfd;
+  text-align: center;
+  line-height: 75vh;
+  font-family: "Noto Serif TC", serif;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+@-webkit-keyframes floating-heart {
+  from {
+    -webkit-transform: translateY(50%) rotate(45deg);
+            transform: translateY(50%) rotate(45deg);
+    -webkit-animation-timing-function: cubic-bezier(0.37, 0, 0.63, 1);
+            animation-timing-function: cubic-bezier(0.37, 0, 0.63, 1);
+  }
+  60% {
+    -webkit-transform: translateY(80%) rotate(45deg);
+            transform: translateY(80%) rotate(45deg);
+    -webkit-animation-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+            animation-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+  }
+  to {
+    -webkit-transform: translateY(50%) rotate(45deg);
+            transform: translateY(50%) rotate(45deg);
+  }
+}
+
+@keyframes floating-heart {
+  from {
+    -webkit-transform: translateY(50%) rotate(45deg);
+            transform: translateY(50%) rotate(45deg);
+    -webkit-animation-timing-function: cubic-bezier(0.37, 0, 0.63, 1);
+            animation-timing-function: cubic-bezier(0.37, 0, 0.63, 1);
+  }
+  60% {
+    -webkit-transform: translateY(80%) rotate(45deg);
+            transform: translateY(80%) rotate(45deg);
+    -webkit-animation-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+            animation-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+  }
+  to {
+    -webkit-transform: translateY(50%) rotate(45deg);
+            transform: translateY(50%) rotate(45deg);
+  }
 }
 
 #tothetop {

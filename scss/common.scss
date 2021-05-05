@@ -106,8 +106,86 @@ a {
         display: table;
     }
 }
-//通用樣式設定 END ===========================================
-//* to the top ====================================================
+//通用樣式設定 END ===============================================================
+//* loading 畫面 ================================================================
+#loading {
+    $semi-trnsp: rgba(white, 0.3);
+    $pink: rgb(255, 217, 242);
+    $sunset: rgb(255, 199, 121);
+    $background-blend: linear-gradient(29deg, $pink, $sunset);
+    @mixin to-float($name) {
+        animation: {
+            name: floating-#{$name};
+            fill-mode: both;
+            duration: 4s;
+            iteration-count: infinite;
+        }
+    }
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: $background-blend;
+    z-index: 99;
+
+    $leng-L: 160px;
+    $leng-M: 80px;
+    #heart {
+        width: $leng-L;
+        height: $leng-L;
+        background-color: $semi-trnsp;
+        position: relative;
+        margin: 0 auto;
+        top: 15%;
+        transform: translateY(50%) rotate(45deg);
+        border-bottom-right-radius: 0.3 * $leng-M;
+        @include to-float("heart");
+        &::before,
+        &::after {
+            content: "";
+            width: $leng-L;
+            height: $leng-M;
+            position: absolute;
+        }
+        &::before {
+            border-radius: 0 0 $leng-M $leng-M;
+            transform-origin: 0 0;
+            transform: rotate(90deg);
+            background-color: $semi-trnsp;
+        }
+        &::after {
+            top: -50%;
+            border-radius: $leng-M $leng-M 0 0;
+            background-color: $semi-trnsp;
+        }
+    }
+    h1 {
+        position: relative;
+        color: $color-04;
+        text-align: center;
+        line-height: 75vh;
+        @include font-zh(2rem, 700);
+    }
+    // easeInOutQuad
+    $easeIO4: cubic-bezier(0.37, 0, 0.63, 1);
+    // easeInOutExpo
+    $easeIOe: cubic-bezier(0.87, 0, 0.13, 1);
+
+    @keyframes floating-heart {
+        from {
+            transform: translateY(50%) rotate(45deg);
+            animation-timing-function: $easeIO4;
+        }
+        60% {
+            transform: translateY(80%) rotate(45deg);
+            animation-timing-function: $easeIOe;
+        }
+        to {
+            transform: translateY(50%) rotate(45deg);
+        }
+    }
+}
+// loading 畫面 END =============================================================
+//* to the top =================================================================
 #tothetop {
     display: block;
     background-image: url(../icons/iconTothetop.png);
@@ -129,8 +207,8 @@ a {
         box-shadow: 0 0 15px $color-14;
     }
 }
-//to the top END ====================================================
-//* 導覽列 ====================================================
+//to the top END ===============================================================
+//* 導覽列 ======================================================================
 nav {
     //* Part 0 : 通用樣式設定
     @media screen and (min-width: $desktop) {
@@ -345,7 +423,7 @@ nav {
         }
     }
 }
-//導覽列 END ================================================
+//導覽列 END ====================================================================
 footer {
     // Part 0 : 整體設定
     min-height: 100vh;

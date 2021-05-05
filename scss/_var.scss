@@ -1,3 +1,6 @@
+/*-------------------------*\
+    各頁面共用樣式設定
+\*-------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;500;700;900&display=swap");
 $color-04 : #fdfdfd ;
 $color-05 : #ddd ;
@@ -6,6 +9,7 @@ $color-16 : hsl(332, 87%, 23%) ;
 $color-14 : hsl(350, 70%, 95%) ;
 $color-26 : hsl(330, 80%, 71%) ;
 $color-24 : LavenderBlush ;
+$background-blend : linear-gradient(30deg, rgb(255, 69, 192), rgb(255, 176, 66));
 $color-grad-90 : linear-gradient(90deg, #ff5757, #ff61b0) ;
 $color-grad-40 : linear-gradient(-40deg, #ff5757, #ff61b0) ;
 $color-text : Brown ;
@@ -16,11 +20,6 @@ $tablet: 1024px; //upper bound
 $mobile: 767px; //upper bound
 //============ nav高度 in RWD
 // 用於 nav(common) & 簡介頁面(style)
-/*-------------------------*\
-RWD的變數改變不採取更改變數值的方案，因為不可行
-//採用在個樣式設定取用不同不同的變數
-//也就說是說還是要寫兩次。
-\*-------------------------*/
 $h-nav-dt: 80px ;
 $h-nav-tb: 60px ;
 //============ 門診時間表用
