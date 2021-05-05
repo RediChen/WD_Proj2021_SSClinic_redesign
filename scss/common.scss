@@ -128,7 +128,7 @@ a {
     z-index: 99;
 
     $leng-L: 160px;
-    $leng-M: 80px;
+    $leng-M: $leng-L / 2;
     #heart {
         width: $leng-L;
         height: $leng-L;
