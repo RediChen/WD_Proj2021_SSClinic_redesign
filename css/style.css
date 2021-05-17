@@ -562,12 +562,6 @@
   margin: 200px 5px 0;
 }
 
-#care .care-card-boards {
-  background-color: #fdfdfd;
-  -webkit-box-shadow: 5px 5px 7px 2px rgba(153, 153, 153, 0.3);
-          box-shadow: 5px 5px 7px 2px rgba(153, 153, 153, 0.3);
-}
-
 @media screen and (min-width: 1025px) {
   #care .care-card-boards {
     max-width: 75vw;
@@ -576,7 +570,6 @@
 
 #care .care-card-boards .care-card > img {
   display: block;
-  margin: 0 auto;
   width: 128px;
   height: 128px;
 }
@@ -585,14 +578,17 @@
   margin: 50px auto;
   display: -ms-grid;
   display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (min-width: 1025px) {
   #care #care-board-1 {
-    max-width: 800px;
+    max-width: 1000px;
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
-    grid-row-gap: 50px;
+    grid-row-gap: 60px;
   }
 }
 
@@ -608,6 +604,29 @@
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
   }
+}
+
+#care #care-board-1 .care-card {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: #fdfdfd;
+  -webkit-box-shadow: 5px 5px 7px 2px rgba(153, 153, 153, 0.3);
+          box-shadow: 5px 5px 7px 2px rgba(153, 153, 153, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #care #care-board-2 {
