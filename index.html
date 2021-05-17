@@ -10,15 +10,16 @@
 
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
-    <div id="loading">
+    <!-- <div id="loading">
         <div id="heart"></div>
         <h1>loading...</h1>
-    </div>
+    </div> -->
     <a id="tothetop" data-s2-target="home" data-s2-time="400"></a>
     <!-- 導覽列 ============================================================= -->
     <nav>
@@ -63,8 +64,13 @@
         </div>
         <!-- Part II : 診所簡介 -->
         <div id="intro">
-            <div data-aos="fade-left" data-aos-duration="1500" data-aos-anchor-placement="cneter-bottom">
-                <h1 class="title-1">診所簡介</h1>
+            <div data-aos="fade-up" data-aos-duration="1500">
+                <h1 class="title-1">
+                    <span class="intro-title">診</span>
+                    <span class="intro-title">所</span>
+                    <span class="intro-title">簡</span>
+                    <span class="intro-title">介</span>
+                </h1>
                 <hr class="hr-1">
                 <p class="p-text">
                     現代人的工作壓力大，難免會有失眠、焦慮、憂鬱症…等等困擾。若因此而需要專業協助時，歡迎您到優質的桃園心晴診所就診。心晴診所環境溫馨舒適，由數位專業的醫師親自看診，並能夠提供適當的心理諮詢服務。盼望能夠有效的幫助您改善生活的品質。
@@ -84,11 +90,11 @@
         <!-- team = {header, buttons, cards} -->
         <!-- Part I : 標題 -->
         <header>
-            <h1 class="title-1" data-aos="zoom-in-left">醫療團隊</h1>
+            <h1 class="title-1">醫療團隊</h1>
             <hr class="hr-1">
         </header>
         <!-- Part II : 選取按鈕 -->
-        <div id="team-btn-box" data-aos="flip-right">
+        <div id="team-btn-box">
             <div class="team-btn" onclick="showCard(0)">
                 <h2>林為文<br>總院長</h2>
             </div>
@@ -118,7 +124,7 @@
             </div>
         </div>
         <!-- Part III : 詳細介紹 -->
-        <div id="team-card-wrap">
+        <div id="team-card-wrap" data-aos="fade-left" data-aos-duration="3000">
             <!-- card = {img, name, about} -->
             <article class="team-card">
                 <!--1: 林為文總院長-->
