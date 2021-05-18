@@ -13,9 +13,21 @@
           box-sizing: border-box;
 }
 
-body {
+html, body {
   background-image: url(../img/bgPattern_64px.png);
   background-repeat: repeat;
+}
+
+@media screen and (min-width: 1025px) {
+  html, body {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  html, body {
+    font-size: 16px;
+  }
 }
 
 a {
@@ -61,7 +73,7 @@ a:link, a:visited {
 .title-1 {
   font-family: "Noto Serif TC", serif;
   font-weight: 900;
-  font-size: 2em;
+  font-size: 2rem;
   text-align: center;
   letter-spacing: 15px;
   text-indent: 15px;
@@ -71,7 +83,7 @@ a:link, a:visited {
   .title-1 {
     font-family: "Noto Serif TC", serif;
     font-weight: 900;
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
 }
 
@@ -79,25 +91,25 @@ a:link, a:visited {
   text-align: center;
   font-family: "Noto Serif TC", serif;
   font-weight: 700;
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
 @media screen and (max-width: 767px) {
   .title-2 {
     font-family: "Noto Serif TC", serif;
     font-weight: 900;
-    font-size: 1em;
+    font-size: 1rem;
   }
 }
 
 .p-text {
   font-family: "Noto Serif TC", serif;
   font-weight: 300;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 .hr-1 {
-  margin: 0.5em auto 1em;
+  margin: 0.5rem auto 1rem;
   border-color: indigo;
 }
 
@@ -114,8 +126,8 @@ a:link, a:visited {
 }
 
 .hr-2 {
-  margin-left: 1em;
-  margin-bottom: 0.5em;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .hr-2 > div {
@@ -131,7 +143,7 @@ a:link, a:visited {
 }
 
 .hr-3 {
-  margin: 0.5em auto 1em;
+  margin: 0.5rem auto 1rem;
   max-width: 25%;
   border-color: #f07ab5;
 }
@@ -427,14 +439,14 @@ nav #nav-link-wrap div:nth-of-type(2) {
 
 nav #nav-link-wrap .nav-link {
   display: block;
-  padding: 5px 1em;
+  padding: 5px 1rem;
   border-radius: 30%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   line-height: 2;
   font-family: "Noto Serif TC", serif;
   font-weight: 700;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   position: relative;
 }
 
@@ -498,12 +510,12 @@ nav #nav-link-wrap .nav-link:active {
     height: 100vh;
     text-align: center;
     background-color: #f2f2f2;
-    padding: 3em 0;
+    padding: 3rem 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    row-gap: 2em;
+    row-gap: 2rem;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
@@ -512,7 +524,7 @@ nav #nav-link-wrap .nav-link:active {
   nav #nav-link-wrap a {
     font-family: "Noto Serif TC", serif;
     font-weight: 700;
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
 }
 
@@ -618,10 +630,10 @@ footer #time-footer table {
 footer #time-footer table tr:first-of-type {
   background-color: rgba(240, 122, 181, 0.6);
   border-bottom: 1px solid #000;
-  line-height: 2em;
+  line-height: 2rem;
   font-family: "Noto Serif TC", serif;
   font-weight: 500;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 footer #time-footer table tr:nth-child(n + 1) {
@@ -630,11 +642,11 @@ footer #time-footer table tr:nth-child(n + 1) {
 
 footer #time-footer table tr > :first-child {
   background-color: rgba(240, 122, 181, 0.6);
-  width: 3em;
+  width: 3rem;
   border-right: 1px solid #000;
   font-family: "Noto Serif TC", serif;
   font-weight: 500;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 footer #time-footer table tr > :nth-child(n + 1) {
@@ -642,14 +654,14 @@ footer #time-footer table tr > :nth-child(n + 1) {
 }
 
 footer #time-footer table tr span {
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 footer #time-footer a {
-  margin: 1em auto;
-  width: 6em;
-  height: 2.5em;
-  line-height: 2.5em;
+  margin: 1rem auto;
+  width: 6rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
 }
 
 footer dl {
@@ -672,13 +684,13 @@ footer dl {
 
 footer dl img {
   vertical-align: middle;
-  margin-right: 0.5em;
+  margin-right: 0.5rem;
 }
 
 footer dl dt {
   font-family: "Noto Serif TC", serif;
   font-weight: 500;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 footer dl dt a {
@@ -762,7 +774,7 @@ footer div:last-child {
 
 footer div:last-child p {
   color: #f2f2f2;
-  line-height: 3em;
+  line-height: 3rem;
   text-align: center;
 }
 /*# sourceMappingURL=common.css.map */

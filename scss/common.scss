@@ -8,7 +8,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-body {
+html, body {
     //[A] 雙色漸層
     // background: radial-gradient(#ffeeee, #f2f2f2);
     //[B] 雜訊材質
@@ -16,6 +16,12 @@ body {
     //[C] 壁紙花紋
     background-image: url(../img/bgPattern_64px.png);
     background-repeat: repeat;
+    @media screen and (min-width: $desktop) {
+        font-size: 18px;
+    }
+    @media screen and (max-width: $tablet) {
+        font-size: 16px;
+    }
 }
 a {
     //reset the default
@@ -47,26 +53,26 @@ a {
 }
 .title-1 {
     $offset: 15px;
-    @include font-zh(2em, 900);
+    @include font-zh(2rem, 900);
     text-align: center;
     letter-spacing: $offset;
     text-indent: $offset;
     @media screen and (max-width: $mobile) {
-        @include font-zh(1.5em, 900);
+        @include font-zh(1.5rem, 900);
     }
 }
 .title-2 {
     text-align: center;
-    @include font-zh(1.2em, 700);
+    @include font-zh(1.2rem, 700);
     @media screen and (max-width: $mobile) {
-        @include font-zh(1em, 900);
+        @include font-zh(1rem, 900);
     }
 }
 .p-text {
-    @include font-zh(1em, 300);
+    @include font-zh(1rem, 300);
 }
 .hr-1 {
-    margin: 0.5em auto 1em;
+    margin: 0.5rem auto 1rem;
     border-color: $color-line;
     @media screen and (min-width: $desktop) {
         max-width: 70%;
@@ -80,8 +86,8 @@ a {
 }
 .hr-2 {
     //複合式；靠左
-    margin-left: 1em;
-    margin-bottom: 0.5em;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
     & > div {
         width: 15px;
         height: 5px;
@@ -94,7 +100,7 @@ a {
     }
 }
 .hr-3 {
-    margin: 0.5em auto 1em;
+    margin: 0.5rem auto 1rem;
     max-width: 25%;
     border-color: $color-26;
 }
@@ -349,12 +355,12 @@ nav {
         }
         .nav-link {
             display: block;
-            padding: 5px 1em;
+            padding: 5px 1rem;
             border-radius: 30%;
             transition: 0.5s;
             //* 文字樣式
             line-height: 2;
-            @include font-zh(1.2em, 700);
+            @include font-zh(1.2rem, 700);
             @media screen and (min-width: $desktop) {
                 color: $color-14;
             }
@@ -409,13 +415,13 @@ nav {
             height: 100vh;
             text-align: center;
             background-color: #f2f2f2;
-            padding: 3em 0;
+            padding: 3rem 0;
             flex-direction: column;
-            row-gap: 2em;
+            row-gap: 2rem;
             justify-content: start;
             z-index: 3;
             a {
-                @include font-zh(1.5em, 700);
+                @include font-zh(1.5rem, 700);
                 // line-height: 3;
             }
 
@@ -496,8 +502,8 @@ footer {
                 &:first-of-type {
                     background-color: rgba($color-26, 0.6);
                     border-bottom: 1px solid #000;
-                    line-height: 2em;
-                    @include font-zh(1em, 500);
+                    line-height: 2rem;
+                    @include font-zh(1rem, 500);
                 }
                 //other rows
                 &:nth-child(n + 1) {
@@ -506,9 +512,9 @@ footer {
                 //first column
                 & > :first-child {
                     background-color: rgba($color-26, 0.6);
-                    width: 3em;
+                    width: 3rem;
                     border-right: 1px solid #000;
-                    @include font-zh(1em, 500);
+                    @include font-zh(1rem, 500);
                 }
                 //other columns
                 & > :nth-child(n + 1) {
@@ -516,15 +522,15 @@ footer {
                 }
                 //bullets
                 span {
-                    font-size: 2em;
+                    font-size: 2rem;
                 }
             }
         }
         a {
-            margin: 1em auto;
-            width: 6em;
-            height: 2.5em;
-            line-height: 2.5em;
+            margin: 1rem auto;
+            width: 6rem;
+            height: 2.5rem;
+            line-height: 2.5rem;
         }
     }
     // Part 3 : 聯絡 & 交通方式
@@ -540,10 +546,10 @@ footer {
         }
         img {
             vertical-align: middle;
-            margin-right: 0.5em;
+            margin-right: 0.5rem;
         }
         dt {
-            @include font-zh(1em, 500);
+            @include font-zh(1rem, 500);
             a {
                 color: initial;
                 transition: color 0.5s;
@@ -597,7 +603,7 @@ footer {
         background-color: $color-16;
         p {
             color: #f2f2f2;
-            line-height: 3em;
+            line-height: 3rem;
             text-align: center;
         }
     }
