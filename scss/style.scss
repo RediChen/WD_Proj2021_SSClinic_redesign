@@ -413,10 +413,10 @@
             max-width: 75vw;
         }
         .care-card {
-            // 只有板1&3使用img，2使用bg-img
+            // 只有板1&3使用img，板2使用bg-img
             & > img {
                 display: block;
-                // margin: 0 auto;
+                margin: 0 auto;
                 width: 128px;
                 height: 128px;
             }
@@ -426,22 +426,33 @@
     #care-board-1 {
         margin: 50px auto;
         display: grid;
-        align-items: center;
         @media screen and (min-width: $desktop) {
             max-width: 1000px;
             grid-template-columns: repeat(3, 1fr);
             grid-row-gap: 60px;
+            .care-card {
+                $leng: 200px;
+                width: $leng;
+                height: $leng;
+            }
         }
         @media screen and (max-width: $tablet) {
             grid-template-columns: repeat(2, 1fr);
+            .care-card {
+                $leng: 180px;
+                width: $leng;
+                height: $leng;
+            }
         }
         @media screen and (max-width: $mobile) {
             grid-template-columns: repeat(1, 1fr);
+            // .care-card {
+            //     $leng: 60px;
+            //     width: $leng;
+            //     height: $leng;
+            // }
         }
         .care-card {
-            $leng: 200px;
-            width: $leng;
-            height: $leng;
             margin: 0 auto;
             border-radius: 50%;
             background-color: $color-04;

@@ -570,6 +570,7 @@
 
 #care .care-card-boards .care-card > img {
   display: block;
+  margin: 0 auto;
   width: 128px;
   height: 128px;
 }
@@ -578,9 +579,6 @@
   margin: 50px auto;
   display: -ms-grid;
   display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 @media screen and (min-width: 1025px) {
@@ -590,12 +588,20 @@
         grid-template-columns: repeat(3, 1fr);
     grid-row-gap: 60px;
   }
+  #care #care-board-1 .care-card {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
   #care #care-board-1 {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
+  }
+  #care #care-board-1 .care-card {
+    width: 180px;
+    height: 180px;
   }
 }
 
@@ -607,8 +613,6 @@
 }
 
 #care #care-board-1 .care-card {
-  width: 200px;
-  height: 200px;
   margin: 0 auto;
   border-radius: 50%;
   background-color: #fdfdfd;
