@@ -9,9 +9,9 @@ var isMobile = window.matchMedia("(max-width: " + mobile + 'px)');
 //     $("#loading").hide() ;
 //     alert("跑完惹！！！");
 // }) ;
-// $(window).load(function () {
-//     $("#loading").hide();
-// }) ;
+$(window).ready(function () {
+    $("#loading").hide();
+}) ;
 // loading畫面 END ==============================//
 //* 形象頁面 名稱動畫 ====================================//
 // $(window).load(function () {
