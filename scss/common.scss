@@ -195,10 +195,7 @@ a {
 #tothetop {
     display: block;
     background-image: url(../icons/iconTothetop.png);
-    // background-color: $color-14;
-    // filter: invert(13%) sepia(29%) saturate(7468%) hue-rotate(-45deg) brightness(78%) contrast(104%);
-    filter: invert(100%) sepia(5%) saturate(249%) hue-rotate(178deg) brightness(116%) contrast(100%)
-        drop-shadow(0 0 1px black);
+    background-color: $color-14;
     position: fixed;
     bottom: 15px;
     right: 15px;
