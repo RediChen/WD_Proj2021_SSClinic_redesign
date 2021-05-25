@@ -592,11 +592,11 @@
     width: 200px;
     height: 200px;
   }
-  #care #care-board-1 .care-card:nth-child(3n+2) {
+  #care #care-board-1 .care-card:nth-child(3n + 2) {
     -webkit-animation-delay: 200;
             animation-delay: 200;
   }
-  #care #care-board-1 .care-card:nth-child(3n+3) {
+  #care #care-board-1 .care-card:nth-child(3n + 3) {
     -webkit-animation-delay: 400;
             animation-delay: 400;
   }
@@ -616,7 +616,7 @@
     -webkit-animation-delay: 200;
             animation-delay: 200;
   }
-  #care #care-board-1 .care-card:nth-child(n+5) {
+  #care #care-board-1 .care-card:nth-child(n + 5) {
     -webkit-animation-delay: 400;
             animation-delay: 400;
   }
@@ -723,8 +723,6 @@
 
 #care #care-board-2 .slick-current {
   border-radius: 35px;
-  -webkit-box-shadow: 0 2px 8px #55555555;
-          box-shadow: 0 2px 8px #55555555;
 }
 
 #care #care-board-2 .slick-current > div {
@@ -749,12 +747,21 @@
 
 #care #care-board-2 .slick-current h2 {
   font-size: 1.5rem;
+  word-break: keep-all;
+  text-align: center;
 }
 
 #care #care-board-3 {
   overflow: hidden;
+  background-color: #fdfdfd;
   margin: 50px auto;
-  padding: 50px;
+  padding: 25px 50px;
+}
+
+#care #care-board-3 > div {
+  padding: 25px 0;
+  -webkit-box-shadow: 15px 0 15px -5px rgba(153, 153, 153, 0.3) inset, -15px 0 15px -5px rgba(153, 153, 153, 0.3) inset;
+          box-shadow: 15px 0 15px -5px rgba(153, 153, 153, 0.3) inset, -15px 0 15px -5px rgba(153, 153, 153, 0.3) inset;
 }
 
 @media screen and (min-width: 1025px) {
