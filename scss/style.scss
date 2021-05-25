@@ -3,7 +3,7 @@
 \*-------------------------*/
 @import "./var";
 
-//* 診所簡介 ===============================================================
+//* 診所簡介 ====================================================================
 #opening {
     width: 100%;
     //避免任何縫隙
@@ -179,8 +179,8 @@
         }
     }
 }
-// 診所簡介 END ============================================================
-//* 醫療團隊 ===============================================================
+// 診所簡介 END =================================================================
+//* 醫療團隊 ====================================================================
 #team {
     //* Part 0 : 整體格局
     // team = {header, buttons, cards}
@@ -189,6 +189,7 @@
     $card-h: 540px;
     $section-h: calc(#{$title-h} + #{$card-h});
     width: 100%;
+    overflow-x: hidden;
     @media screen and (min-width: $desktop) {
         height: auto;
         margin: 150px 0 100px;
@@ -422,6 +423,12 @@
             }
         }
     }
+    @mixin LRshadow() {
+        $t: 5px;
+        $ttt: 3*$t ;
+        box-shadow: $ttt 0 $ttt -$tpx $color-shade inset, -$ttt 0 $ttt -$tpx $color-shade inset;
+    }
+    // 共同樣式 END
     //* board 1
     #care-board-1 {
         margin: 50px auto;
@@ -492,7 +499,7 @@
         $h2-lh: 3rem;
         margin: $card-m-y auto;
         background-color: $color-04;
-        box-shadow: 15px 0 15px -5px $color-shade inset, -15px 0 15px -5px $color-shade inset;
+        @include LRshadow() ;
         @mixin setupBoard($img-LENG) {
             height: calc(2 * #{$card-m-y} + 2 * #{$img-m-y} + #{$img-LENG} + #{$h2-lh});
         }
@@ -574,7 +581,7 @@
         background-color: $color-04;
         & > div {
             padding: 25px 0;
-            box-shadow: 15px 0 15px -5px $color-shade inset, -15px 0 15px -5px $color-shade inset;
+            @include LRshadow() ;
         }
         margin: 50px auto;
         padding: 25px 50px;
