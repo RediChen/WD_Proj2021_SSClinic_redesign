@@ -242,7 +242,8 @@
 }
 
 #team {
-  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 1025px) {
@@ -654,8 +655,8 @@
 #care #care-board-2 {
   margin: 60px auto;
   background-color: #fdfdfd;
-  -webkit-box-shadow: 15px 0 15px -5px rgba(153, 153, 153, 0.3) inset, -15px 0 15px -5px rgba(153, 153, 153, 0.3) inset;
-          box-shadow: 15px 0 15px -5px rgba(153, 153, 153, 0.3) inset, -15px 0 15px -5px rgba(153, 153, 153, 0.3) inset;
+  -webkit-box-shadow: 15px 0 10px rgba(153, 153, 153, 0.3) inset, -15px 0 10px rgba(153, 153, 153, 0.3) inset;
+          box-shadow: 15px 0 10px rgba(153, 153, 153, 0.3) inset, -15px 0 10px rgba(153, 153, 153, 0.3) inset;
 }
 
 @media screen and (min-width: 1025px) {
@@ -760,8 +761,8 @@
 
 #care #care-board-3 > div {
   padding: 25px 0;
-  -webkit-box-shadow: 15px 0 15px -5px rgba(153, 153, 153, 0.3) inset, -15px 0 15px -5px rgba(153, 153, 153, 0.3) inset;
-          box-shadow: 15px 0 15px -5px rgba(153, 153, 153, 0.3) inset, -15px 0 15px -5px rgba(153, 153, 153, 0.3) inset;
+  -webkit-box-shadow: 15px 0 10px rgba(153, 153, 153, 0.3) inset, -15px 0 10px rgba(153, 153, 153, 0.3) inset;
+          box-shadow: 15px 0 10px rgba(153, 153, 153, 0.3) inset, -15px 0 10px rgba(153, 153, 153, 0.3) inset;
 }
 
 @media screen and (min-width: 1025px) {

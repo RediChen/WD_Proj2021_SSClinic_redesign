@@ -188,8 +188,8 @@
     $card-pd: 1rem; // also gap
     $card-h: 540px;
     $section-h: calc(#{$title-h} + #{$card-h});
-    width: 100%;
-    overflow-x: hidden;
+    max-width: 100%;
+    overflow: hidden;
     @media screen and (min-width: $desktop) {
         height: auto;
         margin: 150px 0 100px;
@@ -286,7 +286,6 @@
         background-color: rgba($color-05, 0.5);
         box-shadow: -8px 8px 8px -3px $color-shade;
         height: $card-h;
-
         .team-card {
             // card = {img, div-h2, div-about}
             //* 共通設定
@@ -426,7 +425,7 @@
     @mixin LRshadow() {
         $t: 5px;
         $ttt: 3*$t ;
-        box-shadow: $ttt 0 $ttt -$tpx $color-shade inset, -$ttt 0 $ttt -$tpx $color-shade inset;
+        box-shadow: $ttt 0 $ttt -$t $color-shade inset, -$ttt 0 $ttt -$t $color-shade inset;
     }
     // 共同樣式 END
     //* board 1
