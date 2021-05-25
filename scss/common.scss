@@ -16,6 +16,7 @@ html, body {
     //[C] 壁紙花紋
     background-image: url(../img/bgPattern_64px.png);
     background-repeat: repeat;
+    overflow-x: hidden;
     @media screen and (min-width: $desktop) {
         font-size: 18px;
     }
