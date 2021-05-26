@@ -579,16 +579,18 @@
         overflow: hidden;
         background-color: $color-04;
         & > div {
-            padding: 25px 0;
+            padding: 1.5rem 0;
             @include LRshadow() ;
         }
-        margin: 50px auto;
-        padding: 25px 50px;
         @media screen and (min-width: $desktop) {
+            margin: 3rem auto;
+            padding: 1.5rem 3rem;
             width: 60%;
         }
         @media screen and (max-width: $tablet) {
-            width: 80%;
+            margin: 1rem auto 3rem;
+            padding: 1rem;
+            width: 100%;
         }
         h3 {
             display: block;
