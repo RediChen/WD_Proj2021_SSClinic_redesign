@@ -592,19 +592,22 @@ footer #map iframe {
 
 @media screen and (min-width: 1025px) {
   footer #map iframe {
-    height: 350px;
+    height: 400px;
+    max-width: 600px;
   }
 }
 
 @media screen and (max-width: 1024px) {
   footer #map iframe {
     height: 300px;
+    min-width: 80%;
   }
 }
 
 @media screen and (max-width: 767px) {
   footer #map iframe {
     height: 250px;
+    min-width: 90%;
   }
 }
 
