@@ -666,12 +666,13 @@
 
 @media screen and (min-width: 1025px) {
   #care #care-board-2 {
-    height: calc(2 * 4rem + 2 * 1rem + 140px + 2.8rem);
+    height: calc(2 * 1.5rem + 2 * 1rem + 140px + 4.2rem);
+    padding: 1.5rem 0;
   }
   #care #care-board-2 .care-card {
     margin: 0 1.2rem;
     width: 100px;
-    height: calc(2 * 1rem + 140px + 2.8rem);
+    height: calc(2 * 1rem + 140px + 4.2rem);
     max-width: 140px;
   }
   #care #care-board-2 .care-card > div {
@@ -720,12 +721,13 @@
 
 @media screen and (max-width: 1024px) {
   #care #care-board-2 {
-    height: calc(2 * 4rem + 2 * 1rem + 125px + 2.4rem);
+    height: calc(2 * 1.5rem + 2 * 1rem + 125px + 3.6rem);
+    padding: 1.5rem 0;
   }
   #care #care-board-2 .care-card {
     margin: 0 1rem;
     width: 100px;
-    height: calc(2 * 1rem + 125px + 2.4rem);
+    height: calc(2 * 1rem + 125px + 3.6rem);
     max-width: 125px;
   }
   #care #care-board-2 .care-card > div {
