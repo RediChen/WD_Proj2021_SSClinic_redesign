@@ -94,18 +94,3 @@
         }
     }
 }
-//* 須知文字的RWD設定
-@mixin notePageText($fz_h4, $fz_ul) {
-    h4 {
-        @include font-zh($fz_h4, 700);
-    }
-    ul {
-        @include font-zh($fz_ul, 300);
-        margin-left: 2 * $fz_ul;
-        &::before {
-            content: attr(aria-label);
-            text-indent: -2 * $fz_ul;
-            @include font-zh($fz_ul, 500);
-        }
-    }
-}

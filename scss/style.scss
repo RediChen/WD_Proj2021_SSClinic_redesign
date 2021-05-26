@@ -509,7 +509,7 @@
             //* 單片 card
             .care-card {
                 margin: 0 $h2-fz;
-                width: $img-L;//無論有沒有center都保持大size的寬敞
+                width: $img-L; //無論有沒有center都保持大size的寬敞
                 height: $card-h;
                 //* 圖片
                 & > div {
@@ -737,44 +737,40 @@
             .note-btns {
                 display: block;
                 margin-right: 10px;
-                padding: 1em 2em 0.5em;
-                background-color: rgba($color-26, 0.1);
+                padding: 1rem 2rem 0.5rem;
+                background-color: $color-25;
                 border-radius: 10% 10% 0 0/ 20% 20% 0 0;
-                transition: filter 0.5s;
+                transition: filter 0.3s;
                 &:not(.note-btns-active):hover {
-                    filter: saturate(2);
+                    filter: brightness(0.9);
                 }
                 // 啟動者的對應強調
                 &-active {
-                    background-color: rgba($color-26, 0.3);
+                    background-color: $color-16;
+                    color: $color-14;
                 }
                 // 文字
-                @media screen and (min-width: $desktop) {
-                    @include font-zh(1em, 500);
-                }
-                @media screen and (max-width: $tablet) {
-                    @include font-zh(0.8em, 500);
-                }
-                @media screen and (max-width: $mobile) {
-                    @include font-zh(0.5em, 500);
-                }
+                @include font-zh(1rem, 500);
             }
         }
         // pages = {(h4, ul)*3, a}
         & > :last-child {
-            padding: 2em 4em;
+            padding: 2rem 4rem;
             background-color: rgba($color-24, 0.8);
             .note-pages {
                 line-height: 2;
                 // 文字
-                @media screen and (min-width: $desktop) {
-                    @include notePageText(1.5em, 1.2em);
+                h4 {
+                    @include font-zh(1.2rem, 700);
                 }
-                @media screen and (max-width: $tablet) {
-                    @include notePageText(1.2em, 1em);
-                }
-                @media screen and (max-width: $mobile) {
-                    @include notePageText(1em, 0.8em);
+                ul {
+                    @include font-zh(1rem, 300);
+                    margin-left: 2 * 1rem;
+                    &::before {
+                        content: attr(aria-label);
+                        text-indent: -2 * 1rem;
+                        @include font-zh(1rem, 500);
+                    }
                 }
             }
             a {
@@ -797,35 +793,16 @@
             line-height: 2.5;
             transition: box-shadow 0.4s;
             &:hover {
-                $pink: rgba($color-26, 0.5) ;
+                $pink: rgba($color-26, 0.5);
                 border-color: $pink;
                 box-shadow: 0 0 0 0.2rem $pink, 0 0 0 0.2rem $pink inset;
             }
             dt {
-                @media screen and (min-width: $desktop) {
-                    @include font-zh(1.5rem, 500);
-                }
-                @media screen and (max-width: $tablet) {
-                    @include font-zh(1.2rem, 500);
-                }
-                @media screen and (max-width: $mobile) {
-                    @include font-zh(1rem, 500);
-                }
+                @include font-zh(1.2rem, 500);
             }
             dd {
+                @include font-zh(1, 300);
                 text-indent: 1.2rem;
-                @media screen and (min-width: $desktop) {
-                    @include font-zh(1.2rem, 300);
-                    // text-indent: 3em;
-                }
-                @media screen and (max-width: $tablet) {
-                    @include font-zh(1rem, 300);
-                    // text-indent: 2em;
-                }
-                @media screen and (max-width: $mobile) {
-                    @include font-zh(0.8rem, 300);
-                    // text-indent: 1.6em;
-                }
             }
         }
         a {

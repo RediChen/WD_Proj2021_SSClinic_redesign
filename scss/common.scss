@@ -36,10 +36,13 @@ a {
     display: block;
     background-color: rgba($color-26, 0.3);
     box-shadow: 0 0 10px $color-shade;
+    @include font-zh(1rem, 500);
     border-radius: 50% / 20%;
     transition: background-color 0.5s;
     &:hover {
         background-color: rgba($color-26, 0.8);
+        color: $color-04 ;
+        font-weight: 700;
     }
     &:active {
         filter: invert(5%);
@@ -555,7 +558,7 @@ footer {
                 color: initial;
                 transition: color 0.5s;
                 &:hover {
-                    color: rgba($color-text, 0.8);
+                    color: rgba($color-16, 0.8);
                 }
             }
         }

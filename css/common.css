@@ -44,6 +44,9 @@ a:link, a:visited {
   background-color: rgba(240, 122, 181, 0.3);
   -webkit-box-shadow: 0 0 10px rgba(153, 153, 153, 0.3);
           box-shadow: 0 0 10px rgba(153, 153, 153, 0.3);
+  font-family: "Noto Serif TC", serif;
+  font-weight: 500;
+  font-size: 1rem;
   border-radius: 50% / 20%;
   -webkit-transition: background-color 0.5s;
   transition: background-color 0.5s;
@@ -51,6 +54,8 @@ a:link, a:visited {
 
 .btn:hover {
   background-color: rgba(240, 122, 181, 0.8);
+  color: #fdfdfd;
+  font-weight: 700;
 }
 
 .btn:active {
@@ -703,7 +708,7 @@ footer dl dt a {
 }
 
 footer dl dt a:hover {
-  color: rgba(165, 42, 42, 0.8);
+  color: rgba(110, 8, 55, 0.8);
 }
 
 footer dl dd {

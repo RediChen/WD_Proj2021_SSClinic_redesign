@@ -1194,50 +1194,30 @@
 #time #register-note .note-btn-box .note-btns {
   display: block;
   margin-right: 10px;
-  padding: 1em 2em 0.5em;
-  background-color: rgba(240, 122, 181, 0.1);
+  padding: 1rem 2rem 0.5rem;
+  background-color: #ffcce6;
   border-radius: 10% 10% 0 0/ 20% 20% 0 0;
-  -webkit-transition: -webkit-filter 0.5s;
-  transition: -webkit-filter 0.5s;
-  transition: filter 0.5s;
-  transition: filter 0.5s, -webkit-filter 0.5s;
+  -webkit-transition: -webkit-filter 0.3s;
+  transition: -webkit-filter 0.3s;
+  transition: filter 0.3s;
+  transition: filter 0.3s, -webkit-filter 0.3s;
+  font-family: "Noto Serif TC", serif;
+  font-weight: 500;
+  font-size: 1rem;
 }
 
 #time #register-note .note-btn-box .note-btns:not(.note-btns-active):hover {
-  -webkit-filter: saturate(2);
-          filter: saturate(2);
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
 }
 
 #time #register-note .note-btn-box .note-btns-active {
-  background-color: rgba(240, 122, 181, 0.3);
-}
-
-@media screen and (min-width: 1025px) {
-  #time #register-note .note-btn-box .note-btns {
-    font-family: "Noto Serif TC", serif;
-    font-weight: 500;
-    font-size: 1em;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  #time #register-note .note-btn-box .note-btns {
-    font-family: "Noto Serif TC", serif;
-    font-weight: 500;
-    font-size: 0.8em;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  #time #register-note .note-btn-box .note-btns {
-    font-family: "Noto Serif TC", serif;
-    font-weight: 500;
-    font-size: 0.5em;
-  }
+  background-color: #6e0837;
+  color: #fbe9ec;
 }
 
 #time #register-note > :last-child {
-  padding: 2em 4em;
+  padding: 2rem 4rem;
   background-color: rgba(255, 240, 245, 0.8);
 }
 
@@ -1245,67 +1225,25 @@
   line-height: 2;
 }
 
-@media screen and (min-width: 1025px) {
-  #time #register-note > :last-child .note-pages h4 {
-    font-family: "Noto Serif TC", serif;
-    font-weight: 700;
-    font-size: 1.5em;
-  }
-  #time #register-note > :last-child .note-pages ul {
-    font-family: "Noto Serif TC", serif;
-    font-weight: 300;
-    font-size: 1.2em;
-    margin-left: 2.4em;
-  }
-  #time #register-note > :last-child .note-pages ul::before {
-    content: attr(aria-label);
-    text-indent: -2.4em;
-    font-family: "Noto Serif TC", serif;
-    font-weight: 500;
-    font-size: 1.2em;
-  }
+#time #register-note > :last-child .note-pages h4 {
+  font-family: "Noto Serif TC", serif;
+  font-weight: 700;
+  font-size: 1.2rem;
 }
 
-@media screen and (max-width: 1024px) {
-  #time #register-note > :last-child .note-pages h4 {
-    font-family: "Noto Serif TC", serif;
-    font-weight: 700;
-    font-size: 1.2em;
-  }
-  #time #register-note > :last-child .note-pages ul {
-    font-family: "Noto Serif TC", serif;
-    font-weight: 300;
-    font-size: 1em;
-    margin-left: 2em;
-  }
-  #time #register-note > :last-child .note-pages ul::before {
-    content: attr(aria-label);
-    text-indent: -2em;
-    font-family: "Noto Serif TC", serif;
-    font-weight: 500;
-    font-size: 1em;
-  }
+#time #register-note > :last-child .note-pages ul {
+  font-family: "Noto Serif TC", serif;
+  font-weight: 300;
+  font-size: 1rem;
+  margin-left: 2rem;
 }
 
-@media screen and (max-width: 767px) {
-  #time #register-note > :last-child .note-pages h4 {
-    font-family: "Noto Serif TC", serif;
-    font-weight: 700;
-    font-size: 1em;
-  }
-  #time #register-note > :last-child .note-pages ul {
-    font-family: "Noto Serif TC", serif;
-    font-weight: 300;
-    font-size: 0.8em;
-    margin-left: 1.6em;
-  }
-  #time #register-note > :last-child .note-pages ul::before {
-    content: attr(aria-label);
-    text-indent: -1.6em;
-    font-family: "Noto Serif TC", serif;
-    font-weight: 500;
-    font-size: 0.8em;
-  }
+#time #register-note > :last-child .note-pages ul::before {
+  content: attr(aria-label);
+  text-indent: -2rem;
+  font-family: "Noto Serif TC", serif;
+  font-weight: 500;
+  font-size: 1rem;
 }
 
 #time #register-note > :last-child a {
@@ -1339,56 +1277,17 @@
           box-shadow: 0 0 0 0.2rem rgba(240, 122, 181, 0.5), 0 0 0 0.2rem rgba(240, 122, 181, 0.5) inset;
 }
 
-@media screen and (min-width: 1025px) {
-  #time > :last-child > :last-child dl dt {
-    font-family: "Noto Serif TC", serif;
-    font-weight: 500;
-    font-size: 1.5rem;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  #time > :last-child > :last-child dl dt {
-    font-family: "Noto Serif TC", serif;
-    font-weight: 500;
-    font-size: 1.2rem;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  #time > :last-child > :last-child dl dt {
-    font-family: "Noto Serif TC", serif;
-    font-weight: 500;
-    font-size: 1rem;
-  }
+#time > :last-child > :last-child dl dt {
+  font-family: "Noto Serif TC", serif;
+  font-weight: 500;
+  font-size: 1.2rem;
 }
 
 #time > :last-child > :last-child dl dd {
+  font-family: "Noto Serif TC", serif;
+  font-weight: 300;
+  font-size: 1;
   text-indent: 1.2rem;
-}
-
-@media screen and (min-width: 1025px) {
-  #time > :last-child > :last-child dl dd {
-    font-family: "Noto Serif TC", serif;
-    font-weight: 300;
-    font-size: 1.2rem;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  #time > :last-child > :last-child dl dd {
-    font-family: "Noto Serif TC", serif;
-    font-weight: 300;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  #time > :last-child > :last-child dl dd {
-    font-family: "Noto Serif TC", serif;
-    font-weight: 300;
-    font-size: 0.8rem;
-  }
 }
 
 #time > :last-child > :last-child a {
