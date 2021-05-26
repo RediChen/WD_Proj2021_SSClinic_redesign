@@ -52,14 +52,14 @@ a {
     }
 }
 .title-1 {
-    $offset: 15px;
-    @include font-zh(2rem, 900);
     text-align: center;
-    letter-spacing: $offset;
-    text-indent: $offset;
+    @include font-zh(2rem, 900);
     @media screen and (max-width: $mobile) {
         @include font-zh(1.5rem, 900);
     }
+    $offset: 15px;
+    letter-spacing: $offset;
+    text-indent: $offset;
 }
 .title-2 {
     text-align: center;

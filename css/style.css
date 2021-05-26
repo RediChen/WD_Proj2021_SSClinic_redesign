@@ -566,6 +566,13 @@
 @media screen and (min-width: 1025px) {
   #care .care-card-boards {
     max-width: 75vw;
+    margin: 3rem auto;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #care .care-card-boards {
+    margin: 1rem auto 3rem;
   }
 }
 
@@ -577,7 +584,6 @@
 }
 
 #care #care-board-1 {
-  margin: 50px auto;
   display: -ms-grid;
   display: grid;
 }
@@ -653,7 +659,6 @@
 }
 
 #care #care-board-2 {
-  margin: 60px auto;
   background-color: #fdfdfd;
   -webkit-box-shadow: 15px 0 10px rgba(153, 153, 153, 0.3) inset, -15px 0 10px rgba(153, 153, 153, 0.3) inset;
           box-shadow: 15px 0 10px rgba(153, 153, 153, 0.3) inset, -15px 0 10px rgba(153, 153, 153, 0.3) inset;
@@ -661,95 +666,110 @@
 
 @media screen and (min-width: 1025px) {
   #care #care-board-2 {
-    height: calc(2 * 60px + 2 * 15px + 140px + 3rem);
+    height: calc(2 * 4rem + 2 * 1rem + 140px + 2.8rem);
   }
-}
-
-@media screen and (max-width: 767px) {
-  #care #care-board-2 {
-    height: calc(2 * 60px + 2 * 15px + 125px + 3rem);
-  }
-}
-
-#care #care-board-2 .care-card {
-  margin: 60px 20px;
-  width: 140px;
-  text-align: center;
-  overflow: break-word;
-}
-
-@media screen and (min-width: 1025px) {
   #care #care-board-2 .care-card {
-    height: calc(2 * 15px + 140px + 3rem);
-    max-width: 180px;
+    margin: 0 1.2rem;
+    width: 100px;
+    height: calc(2 * 1rem + 140px + 2.8rem);
+    max-width: 140px;
   }
-}
-
-@media screen and (max-width: 767px) {
-  #care #care-board-2 .care-card {
-    height: calc(2 * 15px + 125px + 3rem);
-    max-width: 165px;
+  #care #care-board-2 .care-card > div {
+    background-image: url(../img/cloudy0.png);
+    margin: 1rem auto;
+    width: 100px;
+    height: 100px;
+    background-size: 100px 100px;
+    border-radius: 50%;
+    text-align: center;
+    -webkit-transition: 0.4s ease-out;
+    transition: 0.4s ease-out;
   }
-}
-
-#care #care-board-2 .care-card > div {
-  background-image: url(../img/cloudy0.png);
-  margin: 15px auto;
-  width: 100px;
-  height: 100px;
-  background-size: 100px 100px;
-  border-radius: 50%;
-  text-align: center;
-}
-
-#care #care-board-2 .care-card:hover {
-  border-radius: 35px;
-  -webkit-box-shadow: 0 2px 8px #55555555;
-          box-shadow: 0 2px 8px #55555555;
-}
-
-#care #care-board-2 .care-card:hover > div {
-  background-image: url(../img/cloudy1.png);
-}
-
-#care #care-board-2 .care-card > h2 {
-  text-align: center;
-  line-height: 3rem;
-}
-
-#care #care-board-2 .slick-list {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-#care #care-board-2 .slick-current {
-  border-radius: 35px;
-}
-
-#care #care-board-2 .slick-current > div {
-  background-image: url(../img/cloudy1.png);
-}
-
-@media screen and (min-width: 1025px) {
+  #care #care-board-2 .care-card:hover {
+    -webkit-box-shadow: 0 2px 8px #55555555;
+            box-shadow: 0 2px 8px #55555555;
+  }
+  #care #care-board-2 .care-card:hover > div {
+    background-image: url(../img/cloudy1.png);
+  }
+  #care #care-board-2 .care-card h2 {
+    text-align: center;
+    line-height: 1.8rem;
+    -webkit-transition: 0.4s ease-out;
+    transition: 0.4s ease-out;
+  }
+  #care #care-board-2 .slick-list {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  #care #care-board-2 .slick-current {
+    width: 140px;
+  }
   #care #care-board-2 .slick-current > div {
+    background-image: url(../img/cloudy1.png);
     height: 140px;
     width: 140px;
     background-size: 140px 140px;
   }
+  #care #care-board-2 .slick-current h2 {
+    font-size: calc(1.2rem + 0.2rem);
+    word-break: keep-all;
+    text-align: center;
+  }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
+  #care #care-board-2 {
+    height: calc(2 * 4rem + 2 * 1rem + 125px + 2.4rem);
+  }
+  #care #care-board-2 .care-card {
+    margin: 0 1rem;
+    width: 100px;
+    height: calc(2 * 1rem + 125px + 2.4rem);
+    max-width: 125px;
+  }
+  #care #care-board-2 .care-card > div {
+    background-image: url(../img/cloudy0.png);
+    margin: 1rem auto;
+    width: 100px;
+    height: 100px;
+    background-size: 100px 100px;
+    border-radius: 50%;
+    text-align: center;
+    -webkit-transition: 0.4s ease-out;
+    transition: 0.4s ease-out;
+  }
+  #care #care-board-2 .care-card:hover {
+    -webkit-box-shadow: 0 2px 8px #55555555;
+            box-shadow: 0 2px 8px #55555555;
+  }
+  #care #care-board-2 .care-card:hover > div {
+    background-image: url(../img/cloudy1.png);
+  }
+  #care #care-board-2 .care-card h2 {
+    text-align: center;
+    line-height: 1.5rem;
+    -webkit-transition: 0.4s ease-out;
+    transition: 0.4s ease-out;
+  }
+  #care #care-board-2 .slick-list {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  #care #care-board-2 .slick-current {
+    width: 125px;
+  }
   #care #care-board-2 .slick-current > div {
+    background-image: url(../img/cloudy1.png);
     height: 125px;
     width: 125px;
     background-size: 125px 125px;
   }
-}
-
-#care #care-board-2 .slick-current h2 {
-  font-size: 1.5rem;
-  word-break: keep-all;
-  text-align: center;
+  #care #care-board-2 .slick-current h2 {
+    font-size: calc(1rem + 0.2rem);
+    word-break: keep-all;
+    text-align: center;
+  }
 }
 
 #care #care-board-3 {
@@ -757,7 +777,7 @@
   background-color: #fdfdfd;
 }
 
-#care #care-board-3 > div {
+#care #care-board-3 .care-card {
   padding: 1.5rem 0;
   -webkit-box-shadow: 15px 0 10px rgba(153, 153, 153, 0.3) inset, -15px 0 10px rgba(153, 153, 153, 0.3) inset;
           box-shadow: 15px 0 10px rgba(153, 153, 153, 0.3) inset, -15px 0 10px rgba(153, 153, 153, 0.3) inset;
@@ -765,7 +785,6 @@
 
 @media screen and (min-width: 1025px) {
   #care #care-board-3 {
-    margin: 3rem auto;
     padding: 1.5rem 3rem;
     width: 60%;
   }
@@ -773,7 +792,6 @@
 
 @media screen and (max-width: 1024px) {
   #care #care-board-3 {
-    margin: 1rem auto 3rem;
     padding: 1rem;
     width: 100%;
   }

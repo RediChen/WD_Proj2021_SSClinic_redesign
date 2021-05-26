@@ -71,10 +71,10 @@ a:link, a:visited {
 }
 
 .title-1 {
+  text-align: center;
   font-family: "Noto Serif TC", serif;
   font-weight: 900;
   font-size: 2rem;
-  text-align: center;
   letter-spacing: 15px;
   text-indent: 15px;
 }

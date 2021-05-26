@@ -411,6 +411,10 @@
         // box-shadow: 5px 5px 7px 2px $color-shade;
         @media screen and (min-width: $desktop) {
             max-width: 75vw;
+            margin: 3rem auto;
+        }
+        @media screen and (max-width: $tablet) {
+            margin: 1rem auto 3rem;
         }
         .care-card {
             // 只有板1&3使用img，板2使用bg-img
@@ -422,15 +426,15 @@
             }
         }
     }
+    // slick版面的內陰影
     @mixin LRshadow() {
         $t: 5px;
-        $ttt: 3*$t ;
+        $ttt: 3 * $t;
         box-shadow: $ttt 0 $ttt -$t $color-shade inset, -$ttt 0 $ttt -$t $color-shade inset;
     }
     // 共同樣式 END
     //* board 1
     #care-board-1 {
-        margin: 50px auto;
         display: grid;
         @media screen and (min-width: $desktop) {
             max-width: 1000px;
@@ -487,108 +491,145 @@
     //* board 2
     #care-board-2 {
         // board2 = {card | icon, h2}_9
-        $card-m-y: 60px;
-        $img-m-y: 15px;
-        $img-leng: 100px; // 預設的圖片尺寸
-        $img-LENG-pc: 140px; // center mode的放大版尺寸 for PC
-        $img-LENG-tb: 125px; // center mode的放大版尺寸 for 行動裝置
         $centerPd-pc: 100px; // center mode的padding(gap) for PC
-        $centerPd-tb: 40px; // center mode的padding(gap) for 行動裝置
-        // centerPd 須與js的設定連動
-        $h2-lh: 3rem;
-        margin: $card-m-y auto;
-        background-color: $color-04;
-        @include LRshadow() ;
-        @mixin setupBoard($img-LENG) {
-            height: calc(2 * #{$card-m-y} + 2 * #{$img-m-y} + #{$img-LENG} + #{$h2-lh});
-        }
-        @media screen and (min-width: $desktop) {
-            @include setupBoard($img-LENG-pc);
-        }
-        @media screen and (max-width: $mobile) {
-            @include setupBoard($img-LENG-tb);
-        }
-        .care-card {
-            margin: $card-m-y 20px;
-            width: $img-leng + 40px;
-            @mixin setupCard($img-LENG) {
-                height: calc(2 * #{$img-m-y} + #{$img-LENG} + #{$h2-lh});
-                max-width: $img-LENG + 40px;
+        $centerPd-tb: 0px; // center mode的padding(gap) for 行動裝置
+        //center pd 尚未使用進JS
+
+        //!====================================================
+        @mixin setupBoard($card-m-y, $card-p-y, $img-l, $img-L, $h2-fz) {
+            // $img-l : 預設的圖片尺寸, $img-L : center的圖片尺寸
+            $h2-lh: 1.5 * $h2-fz;
+            $h2-height: 2 * ($h2-fz + 0.2rem); //最多會有2行
+            //* board 整體
+            height: calc(2 * #{$card-m-y} + 2 * #{$card-p-y} + #{$img-L} + #{$h2-height});
+
+            //* 單片 card
+            .care-card {
+                margin: 0 $h2-fz;
+                // width: calc(#{$img-l} + 3rem);
+                width: $img-l;
+                height: calc(2 * #{$card-p-y} + #{$img-L} + #{$h2-height});
+                // max-width: calc(#{$img-L} + 3rem);
+                max-width: $img-L;
+                //* 圖片
+                & > div {
+                    background-image: url(../img/cloudy0.png);
+                    margin: $card-p-y auto;
+                    width: $img-l;
+                    height: $img-l;
+                    background-size: $img-l $img-l;
+                    border-radius: 50%;
+                    text-align: center;
+                    transition: 0.4s ease-out;
+                }
+                &:hover {
+                    box-shadow: 0 2px 8px $color-06;
+                    & > div {
+                        background-image: url(../img/cloudy1.png);
+                    }
+                }
+                //圖片 END
+                //* 病症名稱
+                h2 {
+                    // overflow: break-word;
+                    text-align: center;
+                    line-height: $h2-lh;
+                    transition: 0.4s ease-out;
+                }
             }
-            @media screen and (min-width: $desktop) {
-                @include setupCard($img-LENG-pc);
+            //* Slick 修正區
+            // 在正中央的樣式 (center mode)
+            .slick-list {
+                box-sizing: border-box;
             }
-            @media screen and (max-width: $mobile) {
-                @include setupCard($img-LENG-tb);
-            }
-            text-align: center;
-            overflow: break-word;
-            & > div {
-                // 圖片
-                background-image: url(../img/cloudy0.png);
-                margin: $img-m-y auto;
-                width: $img-leng;
-                height: $img-leng;
-                background-size: $img-leng $img-leng;
-                border-radius: 50%;
-                text-align: center;
-            }
-            &:hover {
-                border-radius: 35px;
-                box-shadow: 0 2px 8px $color-06;
+            .slick-current {
+                width: $img-L;
                 & > div {
                     background-image: url(../img/cloudy1.png);
+                    height: $img-L;
+                    width: $img-L;
+                    background-size: $img-L $img-L;
+                }
+                h2 {
+                    font-size: calc(#{$h2-fz} + 0.2rem);
+                    word-break: keep-all;
+                    text-align: center;
                 }
             }
-            & > h2 {
-                text-align: center;
-                line-height: $h2-lh;
-            }
+            //Slick 修正區 END
         }
-        //Slick 修正區
-        // 在正中央的樣式 (center mode)
-        .slick-list {
-            box-sizing: border-box;
+        // setupBoard($card-m-y, $card-p-y, $img-l, $img-L, $h2-fz)
+        // $h2-fz 必須輸入 .title-2 的設定值
+        @media screen and (min-width: $desktop) {
+            @include setupBoard(4rem, 1rem, 100px, 140px, 1.2rem);
         }
-        .slick-current {
-            border-radius: 35px;
-            & > div {
-                background-image: url(../img/cloudy1.png);
-                @mixin setupSize($l) {
-                    height: $l;
-                    width: $l;
-                    background-size: $l $l;
-                }
-                @media screen and (min-width: $desktop) {
-                    @include setupSize($img-LENG-pc);
-                }
-                @media screen and (max-width: $mobile) {
-                    @include setupSize($img-LENG-tb);
-                }
-            }
-            h2 {
-                font-size: 1.5rem;
-                word-break: keep-all;
-                text-align: center;
-            }
+        @media screen and (max-width: $tablet) {
+            @include setupBoard(4rem, 1rem, 100px, 125px, 1rem);
         }
-        //Slick 修正區 END
+        //!====================================================
+        background-color: $color-04;
+        @include LRshadow();
+        // @mixin setupBoard($img-LENG) {
+        //     height: calc(2 * #{$card-m-y} + 2 * #{$img-m-y} + #{$img-LENG} + #{$h2-lh});
+        // }
+        // @media screen and (min-width: $desktop) {
+        //     @include setupBoard($img-LENG-pc);
+        // }
+        // @media screen and (max-width: $tablet) {
+        //     @include setupBoard($img-LENG-tb);
+        // }
+        // .care-card {
+        // margin: $card-m-y 1rem;
+        // margin: 0 1rem;
+        // width: calc(#{$img-leng} + 3rem);
+        // @mixin setupCard($img-LENG) {
+        //     height: calc(2 * #{$img-m-y} + #{$img-LENG} + #{$h2-lh});
+        //     max-width: calc(#{$img-LENG} + 3rem);
+        // }
+        // @media screen and (min-width: $desktop) {
+        //     @include setupCard($img-LENG-pc);
+        // }
+        // @media screen and (max-width: $tablet) {
+        //     @include setupCard($img-LENG-tb);
+        // }
+
+        // & > div {
+        //     // 圖片
+        //     background-image: url(../img/cloudy0.png);
+        //     margin: $img-m-y auto;
+        //     width: $img-leng;
+        //     height: $img-leng;
+        //     background-size: $img-leng $img-leng;
+        //     border-radius: 50%;
+        //     text-align: center;
+        //     &:hover {
+        //         border-radius: 35px;
+        //         box-shadow: 0 2px 8px $color-06;
+        //         & > div {
+        //             background-image: url(../img/cloudy1.png);
+        //         }
+        //     }
+        // }
+        // & > h2 {
+        //     overflow: break-word;
+        //     text-align: center;
+        //     line-height: $h2-lh;
+        // }
+        // }
     }
     //* board 3
     #care-board-3 {
         overflow: hidden;
         background-color: $color-04;
-        & > div {
+        .care-card {
             padding: 1.5rem 0;
-            @include LRshadow() ;
+            @include LRshadow();
         }
         @media screen and (min-width: $desktop) {
-            margin: 3rem auto;
             padding: 1.5rem 3rem;
             width: 60%;
         }
         @media screen and (max-width: $tablet) {
-            margin: 1rem auto 3rem;
             padding: 1rem;
             width: 100%;
         }
