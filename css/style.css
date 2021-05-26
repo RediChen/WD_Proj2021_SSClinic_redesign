@@ -521,7 +521,7 @@
 #team #team-card-wrap .team-card > div:nth-child(2) h2 {
   padding: 0 0.5em;
   display: inline-block;
-  border-bottom: 1px solid indigo;
+  border-bottom: 1px solid #6e0837;
   -webkit-box-shadow: 0 9px 5px -6px #55555555;
           box-shadow: 0 9px 5px -6px #55555555;
 }

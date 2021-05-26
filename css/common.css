@@ -110,7 +110,7 @@ a:link, a:visited {
 
 .hr-1 {
   margin: 0.5rem auto 1rem;
-  border-color: indigo;
+  border-color: #6e0837;
 }
 
 @media screen and (min-width: 1025px) {
