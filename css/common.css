@@ -267,6 +267,7 @@ a:link, a:visited {
   transition: -webkit-box-shadow 0.5s;
   transition: box-shadow 0.5s;
   transition: box-shadow 0.5s, -webkit-box-shadow 0.5s;
+  z-index: 999;
 }
 
 #tothetop:hover {
