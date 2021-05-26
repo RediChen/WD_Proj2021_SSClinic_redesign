@@ -668,9 +668,8 @@
   }
   #care #care-board-2 .care-card {
     margin: 0 1.2rem;
-    width: 100px;
+    width: 140px;
     height: calc(2 * 1rem + 140px + 4.2rem);
-    max-width: 140px;
   }
   #care #care-board-2 .care-card > div {
     background-image: url(../img/cloudy0.png);
@@ -696,9 +695,6 @@
     -webkit-transition: 0.4s ease-out;
     transition: 0.4s ease-out;
   }
-  #care #care-board-2 .slick-current {
-    width: 140px;
-  }
   #care #care-board-2 .slick-current > div {
     background-image: url(../img/cloudy1.png);
     height: 140px;
@@ -722,9 +718,8 @@
   }
   #care #care-board-2 .care-card {
     margin: 0 1rem;
-    width: 100px;
+    width: 125px;
     height: calc(2 * 1rem + 125px + 3.6rem);
-    max-width: 125px;
   }
   #care #care-board-2 .care-card > div {
     background-image: url(../img/cloudy0.png);
@@ -749,9 +744,6 @@
     line-height: 1.5rem;
     -webkit-transition: 0.4s ease-out;
     transition: 0.4s ease-out;
-  }
-  #care #care-board-2 .slick-current {
-    width: 125px;
   }
   #care #care-board-2 .slick-current > div {
     background-image: url(../img/cloudy1.png);

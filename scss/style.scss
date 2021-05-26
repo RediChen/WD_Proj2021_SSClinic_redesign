@@ -509,9 +509,8 @@
             //* 單片 card
             .care-card {
                 margin: 0 $h2-fz;
-                width: $img-l;
+                width: $img-L;//無論有沒有center都保持大size的寬敞
                 height: $card-h;
-                max-width: $img-L;
                 //* 圖片
                 & > div {
                     background-image: url(../img/cloudy0.png);
@@ -542,7 +541,6 @@
             //* Slick 修正區
             // 在正中央的樣式 (center mode)
             .slick-current {
-                width: $img-L;
                 & > div {
                     background-image: url(../img/cloudy1.png);
                     height: $img-L;
