@@ -1248,12 +1248,9 @@
 
 #time #register-note > :last-child a {
   margin: 0 auto;
-  font-family: "Noto Serif TC", serif;
-  font-weight: 300;
-  font-size: 1em;
   text-align: center;
-  width: 6em;
-  line-height: 3em;
+  width: 6rem;
+  line-height: 3rem;
 }
 
 #time > :last-child > :last-child {

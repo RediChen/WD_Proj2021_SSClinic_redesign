@@ -774,12 +774,11 @@
                 }
             }
             a {
+                //其餘樣式已於.btn設定
                 margin: 0 auto;
-                @include font-zh(1em, 300);
                 text-align: center;
-                width: 6em;
-                line-height: 3em;
-                // filter: hue-rotate(64deg);
+                width: 6rem;
+                line-height: 3rem;
             }
         }
     }
