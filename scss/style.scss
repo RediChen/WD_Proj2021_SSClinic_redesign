@@ -571,9 +571,9 @@
     #care-board-3 {
         overflow: hidden;
         background-color: $color-04;
+        @include LRshadow();
         .care-card {
             padding: 1.5rem 0;
-            @include LRshadow();
         }
         @media screen and (min-width: $desktop) {
             padding: 1.5rem 3rem;
