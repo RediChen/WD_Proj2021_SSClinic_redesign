@@ -718,7 +718,7 @@
                 //須知叮嚀＆異動公告
                 width: 30%;
                 border: 1px solid $color-26;
-                background-color: rgba($color-24, 0.5);
+                background-color: $color-04;
                 margin: 30px 0 0;
             }
         }
@@ -734,7 +734,6 @@
         }
         .note-btn-box {
             display: flex;
-
             .note-btns {
                 display: block;
                 margin-right: 10px;
@@ -792,40 +791,47 @@
     & > :last-child > :last-child {
         padding: 10px 20px;
         dl {
-            margin: 0.5em 0;
-            padding-left: 0.5em;
+            margin: 0.5rem 0;
+            padding-left: 0.5rem;
             border: 1px solid $color-shade;
             line-height: 2.5;
+            transition: box-shadow 0.4s;
+            &:hover {
+                $pink: rgba($color-26, 0.5) ;
+                border-color: $pink;
+                box-shadow: 0 0 0 0.2rem $pink, 0 0 0 0.2rem $pink inset;
+            }
             dt {
                 @media screen and (min-width: $desktop) {
-                    @include font-zh(1.5em, 500);
+                    @include font-zh(1.5rem, 500);
                 }
                 @media screen and (max-width: $tablet) {
-                    @include font-zh(1.2em, 500);
+                    @include font-zh(1.2rem, 500);
                 }
                 @media screen and (max-width: $mobile) {
-                    @include font-zh(1em, 500);
+                    @include font-zh(1rem, 500);
                 }
             }
             dd {
+                text-indent: 1.2rem;
                 @media screen and (min-width: $desktop) {
-                    @include font-zh(1.2em, 300);
-                    text-indent: 3em;
+                    @include font-zh(1.2rem, 300);
+                    // text-indent: 3em;
                 }
                 @media screen and (max-width: $tablet) {
-                    @include font-zh(1em, 300);
-                    text-indent: 2em;
+                    @include font-zh(1rem, 300);
+                    // text-indent: 2em;
                 }
                 @media screen and (max-width: $mobile) {
-                    @include font-zh(0.8em, 300);
-                    text-indent: 1.6em;
+                    @include font-zh(0.8rem, 300);
+                    // text-indent: 1.6em;
                 }
             }
         }
         a {
             margin: 10px auto 0;
-            width: 5em;
-            line-height: 2.5em;
+            width: 5rem;
+            line-height: 2.5rem;
             text-align: center;
         }
     }
