@@ -1,4 +1,4 @@
-# WD_Proj2021_SSClinic_redesign
+# WebPrac_SSClinic_redesign
 前端網頁專題：心晴診所網站重製<br>
 原網站：http://www.sunshine-clinic.com.tw/index.html <br>
 改造後：https://redichen.github.io/WD_Proj2021_SSClinic_redesign/ <br>
